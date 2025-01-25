@@ -1,0 +1,10 @@
+---
+title: "REDAME.md"
+format: html
+---
+
+## rmdで記事を執筆する
+
+### やりたいこと
+
+Rstudio上で.qmd記事を書き、htmlにrenderした後githubに公開したりしたい
