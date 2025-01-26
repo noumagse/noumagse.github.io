@@ -9,17 +9,18 @@ website:
     search: true
     contents: 
       - text: "About me"
-        href: article/about.qmd
+        href: article/about.html
       - section: "Bird"
         contents: 
-          - article/miyagi.qmd
-          - article/trip.qmd
+          - article/miyagi.html
+          - article/trip.html
           
 format:
   html:
     css: "styles.css"  # 共通のCSSファイル
-    toc: true  # 目次を表示
-    toc-depth: 2  # 目次の深さ
+    toc: true
+    toc-title: 目次
+    toc-location: left
     number-sections: true  # セクション番号を表示
     theme: morph
     mainfont: sans-serif;
