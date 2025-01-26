@@ -41,14 +41,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
 <div id="quarto-sidebar-toc-left" class="sidebar toc-left">
-  <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">目次</h2>
-   
-  <ul>
-  <li><a href="#サンプルページ" id="toc-サンプルページ" class="nav-link active" data-scroll-target="#サンプルページ">サンプルページ</a></li>
-  <li><a href="#ホームページ" id="toc-ホームページ" class="nav-link" data-scroll-target="#ホームページ">ホームページ</a></li>
-  </ul>
-</nav>
+  
 </div>
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 </div>
@@ -73,31 +66,25 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="サンプルページ" class="level2">
-<h2 class="anchored" data-anchor-id="サンプルページ">サンプルページ</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="image/branta.JPG" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Branta</figcaption>
-</figure>
-</div>
 <style>
 /* メニューバーのスタイル */
 .sidebar {
   height: 100%;
-  width: 250px;
+  width: 0;
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   background-color: #111;
-  padding-top: 20px;
-  overflow-y: auto;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
 .sidebar a {
-  padding: 10px 15px;
+  padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 25px;
   color: #818181;
   display: block;
   transition: 0.3s;
@@ -107,23 +94,25 @@ ul.task-list li input[type="checkbox"] {
   color: #f1f1f1;
 }
 
-.sidebar .submenu {
-  display: none;
-  padding-left: 20px;
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 
-.sidebar .submenu a {
-  font-size: 16px;
+#menuBtn {
+  font-size: 30px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  color: #111;
 }
 
-.sidebar .menu-item:hover .submenu {
-  display: block;
-}
-
-/* メインコンテンツのスタイル */
-.main-content {
-  margin-left: 260px; /* メニューバーの幅 + 余白 */
-  padding: 20px;
+.opened #menuBtn {
+  color: #f1f1f1;
 }
 </style>
 <div class="sidebar">
@@ -136,11 +125,15 @@ ul.task-list li input[type="checkbox"] {
 &lt;/div&gt;</code></pre>
 </div>
 </div>
-</section>
-<section id="ホームページ" class="level1">
-<h1>ホームページ</h1>
-<p>ここにメインコンテンツを記述します。左側のメニューバーからリンクを選択してください。</p>
-</section>
+<div class="main-content">
+<p>## サンプルページ</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/branta.JPG" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Branta</figcaption>
+</figure>
+</div>
+</div>
 
 </main>
 <!-- /main column -->
