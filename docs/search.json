@@ -61,5 +61,63 @@
     "title": "About me",
     "section": "2 “Settings”",
     "text": "2 “Settings”\n\n2.1 Camera\n\nNikon P900\nNikon D500 + NIKKOR 200-500\n\n\n\n2.2 Field Scope\n\nKOWA TSN-664M\nTE-14WD"
+  },
+  {
+    "objectID": "article/index.html",
+    "href": "article/index.html",
+    "title": "index",
+    "section": "",
+    "text": "Branta"
+  },
+  {
+    "objectID": "article/index.html#サンプルページ",
+    "href": "article/index.html#サンプルページ",
+    "title": "index",
+    "section": "",
+    "text": "Branta"
+  },
+  {
+    "objectID": "article/readme.html",
+    "href": "article/readme.html",
+    "title": "REDAME.md",
+    "section": "",
+    "text": "Rstudio上で.qmd記事を書き、htmlにrenderした後githubに公開したりしたい"
+  },
+  {
+    "objectID": "article/readme.html#rmdで記事を執筆する",
+    "href": "article/readme.html#rmdで記事を執筆する",
+    "title": "REDAME.md",
+    "section": "",
+    "text": "Rstudio上で.qmd記事を書き、htmlにrenderした後githubに公開したりしたい"
+  },
+  {
+    "objectID": "article/about.html",
+    "href": "article/about.html",
+    "title": "About me",
+    "section": "",
+    "text": "動物の進化や多様性に興味あり 野鳥の観察をしている",
+    "crumbs": [
+      "About me"
+    ]
+  },
+  {
+    "objectID": "article/about.html#about-me",
+    "href": "article/about.html#about-me",
+    "title": "About me",
+    "section": "",
+    "text": "動物の進化や多様性に興味あり 野鳥の観察をしている",
+    "crumbs": [
+      "About me"
+    ]
+  },
+  {
+    "objectID": "article/about.html#settings",
+    "href": "article/about.html#settings",
+    "title": "About me",
+    "section": "2 “Settings”",
+    "text": "2 “Settings”\n\n2.1 Camera\n\nNikon P900\nNikon D500 + NIKKOR 200-500\n\n\n\n2.2 Field Scope\n\nKOWA TSN-664M\nTE-14WD",
+    "crumbs": [
+      "About me"
+    ]
   }
 ]
