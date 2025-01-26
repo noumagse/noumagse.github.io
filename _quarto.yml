@@ -3,10 +3,6 @@ project:
 
 website: 
   title: "Top"
-  theme: morph
-  mainfont: sans-serif;
-  fontcolor: black;
-  linkcolor: hsla(237deg 74% 33% / 61%);
   sidebar: 
     style: "floating"
     search: true
@@ -24,4 +20,8 @@ format:
     toc: true  # 目次を表示
     toc-depth: 2  # 目次の深さ
     number-sections: true  # セクション番号を表示
+    theme: morph
+    mainfont: sans-serif;
+    fontcolor: black;
+    linkcolor: hsla(237deg 74% 33% / 61%);
     
