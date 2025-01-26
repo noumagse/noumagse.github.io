@@ -15,7 +15,7 @@ website:
           - text: "Miyagi"
             href: article/Miyagi.html
           - text: "Trip"
-            href: article/Trip.html
+            href: https://noumagse.github.io/article/Trip.html
           
 format:
   html:
