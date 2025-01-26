@@ -1,6 +1,7 @@
 ---
 title: "About me"
-format: html
+format: 
+  html
 ---
 
 ## Who?
