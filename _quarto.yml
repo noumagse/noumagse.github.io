@@ -19,7 +19,7 @@ website:
       - section: "Others"
         contents: 
           - text: "Food"
-            href: https://noumagse.github.io/article/others/Food.html
+            href: https://noumagse.github.io/article/others/food.html
           
 format:
   html:
