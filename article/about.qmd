@@ -5,7 +5,8 @@ format: html
 
 ## About me
 動物の進化や多様性に興味あり<br>
-野鳥の観察をしている
+野鳥の観察をしている<br>
+quarto勉強中。ページがガタガタしている可能性あり。改善していきたい。
 
 ## "Settings"
 ### Camera

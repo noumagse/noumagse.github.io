@@ -4,9 +4,9 @@ project:
 
 website: 
   navbar: 
+    logo: image/branta_icon.JPG
     left: 
       - href: index.html
-        image: image/branta_icon.JPG
     tools:
       - icon: twitter
         href: https://x.com/ann0uman
