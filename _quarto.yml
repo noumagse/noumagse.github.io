@@ -3,6 +3,10 @@ project:
   output-dir: "docs"
 
 website: 
+  navbar: 
+    tools:
+      - icon: twitter
+        href: https://x.com/ann0uman
   title: "Top"
   sidebar: 
     style: "floating"
