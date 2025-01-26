@@ -4,10 +4,13 @@ project:
 
 website: 
   navbar: 
+    left: 
+      - href: index.html
+        image: image/branta_icon.JPG
     tools:
       - icon: twitter
         href: https://x.com/ann0uman
-  title: "Top"
+  title: "noumaのページ"
   sidebar: 
     style: "floating"
     search: true
