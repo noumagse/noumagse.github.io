@@ -1,0 +1,11 @@
+website: 
+  sidebar: 
+    style: "floating"
+    search: true
+    contents: 
+      - text: "About me"
+        href: article/about.qmd
+      - section: "Bird"
+        contents: 
+          - article/miyagi.qmd
+          - article/trip.qmd
