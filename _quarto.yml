@@ -9,13 +9,17 @@ website:
     search: true
     contents: 
       - text: "About me"
-        href: article/about.html
+        href: https://noumagse.github.io/article/about.html
       - section: "Bird"
         contents: 
           - text: "Miyagi"
-            href: article/Miyagi.html
+            href: https://noumagse.github.io/article/Miyagi.html
           - text: "Trip"
             href: https://noumagse.github.io/article/Trip.html
+      - section: "Others"
+        contents: 
+          - text: "Food"
+            href: https://noumagse.github.io/article/others/Food.html
           
 format:
   html:
