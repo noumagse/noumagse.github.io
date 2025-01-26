@@ -1,0 +1,17 @@
+---
+title: "About me"
+format: html
+---
+
+## About me
+動物の進化や多様性に興味あり<br>
+野鳥の観察をしている
+
+## "Settings"
+### Camera
+ - Nikon P900
+ - Nikon D500 + NIKKOR 200-500
+
+### Field Scope
+ - KOWA TSN-664M
+ - TE-14WD

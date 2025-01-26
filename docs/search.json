@@ -40,5 +40,26 @@
     "title": "index",
     "section": "",
     "text": "Branta"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About me",
+    "section": "",
+    "text": "動物の進化や多様性に興味あり 野鳥の観察をしている"
+  },
+  {
+    "objectID": "about.html#about-me",
+    "href": "about.html#about-me",
+    "title": "About me",
+    "section": "",
+    "text": "動物の進化や多様性に興味あり 野鳥の観察をしている"
+  },
+  {
+    "objectID": "about.html#settings",
+    "href": "about.html#settings",
+    "title": "About me",
+    "section": "2 “Settings”",
+    "text": "2 “Settings”\n\n2.1 Camera\n\nNikon P900\nNikon D500 + NIKKOR 200-500\n\n\n\n2.2 Field Scope\n\nKOWA TSN-664M\nTE-14WD"
   }
 ]
