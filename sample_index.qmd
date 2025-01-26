@@ -1,0 +1,18 @@
+---
+title: "index"
+format: 
+  html:
+    toc: true
+    toc-title: 目次
+    toc-location: left
+#    theme: morph
+#    mainfont: sans-serif;
+#    fontcolor: black;
+#    linkcolor: hsla(237deg 74% 33% / 61%);
+#    css: styles.css
+#    include-after-body: menu.html
+---
+
+## サンプルページ
+
+![Branta](image/branta.JPG){width="100%"}
