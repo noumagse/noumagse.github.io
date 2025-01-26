@@ -12,8 +12,10 @@ website:
         href: article/about.html
       - section: "Bird"
         contents: 
-          - article/miyagi.html
-          - article/trip.html
+          - text: "Miyagi"
+            href: article/miyagi.html
+          - text: "Trip"
+            href: article/trip.html
           
 format:
   html:
