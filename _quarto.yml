@@ -9,13 +9,13 @@ website:
     search: true
     contents: 
       - text: "About me"
-        href: docs/article/about.html
+        href: /docs/article/about.html
       - section: "Bird"
         contents: 
           - text: "Miyagi"
-            href: docs/article/miyagi.html
+            href: docs/article/Miyagi.html
           - text: "Trip"
-            href: docs/article/trip.html
+            href: docs/article/Trip.html
           
 format:
   html:
