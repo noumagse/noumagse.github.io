@@ -1,6 +1,0 @@
----
-title: "Miyagi"
-format: html
----
-
-## 宮城の記録
