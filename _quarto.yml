@@ -35,7 +35,7 @@ format:
     toc-title: 目次
     toc-location: left
     number-sections: true  # セクション番号を表示
-    theme: morph
+#    theme: morph
     mainfont: sans-serif;
     fontcolor: black;
     linkcolor: hsla(237deg 74% 33% / 61%);
