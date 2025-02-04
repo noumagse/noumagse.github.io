@@ -6,7 +6,7 @@ website:
   navbar: 
     logo: image/branta_icon.JPG
     left: 
-      - href: index.html
+      - href: https://noumagse.github.io
     tools:
       - icon: twitter
         href: https://x.com/ann0uman
