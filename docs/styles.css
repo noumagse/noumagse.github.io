@@ -23,49 +23,6 @@
   background-color: #575757;
 }
 
-/* ドロップダウンボタン */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-btn {
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  font-size: 18px;
-  cursor: pointer;
-  width: 100%;
-  text-align: left;
-}
-
-.dropdown-btn:hover {
-  background-color: #575757;
-}
-
-/* ドロップダウンの内容 */
-.dropdown-content {
-  display: none;
-  position: relative;
-  background-color: #444;
-}
-
-.dropdown-content a {
-  padding: 10px 15px;
-  text-decoration: none;
-  color: white;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #575757;
-}
-
-/* ドロップダウンのホバー効果 */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
 /* メインコンテンツの調整 */
 body {
   margin-left: 220px; /* サイドバーの幅分余白を確保 */
