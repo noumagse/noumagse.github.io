@@ -28,3 +28,9 @@ body {
   margin-left: 220px; /* サイドバーの幅分余白を確保 */
   font-family: Arial, sans-serif;
 }
+
+/*TOC（目次）*/
+#TOC {
+  font-size: 14px;  /* フォントサイズを変更 */
+  color: #333333;  /* テキストの色を変更 */
+}
