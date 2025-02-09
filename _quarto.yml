@@ -5,8 +5,6 @@ project:
 website: 
   navbar: 
     logo: image/branta_icon.JPG
-    left: 
-      - href: https://noumagse.github.io
     tools:
       - icon: twitter
         href: https://x.com/ann0uman
@@ -27,15 +25,20 @@ website:
         contents: 
           - text: "Food"
             href: https://noumagse.github.io/article/others/food.html
-          
+  page-footer: 
+    left: "Copyright 2025"
+
 format:
   html:
-    css: "styles.css"  # 共通のCSSファイル
+    css: "docs/styles.css"  # 共通のCSSファイル
+    lightbox: true
+    theme: 
+      light: flatly
+      dark: darkly
     toc: true
     toc-title: 目次
     toc-location: left
-    number-sections: true  # セクション番号を表示
-#    theme: morph
+    number-sections: false  # セクション番号を非表示
     mainfont: sans-serif;
     fontcolor: black;
     linkcolor: hsla(237deg 74% 33% / 61%);
