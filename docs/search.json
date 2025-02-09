@@ -362,5 +362,54 @@
     "title": "Quarto勉強",
     "section": "",
     "text": "このサイトはQuartoで作成している。\n\nRender\n一括Render：Rstudioでショートカット（Ctrl + Shift + B）。もしくはTool bar-&gt;Build-&gt;Render Website\n\n\n画像追加\n\n\n\n“sentence”\n\n\n{.lightbox}：クリックで拡大表示\n{width=“100%”}：画像の表示サイズ"
+  },
+  {
+    "objectID": "article/Trip.html",
+    "href": "article/Trip.html",
+    "title": "Trip",
+    "section": "",
+    "text": "遠征の記録"
+  },
+  {
+    "objectID": "article/Trip.html#北海道",
+    "href": "article/Trip.html#北海道",
+    "title": "Trip",
+    "section": "北海道",
+    "text": "北海道\n[2021.03 道東探鳥]\n[2022.08 函館～苫小牧（観光多め）]\n2023.12 道東探鳥\n[2024.05 天売島]\n[2024.09 苫小牧]"
+  },
+  {
+    "objectID": "article/Trip.html#東北",
+    "href": "article/Trip.html#東北",
+    "title": "Trip",
+    "section": "東北",
+    "text": "東北\n[2022.03 青森・弘前]\n[2024.09 青森・龍飛ほか]\n[2022.12 秋田ハクガン]\n[2024.11 秋田ハクガン２]\n[2024.10 山形・飛島]"
+  },
+  {
+    "objectID": "article/Trip.html#関東",
+    "href": "article/Trip.html#関東",
+    "title": "Trip",
+    "section": "関東",
+    "text": "関東\n[2023.08 戦場ヶ原]\n[2024.09 谷津干潟]\n[2024.12 三番瀬・葛西]"
+  },
+  {
+    "objectID": "article/Trip.html#中部",
+    "href": "article/Trip.html#中部",
+    "title": "Trip",
+    "section": "中部",
+    "text": "中部\n[2024.03 裏日本周遊]"
+  },
+  {
+    "objectID": "article/Trip.html#九州",
+    "href": "article/Trip.html#九州",
+    "title": "Trip",
+    "section": "九州",
+    "text": "九州\n[2022.12～2023.01 九州探鳥]"
+  },
+  {
+    "objectID": "article/Trip.html#八重山",
+    "href": "article/Trip.html#八重山",
+    "title": "Trip",
+    "section": "八重山",
+    "text": "八重山\n[2023.03 石垣島]"
   }
 ]
