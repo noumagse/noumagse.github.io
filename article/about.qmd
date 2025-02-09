@@ -8,7 +8,7 @@ format: html
 野鳥の観察をしている<br>
 quarto勉強中。ページがガタガタしている可能性あり。改善していきたい。
 
-## "Settings"
+## Settings
 ### Camera
  - Nikon P900
  - Nikon D500 + NIKKOR 200-500
