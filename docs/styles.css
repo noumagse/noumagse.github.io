@@ -15,7 +15,7 @@
   padding: 10px 15px;
   text-decoration: none;
   font-size: 18px;
-  color: #56B4E9;
+  color: #18bc9c;
   display: block;
 }
 
@@ -32,5 +32,5 @@ body {
 /*TOC（目次）*/
 #TOC {
   font-size: 14px;  /* フォントサイズを変更 */
-  color: #333333;  /* テキストの色を変更 */
+  color: #18bc9c;  /* テキストの色を変更 */
 }
