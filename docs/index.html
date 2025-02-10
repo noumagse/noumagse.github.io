@@ -41,6 +41,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -136,14 +139,20 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="https://noumagse.github.io/article/Miyagi.html" class="sidebar-item-text sidebar-link">
+  <a href="https://noumagse.github.io/article/list_Miyagi.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Miyagi</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="https://noumagse.github.io/article/Trip.html" class="sidebar-item-text sidebar-link">
+  <a href="https://noumagse.github.io/article/list_Trip.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Trip</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://noumagse.github.io/article/list_ferry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ferry</span></a>
   </div>
 </li>
       </ul>
@@ -203,8 +212,12 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="サンプルページ" class="level2">
 <h2 class="anchored" data-anchor-id="サンプルページ">サンプルページ</h2>
-<p>宮城の野鳥観察フィールドノート。</p>
-<p>制作中（2025.02） <img src="../image/branta.JPG" class="img-fluid" style="width:100.0%" alt="Branta"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../image/branta.JPG" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Branta"><img src="../image/branta.JPG" class="img-fluid figure-img" style="width:100.0%" alt="Branta"></a></p>
+<figcaption>Branta</figcaption>
+</figure>
+</div>
 
 
 </section>
@@ -788,6 +801,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","closeEffect":"zoom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

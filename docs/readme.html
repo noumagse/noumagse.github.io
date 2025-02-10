@@ -136,14 +136,20 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="https://noumagse.github.io/article/Miyagi.html" class="sidebar-item-text sidebar-link">
+  <a href="https://noumagse.github.io/article/list_Miyagi.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Miyagi</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="https://noumagse.github.io/article/Trip.html" class="sidebar-item-text sidebar-link">
+  <a href="https://noumagse.github.io/article/list_Trip.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Trip</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://noumagse.github.io/article/list_ferry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ferry</span></a>
   </div>
 </li>
       </ul>
@@ -174,6 +180,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#rmdで記事を執筆する" id="toc-rmdで記事を執筆する" class="nav-link active" data-scroll-target="#rmdで記事を執筆する">rmdで記事を執筆する</a>
   <ul class="collapse">
   <li><a href="#やりたいこと" id="toc-やりたいこと" class="nav-link" data-scroll-target="#やりたいこと">やりたいこと</a></li>
+  <li><a href="#エラー１-git-push時頻繁にpermission-denied.される" id="toc-エラー１-git-push時頻繁にpermission-denied.される" class="nav-link" data-scroll-target="#エラー１-git-push時頻繁にpermission-denied.される">エラー１　git push時、頻繁にPermission denied.される</a></li>
+  <li><a href="#エラー２-一部のファイルの変更が戻される" id="toc-エラー２-一部のファイルの変更が戻される" class="nav-link" data-scroll-target="#エラー２-一部のファイルの変更が戻される">エラー２　一部のファイルの変更が戻される。</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -215,6 +223,14 @@ ul.task-list li input[type="checkbox"] {
 <pre><code>ssh-keygen -t ed25519 -C youremail@hogehoge.com -f ~/.ssh/id_ed25519_githublog</code></pre>
 <p>生成した公開鍵（.pubファイル）をcatコマンドなどでコピーし、githubの「Settings -&gt; SSH and GPG keys -&gt; New ssh key」にペースト。</p>
 <p>＊githubアカウントを使い分けているときは、configファイルに記述しておく</p>
+</section>
+<section id="エラー１-git-push時頻繁にpermission-denied.される" class="level3">
+<h3 class="anchored" data-anchor-id="エラー１-git-push時頻繁にpermission-denied.される">エラー１　git push時、頻繁にPermission denied.される</h3>
+<p>eval “$(ssh-agent -s)” ssh-add ~/.ssh/id_ed25519_githublog</p>
+</section>
+<section id="エラー２-一部のファイルの変更が戻される" class="level3">
+<h3 class="anchored" data-anchor-id="エラー２-一部のファイルの変更が戻される">エラー２　一部のファイルの変更が戻される。</h3>
+<p>症例：エクスプローラーなどの外部（？）で変更したものをVScodeでやるときに、変更が元に戻されている。 例えば、画像の名前を変えてディレクトリの変更などをしても、元々の状態に戻されるので画像が消えたり、記述した行がなくなっていたりする。</p>
 
 
 </section>
