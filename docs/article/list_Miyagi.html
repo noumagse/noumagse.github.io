@@ -80,9 +80,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -130,7 +130,7 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../docs/styles.css">
+<link rel="stylesheet" href="docs/styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -202,8 +202,14 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="https://noumagse.github.io/article/Trip.html" class="sidebar-item-text sidebar-link">
+  <a href="https://noumagse.github.io/article/list_Trip.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Trip</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://noumagse.github.io/article/list_ferry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ferry</span></a>
   </div>
 </li>
       </ul>
@@ -231,8 +237,8 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-    </div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(9)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -259,205 +265,199 @@ window.Quarto = {
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1739071544012" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<div class="thumbnail">
-<p><a href="../article/Miyagi/ajishima.html" class="no-external"></a></p><a href="../article/Miyagi/ajishima.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../article/Miyagi/ajishima.html" class="no-external"></a></p>
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+     </select>
+  </div>
 </div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../article/Miyagi/ajishima.html" class="no-external">宮城県航路</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../article/Miyagi/ajishima.html" class="no-external"></a>
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1739071544012" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<a href="../article/Miyagi/ajishima.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+宮城県航路
+</h5>
+<div class="card-text listing-description">
+網地島ライン＋網地島探鳥がメイン
 </div>
-<div class="listing-description">
-<a href="../article/Miyagi/ajishima.html" class="no-external">網地島ライン＋網地島探鳥がメイン</a>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
 </div>
 </div>
-<div class="metadata">
-<p><a href="../article/Miyagi/ajishima.html" class="no-external"></a></p><a href="../article/Miyagi/ajishima.html" class="no-external">
+</div>
+</div>
 </a>
 </div>
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1739065514249" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<a href="../article/Miyagi/kakou1.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+河口フィールド１
+</h5>
+<div class="card-text listing-description">
+河口のシギチ、ガンカモなどなど
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1739065514249" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<div class="thumbnail">
-<p><a href="../article/Miyagi/kakou1.html" class="no-external"></a></p><a href="../article/Miyagi/kakou1.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../article/Miyagi/kakou1.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../article/Miyagi/kakou1.html" class="no-external">河口フィールド１</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../article/Miyagi/kakou1.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="../article/Miyagi/kakou1.html" class="no-external">河口のシギチ、ガンカモなどなど</a>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
 </div>
 </div>
-<div class="metadata">
-<p><a href="../article/Miyagi/kakou1.html" class="no-external"></a></p><a href="../article/Miyagi/kakou1.html" class="no-external">
+</div>
+</div>
 </a>
 </div>
+<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1739065514260" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
+<a href="../article/Miyagi/kakou2.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+河口フィールド２
+</h5>
+<div class="card-text listing-description">
+河口の海ガモ、シギチなど
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1739065514260" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
-<div class="thumbnail">
-<p><a href="../article/Miyagi/kakou2.html" class="no-external"></a></p><a href="../article/Miyagi/kakou2.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../article/Miyagi/kakou2.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../article/Miyagi/kakou2.html" class="no-external">河口フィールド２</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../article/Miyagi/kakou2.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="../article/Miyagi/kakou2.html" class="no-external">河口の海ガモ、シギチなど</a>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
 </div>
 </div>
-<div class="metadata">
-<p><a href="../article/Miyagi/kakou2.html" class="no-external"></a></p><a href="../article/Miyagi/kakou2.html" class="no-external">
+</div>
+</div>
 </a>
 </div>
+<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1739070237812" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<a href="../article/Miyagi/kennan.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+県南
+</h5>
+<div class="card-text listing-description">
+県南の野鳥観察記録
 </div>
-<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1739070237812" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<div class="thumbnail">
-<p><a href="../article/Miyagi/kennan.html" class="no-external"></a></p><a href="../article/Miyagi/kennan.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../article/Miyagi/kennan.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../article/Miyagi/kennan.html" class="no-external">県南</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../article/Miyagi/kennan.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="../article/Miyagi/kennan.html" class="no-external">県南の野鳥観察記録</a>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
 </div>
 </div>
-<div class="metadata">
-<p><a href="../article/Miyagi/kennan.html" class="no-external"></a></p><a href="../article/Miyagi/kennan.html" class="no-external">
+</div>
+</div>
 </a>
 </div>
+<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1739068206598" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<a href="../article/Miyagi/kenpoku_general.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+県北その他
+</h5>
+<div class="card-text listing-description">
+ガン以外の野鳥の観察記録など
 </div>
-<div class="quarto-post image-right" data-index="4" data-listing-file-modified-sort="1739068206598" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<div class="thumbnail">
-<p><a href="../article/Miyagi/kenpoku_general.html" class="no-external"></a></p><a href="../article/Miyagi/kenpoku_general.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../article/Miyagi/kenpoku_general.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../article/Miyagi/kenpoku_general.html" class="no-external">県北その他</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../article/Miyagi/kenpoku_general.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="../article/Miyagi/kenpoku_general.html" class="no-external">ガン以外の野鳥の観察記録など</a>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
 </div>
 </div>
-<div class="metadata">
-<p><a href="../article/Miyagi/kenpoku_general.html" class="no-external"></a></p><a href="../article/Miyagi/kenpoku_general.html" class="no-external">
+</div>
+</div>
 </a>
 </div>
+<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1739065514271" data-listing-reading-time-sort="1" data-listing-word-count-sort="14">
+<a href="../article/Miyagi/kenpoku_goose.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+県北ガン
+</h5>
+<div class="card-text listing-description">
+大好きなガン類の観察記録を中心とした記録。2020年11月の大学サークルの行事でねぐら入りを見たことがきっかけで、鳥の中でガンが一番好きになった。
 </div>
-<div class="quarto-post image-right" data-index="5" data-listing-file-modified-sort="1739065514271" data-listing-reading-time-sort="1" data-listing-word-count-sort="14">
-<div class="thumbnail">
-<p><a href="../article/Miyagi/kenpoku_goose.html" class="no-external"></a></p><a href="../article/Miyagi/kenpoku_goose.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../article/Miyagi/kenpoku_goose.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../article/Miyagi/kenpoku_goose.html" class="no-external">県北ガン</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../article/Miyagi/kenpoku_goose.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="../article/Miyagi/kenpoku_goose.html" class="no-external">大好きなガン類の観察記録を中心とした記録。2020年11月の大学サークルの行事でねぐら入りを見たことがきっかけで、鳥の中でガンが一番好きになった。</a>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
 </div>
 </div>
-<div class="metadata">
-<p><a href="../article/Miyagi/kenpoku_goose.html" class="no-external"></a></p><a href="../article/Miyagi/kenpoku_goose.html" class="no-external">
+</div>
+</div>
 </a>
 </div>
+<div class="g-col-1" data-index="6" data-listing-file-modified-sort="1739177771374" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
+<a href="../article/Miyagi/numa1.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="..\image\Miyagi\numa1.JPG" alt="すやすやトモちゃん" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+沼１
+</h5>
+<div class="card-text listing-description">
+特に記憶に残ってる探鳥についてピックアップ
 </div>
-<div class="quarto-post image-right" data-index="6" data-listing-file-modified-sort="1739176141934" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
-<div class="thumbnail">
-<p><a href="../article/Miyagi/numa1.html" class="no-external"></a></p><a href="../article/Miyagi/numa1.html" class="no-external">
-<p class="card-img-top"><img src="..\image\numa1.JPG" alt="すやすやトモちゃん"  class="thumbnail-image card-img"/></p>
-</a><p><a href="../article/Miyagi/numa1.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../article/Miyagi/numa1.html" class="no-external">沼１</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../article/Miyagi/numa1.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="../article/Miyagi/numa1.html" class="no-external">特に記憶に残ってる探鳥についてピックアップ</a>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
 </div>
 </div>
-<div class="metadata">
-<p><a href="../article/Miyagi/numa1.html" class="no-external"></a></p><a href="../article/Miyagi/numa1.html" class="no-external">
+</div>
+</div>
 </a>
 </div>
+<div class="g-col-1" data-index="7" data-listing-file-modified-sort="1739071034873" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<a href="../article/Miyagi/park.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+公園いろいろ
+</h5>
+<div class="card-text listing-description">
+新型コロナウイルス感染症対策でオンデマンド授業、サークル活動自粛期間中だったので、探鳥する時間がかなりあった。
 </div>
-<div class="quarto-post image-right" data-index="7" data-listing-file-modified-sort="1739071034873" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
-<div class="thumbnail">
-<p><a href="../article/Miyagi/park.html" class="no-external"></a></p><a href="../article/Miyagi/park.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../article/Miyagi/park.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../article/Miyagi/park.html" class="no-external">公園いろいろ</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../article/Miyagi/park.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="../article/Miyagi/park.html" class="no-external">新型コロナウイルス感染症対策でオンデマンド授業、サークル活動自粛期間中だったので、探鳥する時間がかなりあった。</a>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
 </div>
 </div>
-<div class="metadata">
-<p><a href="../article/Miyagi/park.html" class="no-external"></a></p><a href="../article/Miyagi/park.html" class="no-external">
+</div>
+</div>
 </a>
 </div>
+<div class="g-col-1" data-index="8" data-listing-file-modified-sort="1739065514303" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<a href="../article/Miyagi/ricefield.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+近所田んぼ・川
+</h5>
+<div class="card-text listing-description">
+近所の田んぼ。チャリで行くことが多い。狭義のマイフィールド
 </div>
-<div class="quarto-post image-right" data-index="8" data-listing-file-modified-sort="1739065514303" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
-<div class="thumbnail">
-<p><a href="../article/Miyagi/ricefield.html" class="no-external"></a></p><a href="../article/Miyagi/ricefield.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../article/Miyagi/ricefield.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../article/Miyagi/ricefield.html" class="no-external">近所田んぼ・川</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../article/Miyagi/ricefield.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="../article/Miyagi/ricefield.html" class="no-external">近所の田んぼ。チャリで行くことが多い。狭義のマイフィールド</a>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
 </div>
 </div>
-<div class="metadata">
-<p><a href="../article/Miyagi/ricefield.html" class="no-external"></a></p><a href="../article/Miyagi/ricefield.html" class="no-external">
+</div>
+</div>
 </a>
-</div>
 </div>
 </div>
 <div class="listing-no-matching d-none">
