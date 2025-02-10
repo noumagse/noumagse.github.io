@@ -20,7 +20,9 @@ website:
           - text: "Miyagi"
             href: https://noumagse.github.io/article/list_Miyagi.html
           - text: "Trip"
-            href: https://noumagse.github.io/article/Trip.html
+            href: https://noumagse.github.io/article/list_Trip.html
+          - text: "Ferry"
+            href: https://noumagse.github.io/article/list_ferry.html
       - section: "Others"
         contents: 
           - text: "Food"
