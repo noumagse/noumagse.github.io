@@ -18,7 +18,7 @@ website:
       - section: "Bird"
         contents: 
           - text: "Miyagi"
-            href: https://noumagse.github.io/article/Miyagi.html
+            href: https://noumagse.github.io/article/list_Miyagi.html
           - text: "Trip"
             href: https://noumagse.github.io/article/Trip.html
       - section: "Others"
