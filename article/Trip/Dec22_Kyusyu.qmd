@@ -1,0 +1,8 @@
+---
+title: "九州遠征"
+format: html
+---
+
+::: {layout-ncol="1"}
+![ナベヅル](../../image/Trip/Kyusyu/Dec22_Kyusyu1.JPG){width="100%"}
+:::
