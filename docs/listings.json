@@ -1,5 +1,28 @@
 [
   {
+    "listing": "/article/list_Miyagi.html",
+    "items": [
+      "/article/Miyagi/ajishima.html",
+      "/article/Miyagi/kakou1.html",
+      "/article/Miyagi/kakou2.html",
+      "/article/Miyagi/kennan.html",
+      "/article/Miyagi/kenpoku_general.html",
+      "/article/Miyagi/kenpoku_goose.html",
+      "/article/Miyagi/numa1.html",
+      "/article/Miyagi/park.html",
+      "/article/Miyagi/ricefield.html"
+    ]
+  },
+  {
+    "listing": "/article/list_ferry.html",
+    "items": [
+      "/article/ferry/silverferry.html",
+      "/article/ferry/taiheiyoferry.html",
+      "/article/ferry/toukaikisen.html",
+      "/article/Miyagi/ajishima.html"
+    ]
+  },
+  {
     "listing": "/article/list_Trip.html",
     "items": [
       "/article/Trip/Aug23_Senjogahara.html",
@@ -14,29 +37,6 @@
       "/article/Trip/May24_Teuri.html",
       "/article/Trip/Nov24_Akita.html",
       "/article/Trip/Oct24_Tobishima.html"
-    ]
-  },
-  {
-    "listing": "/article/list_ferry.html",
-    "items": [
-      "/article/ferry/silverferry.html",
-      "/article/ferry/taiheiyoferry.html",
-      "/article/ferry/toukaikisen.html",
-      "/article/Miyagi/ajishima.html"
-    ]
-  },
-  {
-    "listing": "/article/list_Miyagi.html",
-    "items": [
-      "/article/Miyagi/ajishima.html",
-      "/article/Miyagi/kakou1.html",
-      "/article/Miyagi/kakou2.html",
-      "/article/Miyagi/kennan.html",
-      "/article/Miyagi/kenpoku_general.html",
-      "/article/Miyagi/kenpoku_goose.html",
-      "/article/Miyagi/numa1.html",
-      "/article/Miyagi/park.html",
-      "/article/Miyagi/ricefield.html"
     ]
   }
 ]
