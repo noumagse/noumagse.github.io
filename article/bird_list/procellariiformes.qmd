@@ -1,0 +1,12 @@
+---
+title: "shearwater, petrel, storm-petrel, albatross"
+format: revealjs
+---
+
+# Procellariiformes
+航路に乗って見ることがメインの、ミズナギドリ、ウミツバメ、アホウドリ類。ここでは宮城沿岸域で見られたものも含むものとする
+
+## Shearwater and albatross in Miyagi
+-   コアホウドリ
+-   クロアシアホウドリ
+-   オオミズナギドリ

@@ -1,0 +1,41 @@
+---
+title: "Grebes"
+format: revealjs
+---
+
+# Podicipediformes
+
+カイツブリ類。八版に記載されたカイツブリ類5種は宮城でも見られる
+
+# Grebes in Miyagi
+-   カイツブリ
+-   アカエリカイツブリ
+-   カンムリカイツブリ
+-   ミミカイツブリ
+-   ハジロカイツブリ
+
+## カイツブリ Little Grebe
+-   素速い潜水者（Tachybaptus）
+-   留鳥。繁殖もする。
+
+![](../../image/bird_list/Podicipediformes/Little_Grebe1.jpg){.r-stretch .lightbox}
+
+## アカエリカイツブリ Red-necked Grebe
+-   冬鳥。河口や漁港などに入ってる。嘴が黄色く、他のカイツブリより大きい
+-   冬羽は首の赤襟がなくなって黒っぽくなる
+
+![](../../image/bird_list/Podicipediformes/Red-necked_Grebe1.jpg){.r-stretch .lightbox}
+
+## カンムリカイツブリ
+-   冬鳥だが場所によって留鳥として繁殖している個体もいる。
+-   幼鳥を背中に乗せてるとほっこりする
+
+![](../../image/bird_list/Podicipediformes/Great_Crested_Grebe1.jpg){.r-stretch .lightbox}
+
+## ミミカイツブリ Horned Grebe
+-   冬鳥だが、体感一番少ない印象。たまに漁港とか河口に入っていると嬉しい
+
+## ハジロカイツブリ Black-necked Grebe
+-   冬鳥。春先に沖合で大量の群れになっているのを陸から観察できることがある
+
+![](../../image/bird_list/Podicipediformes/Black-necked_Grebe1.jpg){.r-stretch .lightbox}

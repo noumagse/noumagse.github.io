@@ -1,0 +1,18 @@
+---
+title: "Landfowl"
+format: revealjs
+scrollable: true
+---
+
+# Galliformes
+
+ガンカモと同じく、新鳥類から最初に分岐したキジカモの一グループ
+
+## Landfowls in Miyagi
+宮城で観察したことのあるキジ
+
+-   ヤマドリ
+-   キジ
+
+## 宮城で観察されたことのあるキジ
+-   ウズラ

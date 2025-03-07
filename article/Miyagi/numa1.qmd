@@ -1,6 +1,10 @@
 ---
 title: "沼１"
 format: html
+date: 2025/02/11
+categories:
+  - ducks
+  - shorebirds
 ---
 
 ## 沼１の記録

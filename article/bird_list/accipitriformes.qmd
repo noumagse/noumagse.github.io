@@ -1,0 +1,26 @@
+---
+title: "Osprey, Hawks and Eagles"
+format: revealjs
+---
+
+# Accipitriformes
+
+白石市がタカの渡りの定点観察地になっている。また、冬季にはオジロワシやオオワシが飛来してくる。
+
+# Osprey, Hawks and Eagles in Miyagi
+-   ミサゴ
+-   ハチクマ
+-   クマタカ
+-   ハイタカ
+-   オオタカ
+-   チュウヒ
+-   ハイイロチュウヒ
+-   トビ
+-   オオワシ
+-   オジロワシ
+-   サシバ
+-   ノスリ
+
+# 宮城で観察されたことのあるタカ
+-   ツミ
+-   ケアシノスリ

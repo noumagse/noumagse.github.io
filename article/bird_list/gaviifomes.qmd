@@ -1,0 +1,29 @@
+---
+title: "Loons"
+format: revealjs
+---
+
+# Gaviiformes
+アビ類。八版には五種が記載されているが、宮城では４種が見られている（はず）
+
+# Loons in Miyagi
+-   アビ
+-   オオハム
+-   シロエリオオハム
+
+## アビ
+嘴が上に反ったアビ類。
+冬から春にかけて漁港や河口に入っていることがあるが、多くは沖合に浮いているのをスコープで観察する
+
+![](../../image/bird_list/Gaviiformes/Red-throated_Loon1.jpg){.r-stretch .lightbox}
+
+## オオハム 
+アビと同じく、漁港や河口にいたらラッキー。アビより太い
+
+## シロエリオオハム
+アビと同じく、漁港や河口にいたらラッキー。アビより太い
+
+![](../../image/bird_list/Gaviiformes/Pacific_Loon1.jpg){.r-stretch .lightbox}
+
+## 宮城で観察されたことのあるアビ類
+-   ハシジロアビ
