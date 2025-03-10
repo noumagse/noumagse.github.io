@@ -1,0 +1,13 @@
+---
+title: "航路探鳥リスト"
+format: html
+listing: 
+  contents: 
+    - ferry
+    - "Miyagi/ajishima*"
+  type: grid
+  sort: "date"
+  date-format: medium
+  categories: true
+  sort-ui: [title, date]
+---

@@ -1,0 +1,59 @@
+---
+title: "Food"
+format: html
+---
+
+## 宮城の美味しいご飯やさん
+
+### 仙台市宮城野区
+* [おふくろ弁当](https://goo.gl/maps/1LaNVvTmKdEzpqRWA) ... <br> 
+* [ラーメンショップ](https://goo.gl/maps/SJwBSbrRjTrBCyyb8) ... <br>
+ネギがシャキシャキで美味しい豚骨ラーメン。おすすめはパラパラしてて美味しい炒飯。
+* [らーめんONE](https://goo.gl/maps/4z7dTUceBVfrnk4s5) ... <br> 
+いろんな種類の濃厚ラーメンが食べられる。エビだしうまい。混んでる
+* [麺屋くまがい](https://maps.app.goo.gl/M4TEFKbfA5dTZhbT9) ... <br> 
+らーめんONEとかと似て、具材たくさんこってり大盛り麺。混んでる。
+* [Pensee](https://goo.gl/maps/wc1ZwkBwhkawjywN6) ... <br> 塩パンが無類の美味しさを誇るパン屋さん。ピザもスコーンも美味しい。コーヒー無料なので嬉しい。
+* [石井商店](https://maps.app.goo.gl/x1ob1nfaZWSE9C4P6) ... <br>
+でかからあげ。カリカリでうまい
+
+### 青葉区
+* [さわき](https://goo.gl/maps/WrngAAGtMhuiogGv9) ... <br>
+緑色の細麺と大量のお野菜、ガツンと効いたにんにくがやみつきの「スタミナラーメン」。たこ焼きやお好み焼きもおいしい
+* [中華麺店　思](https://goo.gl/maps/ERrabHerq4wpgkwp8) ... <br> 一番町のアーケード路地裏にある、屋台風のラーメン屋さん。チャーシューもおいしい。
+* [ラーメンビッグ](https://goo.gl/maps/KZfn9du25VNUG2gd8) ... <br>
+濃いめの豚骨醤油（家系というやつ）。まくる（スープを飲みきる）と「まくり券」がもらえて、次回から好きなトッピングが出来たりする。
+
+### 若林区
+* [上海厨房](https://goo.gl/maps/CT5kc4RGKC7EdzV37) ... <br>
+外れがない中華料理店。ぜんぶおいしい
+* [田中そば](https://maps.app.goo.gl/N3X5h6Rq3b9Xhd7B6) ... <br>
+中華そばなんだけど背脂がのってて、自家製の縮れ麺に絡んで美味しい。長町にもある。混んでる
+
+## 仙台市外
+
+### 多賀城、七ヶ浜、塩竃方面
+* [らーめん蔵](https://maps.app.goo.gl/NAVpoWdxaTPkPtmz8) ... <br>
+人気店。味噌と醤油がどちらも王道という感じで美味しい
+* [Trattoria Blair Marina](https://maps.app.goo.gl/e3aNvTxJdGLsHyPP9) ... <br>
+塩竃マリンゲート内の美味しいイタリアン。スパゲッティ美味しい。ディナーは値が張るので食べたことないけどランチ美味しい
+
+### 県南
+* [ヌードルショップ arakawa](https://goo.gl/maps/QGL9sKzQhYLaYmwC6) ... <br>
+岩沼のインスタ映えしそうなお洒落ラーメン。内装もお洒落。鴨だしと柚。
+* [フラミンゴ](https://goo.gl/maps/TpkHJgLmVGzqH6vH9) ... <br>
+亘理町の四季の美味しい海の幸が食べられる。オススメは秋のはらこ飯（本場）。荒汁が無料。次回から使える50円割引券がもらえる。大学のサークルでよく行った
+* [らーめんせん家](https://maps.app.goo.gl/363WV7m8iWxyEqoV8) ... <br>
+美味しいラーメン。バターねぎ味噌 is 至高。[坂本駅すぐそばの道の駅](https://yumeichigo.jp/)の中にもある。道の駅でいちごを買って食べましょう
+
+### 県北
+* [とよま観光物産センター](https://maps.app.goo.gl/xj9aqgoBDLciTeJc7) ... <br>
+レストランにはいろんな絵が飾ってある。宮城県の美味しい郷土料理が色々食べられる
+* [くんぺる](https://maps.app.goo.gl/gSEtA9BMMU1Bx3Bw8) ...
+<br>
+地元の野菜や豚肉を美味しくランチで食べられる。ごはん（ひとめぼれ）のおかわり無料。伊豆沼に隣接しているためか、店内には野鳥のご本がある。
+
+* [南三陸さんさん商店街](https://maps.app.goo.gl/Az4vLNimK5JZGai6A) ... <br>
+美味しい海の幸がたくさんあって非常に良い。お刺身を自分で選んで食べられる山内鮮魚店。モアイ像。隣接する防災対策庁舎は震災遺構となっている。
+* [なるこりんジェラート](https://maps.app.goo.gl/hiwAGD5k2s5PqBwu9) ... <br>
+野菜で作ったジェラートが食べられる。値は張るがどれも美味しいし内装がインスタ映えするので小腹だけでなく承認欲求も満たせる。

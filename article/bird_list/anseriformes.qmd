@@ -1,0 +1,231 @@
+---
+title: "Geese, Swans, Ducks"
+format: revealjs
+scrollable: true
+---
+
+# Anseriformes
+
+-   宮城県はガンカモ、ハクチョウが多い
+-   県鳥はマガン
+-   県北部にはラムサール条約登録湿地が4つある
+
+## Geese in Miyagi
+宮城で観察したことのあるガン
+
+-   コクガン
+-   シジュウカラガン
+-   ハクガン
+-   ヒシクイ
+-   マガン
+-   カリガネ
+
+## コクガン
+
+-   冬鳥。南三陸志津川湾の漁港や石巻湾、仙台市東部海岸で越冬。
+-   家族の絆が強く、ファミリー単位で威嚇し合ったり、別ファミリーの個体を追い払ったりしている。~~ガラが悪い~~
+-   志津川湾では潜水してアマモなどの海藻を食べるオオバンに絡んで、横取りしてしまう労働寄生の様子を観察できることがある。~~ガラが悪い~~
+
+![](../../image/bird_list/anseriformes/Brant_Goose1.jpg){.r-stretch .lightbox}
+
+## シジュウカラガン
+-   一時大きく数を減らし絶滅が危ぶまれたガン。八木山動物公園や宮城・ロシアの研究者の尽力によって復活した。詳細は「シジュウカラガン物語」参考
+-   江戸時代は「いぬがん」と呼ばれており、英名は「Cackling Goose」。どちらも鳴き声が犬の鳴き声ににることに由来。
+-   亜種シジュウカラガンはマガンよりも一回り小さい。
+-   たまにマガン同大で首の付け根の白い首輪が見えない個体がいる。亜種アラスカシジュウカラガン
+-   嘴も華奢で更に小さいのは亜種ヒメシジュウカラガンらしい（見たことない）
+
+![](../../image/bird_list/Anseriformes/Cackling_Goose1.jpg){.r-stretch .lightbox}
+
+## ハクガン
+-   主に秋田県大潟村の巨大干拓で越冬しに来る。一部の個体群が宮城県北にやってきている可能性
+-   こちらも絶滅が危ぶまれたガン。
+![](../../image/bird_list/Anseriformes/Snow_Goose1.jpg){.r-stretch .lightbox}
+
+## ヒシクイ
+-   蕪栗沼や伊豆沼には亜種オオヒシクイが越冬。嘴がなだらかで大きく、首も長い。
+-   蕪栗沼では集団で越冬しているが、よく他個体を威嚇していてガラが悪い。鳴き声が他のガンと比べて低く、ちょっとおじさんみたい
+![](../../image/bird_list/Anseriformes/Bean_Goose1.jpg){.r-stretch .lightbox}
+
+## マガン
+-   宮城県に10万羽くらい越冬しに来る鳥。県鳥。
+![](../../image/bird_list/Anseriformes/White-fronted_Goose1.jpg){.r-stretch .lightbox}
+
+## カリガネ
+-   マガンより一回り小さく、金色のアイリングや嘴のピンク色、額の白色部の広さで識別可能。
+-   かわいいと言われる。東北大学野鳥の会ではカリガネとマガンとの識別が必修科目になる（ことが多い）。
+-   幼鳥は白色部がない。
+![](../../image/bird_list/Anseriformes/Lesser_White-fronted_Goose1.jpg){.r-stretch .lightbox}
+
+# Swans
+-   コハクチョウ
+-   オオハクチョウ
+
+## コハクチョウ Tundra Swan
+オオハクチョウより小さく、首も短い（個体が多い）
+亜種アメリカコハクチョウは毎冬県内で数羽くらい来てるはず。
+
+![](../../image/bird_list/Anseriformes/Tundra_Swan1.jpg){.r-stretch .lightbox}
+
+## オオハクチョウ Whoopr Swan
+毎冬、県内の湖沼や河川に飛来。
+翼の骨が折れたりして北帰行できなくなったのが越夏してる
+
+![](../../image/bird_list/Anseriformes/Whooper_Swan1.jpg){.r-stretch .lightbox}
+
+# Ducks
+-   ツクシガモ
+-   アカツクシガモ
+-   オシドリ
+-   トモエガモ
+-   シマアジ
+-   ハシビロガモ
+-   オカヨシガモ
+-   ヨシガモ
+-   ヒドリガモ
+-   アメリカヒドリ
+-   カルガモ
+-   マガモ
+-   オナガガモ
+-   コガモ
+-   オオホシハジロ
+-   ホシハジロ
+-   キンクロハジロ
+-   スズガモ
+-   シノリガモ
+-   ビロードキンクロ
+-   クロガモ
+-   ホオジロガモ
+-   ミコアイサ
+-   カワアイサ
+-   ウミアイサ
+
+## ツクシガモ Common Shelduck
+県内でたまに見られる。すぐ抜ける
+![](../../image/bird_list/Anseriformes/Common_Shelduck1.jpg){.r-stretch .lightbox}
+
+## アカツクシガモ Ruddy Shelduck
+2023年冬、県内某所に飛来した一例がある
+![](../../image/bird_list/Anseriformes/Rudy_Shellduck1.jpg){.r-stretch .lightbox}
+
+##オシドリ Mandarin Duck
+冬に川や公園内の池などで見られることが多い印象
+
+![](../../image/bird_list/Anseriformes/Mandarin_Duck1.jpg){.r-stretch .lightbox}
+
+## トモエガモ Baikal Teal
+最近はフィールドでも百数羽単位で見られるようになった嬉しいカモ。見つけると嬉しい
+![](../../image/bird_list/Anseriformes/Baikal_Teal1.jpg){.r-stretch .lightbox}
+
+## シマアジ Garganey
+春と秋の渡りの時期にちょろっと沼に立ち寄る。
+
+![](../../image/bird_list/Anseriformes/Garganey1.jpg){.r-stretch .lightbox}
+
+## ハシビロガモ Northern Shoveler
+晩冬にやってくる。渡去もかなり遅い印象。
+
+![](../../image/bird_list/Anseriformes/Northern_Shoveler1.jpg){.r-stretch .lightbox}
+
+## オカヨシガモ Gadwall
+河口や海岸近くの湖沼によくいるイメージ。内陸の池などでは見たことがない。
+
+![](../../image/bird_list/Anseriformes/Gadwall1.jpg){.r-stretch .lightbox}
+
+## ヨシガモ Falcated Duck
+宮城県では少ない。秋にエクリプス一羽と晩春に沼で数羽の生殖羽を見たことがあるのみ
+
+![](../../image/bird_list/Anseriformes/Falcated_Duck1.jpg){.r-stretch .lightbox}
+## ヒドリガモ Eurasian Wigeon
+河口や漁港など。船着き場に生えた海藻を食べてる。公園などにはいないので、陸に上がって草の上で集団採餌する様子は見たことがない
+
+![](../../image/bird_list/Anseriformes/Eurasian_Wigeon1.jpg){.r-stretch .lightbox}
+
+## アメリカヒドリ
+毎冬フィールドに数羽ほど訪れる。ヒドリとの雑種（アメヒヒ）も多い。
+![](../../image/bird_list/Anseriformes/American_Wigeon1.jpg){.r-stretch .lightbox}
+
+## カルガモ
+留鳥。繁殖もする。
+都市公園とかだと恐ろしく人慣れしてる。
+
+![](../../image/bird_list/Anseriformes/Eurasian_Spott-billed_Duck1.jpg){.r-stretch .lightbox}
+
+## マガモ
+冬鳥。たまにオスの羽衣にそっくりなアヒルが混ざっている。
+
+![](../../image/bird_list/Anseriformes/Malard1.jpg){.r-stretch .lightbox}
+## オナガガモ
+冬鳥。体感最も数が多いカモ。
+
+カルガモが牛耳っていた沼は11月になるとオナガガモで溢れかえるので、カルガモは別の場所へ移動して静かにしているのを目にする
+
+![](../../image/bird_list/Anseriformes/Northern_Pintail1.jpg){.r-stretch .lightbox}
+
+## コガモ Green-winged Teal
+他のカモに比べて小さいからか、小ガモ単一の集団を作って越冬していることが多い印象。
+春先にはかわいい求愛ダンスを観察できたりする。
+
+![](../../image/bird_list/Anseriformes/Green-winged_Teal1.jpg){.r-stretch .lightbox}
+
+## オオホシハジロ Canvasback
+一度だけ河口で観察した。遠すぎてよく分からなかったが...
+
+![](../../image/bird_list/Anseriformes/Canvasback1.jpg){.r-stretch .lightbox}
+
+## ホシハジロ Common Pochard
+冬鳥。沼や河口にやってくる
+
+![](../../image/bird_list/Anseriformes/Common_Pochard1.jpg){.r-stretch .lightbox}
+
+## キンクロハジロ Tufted Duck
+英名通り、冠羽のあるカモ
+毎冬やってくる
+
+![](../../image/bird_list/Anseriformes/Tufted_Duck1.jpg){.r-stretch .lightbox}
+
+## スズガモ Greater Scaup
+冠羽のない方。メスは嘴基部が白い。キンクロよりも海水環境を好んでいる印象
+
+![](../../image/bird_list/Anseriformes/Greater_Scaup1.jpg){.r-stretch .lightbox}
+
+## シノリガモ Harlequin Duck
+冬鳥。漁港や河口にいたらラッキー。網地島航路で狙いたい鳥
+
+![](../../image/bird_list/Anseriformes/Harlequin_Duck1.jpg){.r-stretch .lightbox}
+
+## ビロードキンクロ Velvet Scoter
+冬鳥。漁港や河口にいたらラッキー。クロガモよりも観察頻度が少ない
+
+![](../../image/bird_list/Anseriformes/Velvet_Scoter1.jpg){.r-stretch .lightbox}
+
+## クロガモ Black Scoter
+よく漁港や河口に数羽だけ入っている。堤防からスコープを覗いて沖合を探すのがメイン
+
+![](../../image/bird_list/Anseriformes/Black_Scoter1.jpg){.r-stretch .lightbox}
+
+## ホオジロガモ Common Goldenee
+よく漁港や河口に入っている。気合いの入った応援団みたいな求愛ダンスは見たことない
+
+![](../../image/bird_list/Anseriformes/Common_Goldeneye1.jpg){.r-stretch .lightbox}
+
+## ミコアイサ Smew
+沼に多く入っている。オナガガモは越冬中もねぐらを変えるが、ミコアイサはずっと同じ沼を使っている印象
+
+![](../../image/bird_list/Anseriformes/Smew1.jpg){.r-stretch .lightbox}
+
+## ウミアイサ Red-brested Merganser
+よく河口や漁港に入っている。
+![](../../image/bird_list/Anseriformes/Red-brested_Merganser1.jpg){.r-stretch .lightbox}
+
+## カワアイサ Common Merganser
+川に入ってることが多い。著者はあまり会う機会がない
+![](../../image/bird_list/Anseriformes/Common_Merganser1.jpg){.r-stretch .lightbox}
+
+# 記録のあるガンカモ
+-   アオガン
+-   ミカドガン
+-   サカツラガン
+-   アラナミキンクロ
+-   アメリカビロードキンクロ
+-   コオリガモ

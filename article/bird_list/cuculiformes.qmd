@@ -1,0 +1,19 @@
+---
+title: "Cuckoos"
+format: revealjs
+---
+
+# Cuculiformes
+
+托卵・対趾足・しましまお腹・美声・鳴いてるときのポーズなど、属性もりもりのおもしろバード
+
+# Cuckoos in Miyagi
+-   ホトトギス
+-   カッコウ
+-   ツツドリ
+
+## カッコウ Common Cuckoo
+あまりの美声すぎて、英語・和蘭語・仏語・独語で鳴き声が名前の由来になってしまった鳥。調べたらほかにもありそう
+仙台市の鳥。数は減ってる気がする
+
+![](../../image/bird_list/Cuculiformes/Common_Cuckoo1.jpg){.r-stretch .lightbox}

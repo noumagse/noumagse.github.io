@@ -1,0 +1,12 @@
+---
+title: "宮城の鳥見リスト"
+format: html
+listing: 
+  contents: Miyagi
+  type: grid
+  sort: "date"
+  date-format: medium
+  categories: true
+  sort-ui: [title, date]
+---
+

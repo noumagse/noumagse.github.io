@@ -1,0 +1,11 @@
+---
+title: "遠征リスト"
+format: html
+listing: 
+  contents: Trip
+  type: grid
+  sort: "date"
+  date-format: medium
+  categories: true
+  sort-ui: [title, date]
+---

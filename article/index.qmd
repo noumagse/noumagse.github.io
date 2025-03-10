@@ -1,0 +1,9 @@
+---
+title: "index"
+format: 
+  html
+---
+
+## サンプルページ
+
+![Branta](image/bird_list/Anseriformes/Brant_Goose1.JPG){width="100%"}

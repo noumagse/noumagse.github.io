@@ -1,0 +1,47 @@
+project: 
+  type: website
+  output-dir: "docs"
+
+website: 
+  navbar: 
+    logo: image/branta_icon.JPG
+    tools:
+      - icon: twitter
+        href: https://x.com/ann0uman
+  title: "noumaのページ"
+  sidebar: 
+    style: "floating"
+    search: true
+    contents: 
+      - text: "About me"
+        href: https://noumagse.github.io/article/about.html
+      - section: "Bird"
+        contents: 
+          - text: "Miyagi"
+            href: https://noumagse.github.io/article/list_Miyagi.html
+          - text: "Trip"
+            href: https://noumagse.github.io/article/list_Trip.html
+          - text: "Ferry"
+            href: https://noumagse.github.io/article/list_ferry.html
+      - section: "Others"
+        contents: 
+          - text: "Food"
+            href: https://noumagse.github.io/article/others/food.html
+  page-footer: 
+    left: "Copyright 2025"
+
+format:
+  html:
+    css: "docs/styles.css"  # 共通のCSSファイル
+    lightbox: true
+    theme: 
+      light: flatly
+      dark: darkly
+    toc: true
+    toc-title: 目次
+    toc-location: left
+    number-sections: false  # セクション番号を非表示
+    mainfont: sans-serif;
+    fontcolor: black;
+    linkcolor: hsla(237deg 74% 33% / 61%);
+    

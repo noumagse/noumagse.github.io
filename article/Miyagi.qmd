@@ -1,0 +1,20 @@
+---
+title: "Miyagi"
+format: html
+---
+
+## 宮城の記録
+
+[沼１](https://noumagse.github.io/article/numa1.html)
+
+[河口１](https://noumagse.github.io/article/kakou1.html)
+
+[河口２](https://noumagse.github.io/article/kakou2.html)
+
+[県北ガン](https://noumagse.github.io/article/kenpou_goose.html)
+
+[県北その他](https://noumagse.github.io/article/kenpou_general.html)
+
+[県南](https://noumagse.github.io/article/kennan.html)
+
+[田んぼ・川](https://noumagse.github.io/article/ricefield.html)

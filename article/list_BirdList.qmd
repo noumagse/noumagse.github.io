@@ -1,0 +1,16 @@
+---
+title: "名鑑リスト"
+format: html
+listing: 
+  contents: bird_list
+  type: grid
+  sort: "date"
+  date-format: medium
+  categories: true
+  sort-ui: [title, date]
+---
+
+私的野鳥目録。
+・識別点<-専門性なし
+・鳥周りの知識まとめ
+・鳥についての所感

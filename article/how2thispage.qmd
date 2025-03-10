@@ -1,0 +1,21 @@
+---
+title: "How2ThisPage"
+format: 
+  html
+---
+
+# このサイトの作り方
+
+以下を用いている。
+
+1.  Rstudio（Quarto）
+
+2.  VScode（Powershell/ terminal）
+
+3.  Github
+
+-   .mdという拡張子で文章を執筆し、それをHTML形式にレンダリングしてくれるQuartoを、Rstudio上でいじる
+
+-   Github Pagesの機能を使って個人サイトを作成した。アカウントを作ったり、Githubの知識が必要だけど無料でサイト運営できる（容量に制限があるので、大量の画像をアップしたりは出来ない）
+
+-   VScodeで、Local環境のQuarto記事をgithubにpushする。

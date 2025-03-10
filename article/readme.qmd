@@ -1,0 +1,26 @@
+---
+title: "REDAME.md"
+format: html
+---
+
+## rmdで記事を執筆する
+
+### やりたいこと
+
+Rstudio上で.qmd記事を書き、htmlにrenderした後githubに公開したりしたい
+
+### 適当なlocalディレクトリのgit環境作成
+
+ssh-keygen -t ed25519 -C youremail@hogehoge.com -f ~/.ssh/id_ed25519_githublog
+生成した公開鍵（.pubファイル）をcatコマンドなどでコピーし、githubの「Settings -&gt; SSH and GPG keys -&gt; New ssh key」にペースト。
+＊githubアカウントを使い分けているときは、configファイルに記述しておく
+
+### エラー１ git-push時頻繁にpermission-denied.される
+eval $(ssh-agent -s)
+
+ssh-add ~/.ssh/id_ed25519_githublog
+
+### エラー２ 一部のファイルの変更が戻される
+エラー２ 一部のファイルの変更が戻される
+
+症例：エクスプローラーなどの外部（？）で変更したものをVScodeでやるときに、変更が元に戻されている。 例えば、画像の名前を変えてディレクトリの変更などをしても、元々の状態に戻されるので画像が消えたり、記述した行がなくなっていたりする。
