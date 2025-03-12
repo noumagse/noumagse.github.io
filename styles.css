@@ -1,4 +1,5 @@
 /* サイドバーのスタイル */
+/*
 .sidebar {
   position: fixed;
   top: 0;
@@ -22,6 +23,7 @@
 .sidebar a:hover {
   background-color: #575757;
 }
+*/
 
 /* メインコンテンツの調整 */
 body {
@@ -33,4 +35,17 @@ body {
 #TOC {
   font-size: 14px;  /* フォントサイズを変更 */
   color: #18bc9c;  /* テキストの色を変更 */
+}
+
+/*favicon*/
+.favicon {
+  width: 32px;
+  height: 32px;
+}
+
+.header-logo {
+  height: 50px; /* 適宜調整 */
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
 }

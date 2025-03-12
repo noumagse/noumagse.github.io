@@ -6,5 +6,5 @@ format:
 
 ## サンプルページ
 
-![Branta](../image/branta.JPG){width="100%"}
+![Brant](image/Brant0.JPG){width="100%"}
 
