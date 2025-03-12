@@ -572,5 +572,61 @@
     "title": "index",
     "section": "",
     "text": "Branta"
+  },
+  {
+    "objectID": "setup.html",
+    "href": "setup.html",
+    "title": "Environment_setup",
+    "section": "",
+    "text": "Lenovoのやつ。スペックは以下"
+  },
+  {
+    "objectID": "setup.html#pcを新調した",
+    "href": "setup.html#pcを新調した",
+    "title": "Environment_setup",
+    "section": "",
+    "text": "Lenovoのやつ。スペックは以下"
+  },
+  {
+    "objectID": "setup.html#環境の新調",
+    "href": "setup.html#環境の新調",
+    "title": "Environment_setup",
+    "section": "環境の新調",
+    "text": "環境の新調\n大学入学当初に購入した以前のPCは著者の無知（ムチムチ）によりディレクトリの構造などが終わっている。（ホームディレクトリがCドライブ以下のユーザーではないディレクトリにあったりする）。\n\nGithub Pagesでブログ・ホムペ作成をする\n仕事・趣味で野良データを拾って解析したり可視化するのにtidyverse、ggplot2を使う\nVScodeとRstudioを引き継ぐことにした。Githubもね。"
+  },
+  {
+    "objectID": "setup.html#vscodeのセットアップ",
+    "href": "setup.html#vscodeのセットアップ",
+    "title": "Environment_setup",
+    "section": "1. VScodeのセットアップ",
+    "text": "1. VScodeのセットアップ\nVScodeをインストールし、コーディングに便利なもろもろの拡張機能をダウンロードした。\nwindowsではPowershellというターミナルが使われている。なんとここではwcなどの一部のコマンドが使えないのだ！lsは使えるのに…\nwcはLinux由来のコマンドらしい。windowsで使うにはWSL（LinuxをWindowsでも使えるようにします）を準備する必要がある。以前のPCに何となく入れたUbuntu22.04はこれだったのか"
+  },
+  {
+    "objectID": "setup.html#wslの準備",
+    "href": "setup.html#wslの準備",
+    "title": "Environment_setup",
+    "section": "2. WSLの準備",
+    "text": "2. WSLの準備\nVScodeでpowershellを開き、以下を入力\nwsl –install\nこれでwslインストールが始まる。その後PC本体を再起動するように求められる。\n再起動後、Ubuntu 24.04 01をmicrosoft storeからインストールし、startボタンから起動させる。\nEnter new UNIX username:\nNew password:\nRetype new password:\n上のように、UNIXの名前とパスワードを求められた。入力しておく。これで晴れて、WindowsでLinuxが使えるようになった！\nしっかりインストールされたか確認するために、VScodeで以下を実行\nwsl -l -v\nアウトプットはこちら\n  NAME            STATE           VERSION\n* Ubuntu-24.04    Running         2\n大丈夫そう"
+  },
+  {
+    "objectID": "setup.html#vscodeでubuntuを動かす",
+    "href": "setup.html#vscodeでubuntuを動かす",
+    "title": "Environment_setup",
+    "section": "3. VScodeでUbuntuを動かす",
+    "text": "3. VScodeでUbuntuを動かす\nVScodeの拡張機能でWSLをインストール。Remote-WSLがおすすめらしいが見当たらなかった。\nその後、Terminalの切り替えを行いUbuntuにアクセスできた。echo $SHELLで/bin/bashが表示されたので勝ち\nTo run a command as administrator (user \"root\"), use \"sudo &lt;command&gt;\".\nSee \"man sudo_root\" for details.\n\nusername@yourmachine:/mnt/c/Users/hogehoge/$\nせっかくなので、VScode起動時に開くデフォルトターミナルをUbuntuにしよう。\n\nCommand + Shift + Pでコマンドパレットを開く。\nTerminal: Select Default Profileで検索、WSLに変更する。\n\nこれでOK。"
+  },
+  {
+    "objectID": "setup.html#vscodeとgitの連携",
+    "href": "setup.html#vscodeとgitの連携",
+    "title": "Environment_setup",
+    "section": "4. VScodeとgitの連携",
+    "text": "4. VScodeとgitの連携\nGithubはあらかじめレポジトリを作成済。\n\n新しいPCにGitをインストール。ポップアップに従い進める。\n先ほど用意したVScodeのUbuntu環境で、以下を実行\n$ ssh-keygen``-t rsa -b 4096 -C \"your_email@example.com\"\nyour_email@example.comには、githubのレポジトリに登録したメアド。Enterを押して完成\ncat ~/.ssh/id_rsa.pubで公開鍵を表示しコピー。remote repositoryのsettingsからNew SSH keyを見つけ、登録する。この時コピーしたkeyをペーストする\nVScodeに戻り、ssh -T git@github.comで接続を確認する。初めて接続するときは、以下で始まる警告文が表示されるので、Yesをクリック\nThe authenticity of host\nさいごにlocalにgithubアカウントを教える\n\n$ git config user.email \"youremail\"\n$ git config user.name \"yourname\"\n$ git remote add origin git@github.com:Username/yourrepository\nここで入力するyournameとyouremailはremoteのレポジトリに登録したもの\nここで入力するorigin以降は、remote repositoryの緑色のcodeボタンを押し、「code-&gt;local」で表示されるsshを入力\nもろもろ\n\ngit branchをlocalでやるとmasterbranchなのに、remoteはmainだったとき\n\ngit branch m mainでlocalのbranch名をmainに変えた"
+  },
+  {
+    "objectID": "article/settings/how2thispage.html",
+    "href": "article/settings/how2thispage.html",
+    "title": "How2ThisPage",
+    "section": "",
+    "text": "このサイトの作り方\n以下を用いている。\n\nRstudio（Quarto）\nVScode（Powershell/ terminal）\nGithub\n\n\n.mdという拡張子で文章を執筆し、それをHTML形式にレンダリングしてくれるQuartoを、Rstudio上でいじる\nGithub Pagesの機能を使って個人サイトを作成した。アカウントを作ったり、Githubの知識が必要だけど無料でサイト運営できる（容量に制限があるので、大量の画像をアップしたりは出来ない）\nVScodeで、Local環境のQuarto記事をgithubにpushする。"
   }
 ]

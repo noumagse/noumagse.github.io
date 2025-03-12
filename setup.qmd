@@ -1,0 +1,114 @@
+---
+title: "Environment_setup"
+format: html
+editor: visual
+---
+
+## PCを新調した
+
+Lenovoのやつ。スペックは以下
+
+## 環境の新調
+
+大学入学当初に購入した以前のPCは著者の無知（ムチムチ）によりディレクトリの構造などが終わっている。（ホームディレクトリがCドライブ以下のユーザーではないディレクトリにあったりする）。
+
+-   Github Pagesでブログ・ホムペ作成をする
+
+-   仕事・趣味で野良データを拾って解析したり可視化するのにtidyverse、ggplot2を使う
+
+    VScodeとRstudioを引き継ぐことにした。Githubもね。
+
+## 1. VScodeのセットアップ
+
+VScodeをインストールし、コーディングに便利なもろもろの拡張機能をダウンロードした。
+
+windowsではPowershellというターミナルが使われている。なんとここでは`wc`などの一部のコマンドが使えないのだ！`ls`は使えるのに...
+
+`wc`はLinux由来のコマンドらしい。windowsで使うにはWSL（LinuxをWindowsでも使えるようにします）を準備する必要がある。以前のPCに何となく入れたUbuntu22.04はこれだったのか
+
+## 2. WSLの準備
+
+VScodeでpowershellを開き、以下を入力
+
+`wsl –install`
+
+これでwslインストールが始まる。その後PC本体を再起動するように求められる。
+
+再起動後、`Ubuntu 24.04 01`をmicrosoft storeからインストールし、startボタンから起動させる。
+
+```         
+Enter new UNIX username:
+New password:
+Retype new password:
+```
+
+上のように、UNIXの名前とパスワードを求められた。入力しておく。これで晴れて、WindowsでLinuxが使えるようになった！
+
+しっかりインストールされたか確認するために、VScodeで以下を実行
+
+```         
+wsl -l -v
+```
+
+アウトプットはこちら
+
+```         
+  NAME            STATE           VERSION
+* Ubuntu-24.04    Running         2
+```
+
+大丈夫そう
+
+## 3. VScodeでUbuntuを動かす
+
+VScodeの拡張機能で`WSL`をインストール。`Remote-WSL`がおすすめらしいが見当たらなかった。
+
+その後、Terminalの切り替えを行いUbuntuにアクセスできた。`echo $SHELL`で`/bin/bash`が表示されたので勝ち
+
+```         
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+username@yourmachine:/mnt/c/Users/hogehoge/$
+```
+
+せっかくなので、VScode起動時に開くデフォルトターミナルをUbuntuにしよう。
+
+1.  `Command + Shift + P`でコマンドパレットを開く。
+2.  Terminal: Select Default Profileで検索、WSLに変更する。
+
+これでOK。
+
+## 4. VScodeとgitの連携
+
+Githubはあらかじめレポジトリを作成済。
+
+1.  新しいPCに[Git](https://gitforwindows.org/)をインストール。ポップアップに従い進める。
+
+2.  先ほど用意したVScodeのUbuntu環境で、以下を実行\
+    ``` $ ssh-keygen``-t rsa -b 4096 -C "your_email@example.com" ```
+
+    `your_email@example.com`には、githubのレポジトリに登録したメアド。Enterを押して完成
+
+3.  `cat ~/.ssh/id_rsa.pub`で公開鍵を表示しコピー。remote repositoryのsettingsからNew SSH keyを見つけ、登録する。この時コピーしたkeyをペーストする
+
+4.  VScodeに戻り、`ssh -T git@github.com`で接続を確認する。初めて接続するときは、以下で始まる警告文が表示されるので、Yesをクリック\
+    `The authenticity of host`
+
+5.  さいごにlocalにgithubアカウントを教える
+
+```         
+$ git config user.email "youremail"
+$ git config user.name "yourname"
+$ git remote add origin git@github.com:Username/yourrepository
+```
+
+ここで入力するyournameとyouremailはremoteのレポジトリに登録したもの
+
+ここで入力するorigin以降は、remote repositoryの緑色のcodeボタンを押し、「code-\>local」で表示されるsshを入力
+
+もろもろ
+
+-   `git branch`をlocalでやると`master`branchなのに、remoteは`main`だったとき
+
+`git branch m main`でlocalのbranch名をmainに変えた

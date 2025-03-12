@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Quarto勉強 – noumaのページ</title>
+<title>Environment_setup – noumaのページ</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -41,9 +41,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -102,7 +99,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Quarto勉強</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Environment_setup</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -180,8 +177,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">目次</h2>
    
   <ul>
-  <li><a href="#render" id="toc-render" class="nav-link active" data-scroll-target="#render">Render</a></li>
-  <li><a href="#画像追加" id="toc-画像追加" class="nav-link" data-scroll-target="#画像追加">画像追加</a></li>
+  <li><a href="#pcを新調した" id="toc-pcを新調した" class="nav-link active" data-scroll-target="#pcを新調した">PCを新調した</a></li>
+  <li><a href="#環境の新調" id="toc-環境の新調" class="nav-link" data-scroll-target="#環境の新調">環境の新調</a></li>
+  <li><a href="#vscodeのセットアップ" id="toc-vscodeのセットアップ" class="nav-link" data-scroll-target="#vscodeのセットアップ">1. VScodeのセットアップ</a></li>
+  <li><a href="#wslの準備" id="toc-wslの準備" class="nav-link" data-scroll-target="#wslの準備">2. WSLの準備</a></li>
+  <li><a href="#vscodeでubuntuを動かす" id="toc-vscodeでubuntuを動かす" class="nav-link" data-scroll-target="#vscodeでubuntuを動かす">3. VScodeでUbuntuを動かす</a></li>
+  <li><a href="#vscodeとgitの連携" id="toc-vscodeとgitの連携" class="nav-link" data-scroll-target="#vscodeとgitの連携">4. VScodeとgitの連携</a></li>
   </ul>
 </nav>
 </nav>
@@ -194,7 +195,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Quarto勉強</h1>
+<h1 class="title">Environment_setup</h1>
 </div>
 
 
@@ -211,21 +212,80 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>このサイトはQuartoで作成している。</p>
-<section id="render" class="level3">
-<h3 class="anchored" data-anchor-id="render">Render</h3>
-<p>一括Render：Rstudioでショートカット（Ctrl + Shift + B）。もしくはTool bar-&gt;Build-&gt;Render Website</p>
+<section id="pcを新調した" class="level2">
+<h2 class="anchored" data-anchor-id="pcを新調した">PCを新調した</h2>
+<p>Lenovoのやつ。スペックは以下</p>
 </section>
-<section id="画像追加" class="level3">
-<h3 class="anchored" data-anchor-id="画像追加">画像追加</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="&quot;your path to image file&quot;.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="“sentence”"><img src="&quot;your path to image file&quot;.png" class="img-fluid figure-img" style="width:100.0%" alt="“sentence”"></a></p>
-<figcaption>“sentence”</figcaption>
-</figure>
-</div>
-<p>{.lightbox}：クリックで拡大表示</p>
-<p>{width=“100%”}：画像の表示サイズ</p>
+<section id="環境の新調" class="level2">
+<h2 class="anchored" data-anchor-id="環境の新調">環境の新調</h2>
+<p>大学入学当初に購入した以前のPCは著者の無知（ムチムチ）によりディレクトリの構造などが終わっている。（ホームディレクトリがCドライブ以下のユーザーではないディレクトリにあったりする）。</p>
+<ul>
+<li><p>Github Pagesでブログ・ホムペ作成をする</p></li>
+<li><p>仕事・趣味で野良データを拾って解析したり可視化するのにtidyverse、ggplot2を使う</p>
+<p>VScodeとRstudioを引き継ぐことにした。Githubもね。</p></li>
+</ul>
+</section>
+<section id="vscodeのセットアップ" class="level2">
+<h2 class="anchored" data-anchor-id="vscodeのセットアップ">1. VScodeのセットアップ</h2>
+<p>VScodeをインストールし、コーディングに便利なもろもろの拡張機能をダウンロードした。</p>
+<p>windowsではPowershellというターミナルが使われている。なんとここでは<code>wc</code>などの一部のコマンドが使えないのだ！<code>ls</code>は使えるのに…</p>
+<p><code>wc</code>はLinux由来のコマンドらしい。windowsで使うにはWSL（LinuxをWindowsでも使えるようにします）を準備する必要がある。以前のPCに何となく入れたUbuntu22.04はこれだったのか</p>
+</section>
+<section id="wslの準備" class="level2">
+<h2 class="anchored" data-anchor-id="wslの準備">2. WSLの準備</h2>
+<p>VScodeでpowershellを開き、以下を入力</p>
+<p><code>wsl –install</code></p>
+<p>これでwslインストールが始まる。その後PC本体を再起動するように求められる。</p>
+<p>再起動後、<code>Ubuntu 24.04 01</code>をmicrosoft storeからインストールし、startボタンから起動させる。</p>
+<pre><code>Enter new UNIX username:
+New password:
+Retype new password:</code></pre>
+<p>上のように、UNIXの名前とパスワードを求められた。入力しておく。これで晴れて、WindowsでLinuxが使えるようになった！</p>
+<p>しっかりインストールされたか確認するために、VScodeで以下を実行</p>
+<pre><code>wsl -l -v</code></pre>
+<p>アウトプットはこちら</p>
+<pre><code>  NAME            STATE           VERSION
+* Ubuntu-24.04    Running         2</code></pre>
+<p>大丈夫そう</p>
+</section>
+<section id="vscodeでubuntuを動かす" class="level2">
+<h2 class="anchored" data-anchor-id="vscodeでubuntuを動かす">3. VScodeでUbuntuを動かす</h2>
+<p>VScodeの拡張機能で<code>WSL</code>をインストール。<code>Remote-WSL</code>がおすすめらしいが見当たらなかった。</p>
+<p>その後、Terminalの切り替えを行いUbuntuにアクセスできた。<code>echo $SHELL</code>で<code>/bin/bash</code>が表示されたので勝ち</p>
+<pre><code>To run a command as administrator (user "root"), use "sudo &lt;command&gt;".
+See "man sudo_root" for details.
+
+username@yourmachine:/mnt/c/Users/hogehoge/$</code></pre>
+<p>せっかくなので、VScode起動時に開くデフォルトターミナルをUbuntuにしよう。</p>
+<ol type="1">
+<li><code>Command + Shift + P</code>でコマンドパレットを開く。</li>
+<li>Terminal: Select Default Profileで検索、WSLに変更する。</li>
+</ol>
+<p>これでOK。</p>
+</section>
+<section id="vscodeとgitの連携" class="level2">
+<h2 class="anchored" data-anchor-id="vscodeとgitの連携">4. VScodeとgitの連携</h2>
+<p>Githubはあらかじめレポジトリを作成済。</p>
+<ol type="1">
+<li><p>新しいPCに<a href="https://gitforwindows.org/">Git</a>をインストール。ポップアップに従い進める。</p></li>
+<li><p>先ほど用意したVScodeのUbuntu環境で、以下を実行<br>
+<code>$ ssh-keygen``-t rsa -b 4096 -C "your_email@example.com"</code></p>
+<p><code>your_email@example.com</code>には、githubのレポジトリに登録したメアド。Enterを押して完成</p></li>
+<li><p><code>cat ~/.ssh/id_rsa.pub</code>で公開鍵を表示しコピー。remote repositoryのsettingsからNew SSH keyを見つけ、登録する。この時コピーしたkeyをペーストする</p></li>
+<li><p>VScodeに戻り、<code>ssh -T git@github.com</code>で接続を確認する。初めて接続するときは、以下で始まる警告文が表示されるので、Yesをクリック<br>
+<code>The authenticity of host</code></p></li>
+<li><p>さいごにlocalにgithubアカウントを教える</p></li>
+</ol>
+<pre><code>$ git config user.email "youremail"
+$ git config user.name "yourname"
+$ git remote add origin git@github.com:Username/yourrepository</code></pre>
+<p>ここで入力するyournameとyouremailはremoteのレポジトリに登録したもの</p>
+<p>ここで入力するorigin以降は、remote repositoryの緑色のcodeボタンを押し、「code-&gt;local」で表示されるsshを入力</p>
+<p>もろもろ</p>
+<ul>
+<li><code>git branch</code>をlocalでやると<code>master</code>branchなのに、remoteは<code>main</code>だったとき</li>
+</ul>
+<p><code>git branch m main</code>でlocalのbranch名をmainに変えた</p>
 
 
 </section>
@@ -809,38 +869,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":false,"openEffect":"zoom","descPosition":"bottom"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 

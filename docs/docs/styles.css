@@ -1,0 +1,36 @@
+/* サイドバーのスタイル */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #333;
+  padding-top: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #18bc9c;
+  display: block;
+}
+
+.sidebar a:hover {
+  background-color: #575757;
+}
+
+/* メインコンテンツの調整 */
+body {
+  margin-left: 220px; /* サイドバーの幅分余白を確保 */
+  font-family: Arial, sans-serif;
+}
+
+/*TOC（目次）*/
+#TOC {
+  font-size: 14px;  /* フォントサイズを変更 */
+  color: #18bc9c;  /* テキストの色を変更 */
+}
