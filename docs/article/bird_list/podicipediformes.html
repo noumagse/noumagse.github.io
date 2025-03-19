@@ -7,7 +7,10 @@
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
   <title>noumaのページ – Grebes</title>
@@ -336,6 +339,7 @@
 <p>カイツブリ類。八版に記載されたカイツブリ類5種は宮城でも見られる</p>
 </section>
 
+<section>
 <section id="grebes-in-miyagi" class="title-slide slide level1 center">
 <h1>Grebes in Miyagi</h1>
 <ul>
@@ -345,13 +349,50 @@
 <li>ミミカイツブリ</li>
 <li>ハジロカイツブリ</li>
 </ul>
+</section>
+<section id="カイツブリ-little-grebe" class="slide level2">
+<h2>カイツブリ Little Grebe</h2>
+<ul>
+<li>素速い潜水者（Tachybaptus）</li>
+<li>留鳥。繁殖もする。</li>
+</ul>
 
-<div class="quarto-auto-generated-content">
+<img data-src="../../image/bird_list/Podicipediformes/Little_Grebe1.jpg" class="r-stretch"></section>
+<section id="アカエリカイツブリ-red-necked-grebe" class="slide level2">
+<h2>アカエリカイツブリ Red-necked Grebe</h2>
+<ul>
+<li>冬鳥。河口や漁港などに入ってる。嘴が黄色く、他のカイツブリより大きい</li>
+<li>冬羽は首の赤襟がなくなって黒っぽくなる</li>
+</ul>
+
+<img data-src="../../image/bird_list/Podicipediformes/Red-necked_Grebe1.jpg" class="r-stretch"></section>
+<section id="カンムリカイツブリ" class="slide level2">
+<h2>カンムリカイツブリ</h2>
+<ul>
+<li>冬鳥だが場所によって留鳥として繁殖している個体もいる。</li>
+<li>幼鳥を背中に乗せてるとほっこりする</li>
+</ul>
+
+<img data-src="../../image/bird_list/Podicipediformes/Great_Crested_Grebe1.jpg" class="r-stretch"></section>
+<section id="ミミカイツブリ-horned-grebe" class="slide level2">
+<h2>ミミカイツブリ Horned Grebe</h2>
+<ul>
+<li>冬鳥だが、体感一番少ない印象。たまに漁港とか河口に入っていると嬉しい</li>
+</ul>
+</section>
+<section id="ハジロカイツブリ-black-necked-grebe" class="slide level2">
+<h2>ハジロカイツブリ Black-necked Grebe</h2>
+<ul>
+<li>冬鳥。春先に沖合で大量の群れになっているのを陸から観察できることがある</li>
+</ul>
+
+
+<img data-src="../../image/bird_list/Podicipediformes/Black-necked_Grebe1.jpg" class="r-stretch"><div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
@@ -749,6 +790,38 @@
       }
     });
     </script>
+    <script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom","closeEffect":"zoom"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
     
 
 </body></html>

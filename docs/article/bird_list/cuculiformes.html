@@ -7,7 +7,10 @@
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
   <title>noumaのページ – Cuckoos</title>
@@ -331,20 +334,26 @@
 </div>
 
 </section>
-<section>
 <section id="cuculiformes" class="title-slide slide level1 center">
 <h1>Cuculiformes</h1>
 <p>托卵・対趾足・しましまお腹・美声・鳴いてるときのポーズなど、属性もりもりのおもしろバード</p>
 </section>
-<section id="cuckoos-in-miyagi" class="slide level2">
-<h2>Cuckoos in Miyagi</h2>
+
+<section>
+<section id="cuckoos-in-miyagi" class="title-slide slide level1 center">
+<h1>Cuckoos in Miyagi</h1>
 <ul>
 <li>ホトトギス</li>
 <li>カッコウ</li>
 <li>ツツドリ</li>
 </ul>
+</section>
+<section id="カッコウ-common-cuckoo" class="slide level2">
+<h2>カッコウ Common Cuckoo</h2>
+<p>あまりの美声すぎて、英語・和蘭語・仏語・独語で鳴き声が名前の由来になってしまった鳥。調べたらほかにもありそう 仙台市の鳥。数は減ってる気がする</p>
 
-<div class="quarto-auto-generated-content">
+
+<img data-src="../../image/bird_list/Cuculiformes/Common_Cuckoo1.jpg" class="r-stretch"><div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
@@ -747,6 +756,38 @@
       }
     });
     </script>
+    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","openEffect":"zoom","loop":false});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
     
 
 </body></html>

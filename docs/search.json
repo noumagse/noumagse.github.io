@@ -1,108 +1,66 @@
 [
   {
-    "objectID": "quarto_learning.html",
-    "href": "quarto_learning.html",
-    "title": "Quarto勉強",
+    "objectID": "setup.html",
+    "href": "setup.html",
+    "title": "Environment_setup",
     "section": "",
-    "text": "このサイトはQuartoで作成している。\n\nRender\n一括Render：Rstudioでショートカット（Ctrl + Shift + B）。もしくはTool bar-&gt;Build-&gt;Render Website\n\n\n画像追加\n\n\n\n“sentence”\n\n\n{.lightbox}：クリックで拡大表示\n{width=“100%”}：画像の表示サイズ"
+    "text": "Lenovoのやつ。スペックは以下"
   },
   {
-    "objectID": "article/Trip.html",
-    "href": "article/Trip.html",
-    "title": "Trip",
+    "objectID": "setup.html#pcを新調した",
+    "href": "setup.html#pcを新調した",
+    "title": "Environment_setup",
     "section": "",
-    "text": "[2021.03 道東探鳥]\n[2022.08 函館～苫小牧（観光多め）]\n2023.12 道東探鳥\n[2024.05 天売島]\n[2024.09 苫小牧]\n\n\n\n[2022.03 青森・弘前]\n[2024.09 青森・龍飛ほか]\n[2022.12 秋田ハクガン]\n[2024.11 秋田ハクガン２]\n[2024.10 山形・飛島]\n##関東 [2023.08 戦場ヶ原]\n[2024.09 谷津干潟]\n[2024.12 三番瀬・葛西]\n\n\n\n[2024.03 裏日本周遊]\n\n\n\n[2022.12～2023.01 九州探鳥]\n\n\n\n[2023.03 石垣島]"
+    "text": "Lenovoのやつ。スペックは以下"
   },
   {
-    "objectID": "article/Trip.html#北海道",
-    "href": "article/Trip.html#北海道",
-    "title": "Trip",
+    "objectID": "setup.html#環境の新調",
+    "href": "setup.html#環境の新調",
+    "title": "Environment_setup",
+    "section": "環境の新調",
+    "text": "環境の新調\n大学入学当初に購入した以前のPCは著者の無知（ムチムチ）によりディレクトリの構造などが終わっている。（ホームディレクトリがCドライブ以下のユーザーではないディレクトリにあったりする）。\n\nGithub Pagesでブログ・ホムペ作成をする\n仕事・趣味で野良データを拾って解析したり可視化するのにtidyverse、ggplot2を使う\nVScodeとRstudioを引き継ぐことにした。Githubもね。"
+  },
+  {
+    "objectID": "setup.html#vscodeのセットアップ",
+    "href": "setup.html#vscodeのセットアップ",
+    "title": "Environment_setup",
+    "section": "1. VScodeのセットアップ",
+    "text": "1. VScodeのセットアップ\nVScodeをインストールし、コーディングに便利なもろもろの拡張機能をダウンロードした。\nwindowsではPowershellというターミナルが使われている。なんとここではwcなどの一部のコマンドが使えないのだ！lsは使えるのに…\nwcはLinux由来のコマンドらしい。windowsで使うにはWSL（LinuxをWindowsでも使えるようにします）を準備する必要がある。以前のPCに何となく入れたUbuntu22.04はこれだったのか"
+  },
+  {
+    "objectID": "setup.html#wslの準備",
+    "href": "setup.html#wslの準備",
+    "title": "Environment_setup",
+    "section": "2. WSLの準備",
+    "text": "2. WSLの準備\nVScodeでpowershellを開き、以下を入力\nwsl –install\nこれでwslインストールが始まる。その後PC本体を再起動するように求められる。\n再起動後、Ubuntu 24.04 01をmicrosoft storeからインストールし、startボタンから起動させる。\nEnter new UNIX username:\nNew password:\nRetype new password:\n上のように、UNIXの名前とパスワードを求められた。入力しておく。これで晴れて、WindowsでLinuxが使えるようになった！\nしっかりインストールされたか確認するために、VScodeで以下を実行\nwsl -l -v\nアウトプットはこちら\n  NAME            STATE           VERSION\n* Ubuntu-24.04    Running         2\n大丈夫そう"
+  },
+  {
+    "objectID": "setup.html#vscodeでubuntuを動かす",
+    "href": "setup.html#vscodeでubuntuを動かす",
+    "title": "Environment_setup",
+    "section": "3. VScodeでUbuntuを動かす",
+    "text": "3. VScodeでUbuntuを動かす\nVScodeの拡張機能でWSLをインストール。Remote-WSLがおすすめらしいが見当たらなかった。\nその後、Terminalの切り替えを行いUbuntuにアクセスできた。echo $SHELLで/bin/bashが表示されたので勝ち\nTo run a command as administrator (user \"root\"), use \"sudo &lt;command&gt;\".\nSee \"man sudo_root\" for details.\n\nusername@yourmachine:/mnt/c/Users/hogehoge/$\nせっかくなので、VScode起動時に開くデフォルトターミナルをUbuntuにしよう。\n\nCommand + Shift + Pでコマンドパレットを開く。\nTerminal: Select Default Profileで検索、WSLに変更する。\n\nこれでOK。"
+  },
+  {
+    "objectID": "setup.html#vscodeとgitの連携",
+    "href": "setup.html#vscodeとgitの連携",
+    "title": "Environment_setup",
+    "section": "4. VScodeとgitの連携",
+    "text": "4. VScodeとgitの連携\nGithubはあらかじめレポジトリを作成済。\n\n新しいPCにGitをインストール。ポップアップに従い進める。\n先ほど用意したVScodeのUbuntu環境で、以下を実行\n$ ssh-keygen``-t rsa -b 4096 -C \"your_email@example.com\"\nyour_email@example.comには、githubのレポジトリに登録したメアド。Enterを押して完成\ncat ~/.ssh/id_rsa.pubで公開鍵を表示しコピー。remote repositoryのsettingsからNew SSH keyを見つけ、登録する。この時コピーしたkeyをペーストする\nVScodeに戻り、ssh -T git@github.comで接続を確認する。初めて接続するときは、以下で始まる警告文が表示されるので、Yesをクリック\nThe authenticity of host\nさいごにlocalにgithubアカウントを教える\n\n$ git config user.email \"youremail\"\n$ git config user.name \"yourname\"\n$ git remote add origin git@github.com:Username/yourrepository\nここで入力するyournameとyouremailはremoteのレポジトリに登録したもの\nここで入力するorigin以降は、remote repositoryの緑色のcodeボタンを押し、「code-&gt;local」で表示されるsshを入力\nもろもろ\n\ngit branchをlocalでやるとmasterbranchなのに、remoteはmainだったとき\n\ngit branch m mainでlocalのbranch名をmainに変えた"
+  },
+  {
+    "objectID": "article/settings/how2thispage.html",
+    "href": "article/settings/how2thispage.html",
+    "title": "How2ThisPage",
     "section": "",
-    "text": "[2021.03 道東探鳥]\n[2022.08 函館～苫小牧（観光多め）]\n2023.12 道東探鳥\n[2024.05 天売島]\n[2024.09 苫小牧]"
+    "text": "以下を用いている。\n\nRstudio（Quarto）\nVScode（Powershell/ terminal）\nGithub\n\n\n.mdという拡張子で文章を執筆し、それをHTML形式にレンダリングしてくれるQuartoを、Rstudio上でいじる\nGithub Pagesの機能を使って個人サイトを作成した。アカウントを作ったり、Githubの知識が必要だけど無料でサイト運営できる（容量に制限があるので、大量の画像をアップしたりは出来ない）\nVScodeで、Local環境のQuarto記事をgithubにpushする。\n\n\n\n・_quarto.ymlを編集した後は、必ずqmdを一度renderする\n\n\n\nwebsite開発中に遭遇したエラーを記述しておく\n\n\n症例：\n_quarto.ymlを記述後、「Build-&gt;render website」をすると、ディレクトリ内のすべての.qmdが.htmlにrenderされる。しかし、前々から出力先に置いていたimage/ディレクトリが消えてしまう。（いちいちgit restore docs/で復元しなければならなかった…）\n→\nrender時、デフォルトでは一度ディレクトリをresetするらしい。このときディレクトリのresetを回避するために、_quarto.ymlに以下を記述した。\nproject: \n  type: website\n  output-dir: docs\n  render: \n    - \"*.qmd\"\n  resources: \n    - \"image/\"\nもう一度renderしたら、無事残った！！\ndocs |- article |- site_libs |- static |- image"
   },
   {
-    "objectID": "article/Trip.html#東北",
-    "href": "article/Trip.html#東北",
-    "title": "Trip",
+    "objectID": "article/settings/how2thispage.html#quarto使用時の注意点",
+    "href": "article/settings/how2thispage.html#quarto使用時の注意点",
+    "title": "How2ThisPage",
     "section": "",
-    "text": "[2022.03 青森・弘前]\n[2024.09 青森・龍飛ほか]\n[2022.12 秋田ハクガン]\n[2024.11 秋田ハクガン２]\n[2024.10 山形・飛島]\n##関東 [2023.08 戦場ヶ原]\n[2024.09 谷津干潟]\n[2024.12 三番瀬・葛西]"
-  },
-  {
-    "objectID": "article/Trip.html#中部",
-    "href": "article/Trip.html#中部",
-    "title": "Trip",
-    "section": "",
-    "text": "[2024.03 裏日本周遊]"
-  },
-  {
-    "objectID": "article/Trip.html#九州",
-    "href": "article/Trip.html#九州",
-    "title": "Trip",
-    "section": "",
-    "text": "[2022.12～2023.01 九州探鳥]"
-  },
-  {
-    "objectID": "article/Trip.html#八重山",
-    "href": "article/Trip.html#八重山",
-    "title": "Trip",
-    "section": "",
-    "text": "[2023.03 石垣島]"
-  },
-  {
-    "objectID": "article/Trip/Dec23_Hokkaido.html",
-    "href": "article/Trip/Dec23_Hokkaido.html",
-    "title": "道東遠征",
-    "section": "",
-    "text": "12月下旬、飛行機で新千歳空港に降り立った。現地で案内役を買って出てくれた友人との待ち合わせ時間は夜なので、それまで適当に時間を潰すことにした。\n同行してくれた仲間と千歳水族館に行ってみる。こういった専門的な水族館は経験が少なかったが、展示が尖っていて興味深かった。川（淡水環境）で孵化し海域（海水環境）で成長し、産卵のために川に戻ってくるサケは、北海道の重要な海産資源。アイヌを取り扱った有名なマンガにも記述があった。川の中をそのまま眺めることが出来る地下水層がとても興味深い展示だった。秋頃の産卵シーズンに行けばもっと面白いものが見られるのだろう。\nサケ以外にも「今まで見たどの生物にも見られなかった形」をしたナイフフィッシュ（側面に孔辺細胞みたいな有機的な模様が四つも並んでいるよくばりフィッシュ）、赤と白と黒の配色がスポーツやさんのシューズみたいなキャットフィッシュなども観察できた。メガロドラスも不思議な外見で面白かった。世界の淡水魚は大きくてかっこいい（小並感）。\n\n\n\n\n\n\n\n\n\nガーは泳いでるがナマズの連中は下でごろごろしている\n\n\n\n\n\n\n\nセレブ"
-  },
-  {
-    "objectID": "article/Trip/Dec23_Hokkaido.html#サケのふるさと千歳水族館",
-    "href": "article/Trip/Dec23_Hokkaido.html#サケのふるさと千歳水族館",
-    "title": "道東遠征",
-    "section": "",
-    "text": "12月下旬、飛行機で新千歳空港に降り立った。現地で案内役を買って出てくれた友人との待ち合わせ時間は夜なので、それまで適当に時間を潰すことにした。\n同行してくれた仲間と千歳水族館に行ってみる。こういった専門的な水族館は経験が少なかったが、展示が尖っていて興味深かった。川（淡水環境）で孵化し海域（海水環境）で成長し、産卵のために川に戻ってくるサケは、北海道の重要な海産資源。アイヌを取り扱った有名なマンガにも記述があった。川の中をそのまま眺めることが出来る地下水層がとても興味深い展示だった。秋頃の産卵シーズンに行けばもっと面白いものが見られるのだろう。\nサケ以外にも「今まで見たどの生物にも見られなかった形」をしたナイフフィッシュ（側面に孔辺細胞みたいな有機的な模様が四つも並んでいるよくばりフィッシュ）、赤と白と黒の配色がスポーツやさんのシューズみたいなキャットフィッシュなども観察できた。メガロドラスも不思議な外見で面白かった。世界の淡水魚は大きくてかっこいい（小並感）。\n\n\n\n\n\n\n\n\n\nガーは泳いでるがナマズの連中は下でごろごろしている\n\n\n\n\n\n\n\nセレブ"
-  },
-  {
-    "objectID": "article/Trip/Dec23_Hokkaido.html#根室漁港鳥見",
-    "href": "article/Trip/Dec23_Hokkaido.html#根室漁港鳥見",
-    "title": "道東遠征",
-    "section": "根室漁港鳥見",
-    "text": "根室漁港鳥見\n同党と言えばお約束の根室。東に突き出た市は三方向を海に囲まれており、漁港や岬など海鳥観察のポイントが沢山ある。普段宮城で見ることが少ないシノリガモやオジロワシは北海道ではいつメンという感じで、複数のポイントで観察することが出来た。またウミアイサやヒメウの数も非常に多い。\nヒメウにそっくりなチシマウガラスも、かなり好条件で観察できたのが良かった。ヒメウが青紫の光沢が目立つハシブトガラスのようなからす色の羽毛だとすれば、チシマウガラスは光沢のないマットな黒のミヤマガラスのような羽毛だ。またヒメウのクチバシは黒く、アイリングに裸出部が少ない一方で、チシマウガラスのクチバシは白く、白い裸出したアイリングが見える特徴も把握することが出来た。チシマウガラスは宮城のいくつかのポイントで、十数年前まで観察されたことがあったらしいが…。絶滅危惧種なので分布域も狭まっているのだろう。\n市内の海岸線をじっくり見るだけで一日が終わってしまった。その日は市内に宿を取って翌日に備えることにした。\n\n\n\n\n\n\n\n\n\nチシマウガラス\n\n\n\n\n\n\n\n本州のトビのノリでいるオジロワシ"
-  },
-  {
-    "objectID": "article/Trip/Dec23_Hokkaido.html#野付鳥見",
-    "href": "article/Trip/Dec23_Hokkaido.html#野付鳥見",
-    "title": "道東遠征",
-    "section": "野付鳥見",
-    "text": "野付鳥見\n道東はこれで２回目なのだが、前回（2021年3月）は野付に行くことが出来なかったので、そちらへ行ってみることにした。地図上では近そうに見える根室と野付だが、実際に運転してみると相当離れていることに気付いた。北海道大きすぎる。\n野付は別海町の東に位置する巨大な砂州だ。風蓮湖からそのまま244号線を北上し、右手に望む海に海ガモが浮いていないか確認しながら向かった。尾岱沼の漁港もちょろっと覗き、いよいよ野付に侵入である。\n野付は半島の中腹まで車道が続いており、ビジターセンターで通行許可証を取ることで先に進むことが出来る。道路脇の湿地帯にエゾシカが跳びはねたり、電柱や番屋にオジロワシが止まっていたり、THE北海道という感じ。\n砂州に生えた背丈の低い海浜植物の中にハギマシコが群れていた。逆光であまり色合いを観察できなかったが、数十羽という数に驚いた。宮城でこの規模の群れはそうないので…ハマニンニクに群がるユキホオジロも期待したが、この日は見ることが出来なかった。しかし堤防から比較的近い所に浮かぶコオリガモやアビを眺めたり、大好きなコクガンの越冬する様子を見ることが出来た。野付を離れるとき、数台の車が路駐して葦で跳ね回るベニヒワを撮影していたのを見たが、先を急ぐため早々に切り上げた。\n\n\n\n\n\n\n\n\n\n点在する番屋\n\n\n\n\n\n\n\nけんかしていたハギマシコ"
-  },
-  {
-    "objectID": "article/Trip/Dec23_Hokkaido.html#鶴居村",
-    "href": "article/Trip/Dec23_Hokkaido.html#鶴居村",
-    "title": "道東遠征",
-    "section": "鶴居村",
-    "text": "鶴居村\n有名な探鳥地（給餌しているのを見るので「探鳥」という言葉は変かも）の鶴居村に訪れた。タンチョウがコンスタントに見られるが、この日はTwitterで別の種類のツルが数羽来ていることを把握していた。\nまず鶴見台に行くと、タンチョウ数十羽の中に一羽カナダヅルが混じっていた。カナダヅルは2022年大晦日に出水を訪れたときに一度見ていたがお気に入りの鳥だ。グレーの羽毛がもふもふなのと彩度の低い赤い額がぬいぐるみみたいでちょっとかわいい。ずっと隅っこで餌を探して、他のタンチョウと交流する様子は少なかったので、あまり打ち解けられてなさそう。\n伊藤サンクチュアリにはもう一種のツル、マナヅルが観察できた。こちらも出水で勿論観察しているが、和風な顔の模様が美しいツルだと思う。こちらはカナダヅルに比べ大きく、巨大なタンチョウと比べても遜色ない貫禄。夕暮れの中ねぐら入りのために飛び立ったときも、３羽のタンチョウと一緒に飛んでいった。他の固体が全てねぐらへ向けて飛び立った後、最後に残った一羽がとことこ徒歩で林に入っていったのが面白かった。お前はとばないんかーいって感じ\n折角鶴居村にやってきたので、写真でよく見る有名スポットにも足を運んでみた。雪裡川にかかる音羽橋だ。到着すると既に何人もの人がカメラを構えてツルの様子を撮影していた。ここは川岸に積もる雪と緩く蛇行する静かな川に佇む雪のようなタンチョウが映える場所である。こちらも良く写真を撮ろうとあくせくするが、私の腕では無理だと悟り、観察をしっかり行うことにした。\nこの日はそのまま南下して釧路市経由で札幌へ戻る予定だ。観察も適当なところで切り上げ車に戻ろうとすると、鋭い鳴き声と共におデブなシルエットが橋の上空を通過していった。見覚えがあったので写真を撮ってみると、やはりヤマセミだった。まぁ、水平線に沈んだ太陽が情けで投射してくれる申し訳程度の光源のなか、なんとか見るに堪えるツルの写真を撮ろうと苦戦していたお陰で、SS1/50、ISO800の概念ヤマセミになってしまったのだが…この鳥をキレイに撮れるほどじっくり観察できる日は来るのだろうか？\n\n\n\n\n\n\n\n\n\nかわいいカナダヅル\n\n\n\n\n\n\n\n雪の中のマナヅル\n\n\n\n\n\n\n\n\n\nトボトボ帰宅する特別天然記念物\n\n\n\n\n\n\n\nヤマセミの概念"
-  },
-  {
-    "objectID": "article/Trip/Dec23_Hokkaido.html#その他北海道ご飯",
-    "href": "article/Trip/Dec23_Hokkaido.html#その他北海道ご飯",
-    "title": "道東遠征",
-    "section": "その他（北海道ご飯）",
-    "text": "その他（北海道ご飯）\n\nサケラーメン\n水族館見学後、隣接する道の駅「サーモンパーク千歳」で食べたラーメン。サケの切り身といくらが乗った海鮮版親子丼風のラーメン。バターも付属していたが、バターなくても美味しかった。スープはちょっと洋風な感じでラーメンっぽくはなかったかも？\n:::  :::\n\n\nスープカレー\n北海道の有名なスープカレー屋さん「SAMA」で食べた「鳥せせりカレー」。1,600円。一食で限界探鳥中の一日の食費に比肩する値段だったが、これが異常に美味しかった。\nまずカレースープ（と言えば良いのかな）がシンプルに美味しくて、「まずはスープから」作戦で行くとスープだけごくごく呑んでしまいそうで非常に危険（褒め言葉）。そして鳥せせりをはじめ、ヤングコーンやマイタケ、ブロッコリーにレンコンなどの野菜がゴロゴロ入っていて、どれから食べるか迷う。しかも全部美味しい。具材が全部主食級の存在感なのでライスと一緒に食べるのが勿体ない気持ちになる。今まで北海道に何度か足を運んだことはあるが、スープカレーは未経験だったこともある。\n雪の積もった凍える道行きで、非常に美味しいご飯にありつけた。美味しい店を紹介してくれて感謝。写真見ながらこの記事書いているけど、もう一度食べたくなってきた…\n:::  :::\n\n\n根室花まる\n根室の有名（著者は知らなかったが）なお寿司屋さん。魚知識が貧弱すぎるのか、地元の食材を使ったメニューなのか、宮城の寿司屋では聴かないようなネタが多かった。どの皿もボリュームがあり、味も言うまでもなく美味しかった。\n\n\nやきとり弁当\n伝説（伝説ではない）のコンビニ「タイエー」のやきとり弁当。タイエーは根室市に４店舗のみ存在するEndemic Convenience Storeなのである。テンション上がる。店内にはカウンターみたいなところがあり、そこでオーダーするとやきとりが調理され、やきとり弁当を購入できる。パッケージはやきとりを意味する子豚のコックさん。串に刺さったやきとりがのりべんの上に乗っかっていて、美味しかった。ちなみに「やきとり」は豚肉らしい（？？？？？）\n::   ::\n\n\nいくら丼\n初めて道東に行った2021年3月は凍てつく強風が容赦なく吹き付ける落石岬で根性でチシマウガラスを発見したあと、釧路の魚屋さんで美味しいほっけ定食を食べていた。寒さで冷え切った体に、ほっけの旨味がろうそくのように灯りを点して、非常に至福だったのを覚えている。ほっけという宇宙と私が合一したことで、梵我一如だなぁ（違う）とか悟りを開きそうになる位美味しかった。今回もその「釧ちゃん食堂」に行って、美味しい海鮮を食べることにした。\nこの日はいくら丼。おすいものとたくあんが着いていて1,300円。どっさりいくらがご飯の上に乗っていて非常に美味しかった。\n:::  :::\n\n\nトリトン\n道東遠征二度目のお寿司。こちらも初見のお寿司屋さんで、同行者にお勧めされて行ってみた。札幌中心地にある回転寿司屋で、お寿司屋さんあるあるの激混み待ち時間2時間を食らい、ちょっと宿で休憩したり市街地をぷらぷら散歩するなどしてようやく入店できた。地元の方然とした家族やカップルも多かった一方、外国のお客さんも多い感じ。\n北海道の魚介なので美味しいのは不変の真理だが、どの皿もボリュームがあって食べ応えがあり、5皿くらいで満腹になってしまった。挑戦できなかったメニューもあったので、次回札幌に来たときにまたチャレンジしてみたい。\n:::  :::\n\n\nカレーラーメン\n仙台住みのバードウォッチャーの一部は（デカ主語を避ける賢明な判断）太平洋フェリーに乗って苫小牧までの航路探鳥をするが、復路の便が出発するまでに苫小牧で探鳥できる。前々から気になっていた「味の大王」のカレーラーメンを食べてみた。欲張ってチャーシュー丼も食べた。\n青森に「味噌カレー牛乳ラーメン」があるが、こちらは「カレーラーメン」。日本の所謂カレーライスのカレーにラーメンと具材一式が入っている。このカレーは本当に「カレー」で、カレーライスのカレー同様にかなりドロっとしたスープ。ラーメンもカレーも主張が強いので両刀でどちらも楽しめる、という雰囲気を感じた。カツカレーとかカレーうどんとか好きな人は好きなんじゃないだろうか。\n:::  :::"
-  },
-  {
-    "objectID": "article/Trip/Dec22_bufflehead.html",
-    "href": "article/Trip/Dec22_bufflehead.html",
-    "title": "関東ヒメハジロ",
-    "section": "",
-    "text": "有名すぎて伏せる意味はほとんどないと思いますが、関東某所に現れたヒメハジロを見てきました。\n出現情報がネットに流れ出してから（知っている限り）一ヶ月は経っていましたが、現場には10人ほどのバードウォッチャー？カメラマン？がいました。\nあしがゆめかわピンクでかわいかったです。\n\n\n\n\n\n\n\n\n\nヒメハジロ\n\n\n\n\n\n\n\nオオバンと行動する"
-  },
-  {
-    "objectID": "article/Trip/Dec22_bufflehead.html#関東某所",
-    "href": "article/Trip/Dec22_bufflehead.html#関東某所",
-    "title": "関東ヒメハジロ",
-    "section": "",
-    "text": "有名すぎて伏せる意味はほとんどないと思いますが、関東某所に現れたヒメハジロを見てきました。\n出現情報がネットに流れ出してから（知っている限り）一ヶ月は経っていましたが、現場には10人ほどのバードウォッチャー？カメラマン？がいました。\nあしがゆめかわピンクでかわいかったです。\n\n\n\n\n\n\n\n\n\nヒメハジロ\n\n\n\n\n\n\n\nオオバンと行動する"
+    "text": "・_quarto.ymlを編集した後は、必ずqmdを一度renderする"
   },
   {
     "objectID": "article/others/Food.html",
@@ -126,102 +84,18 @@
     "text": "仙台市外\n\n多賀城、七ヶ浜、塩竃方面\n\nらーめん蔵 …  人気店。味噌と醤油がどちらも王道という感じで美味しい\nTrattoria Blair Marina …  塩竃マリンゲート内の美味しいイタリアン。スパゲッティ美味しい。ディナーは値が張るので食べたことないけどランチ美味しい\n\n\n\n県南\n\nヌードルショップ arakawa …  岩沼のインスタ映えしそうなお洒落ラーメン。内装もお洒落。鴨だしと柚。\nフラミンゴ …  亘理町の四季の美味しい海の幸が食べられる。オススメは秋のはらこ飯（本場）。荒汁が無料。次回から使える50円割引券がもらえる。大学のサークルでよく行った\nらーめんせん家 …  美味しいラーメン。バターねぎ味噌 is 至高。坂本駅すぐそばの道の駅の中にもある。道の駅でいちごを買って食べましょう\n\n\n\n県北\n\nとよま観光物産センター …  レストランにはいろんな絵が飾ってある。宮城県の美味しい郷土料理が色々食べられる\nくんぺる …  地元の野菜や豚肉を美味しくランチで食べられる。ごはん（ひとめぼれ）のおかわり無料。伊豆沼に隣接しているためか、店内には野鳥のご本がある。\n南三陸さんさん商店街 …  美味しい海の幸がたくさんあって非常に良い。お刺身を自分で選んで食べられる山内鮮魚店。モアイ像。隣接する防災対策庁舎は震災遺構となっている。\nなるこりんジェラート …  野菜で作ったジェラートが食べられる。値は張るがどれも美味しいし内装がインスタ映えするので小腹だけでなく承認欲求も満たせる。"
   },
   {
-    "objectID": "article/Miyagi/ricefield.html",
-    "href": "article/Miyagi/ricefield.html",
-    "title": "近所田んぼ・川",
+    "objectID": "article/list_Trip.html",
+    "href": "article/list_Trip.html",
+    "title": "遠征リスト",
     "section": "",
-    "text": "近所の田んぼ。チャリで行くことが多い。狭義のマイフィールド"
-  },
-  {
-    "objectID": "article/Miyagi/ricefield.html#冬-マガン襲来",
-    "href": "article/Miyagi/ricefield.html#冬-マガン襲来",
-    "title": "近所田んぼ・川",
-    "section": "2020冬　マガン襲来",
-    "text": "2020冬　マガン襲来"
-  },
-  {
-    "objectID": "article/Miyagi/ricefield.html#シジュウカラガン",
-    "href": "article/Miyagi/ricefield.html#シジュウカラガン",
-    "title": "近所田んぼ・川",
-    "section": "2022.12.01　シジュウカラガン",
-    "text": "2022.12.01　シジュウカラガン"
-  },
-  {
-    "objectID": "article/Miyagi/ricefield.html#夏-オナガファミリー",
-    "href": "article/Miyagi/ricefield.html#夏-オナガファミリー",
-    "title": "近所田んぼ・川",
-    "section": "2024夏　オナガファミリー",
-    "text": "2024夏　オナガファミリー"
-  },
-  {
-    "objectID": "article/Miyagi/numa1.html",
-    "href": "article/Miyagi/numa1.html",
-    "title": "沼１",
-    "section": "",
-    "text": "特に記憶に残ってる探鳥についてピックアップ\n\n\nオンライン（オンデマンド）授業は学生に自由な時間を与える。既にアップロードが済んでいる講義は受講して、まだ済んでいない講義は後の自分に任せてマイフィールドの沼に出かけた。\n午後2:30ほど、大量のオナガガモの中にトモエガモを見つけた。野鳥観察を本格的に行うようになって時間が経っていないが、「すごいバーダー」の目標として個人的に考えていた「マイフィールド双眼鏡トモエ探し」ができた。初めて見るトモエガモオス。ホルスの目みたいでかっこいい。\nそんなことを考えていたら、沼に隣接する電柱にホルスが止まっていた。先日同じ場所で発見していたコチョウゲンボウ。実はチョウゲンボウを見たことが泣く、発見当時は「チョウゲンボウ見つけました」って仲間に報告していたら、コチョですよと指摘をいただいた。電柱のコチョを見ていると、サークルの同期がやってきたので一緒に見た。チョゲとの違いとして「小鳥も襲う」、「一気に加速して群れに突っ込む狩りをする」など教えてもらった。\n\n\n\n\n\n\n\n\n\nすやすやトモちゃん\n\n\n\n\n\n\n\nコチョウゲンボウ\n\n\n\n\n\n\n\n\n初見はトビだと思ったけど、双眼鏡でよく見てると尾羽の形や翼の幅が違いすぎて「！？」ってなった。フィールドで出たことがある、と聞いたことはあったけど、都市伝説として気に留めていなかったので非常に驚いた。 かなりの高所を旋回して西側に向かっていった。遠ざかる猛禽あるあるの「真っ平らな円盤がどんどん小さくなっていく」のを見ながら、もっと早く到着していれば・気付いていれば…という気持ちになった。この日以来、このフィールドでワシを見ていない。\n\n\n\n\n\n\n{width = 50%}\n\n\n\n\n\n\n研究室配属学生にとって大学の春休みはないようなものだが、ハクチョウを見に行った。研究が行き詰まってて気分の切り替えをするつもりだった。 午前10:20、沼の周りの田んぼの中、白いつぶつぶを遠くに見つけて近づいてみる。ハクチョウは表情豊かで観察がとても楽しい。\nハクチョウの中に何やらオレンジ色の物体が置いてあった。珍鳥を見つけるとかなり興奮するのだが、研究でメンタルが死んでいたことに加え、「福島あたりで見つかった」ことがブログに書いてあったので、そこまで驚かなかった。\n午前10:40、寝ていたオレンジはゆっくり首を上げた。想像通りのアカツクシガモだった。ハクチョウの群れの中に1羽混ざっており、しきりに採餌していた。たまにハシボソガラスにちょっかいをかけられてとことこ逃げたり、ハクチョウのように水たまりで飲水して膨張したりしていた。大きさや行動がカモと言うよりガンに近く、首の太さやもこもこ具合がアルパカやわんこみたいで、とても面白い。 私の他に観察者は一人だけだったが、有名ポイントであることに加え発見がしやすい。なるべく広まって欲しくないなぁと思いながら、昼過ぎから仕事があるので一度帰宅した。\n仕事を終えてもう一度現場に向かうと、サークルの仲間が見に来ていた。どうやら私とは独立に発見していたらしい。日が暮れるまで仲間と観察を続けた。その後もサークル仲間と車を出す機会がある際は寄るようにした。\nアカツクシガモは終認の03.24までハクチョウたちと行動を共にし、多くの人々が観察する機会に恵まれた。農道にずらりと並んだ車と通り抜けに難儀する一般車両、ハクチョウが逃げるのも構わず田畑の畦に侵入して撮影するヒト、Youtubeに動画がアップロードされているのを見つけたりして、人嫌いに拍車がかかった。一方で穏やかな顔（？）でのんびり過ごしているアカツクシガモのかわいらしさや雰囲気に救われたし、サークルの仲間と一緒に観察できたのは嬉しかった。\n\n\n\n\n\n\n\n\n\nよくハクチョウと行動していた\n\n\n\n\n\n\n\nぬいぐるみみたい"
-  },
-  {
-    "objectID": "article/Miyagi/numa1.html#沼１の記録",
-    "href": "article/Miyagi/numa1.html#沼１の記録",
-    "title": "沼１",
-    "section": "",
-    "text": "特に記憶に残ってる探鳥についてピックアップ\n\n\nオンライン（オンデマンド）授業は学生に自由な時間を与える。既にアップロードが済んでいる講義は受講して、まだ済んでいない講義は後の自分に任せてマイフィールドの沼に出かけた。\n午後2:30ほど、大量のオナガガモの中にトモエガモを見つけた。野鳥観察を本格的に行うようになって時間が経っていないが、「すごいバーダー」の目標として個人的に考えていた「マイフィールド双眼鏡トモエ探し」ができた。初めて見るトモエガモオス。ホルスの目みたいでかっこいい。\nそんなことを考えていたら、沼に隣接する電柱にホルスが止まっていた。先日同じ場所で発見していたコチョウゲンボウ。実はチョウゲンボウを見たことが泣く、発見当時は「チョウゲンボウ見つけました」って仲間に報告していたら、コチョですよと指摘をいただいた。電柱のコチョを見ていると、サークルの同期がやってきたので一緒に見た。チョゲとの違いとして「小鳥も襲う」、「一気に加速して群れに突っ込む狩りをする」など教えてもらった。\n\n\n\n\n\n\n\n\n\nすやすやトモちゃん\n\n\n\n\n\n\n\nコチョウゲンボウ\n\n\n\n\n\n\n\n\n初見はトビだと思ったけど、双眼鏡でよく見てると尾羽の形や翼の幅が違いすぎて「！？」ってなった。フィールドで出たことがある、と聞いたことはあったけど、都市伝説として気に留めていなかったので非常に驚いた。 かなりの高所を旋回して西側に向かっていった。遠ざかる猛禽あるあるの「真っ平らな円盤がどんどん小さくなっていく」のを見ながら、もっと早く到着していれば・気付いていれば…という気持ちになった。この日以来、このフィールドでワシを見ていない。\n\n\n\n\n\n\n{width = 50%}\n\n\n\n\n\n\n研究室配属学生にとって大学の春休みはないようなものだが、ハクチョウを見に行った。研究が行き詰まってて気分の切り替えをするつもりだった。 午前10:20、沼の周りの田んぼの中、白いつぶつぶを遠くに見つけて近づいてみる。ハクチョウは表情豊かで観察がとても楽しい。\nハクチョウの中に何やらオレンジ色の物体が置いてあった。珍鳥を見つけるとかなり興奮するのだが、研究でメンタルが死んでいたことに加え、「福島あたりで見つかった」ことがブログに書いてあったので、そこまで驚かなかった。\n午前10:40、寝ていたオレンジはゆっくり首を上げた。想像通りのアカツクシガモだった。ハクチョウの群れの中に1羽混ざっており、しきりに採餌していた。たまにハシボソガラスにちょっかいをかけられてとことこ逃げたり、ハクチョウのように水たまりで飲水して膨張したりしていた。大きさや行動がカモと言うよりガンに近く、首の太さやもこもこ具合がアルパカやわんこみたいで、とても面白い。 私の他に観察者は一人だけだったが、有名ポイントであることに加え発見がしやすい。なるべく広まって欲しくないなぁと思いながら、昼過ぎから仕事があるので一度帰宅した。\n仕事を終えてもう一度現場に向かうと、サークルの仲間が見に来ていた。どうやら私とは独立に発見していたらしい。日が暮れるまで仲間と観察を続けた。その後もサークル仲間と車を出す機会がある際は寄るようにした。\nアカツクシガモは終認の03.24までハクチョウたちと行動を共にし、多くの人々が観察する機会に恵まれた。農道にずらりと並んだ車と通り抜けに難儀する一般車両、ハクチョウが逃げるのも構わず田畑の畦に侵入して撮影するヒト、Youtubeに動画がアップロードされているのを見つけたりして、人嫌いに拍車がかかった。一方で穏やかな顔（？）でのんびり過ごしているアカツクシガモのかわいらしさや雰囲気に救われたし、サークルの仲間と一緒に観察できたのは嬉しかった。\n\n\n\n\n\n\n\n\n\nよくハクチョウと行動していた\n\n\n\n\n\n\n\nぬいぐるみみたい"
-  },
-  {
-    "objectID": "article/Miyagi/kenpoku_general.html",
-    "href": "article/Miyagi/kenpoku_general.html",
-    "title": "県北その他",
-    "section": "",
-    "text": "ガン以外の野鳥の観察記録など"
-  },
-  {
-    "objectID": "article/Miyagi/kakou2.html",
-    "href": "article/Miyagi/kakou2.html",
-    "title": "河口フィールド２",
-    "section": "",
-    "text": "河口の海ガモ、シギチなど"
-  },
-  {
-    "objectID": "article/Miyagi/kakou2.html#年gwのシギチ",
-    "href": "article/Miyagi/kakou2.html#年gwのシギチ",
-    "title": "河口フィールド２",
-    "section": "2022年GWのシギチ",
-    "text": "2022年GWのシギチ"
-  },
-  {
-    "objectID": "article/Miyagi/kakou2.html#年冬シーズンのカモ",
-    "href": "article/Miyagi/kakou2.html#年冬シーズンのカモ",
-    "title": "河口フィールド２",
-    "section": "2024年冬シーズンのカモ",
-    "text": "2024年冬シーズンのカモ"
-  },
-  {
-    "objectID": "article/Miyagi/ajishima.html",
-    "href": "article/Miyagi/ajishima.html",
-    "title": "宮城県航路",
-    "section": "",
-    "text": "網地島ライン＋網地島探鳥がメイン"
-  },
-  {
-    "objectID": "article/Miyagi/ajishima.html#section",
-    "href": "article/Miyagi/ajishima.html#section",
-    "title": "宮城県航路",
-    "section": "2021.01.03",
-    "text": "2021.01.03\n前日くらいに友人から「網地島行くっぺし」とお誘いを受けて即決した。前々から気になっていた「ウミスズメ類」という鳥たちが見られる可能性があるらしい。\n仙石線・仙石東北ラインに乗って終点の石巻駅まで。石巻駅からは石巻中央発着所まで15分ほど歩いた。発着所で乗船手続きを済ませ、いざ乗船！\n航路探鳥は初めてだったが、友人に聞いて即席のレインコートをカメラに着せた。デッキに上がって１時間半ほどのフェリー探鳥を楽しんだ。フェリーは子どもの頃家族で乗って酔ったきりで乗船に不安だったが、酔い止めを飲んでいたこともありそこまで酔わなかった。\n何より初めての航路探鳥が楽しかった！波間から鳥のシルエットを見つけ、瞬時に観察したり撮影したりする緊張感（？）、陸ではまず見られない海鳥たちが次々と観察でき、あっという間に網地島に到着した！石巻-&gt;網地島の往路では、念願のウミスズメを始め種々のカモメ類（勉強不足でほとんど識別出来なかった…）、ミツユビカモメやアビなどが観察できた。"
-  },
-  {
-    "objectID": "article/list_Miyagi.html",
-    "href": "article/list_Miyagi.html",
-    "title": "宮城の鳥見リスト",
-    "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n\n\n\n\n\n\n\n\n沼１\n\n\n\nducks\n\n\nshorebirds\n\n\n\n\n\n\n\n\n\n\nFeb 11, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n宮城県航路\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n河口フィールド１\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n河口フィールド２\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n県南\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n県北その他\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n県北ガン\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n公園いろいろ\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n近所田んぼ・川\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n     \n  \n\n\n\n\n\n\n\n\n戦場ヶ原\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n【工事中】秋田ハクガン\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n九州遠征\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n関東ヒメハジロ\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n道東遠征\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n三番瀬・葛西\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2021.03 道東遠征\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n【工事中】石垣島遠征\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n北陸・中部辺り周遊\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n天売島\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n秋田ハクガンその２\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n飛島\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "article/list_BirdList.html",
     "href": "article/list_BirdList.html",
     "title": "名鑑リスト",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n     \n  \n\n\n\n\n\n\n\n\nOsprey, Hawks and Eagles\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGeese, Swans, Ducks\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShorebirds, Gulls, Auks etc.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStorks\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDoves\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKingfishers\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCuckoos\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFalcons\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLandfowl\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLoons\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCranes and Rails\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSongbirds\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSpoonbills, Herons, Egrets and Bitterns\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWoodpeckers\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGrebes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nshearwater, petrel, storm-petrel, albatross\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOwls\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncormorants\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "私的野鳥目録。 ・識別点&lt;-専門性なし ・鳥周りの知識まとめ ・鳥についての所感\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n\n\n\n\n\n\n\n\nOsprey, Hawks and Eagles\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGeese, Swans, Ducks\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShorebirds, Gulls, Auks etc.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStorks\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDoves\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKingfishers\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCuckoos\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFalcons\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLandfowl\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLoons\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCranes and Rails\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSongbirds\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSpoonbills, Herons, Egrets and Bitterns\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWoodpeckers\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGrebes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nshearwater, petrel, storm-petrel, albatross\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOwls\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncormorants\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "article/ferry/taiheiyoferry.html",
@@ -238,11 +112,543 @@
     "text": "Shearwater and albatross in Miyagi\n\nコアホウドリ\nクロアシアホウドリ\nオオミズナギドリ"
   },
   {
-    "objectID": "article/bird_list/gaviifomes.html#loons-in-miyagi",
-    "href": "article/bird_list/gaviifomes.html#loons-in-miyagi",
+    "objectID": "article/bird_list/passeriformes.html#サンショウクイ",
+    "href": "article/bird_list/passeriformes.html#サンショウクイ",
+    "title": "Songbirds",
+    "section": "サンショウクイ",
+    "text": "サンショウクイ"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#サンコウチョウ-japanese-paradise-flycatcher",
+    "href": "article/bird_list/passeriformes.html#サンコウチョウ-japanese-paradise-flycatcher",
+    "title": "Songbirds",
+    "section": "サンコウチョウ Japanese Paradise-Flycatcher",
+    "text": "サンコウチョウ Japanese Paradise-Flycatcher\n陽キャ感あふれる英名。 学名はTerps（官能の）phone（声）+atro（黒い）caudatus（尾）だというが、結構濁音のある声で鳴く。"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#モズ",
+    "href": "article/bird_list/passeriformes.html#モズ",
+    "title": "Songbirds",
+    "section": "モズ",
+    "text": "モズ\n留鳥"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#カケス",
+    "href": "article/bird_list/passeriformes.html#カケス",
+    "title": "Songbirds",
+    "section": "カケス",
+    "text": "カケス\n漂鳥。秋や冬に低地で見られることが多い"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#オナガ",
+    "href": "article/bird_list/passeriformes.html#オナガ",
+    "title": "Songbirds",
+    "section": "オナガ",
+    "text": "オナガ\n東日本なのでこのステキな鳥が分布している"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#コクマルガラス",
+    "href": "article/bird_list/passeriformes.html#コクマルガラス",
+    "title": "Songbirds",
+    "section": "コクマルガラス",
+    "text": "コクマルガラス\nミヤマガラスの群れに数羽混ざるだけ"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ミヤマガラス",
+    "href": "article/bird_list/passeriformes.html#ミヤマガラス",
+    "title": "Songbirds",
+    "section": "ミヤマガラス",
+    "text": "ミヤマガラス\n毎冬田んぼなどに来る"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ハシボソガラス",
+    "href": "article/bird_list/passeriformes.html#ハシボソガラス",
+    "title": "Songbirds",
+    "section": "ハシボソガラス",
+    "text": "ハシボソガラス\n東北大学や花壇自動車学校でくるみを割る行動が観察されている。"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ハシブトガラス",
+    "href": "article/bird_list/passeriformes.html#ハシブトガラス",
+    "title": "Songbirds",
+    "section": "ハシブトガラス",
+    "text": "ハシブトガラス\n留鳥。"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#キレンジャク",
+    "href": "article/bird_list/passeriformes.html#キレンジャク",
+    "title": "Songbirds",
+    "section": "キレンジャク",
+    "text": "キレンジャク\n年変動大きい。当地では春先に渡り途中で立ち寄る印象"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ヒレンジャク",
+    "href": "article/bird_list/passeriformes.html#ヒレンジャク",
+    "title": "Songbirds",
+    "section": "ヒレンジャク",
+    "text": "ヒレンジャク\n年変動大きい。当地では春先に渡り途中で立ち寄る印象"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ヒガラ",
+    "href": "article/bird_list/passeriformes.html#ヒガラ",
+    "title": "Songbirds",
+    "section": "ヒガラ",
+    "text": "ヒガラ\n漂鳥。"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ヤマガラ",
+    "href": "article/bird_list/passeriformes.html#ヤマガラ",
+    "title": "Songbirds",
+    "section": "ヤマガラ",
+    "text": "ヤマガラ\n留鳥。"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#コガラ",
+    "href": "article/bird_list/passeriformes.html#コガラ",
+    "title": "Songbirds",
+    "section": "コガラ",
+    "text": "コガラ\n漂鳥"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#シジュウカラ",
+    "href": "article/bird_list/passeriformes.html#シジュウカラ",
+    "title": "Songbirds",
+    "section": "シジュウカラ",
+    "text": "シジュウカラ\n留鳥"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ヒバリ",
+    "href": "article/bird_list/passeriformes.html#ヒバリ",
+    "title": "Songbirds",
+    "section": "ヒバリ",
+    "text": "ヒバリ\n留鳥。冬も平地で伏せてる。"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ヒヨドリ",
+    "href": "article/bird_list/passeriformes.html#ヒヨドリ",
+    "title": "Songbirds",
+    "section": "ヒヨドリ",
+    "text": "ヒヨドリ\n留鳥"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ショウドウツバメ",
+    "href": "article/bird_list/passeriformes.html#ショウドウツバメ",
+    "title": "Songbirds",
+    "section": "ショウドウツバメ",
+    "text": "ショウドウツバメ\nツバメに混じって飛んだり、単独の数十羽の群れで飛んだりしてる。渡り時期に見られる"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ツバメ",
+    "href": "article/bird_list/passeriformes.html#ツバメ",
+    "title": "Songbirds",
+    "section": "ツバメ",
+    "text": "ツバメ\n夏鳥。"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#イワツバメ",
+    "href": "article/bird_list/passeriformes.html#イワツバメ",
+    "title": "Songbirds",
+    "section": "イワツバメ",
+    "text": "イワツバメ\n夏鳥"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ウグイス",
+    "href": "article/bird_list/passeriformes.html#ウグイス",
+    "title": "Songbirds",
+    "section": "ウグイス",
+    "text": "ウグイス\n留鳥"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ヤブサメ",
+    "href": "article/bird_list/passeriformes.html#ヤブサメ",
+    "title": "Songbirds",
+    "section": "ヤブサメ",
+    "text": "ヤブサメ\n夏鳥"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#エナガ",
+    "href": "article/bird_list/passeriformes.html#エナガ",
+    "title": "Songbirds",
+    "section": "エナガ",
+    "text": "エナガ\n留鳥"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#センダイムシクイ",
+    "href": "article/bird_list/passeriformes.html#センダイムシクイ",
+    "title": "Songbirds",
+    "section": "センダイムシクイ",
+    "text": "センダイムシクイ\n夏鳥。渡り時期に公園などで頑張って観察する。 下嘴が一様に明るい橙黄色で、暗色部がないのはセンムシだけらしい。 エゾ・メボソ・オオムシは先端に暗色部。"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#オオヨシキリ",
+    "href": "article/bird_list/passeriformes.html#オオヨシキリ",
+    "title": "Songbirds",
+    "section": "オオヨシキリ",
+    "text": "オオヨシキリ\n夏鳥。川の葦が多く生えている辺りや田んぼで囀ってる。渡ってきたばかりのタイミングでは夜も囀ってるのでうるさい"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#オオセッカ",
+    "href": "article/bird_list/passeriformes.html#オオセッカ",
+    "title": "Songbirds",
+    "section": "オオセッカ",
+    "text": "オオセッカ\n夏鳥（？）。鳴き声を一度だけ聞いたことがある"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#セッカ",
+    "href": "article/bird_list/passeriformes.html#セッカ",
+    "title": "Songbirds",
+    "section": "セッカ",
+    "text": "セッカ\n留鳥。夏によく鳴いているが冬は探しにくくなる。"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#メジロ",
+    "href": "article/bird_list/passeriformes.html#メジロ",
+    "title": "Songbirds",
+    "section": "メジロ",
+    "text": "メジロ\n留鳥。"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#キクイタダキ-goldcrest",
+    "href": "article/bird_list/passeriformes.html#キクイタダキ-goldcrest",
+    "title": "Songbirds",
+    "section": "キクイタダキ Goldcrest",
+    "text": "キクイタダキ Goldcrest\n頭部の菊が黄色に開くところを見たことがない。別種でFirecrestなんてのもいるらしい"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ミソサザイ",
+    "href": "article/bird_list/passeriformes.html#ミソサザイ",
+    "title": "Songbirds",
+    "section": "ミソサザイ",
+    "text": "ミソサザイ\n留鳥。著者にとって所謂相性の悪い鳥"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ゴジュウカラ",
+    "href": "article/bird_list/passeriformes.html#ゴジュウカラ",
+    "title": "Songbirds",
+    "section": "ゴジュウカラ",
+    "text": "ゴジュウカラ\n漂鳥。冬は混群に混ざって控えめに「フィフィフィフィ」してるけれど、5月頃山にいくとうるさく「フィフィフィフィ」してる"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#キバシリ",
+    "href": "article/bird_list/passeriformes.html#キバシリ",
+    "title": "Songbirds",
+    "section": "キバシリ",
+    "text": "キバシリ\n留鳥。冬に低地で見かけないので、年中山にいる？"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ムクドリ",
+    "href": "article/bird_list/passeriformes.html#ムクドリ",
+    "title": "Songbirds",
+    "section": "ムクドリ",
+    "text": "ムクドリ\n留鳥。"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#コムクドリ",
+    "href": "article/bird_list/passeriformes.html#コムクドリ",
+    "title": "Songbirds",
+    "section": "コムクドリ",
+    "text": "コムクドリ\n夏鳥。日本海側と比べると少ない"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ホシムクドリ",
+    "href": "article/bird_list/passeriformes.html#ホシムクドリ",
+    "title": "Songbirds",
+    "section": "ホシムクドリ",
+    "text": "ホシムクドリ\n冬鳥。2023,24年は同一フィールドで二年連続越冬しにきた"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ヤドリギツグミ",
+    "href": "article/bird_list/passeriformes.html#ヤドリギツグミ",
+    "title": "Songbirds",
+    "section": "ヤドリギツグミ",
+    "text": "ヤドリギツグミ\n迷鳥。東北大学野鳥の会の毎週の土曜探鳥中に一度だけ発見された。"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#クロツグミ",
+    "href": "article/bird_list/passeriformes.html#クロツグミ",
+    "title": "Songbirds",
+    "section": "クロツグミ",
+    "text": "クロツグミ\n夏鳥"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#マミチャジナイ",
+    "href": "article/bird_list/passeriformes.html#マミチャジナイ",
+    "title": "Songbirds",
+    "section": "マミチャジナイ",
+    "text": "マミチャジナイ\n2022年に越冬していた。"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#シロハラ",
+    "href": "article/bird_list/passeriformes.html#シロハラ",
+    "title": "Songbirds",
+    "section": "シロハラ",
+    "text": "シロハラ\nたぶん冬鳥"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#アカハラ",
+    "href": "article/bird_list/passeriformes.html#アカハラ",
+    "title": "Songbirds",
+    "section": "アカハラ",
+    "text": "アカハラ\n冬鳥の場所もあれば夏鳥の場所もあるような印象"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ツグミ",
+    "href": "article/bird_list/passeriformes.html#ツグミ",
+    "title": "Songbirds",
+    "section": "ツグミ",
+    "text": "ツグミ\n冬鳥。2024年冬は全く見られてない"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ハチジョウツグミ",
+    "href": "article/bird_list/passeriformes.html#ハチジョウツグミ",
+    "title": "Songbirds",
+    "section": "ハチジョウツグミ",
+    "text": "ハチジョウツグミ\n毎年数羽見られる。見に行ってない"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#エゾビタキ",
+    "href": "article/bird_list/passeriformes.html#エゾビタキ",
+    "title": "Songbirds",
+    "section": "エゾビタキ",
+    "text": "エゾビタキ\n数は少ないが秋に多い"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#コサメビタキ",
+    "href": "article/bird_list/passeriformes.html#コサメビタキ",
+    "title": "Songbirds",
+    "section": "コサメビタキ",
+    "text": "コサメビタキ\n夏鳥。"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#オオルリ",
+    "href": "article/bird_list/passeriformes.html#オオルリ",
+    "title": "Songbirds",
+    "section": "オオルリ",
+    "text": "オオルリ\n夏鳥"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ノゴマ",
+    "href": "article/bird_list/passeriformes.html#ノゴマ",
+    "title": "Songbirds",
+    "section": "ノゴマ",
+    "text": "ノゴマ\n渡りの時期に気合いで探すことがのとりで流行っている"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#キビタキ",
+    "href": "article/bird_list/passeriformes.html#キビタキ",
+    "title": "Songbirds",
+    "section": "キビタキ",
+    "text": "キビタキ\n夏鳥。水仙の学名"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ルリビタキ",
+    "href": "article/bird_list/passeriformes.html#ルリビタキ",
+    "title": "Songbirds",
+    "section": "ルリビタキ",
+    "text": "ルリビタキ\n漂鳥。"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ジョウビタキ",
+    "href": "article/bird_list/passeriformes.html#ジョウビタキ",
+    "title": "Songbirds",
+    "section": "ジョウビタキ",
+    "text": "ジョウビタキ\n冬鳥。安心の尾羽ビコビコ"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#イソヒヨドリ",
+    "href": "article/bird_list/passeriformes.html#イソヒヨドリ",
+    "title": "Songbirds",
+    "section": "イソヒヨドリ",
+    "text": "イソヒヨドリ\n留鳥。Urban bird"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ノビタキ",
+    "href": "article/bird_list/passeriformes.html#ノビタキ",
+    "title": "Songbirds",
+    "section": "ノビタキ",
+    "text": "ノビタキ\n渡りの時期に通過。宮城に繁殖できる高地はあるのだろうか？"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#カワガラス",
+    "href": "article/bird_list/passeriformes.html#カワガラス",
+    "title": "Songbirds",
+    "section": "カワガラス",
+    "text": "カワガラス\n留鳥。尾羽ビコビコなので、観察していると楽しい"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#スズメ",
+    "href": "article/bird_list/passeriformes.html#スズメ",
+    "title": "Songbirds",
+    "section": "スズメ",
+    "text": "スズメ\n留鳥"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#キセキレイ",
+    "href": "article/bird_list/passeriformes.html#キセキレイ",
+    "title": "Songbirds",
+    "section": "キセキレイ",
+    "text": "キセキレイ\n漂鳥？Grey Wagtailなのだが、じゃあYellow Wagtailは誰なんですかというとツメナガセキレイらしい"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ハクセキレイ",
+    "href": "article/bird_list/passeriformes.html#ハクセキレイ",
+    "title": "Songbirds",
+    "section": "ハクセキレイ",
+    "text": "ハクセキレイ\n留鳥。尾羽ビコビコだが、たまに尾羽がちょん切れてる個体にあう"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#セグロセキレイ",
+    "href": "article/bird_list/passeriformes.html#セグロセキレイ",
+    "title": "Songbirds",
+    "section": "セグロセキレイ",
+    "text": "セグロセキレイ\n留鳥"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ビンズイ",
+    "href": "article/bird_list/passeriformes.html#ビンズイ",
+    "title": "Songbirds",
+    "section": "ビンズイ",
+    "text": "ビンズイ\n漂鳥？眉斑が後部で二つに区切れていることで識別してる"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#タヒバリ",
+    "href": "article/bird_list/passeriformes.html#タヒバリ",
+    "title": "Songbirds",
+    "section": "タヒバリ",
+    "text": "タヒバリ\n漂鳥？"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#アトリ",
+    "href": "article/bird_list/passeriformes.html#アトリ",
+    "title": "Songbirds",
+    "section": "アトリ",
+    "text": "アトリ\n冬鳥"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#シメ",
+    "href": "article/bird_list/passeriformes.html#シメ",
+    "title": "Songbirds",
+    "section": "シメ",
+    "text": "シメ\n冬鳥。あくタイプって感じの外見だが声がかわいらしい"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#イカル",
+    "href": "article/bird_list/passeriformes.html#イカル",
+    "title": "Songbirds",
+    "section": "イカル",
+    "text": "イカル\n漂鳥。相性悪い鳥その２"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ウソ",
+    "href": "article/bird_list/passeriformes.html#ウソ",
+    "title": "Songbirds",
+    "section": "ウソ",
+    "text": "ウソ\n漂鳥。足が短くて可愛い"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ハギマシコ",
+    "href": "article/bird_list/passeriformes.html#ハギマシコ",
+    "title": "Songbirds",
+    "section": "ハギマシコ",
+    "text": "ハギマシコ\n冬鳥。"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ベニマシコ",
+    "href": "article/bird_list/passeriformes.html#ベニマシコ",
+    "title": "Songbirds",
+    "section": "ベニマシコ",
+    "text": "ベニマシコ\n冬鳥。渡去してしまうので、北海道みたいな完熟ベニマシコには会えない 猿の顔みたいな色なので猿子"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#カワラヒワ",
+    "href": "article/bird_list/passeriformes.html#カワラヒワ",
+    "title": "Songbirds",
+    "section": "カワラヒワ",
+    "text": "カワラヒワ\n留鳥。さえずりが迫真で面白い"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#イスカ",
+    "href": "article/bird_list/passeriformes.html#イスカ",
+    "title": "Songbirds",
+    "section": "イスカ",
+    "text": "イスカ\n冬鳥。2024年1月に山に見に行った一回きり"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#マヒワ",
+    "href": "article/bird_list/passeriformes.html#マヒワ",
+    "title": "Songbirds",
+    "section": "マヒワ",
+    "text": "マヒワ\n冬鳥。"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ホオジロ",
+    "href": "article/bird_list/passeriformes.html#ホオジロ",
+    "title": "Songbirds",
+    "section": "ホオジロ",
+    "text": "ホオジロ\n留鳥"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ホオアカ",
+    "href": "article/bird_list/passeriformes.html#ホオアカ",
+    "title": "Songbirds",
+    "section": "ホオアカ",
+    "text": "ホオアカ\n留鳥。いるところに行けばしっかりいる"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#カシラダカ",
+    "href": "article/bird_list/passeriformes.html#カシラダカ",
+    "title": "Songbirds",
+    "section": "カシラダカ",
+    "text": "カシラダカ\n冬鳥。"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ミヤマホオジロ",
+    "href": "article/bird_list/passeriformes.html#ミヤマホオジロ",
+    "title": "Songbirds",
+    "section": "ミヤマホオジロ",
+    "text": "ミヤマホオジロ\n冬鳥。局地的らしいので、見つけると嬉しい"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#ノジコ",
+    "href": "article/bird_list/passeriformes.html#ノジコ",
+    "title": "Songbirds",
+    "section": "ノジコ",
+    "text": "ノジコ\n夏鳥。ミヤホより局地的なので、見つけると嬉しい"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#アオジ",
+    "href": "article/bird_list/passeriformes.html#アオジ",
+    "title": "Songbirds",
+    "section": "アオジ",
+    "text": "アオジ\n留鳥。よくさえずってる"
+  },
+  {
+    "objectID": "article/bird_list/passeriformes.html#オオジュリン",
+    "href": "article/bird_list/passeriformes.html#オオジュリン",
+    "title": "Songbirds",
+    "section": "オオジュリン",
+    "text": "オオジュリン\n留鳥？5月に一度だけ見つけたことがあるが、それ以外は冬"
+  },
+  {
+    "objectID": "article/bird_list/gaviifomes.html#アビ",
+    "href": "article/bird_list/gaviifomes.html#アビ",
     "title": "Loons",
-    "section": "Loons in Miyagi",
-    "text": "Loons in Miyagi\n\nアビ\nオオハム\nシロエリオオハム"
+    "section": "アビ",
+    "text": "アビ\n嘴が上に反ったアビ類。 冬から春にかけて漁港や河口に入っていることがあるが、多くは沖合に浮いているのをスコープで観察する"
+  },
+  {
+    "objectID": "article/bird_list/gaviifomes.html#オオハム",
+    "href": "article/bird_list/gaviifomes.html#オオハム",
+    "title": "Loons",
+    "section": "オオハム",
+    "text": "オオハム\nアビと同じく、漁港や河口にいたらラッキー。アビより太い"
+  },
+  {
+    "objectID": "article/bird_list/gaviifomes.html#シロエリオオハム",
+    "href": "article/bird_list/gaviifomes.html#シロエリオオハム",
+    "title": "Loons",
+    "section": "シロエリオオハム",
+    "text": "シロエリオオハム\nアビと同じく、漁港や河口にいたらラッキー。アビより太い"
   },
   {
     "objectID": "article/bird_list/gaviifomes.html#宮城で観察されたことのあるアビ類",
@@ -301,6 +707,174 @@
     "text": "カリガネ\n\nマガンより一回り小さく、金色のアイリングや嘴のピンク色、額の白色部の広さで識別可能。\nかわいいと言われる。東北大学野鳥の会ではカリガネとマガンとの識別が必修科目になる（ことが多い）。\n幼鳥は白色部がない。"
   },
   {
+    "objectID": "article/bird_list/anseriformes.html#コハクチョウ-tundra-swan",
+    "href": "article/bird_list/anseriformes.html#コハクチョウ-tundra-swan",
+    "title": "Geese, Swans, Ducks",
+    "section": "コハクチョウ Tundra Swan",
+    "text": "コハクチョウ Tundra Swan\nオオハクチョウより小さく、首も短い（個体が多い） 亜種アメリカコハクチョウは毎冬県内で数羽くらい来てるはず。"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#オオハクチョウ-whoopr-swan",
+    "href": "article/bird_list/anseriformes.html#オオハクチョウ-whoopr-swan",
+    "title": "Geese, Swans, Ducks",
+    "section": "オオハクチョウ Whoopr Swan",
+    "text": "オオハクチョウ Whoopr Swan\n毎冬、県内の湖沼や河川に飛来。 翼の骨が折れたりして北帰行できなくなったのが越夏してる"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#ツクシガモ-common-shelduck",
+    "href": "article/bird_list/anseriformes.html#ツクシガモ-common-shelduck",
+    "title": "Geese, Swans, Ducks",
+    "section": "ツクシガモ Common Shelduck",
+    "text": "ツクシガモ Common Shelduck\n県内でたまに見られる。すぐ抜ける"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#アカツクシガモ-ruddy-shelduck",
+    "href": "article/bird_list/anseriformes.html#アカツクシガモ-ruddy-shelduck",
+    "title": "Geese, Swans, Ducks",
+    "section": "アカツクシガモ Ruddy Shelduck",
+    "text": "アカツクシガモ Ruddy Shelduck\n2023年冬、県内某所に飛来した一例がある \n##オシドリ Mandarin Duck 冬に川や公園内の池などで見られることが多い印象"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#トモエガモ-baikal-teal",
+    "href": "article/bird_list/anseriformes.html#トモエガモ-baikal-teal",
+    "title": "Geese, Swans, Ducks",
+    "section": "トモエガモ Baikal Teal",
+    "text": "トモエガモ Baikal Teal\n最近はフィールドでも百数羽単位で見られるようになった嬉しいカモ。見つけると嬉しい"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#シマアジ-garganey",
+    "href": "article/bird_list/anseriformes.html#シマアジ-garganey",
+    "title": "Geese, Swans, Ducks",
+    "section": "シマアジ Garganey",
+    "text": "シマアジ Garganey\n春と秋の渡りの時期にちょろっと沼に立ち寄る。"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#ハシビロガモ-northern-shoveler",
+    "href": "article/bird_list/anseriformes.html#ハシビロガモ-northern-shoveler",
+    "title": "Geese, Swans, Ducks",
+    "section": "ハシビロガモ Northern Shoveler",
+    "text": "ハシビロガモ Northern Shoveler\n晩冬にやってくる。渡去もかなり遅い印象。"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#オカヨシガモ-gadwall",
+    "href": "article/bird_list/anseriformes.html#オカヨシガモ-gadwall",
+    "title": "Geese, Swans, Ducks",
+    "section": "オカヨシガモ Gadwall",
+    "text": "オカヨシガモ Gadwall\n河口や海岸近くの湖沼によくいるイメージ。内陸の池などでは見たことがない。"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#ヨシガモ-falcated-duck",
+    "href": "article/bird_list/anseriformes.html#ヨシガモ-falcated-duck",
+    "title": "Geese, Swans, Ducks",
+    "section": "ヨシガモ Falcated Duck",
+    "text": "ヨシガモ Falcated Duck\n宮城県では少ない。秋にエクリプス一羽と晩春に沼で数羽の生殖羽を見たことがあるのみ\n ## ヒドリガモ Eurasian Wigeon 河口や漁港など。船着き場に生えた海藻を食べてる。公園などにはいないので、陸に上がって草の上で集団採餌する様子は見たことがない"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#アメリカヒドリ",
+    "href": "article/bird_list/anseriformes.html#アメリカヒドリ",
+    "title": "Geese, Swans, Ducks",
+    "section": "アメリカヒドリ",
+    "text": "アメリカヒドリ\n毎冬フィールドに数羽ほど訪れる。ヒドリとの雑種（アメヒヒ）も多い。"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#カルガモ",
+    "href": "article/bird_list/anseriformes.html#カルガモ",
+    "title": "Geese, Swans, Ducks",
+    "section": "カルガモ",
+    "text": "カルガモ\n留鳥。繁殖もする。 都市公園とかだと恐ろしく人慣れしてる。"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#マガモ",
+    "href": "article/bird_list/anseriformes.html#マガモ",
+    "title": "Geese, Swans, Ducks",
+    "section": "マガモ",
+    "text": "マガモ\n冬鳥。たまにオスの羽衣にそっくりなアヒルが混ざっている。\n ## オナガガモ 冬鳥。体感最も数が多いカモ。\nカルガモが牛耳っていた沼は11月になるとオナガガモで溢れかえるので、カルガモは別の場所へ移動して静かにしているのを目にする"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#コガモ-green-winged-teal",
+    "href": "article/bird_list/anseriformes.html#コガモ-green-winged-teal",
+    "title": "Geese, Swans, Ducks",
+    "section": "コガモ Green-winged Teal",
+    "text": "コガモ Green-winged Teal\n他のカモに比べて小さいからか、小ガモ単一の集団を作って越冬していることが多い印象。 春先にはかわいい求愛ダンスを観察できたりする。"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#オオホシハジロ-canvasback",
+    "href": "article/bird_list/anseriformes.html#オオホシハジロ-canvasback",
+    "title": "Geese, Swans, Ducks",
+    "section": "オオホシハジロ Canvasback",
+    "text": "オオホシハジロ Canvasback\n一度だけ河口で観察した。遠すぎてよく分からなかったが…"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#ホシハジロ-common-pochard",
+    "href": "article/bird_list/anseriformes.html#ホシハジロ-common-pochard",
+    "title": "Geese, Swans, Ducks",
+    "section": "ホシハジロ Common Pochard",
+    "text": "ホシハジロ Common Pochard\n冬鳥。沼や河口にやってくる"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#キンクロハジロ-tufted-duck",
+    "href": "article/bird_list/anseriformes.html#キンクロハジロ-tufted-duck",
+    "title": "Geese, Swans, Ducks",
+    "section": "キンクロハジロ Tufted Duck",
+    "text": "キンクロハジロ Tufted Duck\n英名通り、冠羽のあるカモ 毎冬やってくる"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#スズガモ-greater-scaup",
+    "href": "article/bird_list/anseriformes.html#スズガモ-greater-scaup",
+    "title": "Geese, Swans, Ducks",
+    "section": "スズガモ Greater Scaup",
+    "text": "スズガモ Greater Scaup\n冠羽のない方。メスは嘴基部が白い。キンクロよりも海水環境を好んでいる印象"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#シノリガモ-harlequin-duck",
+    "href": "article/bird_list/anseriformes.html#シノリガモ-harlequin-duck",
+    "title": "Geese, Swans, Ducks",
+    "section": "シノリガモ Harlequin Duck",
+    "text": "シノリガモ Harlequin Duck\n冬鳥。漁港や河口にいたらラッキー。網地島航路で狙いたい鳥"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#ビロードキンクロ-velvet-scoter",
+    "href": "article/bird_list/anseriformes.html#ビロードキンクロ-velvet-scoter",
+    "title": "Geese, Swans, Ducks",
+    "section": "ビロードキンクロ Velvet Scoter",
+    "text": "ビロードキンクロ Velvet Scoter\n冬鳥。漁港や河口にいたらラッキー。クロガモよりも観察頻度が少ない"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#クロガモ-black-scoter",
+    "href": "article/bird_list/anseriformes.html#クロガモ-black-scoter",
+    "title": "Geese, Swans, Ducks",
+    "section": "クロガモ Black Scoter",
+    "text": "クロガモ Black Scoter\nよく漁港や河口に数羽だけ入っている。堤防からスコープを覗いて沖合を探すのがメイン"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#ホオジロガモ-common-goldenee",
+    "href": "article/bird_list/anseriformes.html#ホオジロガモ-common-goldenee",
+    "title": "Geese, Swans, Ducks",
+    "section": "ホオジロガモ Common Goldenee",
+    "text": "ホオジロガモ Common Goldenee\nよく漁港や河口に入っている。気合いの入った応援団みたいな求愛ダンスは見たことない"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#ミコアイサ-smew",
+    "href": "article/bird_list/anseriformes.html#ミコアイサ-smew",
+    "title": "Geese, Swans, Ducks",
+    "section": "ミコアイサ Smew",
+    "text": "ミコアイサ Smew\n沼に多く入っている。オナガガモは越冬中もねぐらを変えるが、ミコアイサはずっと同じ沼を使っている印象"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#ウミアイサ-red-brested-merganser",
+    "href": "article/bird_list/anseriformes.html#ウミアイサ-red-brested-merganser",
+    "title": "Geese, Swans, Ducks",
+    "section": "ウミアイサ Red-brested Merganser",
+    "text": "ウミアイサ Red-brested Merganser\nよく河口や漁港に入っている。"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#カワアイサ-common-merganser",
+    "href": "article/bird_list/anseriformes.html#カワアイサ-common-merganser",
+    "title": "Geese, Swans, Ducks",
+    "section": "カワアイサ Common Merganser",
+    "text": "カワアイサ Common Merganser\n川に入ってることが多い。著者はあまり会う機会がない"
+  },
+  {
     "objectID": "article/about.html",
     "href": "article/about.html",
     "title": "About me",
@@ -322,6 +896,307 @@
     "text": "Settings\n\nCamera\n\nNikon P900\nNikon D500 + NIKKOR 200-500\n\n\n\nField Scope\n\nKOWA TSN-664M\nTE-14WD"
   },
   {
+    "objectID": "article/Trip/Dec23_Hokkaido.html",
+    "href": "article/Trip/Dec23_Hokkaido.html",
+    "title": "道東遠征",
+    "section": "",
+    "text": "12月下旬、飛行機で新千歳空港に降り立った。現地で案内役を買って出てくれた友人との待ち合わせ時間は夜なので、それまで適当に時間を潰すことにした。\n同行してくれた仲間と千歳水族館に行ってみる。こういった専門的な水族館は経験が少なかったが、展示が尖っていて興味深かった。川（淡水環境）で孵化し海域（海水環境）で成長し、産卵のために川に戻ってくるサケは、北海道の重要な海産資源。アイヌを取り扱った有名なマンガにも記述があった。川の中をそのまま眺めることが出来る地下水層がとても興味深い展示だった。秋頃の産卵シーズンに行けばもっと面白いものが見られるのだろう。\nサケ以外にも「今まで見たどの生物にも見られなかった形」をしたナイフフィッシュ（側面に孔辺細胞みたいな有機的な模様が四つも並んでいるよくばりフィッシュ）、赤と白と黒の配色がスポーツやさんのシューズみたいなキャットフィッシュなども観察できた。メガロドラスも不思議な外見で面白かった。世界の淡水魚は大きくてかっこいい（小並感）。\n\n\n\n\n\n\n\n\n\nガーは泳いでるがナマズの連中は下でごろごろしている\n\n\n\n\n\n\n\nセレブ"
+  },
+  {
+    "objectID": "article/Trip/Dec23_Hokkaido.html#サケのふるさと千歳水族館",
+    "href": "article/Trip/Dec23_Hokkaido.html#サケのふるさと千歳水族館",
+    "title": "道東遠征",
+    "section": "",
+    "text": "12月下旬、飛行機で新千歳空港に降り立った。現地で案内役を買って出てくれた友人との待ち合わせ時間は夜なので、それまで適当に時間を潰すことにした。\n同行してくれた仲間と千歳水族館に行ってみる。こういった専門的な水族館は経験が少なかったが、展示が尖っていて興味深かった。川（淡水環境）で孵化し海域（海水環境）で成長し、産卵のために川に戻ってくるサケは、北海道の重要な海産資源。アイヌを取り扱った有名なマンガにも記述があった。川の中をそのまま眺めることが出来る地下水層がとても興味深い展示だった。秋頃の産卵シーズンに行けばもっと面白いものが見られるのだろう。\nサケ以外にも「今まで見たどの生物にも見られなかった形」をしたナイフフィッシュ（側面に孔辺細胞みたいな有機的な模様が四つも並んでいるよくばりフィッシュ）、赤と白と黒の配色がスポーツやさんのシューズみたいなキャットフィッシュなども観察できた。メガロドラスも不思議な外見で面白かった。世界の淡水魚は大きくてかっこいい（小並感）。\n\n\n\n\n\n\n\n\n\nガーは泳いでるがナマズの連中は下でごろごろしている\n\n\n\n\n\n\n\nセレブ"
+  },
+  {
+    "objectID": "article/Trip/Dec23_Hokkaido.html#根室漁港鳥見",
+    "href": "article/Trip/Dec23_Hokkaido.html#根室漁港鳥見",
+    "title": "道東遠征",
+    "section": "根室漁港鳥見",
+    "text": "根室漁港鳥見\n同党と言えばお約束の根室。東に突き出た市は三方向を海に囲まれており、漁港や岬など海鳥観察のポイントが沢山ある。普段宮城で見ることが少ないシノリガモやオジロワシは北海道ではいつメンという感じで、複数のポイントで観察することが出来た。またウミアイサやヒメウの数も非常に多い。\nヒメウにそっくりなチシマウガラスも、かなり好条件で観察できたのが良かった。ヒメウが青紫の光沢が目立つハシブトガラスのようなからす色の羽毛だとすれば、チシマウガラスは光沢のないマットな黒のミヤマガラスのような羽毛だ。またヒメウのクチバシは黒く、アイリングに裸出部が少ない一方で、チシマウガラスのクチバシは白く、白い裸出したアイリングが見える特徴も把握することが出来た。チシマウガラスは宮城のいくつかのポイントで、十数年前まで観察されたことがあったらしいが…。絶滅危惧種なので分布域も狭まっているのだろう。\n市内の海岸線をじっくり見るだけで一日が終わってしまった。その日は市内に宿を取って翌日に備えることにした。\n\n\n\n\n\n\n\n\n\nチシマウガラス\n\n\n\n\n\n\n\n本州のトビのノリでいるオジロワシ"
+  },
+  {
+    "objectID": "article/Trip/Dec23_Hokkaido.html#野付鳥見",
+    "href": "article/Trip/Dec23_Hokkaido.html#野付鳥見",
+    "title": "道東遠征",
+    "section": "野付鳥見",
+    "text": "野付鳥見\n道東はこれで２回目なのだが、前回（2021年3月）は野付に行くことが出来なかったので、そちらへ行ってみることにした。地図上では近そうに見える根室と野付だが、実際に運転してみると相当離れていることに気付いた。北海道大きすぎる。\n野付は別海町の東に位置する巨大な砂州だ。風蓮湖からそのまま244号線を北上し、右手に望む海に海ガモが浮いていないか確認しながら向かった。尾岱沼の漁港もちょろっと覗き、いよいよ野付に侵入である。\n野付は半島の中腹まで車道が続いており、ビジターセンターで通行許可証を取ることで先に進むことが出来る。道路脇の湿地帯にエゾシカが跳びはねたり、電柱や番屋にオジロワシが止まっていたり、THE北海道という感じ。\n砂州に生えた背丈の低い海浜植物の中にハギマシコが群れていた。逆光であまり色合いを観察できなかったが、数十羽という数に驚いた。宮城でこの規模の群れはそうないので…ハマニンニクに群がるユキホオジロも期待したが、この日は見ることが出来なかった。しかし堤防から比較的近い所に浮かぶコオリガモやアビを眺めたり、大好きなコクガンの越冬する様子を見ることが出来た。野付を離れるとき、数台の車が路駐して葦で跳ね回るベニヒワを撮影していたのを見たが、先を急ぐため早々に切り上げた。\n\n\n\n\n\n\n\n\n\n点在する番屋\n\n\n\n\n\n\n\nけんかしていたハギマシコ"
+  },
+  {
+    "objectID": "article/Trip/Dec23_Hokkaido.html#鶴居村",
+    "href": "article/Trip/Dec23_Hokkaido.html#鶴居村",
+    "title": "道東遠征",
+    "section": "鶴居村",
+    "text": "鶴居村\n有名な探鳥地（給餌しているのを見るので「探鳥」という言葉は変かも）の鶴居村に訪れた。タンチョウがコンスタントに見られるが、この日はTwitterで別の種類のツルが数羽来ていることを把握していた。\nまず鶴見台に行くと、タンチョウ数十羽の中に一羽カナダヅルが混じっていた。カナダヅルは2022年大晦日に出水を訪れたときに一度見ていたがお気に入りの鳥だ。グレーの羽毛がもふもふなのと彩度の低い赤い額がぬいぐるみみたいでちょっとかわいい。ずっと隅っこで餌を探して、他のタンチョウと交流する様子は少なかったので、あまり打ち解けられてなさそう。\n伊藤サンクチュアリにはもう一種のツル、マナヅルが観察できた。こちらも出水で勿論観察しているが、和風な顔の模様が美しいツルだと思う。こちらはカナダヅルに比べ大きく、巨大なタンチョウと比べても遜色ない貫禄。夕暮れの中ねぐら入りのために飛び立ったときも、３羽のタンチョウと一緒に飛んでいった。他の固体が全てねぐらへ向けて飛び立った後、最後に残った一羽がとことこ徒歩で林に入っていったのが面白かった。お前はとばないんかーいって感じ\n折角鶴居村にやってきたので、写真でよく見る有名スポットにも足を運んでみた。雪裡川にかかる音羽橋だ。到着すると既に何人もの人がカメラを構えてツルの様子を撮影していた。ここは川岸に積もる雪と緩く蛇行する静かな川に佇む雪のようなタンチョウが映える場所である。こちらも良く写真を撮ろうとあくせくするが、私の腕では無理だと悟り、観察をしっかり行うことにした。\nこの日はそのまま南下して釧路市経由で札幌へ戻る予定だ。観察も適当なところで切り上げ車に戻ろうとすると、鋭い鳴き声と共におデブなシルエットが橋の上空を通過していった。見覚えがあったので写真を撮ってみると、やはりヤマセミだった。まぁ、水平線に沈んだ太陽が情けで投射してくれる申し訳程度の光源のなか、なんとか見るに堪えるツルの写真を撮ろうと苦戦していたお陰で、SS1/50、ISO800の概念ヤマセミになってしまったのだが…この鳥をキレイに撮れるほどじっくり観察できる日は来るのだろうか？\n\n\n\n\n\n\n\n\n\nかわいいカナダヅル\n\n\n\n\n\n\n\n雪の中のマナヅル\n\n\n\n\n\n\n\n\n\nトボトボ帰宅する特別天然記念物\n\n\n\n\n\n\n\nヤマセミの概念"
+  },
+  {
+    "objectID": "article/Trip/Dec23_Hokkaido.html#その他北海道ご飯",
+    "href": "article/Trip/Dec23_Hokkaido.html#その他北海道ご飯",
+    "title": "道東遠征",
+    "section": "その他（北海道ご飯）",
+    "text": "その他（北海道ご飯）\n\nサケラーメン\n水族館見学後、隣接する道の駅「サーモンパーク千歳」で食べたラーメン。サケの切り身といくらが乗った海鮮版親子丼風のラーメン。バターも付属していたが、バターなくても美味しかった。スープはちょっと洋風な感じでラーメンっぽくはなかったかも？\n:::  :::\n\n\nスープカレー\n北海道の有名なスープカレー屋さん「SAMA」で食べた「鳥せせりカレー」。1,600円。一食で限界探鳥中の一日の食費に比肩する値段だったが、これが異常に美味しかった。\nまずカレースープ（と言えば良いのかな）がシンプルに美味しくて、「まずはスープから」作戦で行くとスープだけごくごく呑んでしまいそうで非常に危険（褒め言葉）。そして鳥せせりをはじめ、ヤングコーンやマイタケ、ブロッコリーにレンコンなどの野菜がゴロゴロ入っていて、どれから食べるか迷う。しかも全部美味しい。具材が全部主食級の存在感なのでライスと一緒に食べるのが勿体ない気持ちになる。今まで北海道に何度か足を運んだことはあるが、スープカレーは未経験だったこともある。\n雪の積もった凍える道行きで、非常に美味しいご飯にありつけた。美味しい店を紹介してくれて感謝。写真見ながらこの記事書いているけど、もう一度食べたくなってきた…\n:::  :::\n\n\n根室花まる\n根室の有名（著者は知らなかったが）なお寿司屋さん。魚知識が貧弱すぎるのか、地元の食材を使ったメニューなのか、宮城の寿司屋では聴かないようなネタが多かった。どの皿もボリュームがあり、味も言うまでもなく美味しかった。\n\n\nやきとり弁当\n伝説（伝説ではない）のコンビニ「タイエー」のやきとり弁当。タイエーは根室市に４店舗のみ存在するEndemic Convenience Storeなのである。テンション上がる。店内にはカウンターみたいなところがあり、そこでオーダーするとやきとりが調理され、やきとり弁当を購入できる。パッケージはやきとりを意味する子豚のコックさん。串に刺さったやきとりがのりべんの上に乗っかっていて、美味しかった。ちなみに「やきとり」は豚肉らしい（？？？？？）\n::   ::\n\n\nいくら丼\n初めて道東に行った2021年3月は凍てつく強風が容赦なく吹き付ける落石岬で根性でチシマウガラスを発見したあと、釧路の魚屋さんで美味しいほっけ定食を食べていた。寒さで冷え切った体に、ほっけの旨味がろうそくのように灯りを点して、非常に至福だったのを覚えている。ほっけという宇宙と私が合一したことで、梵我一如だなぁ（違う）とか悟りを開きそうになる位美味しかった。今回もその「釧ちゃん食堂」に行って、美味しい海鮮を食べることにした。\nこの日はいくら丼。おすいものとたくあんが着いていて1,300円。どっさりいくらがご飯の上に乗っていて非常に美味しかった。\n:::  :::\n\n\nトリトン\n道東遠征二度目のお寿司。こちらも初見のお寿司屋さんで、同行者にお勧めされて行ってみた。札幌中心地にある回転寿司屋で、お寿司屋さんあるあるの激混み待ち時間2時間を食らい、ちょっと宿で休憩したり市街地をぷらぷら散歩するなどしてようやく入店できた。地元の方然とした家族やカップルも多かった一方、外国のお客さんも多い感じ。\n北海道の魚介なので美味しいのは不変の真理だが、どの皿もボリュームがあって食べ応えがあり、5皿くらいで満腹になってしまった。挑戦できなかったメニューもあったので、次回札幌に来たときにまたチャレンジしてみたい。\n:::  :::\n\n\nカレーラーメン\n仙台住みのバードウォッチャーの一部は（デカ主語を避ける賢明な判断）太平洋フェリーに乗って苫小牧までの航路探鳥をするが、復路の便が出発するまでに苫小牧で探鳥できる。前々から気になっていた「味の大王」のカレーラーメンを食べてみた。欲張ってチャーシュー丼も食べた。\n青森に「味噌カレー牛乳ラーメン」があるが、こちらは「カレーラーメン」。日本の所謂カレーライスのカレーにラーメンと具材一式が入っている。このカレーは本当に「カレー」で、カレーライスのカレー同様にかなりドロっとしたスープ。ラーメンもカレーも主張が強いので両刀でどちらも楽しめる、という雰囲気を感じた。カツカレーとかカレーうどんとか好きな人は好きなんじゃないだろうか。\n:::  :::"
+  },
+  {
+    "objectID": "article/Trip/Dec22_Kyusyu.html",
+    "href": "article/Trip/Dec22_Kyusyu.html",
+    "title": "九州遠征",
+    "section": "",
+    "text": "ナベヅル"
+  },
+  {
+    "objectID": "article/Miyagi/ricefield.html",
+    "href": "article/Miyagi/ricefield.html",
+    "title": "近所田んぼ・川",
+    "section": "",
+    "text": "近所の田んぼ。チャリで行くことが多い。狭義のマイフィールド"
+  },
+  {
+    "objectID": "article/Miyagi/ricefield.html#冬-マガン襲来",
+    "href": "article/Miyagi/ricefield.html#冬-マガン襲来",
+    "title": "近所田んぼ・川",
+    "section": "2020冬　マガン襲来",
+    "text": "2020冬　マガン襲来"
+  },
+  {
+    "objectID": "article/Miyagi/ricefield.html#シジュウカラガン",
+    "href": "article/Miyagi/ricefield.html#シジュウカラガン",
+    "title": "近所田んぼ・川",
+    "section": "2022.12.01　シジュウカラガン",
+    "text": "2022.12.01　シジュウカラガン"
+  },
+  {
+    "objectID": "article/Miyagi/ricefield.html#夏-オナガファミリー",
+    "href": "article/Miyagi/ricefield.html#夏-オナガファミリー",
+    "title": "近所田んぼ・川",
+    "section": "2024夏　オナガファミリー",
+    "text": "2024夏　オナガファミリー"
+  },
+  {
+    "objectID": "article/Miyagi/numa1.html",
+    "href": "article/Miyagi/numa1.html",
+    "title": "沼１",
+    "section": "",
+    "text": "オンライン（オンデマンド）授業は学生に自由な時間を与える。既にアップロードが済んでいる講義は受講して、まだ済んでいない講義は後の自分に任せてマイフィールドの沼に出かけた。\n午後2:30ほど、大量のオナガガモの中にトモエガモを見つけた。野鳥観察を本格的に行うようになって時間が経っていないが、「すごいバーダー」の目標として個人的に考えていた「マイフィールド双眼鏡トモエ探し」ができた。初めて見るトモエガモオス。ホルスの目みたいでかっこいい。\nそんなことを考えていたら、沼に隣接する電柱にホルスが止まっていた。先日同じ場所で発見していたコチョウゲンボウ。実はチョウゲンボウを見たことが泣く、発見当時は「チョウゲンボウ見つけました」って仲間に報告していたら、コチョですよと指摘をいただいた。電柱のコチョを見ていると、サークルの同期がやってきたので一緒に見た。チョゲとの違いとして「小鳥も襲う」、「一気に加速して群れに突っ込む狩りをする」など教えてもらった。\n\n\n\n\n\n\n\n\n\nすやすやトモちゃん\n\n\n\n\n\n\n\nコチョウゲンボウ\n\n\n\n\n\n\n\n\n初見はトビだと思ったけど、双眼鏡でよく見てると尾羽の形や翼の幅が違いすぎて「！？」ってなった。フィールドで出たことがある、と聞いたことはあったけど、都市伝説として気に留めていなかったので非常に驚いた。 かなりの高所を旋回して西側に向かっていった。遠ざかる猛禽あるあるの「真っ平らな円盤がどんどん小さくなっていく」のを見ながら、もっと早く到着していれば・気付いていれば…という気持ちになった。この日以来、このフィールドでワシを見ていない。\n\n\n\n\n\n\n{width = “50%”}\n\n\n\n\n\n\n研究室配属学生にとって大学の春休みはないようなものだが、ハクチョウを見に行った。研究が行き詰まってて気分の切り替えをするつもりだった。 午前10:20、沼の周りの田んぼの中、白いつぶつぶを遠くに見つけて近づいてみる。ハクチョウは表情豊かで観察がとても楽しい。\nハクチョウの中に何やらオレンジ色の物体が置いてあった。珍鳥を見つけるとかなり興奮するのだが、研究でメンタルが死んでいたことに加え、「福島あたりで見つかった」ことがブログに書いてあったので、そこまで驚かなかった。\n午前10:40、寝ていたオレンジはゆっくり首を上げた。想像通りのアカツクシガモだった。ハクチョウの群れの中に1羽混ざっており、しきりに採餌していた。たまにハシボソガラスにちょっかいをかけられてとことこ逃げたり、ハクチョウのように水たまりで飲水して膨張したりしていた。大きさや行動がカモと言うよりガンに近く、首の太さやもこもこ具合がアルパカやわんこみたいで、とても面白い。 私の他に観察者は一人だけだったが、有名ポイントであることに加え発見がしやすい。なるべく広まって欲しくないなぁと思いながら、昼過ぎから仕事があるので一度帰宅した。\n仕事を終えてもう一度現場に向かうと、サークルの仲間が見に来ていた。どうやら私とは独立に発見していたらしい。日が暮れるまで仲間と観察を続けた。その後もサークル仲間と車を出す機会がある際は寄るようにした。\nアカツクシガモは終認の03.24までハクチョウたちと行動を共にし、多くの人々が観察する機会に恵まれた。農道にずらりと並んだ車と通り抜けに難儀する一般車両、ハクチョウが逃げるのも構わず田畑の畦に侵入して撮影するヒト、Youtubeに動画がアップロードされているのを見つけたりして、人嫌いに拍車がかかった。一方で穏やかな顔（？）でのんびり過ごしているアカツクシガモのかわいらしさや雰囲気に救われたし、サークルの仲間と一緒に観察できたのは嬉しかった。\n\n\n\n\n\n\n\n\n\nよくハクチョウと行動していた\n\n\n\n\n\n\n\nぬいぐるみみたい"
+  },
+  {
+    "objectID": "article/Miyagi/numa1.html#沼１の記録",
+    "href": "article/Miyagi/numa1.html#沼１の記録",
+    "title": "沼１",
+    "section": "",
+    "text": "オンライン（オンデマンド）授業は学生に自由な時間を与える。既にアップロードが済んでいる講義は受講して、まだ済んでいない講義は後の自分に任せてマイフィールドの沼に出かけた。\n午後2:30ほど、大量のオナガガモの中にトモエガモを見つけた。野鳥観察を本格的に行うようになって時間が経っていないが、「すごいバーダー」の目標として個人的に考えていた「マイフィールド双眼鏡トモエ探し」ができた。初めて見るトモエガモオス。ホルスの目みたいでかっこいい。\nそんなことを考えていたら、沼に隣接する電柱にホルスが止まっていた。先日同じ場所で発見していたコチョウゲンボウ。実はチョウゲンボウを見たことが泣く、発見当時は「チョウゲンボウ見つけました」って仲間に報告していたら、コチョですよと指摘をいただいた。電柱のコチョを見ていると、サークルの同期がやってきたので一緒に見た。チョゲとの違いとして「小鳥も襲う」、「一気に加速して群れに突っ込む狩りをする」など教えてもらった。\n\n\n\n\n\n\n\n\n\nすやすやトモちゃん\n\n\n\n\n\n\n\nコチョウゲンボウ\n\n\n\n\n\n\n\n\n初見はトビだと思ったけど、双眼鏡でよく見てると尾羽の形や翼の幅が違いすぎて「！？」ってなった。フィールドで出たことがある、と聞いたことはあったけど、都市伝説として気に留めていなかったので非常に驚いた。 かなりの高所を旋回して西側に向かっていった。遠ざかる猛禽あるあるの「真っ平らな円盤がどんどん小さくなっていく」のを見ながら、もっと早く到着していれば・気付いていれば…という気持ちになった。この日以来、このフィールドでワシを見ていない。\n\n\n\n\n\n\n{width = “50%”}\n\n\n\n\n\n\n研究室配属学生にとって大学の春休みはないようなものだが、ハクチョウを見に行った。研究が行き詰まってて気分の切り替えをするつもりだった。 午前10:20、沼の周りの田んぼの中、白いつぶつぶを遠くに見つけて近づいてみる。ハクチョウは表情豊かで観察がとても楽しい。\nハクチョウの中に何やらオレンジ色の物体が置いてあった。珍鳥を見つけるとかなり興奮するのだが、研究でメンタルが死んでいたことに加え、「福島あたりで見つかった」ことがブログに書いてあったので、そこまで驚かなかった。\n午前10:40、寝ていたオレンジはゆっくり首を上げた。想像通りのアカツクシガモだった。ハクチョウの群れの中に1羽混ざっており、しきりに採餌していた。たまにハシボソガラスにちょっかいをかけられてとことこ逃げたり、ハクチョウのように水たまりで飲水して膨張したりしていた。大きさや行動がカモと言うよりガンに近く、首の太さやもこもこ具合がアルパカやわんこみたいで、とても面白い。 私の他に観察者は一人だけだったが、有名ポイントであることに加え発見がしやすい。なるべく広まって欲しくないなぁと思いながら、昼過ぎから仕事があるので一度帰宅した。\n仕事を終えてもう一度現場に向かうと、サークルの仲間が見に来ていた。どうやら私とは独立に発見していたらしい。日が暮れるまで仲間と観察を続けた。その後もサークル仲間と車を出す機会がある際は寄るようにした。\nアカツクシガモは終認の03.24までハクチョウたちと行動を共にし、多くの人々が観察する機会に恵まれた。農道にずらりと並んだ車と通り抜けに難儀する一般車両、ハクチョウが逃げるのも構わず田畑の畦に侵入して撮影するヒト、Youtubeに動画がアップロードされているのを見つけたりして、人嫌いに拍車がかかった。一方で穏やかな顔（？）でのんびり過ごしているアカツクシガモのかわいらしさや雰囲気に救われたし、サークルの仲間と一緒に観察できたのは嬉しかった。\n\n\n\n\n\n\n\n\n\nよくハクチョウと行動していた\n\n\n\n\n\n\n\nぬいぐるみみたい"
+  },
+  {
+    "objectID": "article/Miyagi/kenpoku_general.html",
+    "href": "article/Miyagi/kenpoku_general.html",
+    "title": "県北その他",
+    "section": "",
+    "text": "ガン以外の野鳥の観察記録など"
+  },
+  {
+    "objectID": "article/Miyagi/kakou2.html",
+    "href": "article/Miyagi/kakou2.html",
+    "title": "河口フィールド２",
+    "section": "",
+    "text": "河口の海ガモ、シギチなど"
+  },
+  {
+    "objectID": "article/Miyagi/kakou2.html#年gwのシギチ",
+    "href": "article/Miyagi/kakou2.html#年gwのシギチ",
+    "title": "河口フィールド２",
+    "section": "2022年GWのシギチ",
+    "text": "2022年GWのシギチ"
+  },
+  {
+    "objectID": "article/Miyagi/kakou2.html#年冬シーズンのカモ",
+    "href": "article/Miyagi/kakou2.html#年冬シーズンのカモ",
+    "title": "河口フィールド２",
+    "section": "2024年冬シーズンのカモ",
+    "text": "2024年冬シーズンのカモ"
+  },
+  {
+    "objectID": "article/Miyagi/ajishima.html",
+    "href": "article/Miyagi/ajishima.html",
+    "title": "宮城県航路",
+    "section": "",
+    "text": "網地島ライン＋網地島探鳥がメイン"
+  },
+  {
+    "objectID": "article/Miyagi/ajishima.html#section",
+    "href": "article/Miyagi/ajishima.html#section",
+    "title": "宮城県航路",
+    "section": "2021.01.03",
+    "text": "2021.01.03\n前日くらいに友人から「網地島行くっぺし」とお誘いを受けて即決した。前々から気になっていた「ウミスズメ類」という鳥たちが見られる可能性があるらしい。\n仙石線・仙石東北ラインに乗って終点の石巻駅まで。石巻駅からは石巻中央発着所まで15分ほど歩いた。発着所で乗船手続きを済ませ、いざ乗船！\n航路探鳥は初めてだったが、友人に聞いて即席のレインコートをカメラに着せた。デッキに上がって１時間半ほどのフェリー探鳥を楽しんだ。フェリーは子どもの頃家族で乗って酔ったきりで乗船に不安だったが、酔い止めを飲んでいたこともありそこまで酔わなかった。\n何より初めての航路探鳥が楽しかった！波間から鳥のシルエットを見つけ、瞬時に観察したり撮影したりする緊張感（？）、陸ではまず見られない海鳥たちが次々と観察でき、あっという間に網地島に到着した！石巻-&gt;網地島の往路では、念願のウミスズメを始め種々のカモメ類（勉強不足でほとんど識別出来なかった…）、ミツユビカモメやアビなどが観察できた。"
+  },
+  {
+    "objectID": "article/Miyagi.html",
+    "href": "article/Miyagi.html",
+    "title": "Miyagi",
+    "section": "",
+    "text": "沼１\n河口１\n河口２\n県北ガン\n県北その他\n県南\n田んぼ・川"
+  },
+  {
+    "objectID": "article/Miyagi.html#宮城の記録",
+    "href": "article/Miyagi.html#宮城の記録",
+    "title": "Miyagi",
+    "section": "",
+    "text": "沼１\n河口１\n河口２\n県北ガン\n県北その他\n県南\n田んぼ・川"
+  },
+  {
+    "objectID": "article/Miyagi/kakou1.html",
+    "href": "article/Miyagi/kakou1.html",
+    "title": "河口フィールド１",
+    "section": "",
+    "text": "河口のシギチ、ガンカモなどなど"
+  },
+  {
+    "objectID": "article/Miyagi/kakou1.html#冬シーズンのコクガン",
+    "href": "article/Miyagi/kakou1.html#冬シーズンのコクガン",
+    "title": "河口フィールド１",
+    "section": "2024冬シーズンのコクガン",
+    "text": "2024冬シーズンのコクガン"
+  },
+  {
+    "objectID": "article/Miyagi/kennan.html",
+    "href": "article/Miyagi/kennan.html",
+    "title": "県南",
+    "section": "",
+    "text": "県南の野鳥観察記録"
+  },
+  {
+    "objectID": "article/Miyagi/kenpoku_goose.html",
+    "href": "article/Miyagi/kenpoku_goose.html",
+    "title": "県北ガン",
+    "section": "",
+    "text": "大好きなガン類の観察記録を中心とした記録。2020年11月の大学サークルの行事でねぐら入りを見たことがきっかけで、鳥の中でガンが一番好きになった。"
+  },
+  {
+    "objectID": "article/Miyagi/kenpoku_goose.html#伊豆沼蕪栗沼県北その他",
+    "href": "article/Miyagi/kenpoku_goose.html#伊豆沼蕪栗沼県北その他",
+    "title": "県北ガン",
+    "section": "",
+    "text": "大好きなガン類の観察記録を中心とした記録。2020年11月の大学サークルの行事でねぐら入りを見たことがきっかけで、鳥の中でガンが一番好きになった。"
+  },
+  {
+    "objectID": "article/Miyagi/kenpoku_goose.html#下旬-伊豆沼蕪栗沼",
+    "href": "article/Miyagi/kenpoku_goose.html#下旬-伊豆沼蕪栗沼",
+    "title": "県北ガン",
+    "section": "2022.12下旬　伊豆沼・蕪栗沼",
+    "text": "2022.12下旬　伊豆沼・蕪栗沼\n早起きして塒立ちを見に行った。この時はまだどこに何がいるのかつかみきれてないので、いろいろぐるぐる田んぼを回った。\n田んぼを回る中、交差点付近、道路から一区画目の田んぼにカリガネが群れているのを発見。本来なら道路に隣接した一区画目の田んぼだと警戒されやすいが、対向車線をはさんでいたのでばっちり観察できた。\n9時30分過ぎ、ようやくシジュウカラガンを見つけた。マガンの群れの中に三羽ほど混じっていて、畦の上で採餌をしていた。ここで宮城で見られる亜種シジュウカラガンの特徴を少し挙げてみる\n\nマガンより一回りほど小さい\n首の付け根に白い首環がある\n\n今回観察できた個体は以上二つに該当しない。マガンと同大に見えるし、付け根の首環も確認できない。飛来数の多い亜種シジュウカラガンではなく、亜種アラスカシジュウカラガンの可能性がありそうだ。\n何より、そもそもその他2個体はシジュウカラガンっぽくもない。一個体目はかなりシジュウカラガンの特徴が出ているが、一般的なシジュウカラガンよりも顔の黒白模様のコントラストが曖昧に見える。幼鳥だとしてもここまでぼやぼやした個体は見たことがない。\nさらにもう一個体目を見てみると、同様に顔の黒白模様の曖昧なコントラストに加え、嘴のくすんだピンク色、嘴基部と目の周りの白色部、首の黒の弱さから、シジュウカラガンとマガンの交雑を疑いたくなる個体である。そのシジュウカラガンもおそらくアラスカシジュウカラガンなのだが…曰くありげなファミリーみたいだ。\n筆者はこの日以来発見出来ずにいるが、2024年10月のシーズンはTwitter上でも類似した個体の観察が報告されている。同じ個体だと嬉しい。何より当時写真を全く撮っていなかったので、もう少し特徴の分かる写真を撮ってみたい。\n10時前、謎のシジュウカラガンと分かれて直ぐに、十数羽のカリガネの群れを見つけた。行動の様子を見ると３家族くらいいそうだ。中には額の白色部がない幼鳥も混ざっていた。よちよち歩きながらしきりに採餌しつつ、数羽同士で首を上下に上げ下げしていた。「ウチの子どもをよろしくお願いします」みたいなご近所付き合いだろうか。\nサークルの同期と2021年10月に見つけたカリガネはマガンの群れの中で挙動不審にくねくねしていて、それ以来「くねくねしているならばカリガネである」という命題が屹立している。これも謎のくねくね行動だったのかもしれない。\n10:30頃、蕪栗沼に移動した。この日は蕪栗沼ではなく白鳥地区の方にヘラサギが２羽移動していた。白鳥地区内の湿地を見るために歩道をうろうろしていると、突然足下から大きな鳥が飛び立った。ずっと対岸に意識を向けていたため非常に驚いた。空中へ飛び去るゆったりとした飛び方を見つけると、更に驚いた。この沼で越冬しているサンカノゴイだったのだ。他に鳥屋はいなかったが、サンカノゴイには申し訳ないことをした…これからは慎重に覗くことにする。\nまだまだ見たりないが、この日は鳥とは関係なく普通の友人を連れていたので、鳥見はここで終わりにして県北を観光することにした。"
+  },
+  {
+    "objectID": "article/Miyagi/kenpoku_goose.html#の県北レポート",
+    "href": "article/Miyagi/kenpoku_goose.html#の県北レポート",
+    "title": "県北ガン",
+    "section": "2025.01の県北レポート",
+    "text": "2025.01の県北レポート\n年越し後のガンの分布はあまり知らなかったので、このシーズンはガンを集中的に探すことにした。幸い県北に訪れることが多かったので、用事を終えた後にパパッと行うことが出来た。\n\n第一週　市街地付近のシジュウカラガン\n宮城県の調査によれば、1月のシジュウカラガンは蕪栗沼から化女沼にねぐらを移し、古川市街地よりも西で採餌を行うそうだ。この日は古川から加美のあたりに目星を付け、田んぼを回ってみることにした。\n化女沼付近の田んぼに模型みたいにポツンと座っていた一羽のシジュウカラガン以外は、やはり西古川や加美市街地周囲の田んぼで採餌を行っていた。古川から離れてもほとんど雁行が見えなかったので不安だったが、市街地に近づくにつれパラパラと飛び始めた。もしかしてと思い窓を開けると、やはりシジュウカラガンの声だった！\n慎重に声が飛んでいった方に向かうと、マガンの群れに数十羽規模で混ざっていた。今まで年を越す前の11月や12月に蕪栗沼周辺で見ることが多かっただけ、この辺りで観察できるのは新鮮に感じた。\n\n\n第二週　ハクチョウ数羽\n加美の方まで分布していたと言うことはもっと西にもいるかな～と思い、小野田の方まで行ってみた。結果は積雪がものすごく、ガンが採餌出来ないので数羽のハクチョウしかいなかった…逆に君たちは何故いたの…？積雪が解けた頃にまた行ってみる\nキレイなオス成鳥のコチョゲンを見つけたが、防雪柵に乗ったと思うと直ぐ雪景色に消えていった。\n\n\n第三周　伊豆沼ハクガン\nハクガンの分布を調べに行った。ハクガンと言えば伊豆沼をねぐらにしているので、そちらに行ってみる。周囲の田んぼにはオオヒシクイやマガンの群れは見られるけどハクガンの姿はない。試しに伊豆沼北部の若柳や志波姫へ行ってみた。こちらもマガンやヒシクイだけでハクガンは見えない。\n意気消沈して伊豆沼に戻ると、北部の一角に10羽の群れが見えた。四方をマガンにガードされているので近づけない。遠くから何とか観察できた。"
+  },
+  {
+    "objectID": "article/Miyagi/kenpoku_goose.html#の県北レポート-1",
+    "href": "article/Miyagi/kenpoku_goose.html#の県北レポート-1",
+    "title": "県北ガン",
+    "section": "2025.02の県北レポート",
+    "text": "2025.02の県北レポート\n一つ大きな仕事が一段落したので（まだのこってるけど）１月よりも時間を使えるようになった。\n\n第一週　ハクガン撃沈\n一月第三週のようにハクガンを探しに行った。結果は撃沈。何処を探してもいない。\n前回のように伊豆沼周辺を探し、今度は更に奥の石越辺りまで。途中若柳で標識オオヒシクイを見つけた。黄色首環で「B41」「B47」「B49」と記されていた。ここら辺は伊豆沼周辺よりもガンが多く、「越冬後期にはねぐら周辺の食べ尽くされた田んぼよりも遠くに散らばる」のは本当だと分かった。だからこそ年明けのガン探しは難しいのだが…\n秋田で観察したハクガンはねぐら入りが非常に遅かった。今回もねぐら入りを出待ちしてみたがいつまで経っても現れずタイムアップ。\n\n\n第4週　大当たりのガン見\n一月第二週に赴いた加美の方に出かけてみた。一月の時点ではまだまだ雪深く、麓の方の田んぼにハクチョウが数羽入っていただけだった。二月も下旬で、古川や化女沼周辺といった、ねぐら近くの落ちモミは食べ尽くしたのか全く見られなくなった。\n加美市街地で気になっていたラーメン屋さんによって昼食をいただいた。注文してから5分ほどで美味しいラーメンがでてきた。あっさりだけどしっかり鳥肉の旨味が染みてる、何度も飲みたくなるような塩スープのチャーシュー麺だった。\n車を下野目の方へ走らせると段々と田んぼにガンが降りているのが目立ち始めた。その数は宮崎へ向けてどんどん多くなり、数百羽規模の雁の群れが青空と船形山を背景に飛ぶ様子がコンスタントに見られるようになった。加美でガンを見ることは初めてだったので、非常に印象深かった。田んぼの雪はまだ残っている部分があるものの、雪解けの田んぼに集中して降りているようだ。\n降りているガンを見ると、マガン：シジュウカラガン＝5:3くらいの割合。一羽だけマガン×シジュウカラガンの雑種を見つけたり、一羽だけヒシクイを見たりした。ハクガンを探したが見当たらない。渡りのルートが違うので、ここには立ち寄らないのかもしれない。伊豆沼周辺で見るように車を停めると何度か飛ばしてしまった。伊豆沼周辺よりも警戒心が強いように感じた。\n面白いのはオナガガモの群れがマガンに混ざって田んぼで採餌していたことだ。オナガガモも北帰行でねぐらを北西に移しているのかもしれない。コハクの中には赤い首輪を付けた個体を二個体見つけたが、交通量が多かったり、マガンが周囲で警戒しまくっていたりしたので、うまく読み取ることが出来なかった。\n他に興味深い鳥は見られなかったが、土地勘がないだけで慣れてくれば面白いのが見られるかもしれない。"
+  },
+  {
+    "objectID": "article/Miyagi/kenpoku_goose.html#の県北レポート-2",
+    "href": "article/Miyagi/kenpoku_goose.html#の県北レポート-2",
+    "title": "県北ガン",
+    "section": "2025.03の県北レポート",
+    "text": "2025.03の県北レポート\n1月下旬から始まっていたガンの北帰行がほとんど完了した。まだ周辺田んぼに残っているかは微妙だが、一応行ってみる。\n\n第一週　みんなでガン\n大学を離れる同期達と野鳥観察をした。この日は田尻・蕪栗沼方面を攻めた。\n蕪栗沼のガンはすっからかんでほとんど残っていない。上空を数羽のマガンが鳴きながら、まばらに飛ぶだけ。悲しい。\n登米の高速道路（45号線）を運転中、北上川の周辺田んぼに十数羽のガンが降りていた。高速道路だったので助手席の同期がパパッと観察すると、ヒシクイの群れのようだった。\n\n\n第三週　ガンの居残りチェック\nその前に、ニュースにもなっていたあの個体を観察しに行った。現地に到着すると、確かに餌付けでベタベタに慣れ切ったオオハクチョウ２羽の後ろから、静かにやってきた。茨城では定着しているらしいが、それ以外の場所でも観察されているらしい。真っ黒な羽衣に赤い顔がおしゃれで、オオハクより小さめだった。\nオオハク同様、倒立してタケノコをしているようだった。小さい分、オオハクより採餌効率が悪そうだ。しかし、餌付けの地元民がやってくるとすぐに移動し、慎重にムギやパンくずを食べているようだ。バードウォッチャーよりも地元民の割合が高く、すれ違った女性も「コクチョウいますか？」な～んて尋ねてきた。デカい鳥は地元民に愛されているが、愛し方を間違わないでほしい。ずっと餌をもらい続けることで居心地の良さから定着してしまったり、水質の変化や堆積物の増加が起こらないか懸念。\n移動して蕪栗沼白鳥地区の北側駐車場に車を止めた。白鳥西側から遊水地を眺める。野焼きが行われたらしく、ヨシ原が一定程度開けていた。穏やかな風が人のいない湿原に吹き抜ける。茂みの中からウグイスのさえずりが聞こえる。穏やかな青空に、残ったマガンたちが嘶きながら飛んでいる。ツグミやカシラダカが一生懸命に採餌を行っている。トビとチュウヒが舞い、ダイサギとヘラサギが沼の端で羽を休めている。本当にいい環境だ。思えば鳥見にはまったのも、ガンのねぐら立ちに感動したり、日本にはいないと思っていたヘラサギをここで見たりした大学時代のカウントが原点だ。もう、この場所に大学のなかまとくることはないことに気づく。マガンの北帰行によって、青空を映すほど静まり返った湖面を眺め、この沼はこんなに広かったっけと考えた。\nこの時期にマガンを見に来ることはないが、もしかしたら渡り途中で珍しい鳥が入っているかもしれない。今回は、沼北部の田んぼにマガンが200羽ほど降りていて、採餌をしていた。沼で飛んでいたマガンはどこから来たのかと思っていたが、こういうことらしい。"
+  },
+  {
+    "objectID": "article/Miyagi/park.html",
+    "href": "article/Miyagi/park.html",
+    "title": "公園いろいろ",
+    "section": "",
+    "text": "新型コロナウイルス感染症対策でオンデマンド授業、サークル活動自粛期間中だったので、探鳥する時間がかなりあった。\n自転車で仙台市内の都市公園・森林公園を駆け回った記録。"
+  },
+  {
+    "objectID": "article/Miyagi/park.html#公園１",
+    "href": "article/Miyagi/park.html#公園１",
+    "title": "公園いろいろ",
+    "section": "公園１",
+    "text": "公園１"
+  },
+  {
+    "objectID": "article/Miyagi/park.html#初見のゴジュウカラ",
+    "href": "article/Miyagi/park.html#初見のゴジュウカラ",
+    "title": "公園いろいろ",
+    "section": "2020.12.28 初見のゴジュウカラ",
+    "text": "2020.12.28 初見のゴジュウカラ\n林道を歩いていると途中で折れた幹の上にゴジュウカラが乗っかっていた。コゲラ・エナガ・シジュウカラの鳴き声が近づいてきているのには気付いていたが、ゴジュウカラの鳴き声はしていなかった。\n急いで写真を撮って観察を始めると、数分も経たないうちに林道から外れた奥の木立に移動して行ってしまった。特有の「幹を垂直方向に上り下りする行動」、「幹と垂直に頭を持ち上げる行動」等は見られなかったので、次回に期待。\n「標高が高いところにいる鳥」というイメージしかなく、発見時は驚いた。しかし、その後調べると「標高が高いところにいる」のは繁殖期だけで、越冬は低い場所へ移動する「漂鳥」という生態を持っていることを知った。ヒガラ・コガラよりも先にゴジュウカラをライファーしてしまった。"
+  },
+  {
+    "objectID": "article/Trip.html",
+    "href": "article/Trip.html",
+    "title": "Trip",
+    "section": "",
+    "text": "[2021.03 道東探鳥]\n[2022.08 函館～苫小牧（観光多め）]\n2023.12 道東探鳥\n[2024.05 天売島]\n[2024.09 苫小牧]\n\n\n\n[2022.03 青森・弘前]\n[2024.09 青森・龍飛ほか]\n[2022.12 秋田ハクガン]\n[2024.11 秋田ハクガン２]\n[2024.10 山形・飛島]\n##関東 [2023.08 戦場ヶ原]\n[2024.09 谷津干潟]\n[2024.12 三番瀬・葛西]\n\n\n\n[2024.03 裏日本周遊]\n\n\n\n[2022.12～2023.01 九州探鳥]\n\n\n\n[2023.03 石垣島]"
+  },
+  {
+    "objectID": "article/Trip.html#北海道",
+    "href": "article/Trip.html#北海道",
+    "title": "Trip",
+    "section": "",
+    "text": "[2021.03 道東探鳥]\n[2022.08 函館～苫小牧（観光多め）]\n2023.12 道東探鳥\n[2024.05 天売島]\n[2024.09 苫小牧]"
+  },
+  {
+    "objectID": "article/Trip.html#東北",
+    "href": "article/Trip.html#東北",
+    "title": "Trip",
+    "section": "",
+    "text": "[2022.03 青森・弘前]\n[2024.09 青森・龍飛ほか]\n[2022.12 秋田ハクガン]\n[2024.11 秋田ハクガン２]\n[2024.10 山形・飛島]\n##関東 [2023.08 戦場ヶ原]\n[2024.09 谷津干潟]\n[2024.12 三番瀬・葛西]"
+  },
+  {
+    "objectID": "article/Trip.html#中部",
+    "href": "article/Trip.html#中部",
+    "title": "Trip",
+    "section": "",
+    "text": "[2024.03 裏日本周遊]"
+  },
+  {
+    "objectID": "article/Trip.html#九州",
+    "href": "article/Trip.html#九州",
+    "title": "Trip",
+    "section": "",
+    "text": "[2022.12～2023.01 九州探鳥]"
+  },
+  {
+    "objectID": "article/Trip.html#八重山",
+    "href": "article/Trip.html#八重山",
+    "title": "Trip",
+    "section": "",
+    "text": "[2023.03 石垣島]"
+  },
+  {
+    "objectID": "article/Trip/Dec22_Akita.html",
+    "href": "article/Trip/Dec22_Akita.html",
+    "title": "【工事中】秋田ハクガン",
+    "section": "",
+    "text": "カ　メ　ラ　が　壊　れ　た　の　で　証　拠　写　真　で　す　。\n一眼入門セットみたいなのを家族が15年くらい前に買っていたので、ないよりはマシだとそれを借りました。望遠レンズとかじゃないです。"
+  },
+  {
+    "objectID": "article/Trip/Dec22_Akita.html#section",
+    "href": "article/Trip/Dec22_Akita.html#section",
+    "title": "【工事中】秋田ハクガン",
+    "section": "",
+    "text": "カ　メ　ラ　が　壊　れ　た　の　で　証　拠　写　真　で　す　。\n一眼入門セットみたいなのを家族が15年くらい前に買っていたので、ないよりはマシだとそれを借りました。望遠レンズとかじゃないです。"
+  },
+  {
+    "objectID": "article/Trip/Dec22_bufflehead.html",
+    "href": "article/Trip/Dec22_bufflehead.html",
+    "title": "関東ヒメハジロ",
+    "section": "",
+    "text": "有名すぎて伏せる意味はほとんどないと思いますが、関東某所に現れたヒメハジロを見てきました。\n出現情報がネットに流れ出してから（知っている限り）一ヶ月は経っていましたが、現場には10人ほどのバードウォッチャー？カメラマン？がいました。\nあしがゆめかわピンクでかわいかったです。\n\n\n\n\n\n\n\n\n\nヒメハジロ\n\n\n\n\n\n\n\nオオバンと行動する"
+  },
+  {
+    "objectID": "article/Trip/Dec22_bufflehead.html#関東某所",
+    "href": "article/Trip/Dec22_bufflehead.html#関東某所",
+    "title": "関東ヒメハジロ",
+    "section": "",
+    "text": "有名すぎて伏せる意味はほとんどないと思いますが、関東某所に現れたヒメハジロを見てきました。\n出現情報がネットに流れ出してから（知っている限り）一ヶ月は経っていましたが、現場には10人ほどのバードウォッチャー？カメラマン？がいました。\nあしがゆめかわピンクでかわいかったです。\n\n\n\n\n\n\n\n\n\nヒメハジロ\n\n\n\n\n\n\n\nオオバンと行動する"
+  },
+  {
     "objectID": "article/bird_list/charadriiformes.html#shorebirds-in-miyagi",
     "href": "article/bird_list/charadriiformes.html#shorebirds-in-miyagi",
     "title": "Shorebirds, Gulls, Auks etc.",
@@ -329,18 +1204,396 @@
     "text": "Shorebirds in Miyagi\n\nセイタカシギ\nソリハシセイタカシギ\nタゲリ\nケリ\nムナグロ\nダイゼン\nハジロコチドリ\nイカルチドリ\nコチドリ\nシロチドリ\nメダイチドリ\nチュウシャクシギ\nコシャクシギ\nホウロクシギ\nダイシャクシギ\nオオソリハシシギ\nキョウジョシギ\nオバシギ\nコオバシギ\nエリマキシギ\nキリアイ\nウズラシギ\nオジロトウネン\nヒバリシギ\nトウネン\nミユビシギ\nハマシギ\nヨーロッパトウネン\nオオハシシギ\nタシギ\nソリハシシギ\nアカエリヒレアシシギ\nイソシギ\nクサシギ\nキアシシギ\nアカアシシギ\nコアオアシシギ\nタカブシギ\nツルシギ\nアオアシシギ"
   },
   {
-    "objectID": "article/bird_list/columbiformes.html#doves-pigeons-in-miyagi",
-    "href": "article/bird_list/columbiformes.html#doves-pigeons-in-miyagi",
-    "title": "Doves",
-    "section": "DOves, Pigeons in Miyagi",
-    "text": "DOves, Pigeons in Miyagi\n\nキジバト\nアオバト"
+    "objectID": "article/bird_list/charadriiformes.html#セイタカシギ-black-winged-stilt",
+    "href": "article/bird_list/charadriiformes.html#セイタカシギ-black-winged-stilt",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "セイタカシギ Black-winged Stilt",
+    "text": "セイタカシギ Black-winged Stilt\n\nStilt = 「竹馬」。ハマシギはStintなので、lをnにタイポすると途端に足が短くなる。\nHimans（革紐）+pous（足）\n例年渡りの時期に見られる。近年は個体数が多く、珍しい感じはしなくなってきている。宮城でも繁殖が確認されたりするのだろうか"
   },
   {
-    "objectID": "article/bird_list/cuculiformes.html#cuckoos-in-miyagi",
-    "href": "article/bird_list/cuculiformes.html#cuckoos-in-miyagi",
+    "objectID": "article/bird_list/charadriiformes.html#ソリハシセイタカシギ-pied-avocet",
+    "href": "article/bird_list/charadriiformes.html#ソリハシセイタカシギ-pied-avocet",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "ソリハシセイタカシギ Pied Avocet",
+    "text": "ソリハシセイタカシギ Pied Avocet\n\n数年に一度くらいの頻度で湿地や海岸に現れている。\n現れるのは渡り後期（11月とか）や冬が多い印象（12月、1月）。冬に現れる個体は謎すぎる"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#タゲリ-northern-lapwing",
+    "href": "article/bird_list/charadriiformes.html#タゲリ-northern-lapwing",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "タゲリ Northern Lapwing",
+    "text": "タゲリ Northern Lapwing\n\n毎冬数羽～数十羽で見られる。"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#ケリ-grey-headed-lapwing",
+    "href": "article/bird_list/charadriiformes.html#ケリ-grey-headed-lapwing",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "ケリ Grey-headed Lapwing",
+    "text": "ケリ Grey-headed Lapwing\n\n繁殖個体は少ない。"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#ムナグロ-golden-plover",
+    "href": "article/bird_list/charadriiformes.html#ムナグロ-golden-plover",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "ムナグロ Golden Plover",
+    "text": "ムナグロ Golden Plover\n\n学名のfluvaも「黄金色」\n春秋の渡り時期に沼や湿地で見られる"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#ダイゼン-grey-plover",
+    "href": "article/bird_list/charadriiformes.html#ダイゼン-grey-plover",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "ダイゼン Grey Plover",
+    "text": "ダイゼン Grey Plover\n\nムナグロよりも大きく、灰色味が強い\n春の渡り時期に一度だけ見たことがあるが、探せばいると思う。"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#ハジロコチドリ-ringed-plover",
+    "href": "article/bird_list/charadriiformes.html#ハジロコチドリ-ringed-plover",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "ハジロコチドリ Ringed Plover",
+    "text": "ハジロコチドリ Ringed Plover\n\n夏羽は白い眉斑が目立つ。また、嘴基部は黄色く先端が黒いので識別が容易\n、という識別点を知らずに一度だけ見逃したことがある。家に帰ってからイカルチだと思って撮ったのがハジコチだと知って絶望した"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#イカルチドリ-long-billed-plover",
+    "href": "article/bird_list/charadriiformes.html#イカルチドリ-long-billed-plover",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "イカルチドリ Long-billed Plover",
+    "text": "イカルチドリ Long-billed Plover\n\nコチドリに似ているが、一回り大きくアイリングが目立たない。冬によく見られる"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#コチドリ-little-ringed-plover",
+    "href": "article/bird_list/charadriiformes.html#コチドリ-little-ringed-plover",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "コチドリ Little Ringed Plover",
+    "text": "コチドリ Little Ringed Plover\n\n渡りの季節に沼や海岸で見られる。\n腹を膨らませてビュイッと鳴きながら縄張り争いしているのがよく見られる。威嚇最中は羽毛が膨らんでモフモフに見える。"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#シロチドリ-kentish-plover",
+    "href": "article/bird_list/charadriiformes.html#シロチドリ-kentish-plover",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "シロチドリ Kentish Plover",
+    "text": "シロチドリ Kentish Plover\n\n周年海岸に生息。"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#メダイチドリ",
+    "href": "article/bird_list/charadriiformes.html#メダイチドリ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "メダイチドリ",
+    "text": "メダイチドリ\n\n渡りの時期に見られる。目が大きく見えるので「目大」。\n橙色の羽衣なのでメ「ダイ」だと思ってた。"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#チュウシャクシギ",
+    "href": "article/bird_list/charadriiformes.html#チュウシャクシギ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "チュウシャクシギ",
+    "text": "チュウシャクシギ"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#コシャクシギ",
+    "href": "article/bird_list/charadriiformes.html#コシャクシギ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "コシャクシギ",
+    "text": "コシャクシギ\n2022年は当たり年で、たまたま観察できた。"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#ホウロクシギ",
+    "href": "article/bird_list/charadriiformes.html#ホウロクシギ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "ホウロクシギ",
+    "text": "ホウロクシギ\n数は少ない。"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#ダイシャクシギ",
+    "href": "article/bird_list/charadriiformes.html#ダイシャクシギ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "ダイシャクシギ",
+    "text": "ダイシャクシギ\n数は少ない。飛翔時、翼下面と腰が白い"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#オオソリハシシギ",
+    "href": "article/bird_list/charadriiformes.html#オオソリハシシギ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "オオソリハシシギ",
+    "text": "オオソリハシシギ"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#キョウジョシギ",
+    "href": "article/bird_list/charadriiformes.html#キョウジョシギ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "キョウジョシギ",
+    "text": "キョウジョシギ"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#オバシギ",
+    "href": "article/bird_list/charadriiformes.html#オバシギ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "オバシギ",
+    "text": "オバシギ\n数は少ない印象。数度しか見たことない"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#コオバシギ",
+    "href": "article/bird_list/charadriiformes.html#コオバシギ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "コオバシギ",
+    "text": "コオバシギ\n2021年春に一度だけ"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#エリマキシギ",
+    "href": "article/bird_list/charadriiformes.html#エリマキシギ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "エリマキシギ",
+    "text": "エリマキシギ\n毎年秋に多い。"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#キリアイ",
+    "href": "article/bird_list/charadriiformes.html#キリアイ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "キリアイ",
+    "text": "キリアイ\nほとんど見ない"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#ウズラシギ",
+    "href": "article/bird_list/charadriiformes.html#ウズラシギ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "ウズラシギ",
+    "text": "ウズラシギ\nあんまり多くない"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#オジロトウネン",
+    "href": "article/bird_list/charadriiformes.html#オジロトウネン",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "オジロトウネン",
+    "text": "オジロトウネン\n数は少ない。"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#ヒバリシギ",
+    "href": "article/bird_list/charadriiformes.html#ヒバリシギ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "ヒバリシギ",
+    "text": "ヒバリシギ\nほとんど見ないが探せばいそう"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#トウネン",
+    "href": "article/bird_list/charadriiformes.html#トウネン",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "トウネン",
+    "text": "トウネン\n2024年秋は大当たりだった。普段は数十羽見られれば上々の場所で150以上の群れが見られた"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#ミユビシギ",
+    "href": "article/bird_list/charadriiformes.html#ミユビシギ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "ミユビシギ",
+    "text": "ミユビシギ\n海岸や河口で越冬している。波打ち際でシャトルランしてる"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#ハマシギ",
+    "href": "article/bird_list/charadriiformes.html#ハマシギ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "ハマシギ",
+    "text": "ハマシギ\n海岸や河口で越冬している。春になるとお腹が黒くなるので、羽衣の変化を楽しめる"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#ヨーロッパトウネン",
+    "href": "article/bird_list/charadriiformes.html#ヨーロッパトウネン",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "ヨーロッパトウネン",
+    "text": "ヨーロッパトウネン\n少ない"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#オオハシシギ",
+    "href": "article/bird_list/charadriiformes.html#オオハシシギ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "オオハシシギ",
+    "text": "オオハシシギ\n数羽だけ県内の沼に越冬しに来る"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#タシギ",
+    "href": "article/bird_list/charadriiformes.html#タシギ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "タシギ",
+    "text": "タシギ\n越冬してるし渡りの時期も見られる。田んぼの用水路とか"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#ソリハシシギ",
+    "href": "article/bird_list/charadriiformes.html#ソリハシシギ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "ソリハシシギ",
+    "text": "ソリハシシギ\n渡り時期によく見られる"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#アカエリヒレアシシギ",
+    "href": "article/bird_list/charadriiformes.html#アカエリヒレアシシギ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "アカエリヒレアシシギ",
+    "text": "アカエリヒレアシシギ\nいまはなき県内のポイントで一度だけ見ている。"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#イソシギ",
+    "href": "article/bird_list/charadriiformes.html#イソシギ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "イソシギ",
+    "text": "イソシギ\n留鳥。尾羽ビコビコで楽しい"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#クサシギ",
+    "href": "article/bird_list/charadriiformes.html#クサシギ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "クサシギ",
+    "text": "クサシギ\n11月とか遅い時期に、あまりシギチのいなさそうな場所で見る。謎"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#キアシシギ",
+    "href": "article/bird_list/charadriiformes.html#キアシシギ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "キアシシギ",
+    "text": "キアシシギ\n渡り時期にめちゃ多い"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#アカアシシギ",
+    "href": "article/bird_list/charadriiformes.html#アカアシシギ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "アカアシシギ",
+    "text": "アカアシシギ\n渡り時期に数羽ほどちょろちょろ見られる。ツルシギに似るが、嘴は上も下も赤い。飛翔時の風切りの白色部が目立つ。"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#コアオアシシギ",
+    "href": "article/bird_list/charadriiformes.html#コアオアシシギ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "コアオアシシギ",
+    "text": "コアオアシシギ\n渡り時期によく見られる。アオアシシギより体型が痩せてる印象で、たまにセイタカシギと見間違うことがある。嘴はまっすぐ"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#タカブシギ",
+    "href": "article/bird_list/charadriiformes.html#タカブシギ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "タカブシギ",
+    "text": "タカブシギ\n渡り時期にちょろちょろ見られる"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#ツルシギ",
+    "href": "article/bird_list/charadriiformes.html#ツルシギ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "ツルシギ",
+    "text": "ツルシギ\n渡り時期に見られるが、秋の非生殖羽が多い。アカアシに似るが、上側嘴は黒い。飛翔時、風切りは白くない"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#アオアシシギ",
+    "href": "article/bird_list/charadriiformes.html#アオアシシギ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "アオアシシギ",
+    "text": "アオアシシギ\n渡り時期によく見られる。コアオアシよりも嘴が反っていて、体型が気持ち太く感じる"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#ミツユビカモメ",
+    "href": "article/bird_list/charadriiformes.html#ミツユビカモメ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "ミツユビカモメ",
+    "text": "ミツユビカモメ\n冬の網地島フェリー"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#ユリカモメ",
+    "href": "article/bird_list/charadriiformes.html#ユリカモメ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "ユリカモメ",
+    "text": "ユリカモメ\n冬、公園や下流の河川で見られる。幼鳥は嘴がオレンジ色"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#ウミネコ",
+    "href": "article/bird_list/charadriiformes.html#ウミネコ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "ウミネコ",
+    "text": "ウミネコ\n留鳥。"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#カモメ-mew-gull",
+    "href": "article/bird_list/charadriiformes.html#カモメ-mew-gull",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "カモメ Mew Gull",
+    "text": "カモメ Mew Gull\n冬鳥。数は多くない 日本人は猫っぽいカモメと言われれば「ウミネコ」だが、海外の人は「Mew Gull（＝カモメ）」だと感じたのだろう。Mewは猫の鳴き声"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#ワシカモメ",
+    "href": "article/bird_list/charadriiformes.html#ワシカモメ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "ワシカモメ",
+    "text": "ワシカモメ\n冬鳥。数は多くない"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#セグロカモメ",
+    "href": "article/bird_list/charadriiformes.html#セグロカモメ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "セグロカモメ",
+    "text": "セグロカモメ\n数は少ない"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#オオセグロカモメ",
+    "href": "article/bird_list/charadriiformes.html#オオセグロカモメ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "オオセグロカモメ",
+    "text": "オオセグロカモメ\n留鳥。ウミネコに並んで多い"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#コアジサシ",
+    "href": "article/bird_list/charadriiformes.html#コアジサシ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "コアジサシ",
+    "text": "コアジサシ\n夏鳥。"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#クロハラアジサシ",
+    "href": "article/bird_list/charadriiformes.html#クロハラアジサシ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "クロハラアジサシ",
+    "text": "クロハラアジサシ\n梅雨の時期に沼地で見られる。秋にも見られることがあるらしい。"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#トウゾクカモメ",
+    "href": "article/bird_list/charadriiformes.html#トウゾクカモメ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "トウゾクカモメ",
+    "text": "トウゾクカモメ"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#マダラウミスズメ",
+    "href": "article/bird_list/charadriiformes.html#マダラウミスズメ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "マダラウミスズメ",
+    "text": "マダラウミスズメ\n仙台湾で越冬している（？）生態が謎"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#ウミスズメ",
+    "href": "article/bird_list/charadriiformes.html#ウミスズメ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "ウミスズメ",
+    "text": "ウミスズメ\n冬の網地島フェリーで見たい"
+  },
+  {
+    "objectID": "article/bird_list/charadriiformes.html#ウトウ",
+    "href": "article/bird_list/charadriiformes.html#ウトウ",
+    "title": "Shorebirds, Gulls, Auks etc.",
+    "section": "ウトウ",
+    "text": "ウトウ\n冬の網地島フェリーで見たい"
+  },
+  {
+    "objectID": "article/bird_list/columbiformes.html#キジバト-oriental-turtle-dove",
+    "href": "article/bird_list/columbiformes.html#キジバト-oriental-turtle-dove",
+    "title": "Doves",
+    "section": "キジバト Oriental Turtle Dove",
+    "text": "キジバト Oriental Turtle Dove\n郊外であれば標高が低くても見られる。"
+  },
+  {
+    "objectID": "article/bird_list/columbiformes.html#アオバト",
+    "href": "article/bird_list/columbiformes.html#アオバト",
+    "title": "Doves",
+    "section": "アオバト",
+    "text": "アオバト\n山でよく鳴いてる。見たことはない。"
+  },
+  {
+    "objectID": "article/bird_list/cuculiformes.html#カッコウ-common-cuckoo",
+    "href": "article/bird_list/cuculiformes.html#カッコウ-common-cuckoo",
     "title": "Cuckoos",
-    "section": "Cuckoos in Miyagi",
-    "text": "Cuckoos in Miyagi\n\nホトトギス\nカッコウ\nツツドリ"
+    "section": "カッコウ Common Cuckoo",
+    "text": "カッコウ Common Cuckoo\nあまりの美声すぎて、英語・和蘭語・仏語・独語で鳴き声が名前の由来になってしまった鳥。調べたらほかにもありそう 仙台市の鳥。数は減ってる気がする"
   },
   {
     "objectID": "article/bird_list/galliformes.html#landfowls-in-miyagi",
@@ -364,11 +1617,60 @@
     "text": "Rails in Miyagi\n\nクイナ\nバン\nオオバン"
   },
   {
+    "objectID": "article/bird_list/gruiformes.html#クイナ",
+    "href": "article/bird_list/gruiformes.html#クイナ",
+    "title": "Cranes and Rails",
+    "section": "クイナ",
+    "text": "クイナ\nシャイなのであんまり見れない"
+  },
+  {
+    "objectID": "article/bird_list/gruiformes.html#バン-common-moorhen",
+    "href": "article/bird_list/gruiformes.html#バン-common-moorhen",
+    "title": "Cranes and Rails",
+    "section": "バン Common Moorhen",
+    "text": "バン Common Moorhen\n沢地の家禽（Moorhen）。宮城では夏鳥。モフモフかわいいけど足だけゴツいヒナも見られる"
+  },
+  {
     "objectID": "article/bird_list/gruiformes.html#宮城で観察されたことのあるツルクイナ",
     "href": "article/bird_list/gruiformes.html#宮城で観察されたことのあるツルクイナ",
     "title": "Cranes and Rails",
     "section": "宮城で観察されたことのあるツル・クイナ",
     "text": "宮城で観察されたことのあるツル・クイナ\n\nソデグロヅル 1\nタンチョウ\nナベヅル\n\n\n\n\n\n\n\n蕪栗ぬまっこクラブ"
+  },
+  {
+    "objectID": "article/bird_list/podicipediformes.html#カイツブリ-little-grebe",
+    "href": "article/bird_list/podicipediformes.html#カイツブリ-little-grebe",
+    "title": "Grebes",
+    "section": "カイツブリ Little Grebe",
+    "text": "カイツブリ Little Grebe\n\n素速い潜水者（Tachybaptus）\n留鳥。繁殖もする。"
+  },
+  {
+    "objectID": "article/bird_list/podicipediformes.html#アカエリカイツブリ-red-necked-grebe",
+    "href": "article/bird_list/podicipediformes.html#アカエリカイツブリ-red-necked-grebe",
+    "title": "Grebes",
+    "section": "アカエリカイツブリ Red-necked Grebe",
+    "text": "アカエリカイツブリ Red-necked Grebe\n\n冬鳥。河口や漁港などに入ってる。嘴が黄色く、他のカイツブリより大きい\n冬羽は首の赤襟がなくなって黒っぽくなる"
+  },
+  {
+    "objectID": "article/bird_list/podicipediformes.html#カンムリカイツブリ",
+    "href": "article/bird_list/podicipediformes.html#カンムリカイツブリ",
+    "title": "Grebes",
+    "section": "カンムリカイツブリ",
+    "text": "カンムリカイツブリ\n\n冬鳥だが場所によって留鳥として繁殖している個体もいる。\n幼鳥を背中に乗せてるとほっこりする"
+  },
+  {
+    "objectID": "article/bird_list/podicipediformes.html#ミミカイツブリ-horned-grebe",
+    "href": "article/bird_list/podicipediformes.html#ミミカイツブリ-horned-grebe",
+    "title": "Grebes",
+    "section": "ミミカイツブリ Horned Grebe",
+    "text": "ミミカイツブリ Horned Grebe\n\n冬鳥だが、体感一番少ない印象。たまに漁港とか河口に入っていると嬉しい"
+  },
+  {
+    "objectID": "article/bird_list/podicipediformes.html#ハジロカイツブリ-black-necked-grebe",
+    "href": "article/bird_list/podicipediformes.html#ハジロカイツブリ-black-necked-grebe",
+    "title": "Grebes",
+    "section": "ハジロカイツブリ Black-necked Grebe",
+    "text": "ハジロカイツブリ Black-necked Grebe\n\n冬鳥。春先に沖合で大量の群れになっているのを陸から観察できることがある"
   },
   {
     "objectID": "article/ferry/silverferry.html",
@@ -420,6 +1722,13 @@
     "text": "バードウォッチングの話\nこの日は北風が強かったことから、より北の海域で観察できるイメージのコアホウが多かったと考えられます。あとは天気が良かったためか、八丈航路で観察機会の多い（と聴いている）ウミツバメ類も飛ぶことはありませんでした。鳥の出が悪いときもよく飛んでくれるオオミズナギドリって偉大だな…オオナギくん、いっつも航路で飛んでくれてありがとう。\n覚えている範囲で鳥あわせしてみます。\n\nアホウドリ\nコアホウドリ\nクロアシアホウドリ\nオオミズナギドリ\nウミネコ\nユリカモメ\n\n以　上　で　す　。\n酔いによるグロッキー状態と現場の知識（海域とか）の欠如などで、思ったよりも探すのに苦労しました。今まで行ってきた航路の中で一番渋かったかも。オーストンウミとかいろんなShearwater探したかったという感じ。あわよくばPterodroma属を見てみたかったけど、流石に小笠原まで行かないと見れないですかね。あとヤツガシラの無賃乗船も期待していました（これもXで情報あったです）\n種数で言ったらご覧の有様ですが、アホウドリ類が近くて嬉しかったです！じっくり観察するにはいいな～と思いました。一方近すぎて撮影には難儀しました。大きく写せる一方で、ちょっとしたことで画角からはみ出ます。次は視力と飛びものの撮影技術、半規管を鍛えてから乗りたいです。観察道具に飛沫がかかるので、クリーナー、後処理など忘れずに。"
   },
   {
+    "objectID": "article/list_Miyagi.html",
+    "href": "article/list_Miyagi.html",
+    "title": "宮城の鳥見リスト",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n\n\n\n\n\n\n\n\n沼１\n\n\n\nducks\n\n\nshorebirds\n\n\n\nよく行く沼の記録\n\n\n\n\n\n\nFeb 11, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n宮城県航路\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n河口フィールド１\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n河口フィールド２\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n県南\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n県北その他\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n県北ガン\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n公園いろいろ\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n近所田んぼ・川\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "article/list_ferry.html",
     "href": "article/list_ferry.html",
     "title": "航路探鳥リスト",
@@ -427,206 +1736,59 @@
     "text": "Order By\n       Default\n         \n          Title\n        \n     \n  \n\n\n\n\n\n\n\n\nシルバーフェリー\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n太平洋フェリー（名古屋↔︎仙台↔︎苫小牧）\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n東海汽船\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n宮城県航路\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "article/list_Trip.html",
-    "href": "article/list_Trip.html",
-    "title": "遠征リスト",
+    "objectID": "article/others/Paintings.html",
+    "href": "article/others/Paintings.html",
+    "title": "鳥と絵画",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n     \n  \n\n\n\n\n\n\n\n\n戦場ヶ原\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n【工事中】秋田ハクガン\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n関東ヒメハジロ\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n九州遠征\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n道東遠征\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n三番瀬・葛西\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2021.03 道東遠征\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n【工事中】石垣島遠征\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n北陸・中部辺り周遊\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n天売島\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n秋田ハクガンその２\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n飛島\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "まとめてみたくなったのだからしょうがない\n\n\n執行道具の絞首台にちょこんとカササギが乗っかっている。日本では縁起物として扱われる勝ちガラスは、西洋では不吉なイメージらしい。\n\n\n\n\n\nロビンが出てくる。主題はシェイクスピアの戯曲ハムレットの一場面。タイトルのオフェーリアが川に身投げしたシーン。\n\n\n\n\n静物画は、卓上に乗った果実だけでなく狩猟鳥が描かれることも多い。Game birdのキジ類やカモなどが多く描かれている。\n\n\n\n\n\nゴッホの絶筆。濃い藍色の空と明るい金色の麦畑の隙間に複数のカラスが飛んでいる。\n\n\n\n\n\n\n特定の鳥ではないが、ハトっぽいシルエットの中に雲の浮かんだ青空が描かれる。"
   },
   {
-    "objectID": "article/Miyagi/kakou1.html",
-    "href": "article/Miyagi/kakou1.html",
-    "title": "河口フィールド１",
+    "objectID": "article/others/Paintings.html#ラファエル前派",
+    "href": "article/others/Paintings.html#ラファエル前派",
+    "title": "鳥と絵画",
     "section": "",
-    "text": "河口のシギチ、ガンカモなどなど"
+    "text": "ロビンが出てくる。主題はシェイクスピアの戯曲ハムレットの一場面。タイトルのオフェーリアが川に身投げしたシーン。"
   },
   {
-    "objectID": "article/Miyagi/kakou1.html#冬シーズンのコクガン",
-    "href": "article/Miyagi/kakou1.html#冬シーズンのコクガン",
-    "title": "河口フィールド１",
-    "section": "2024冬シーズンのコクガン",
-    "text": "2024冬シーズンのコクガン"
-  },
-  {
-    "objectID": "article/Miyagi/kennan.html",
-    "href": "article/Miyagi/kennan.html",
-    "title": "県南",
+    "objectID": "article/others/Paintings.html#静物画",
+    "href": "article/others/Paintings.html#静物画",
+    "title": "鳥と絵画",
     "section": "",
-    "text": "県南の野鳥観察記録"
+    "text": "静物画は、卓上に乗った果実だけでなく狩猟鳥が描かれることも多い。Game birdのキジ類やカモなどが多く描かれている。"
   },
   {
-    "objectID": "article/Miyagi/kenpoku_goose.html",
-    "href": "article/Miyagi/kenpoku_goose.html",
-    "title": "県北ガン",
+    "objectID": "article/others/Paintings.html#ゴッホ",
+    "href": "article/others/Paintings.html#ゴッホ",
+    "title": "鳥と絵画",
     "section": "",
-    "text": "大好きなガン類の観察記録を中心とした記録。2020年11月の大学サークルの行事でねぐら入りを見たことがきっかけで、鳥の中でガンが一番好きになった。"
+    "text": "ゴッホの絶筆。濃い藍色の空と明るい金色の麦畑の隙間に複数のカラスが飛んでいる。"
   },
   {
-    "objectID": "article/Miyagi/kenpoku_goose.html#伊豆沼蕪栗沼県北その他",
-    "href": "article/Miyagi/kenpoku_goose.html#伊豆沼蕪栗沼県北その他",
-    "title": "県北ガン",
+    "objectID": "article/others/Paintings.html#シュールレアリスム",
+    "href": "article/others/Paintings.html#シュールレアリスム",
+    "title": "鳥と絵画",
     "section": "",
-    "text": "大好きなガン類の観察記録を中心とした記録。2020年11月の大学サークルの行事でねぐら入りを見たことがきっかけで、鳥の中でガンが一番好きになった。"
-  },
-  {
-    "objectID": "article/Miyagi/kenpoku_goose.html#下旬-伊豆沼蕪栗沼",
-    "href": "article/Miyagi/kenpoku_goose.html#下旬-伊豆沼蕪栗沼",
-    "title": "県北ガン",
-    "section": "2022.12下旬　伊豆沼・蕪栗沼",
-    "text": "2022.12下旬　伊豆沼・蕪栗沼\n早起きして塒立ちを見に行った。この時はまだどこに何がいるのかつかみきれてないので、いろいろぐるぐる田んぼを回った。\n田んぼを回る中、交差点付近、道路から一区画目の田んぼにカリガネが群れているのを発見。本来なら道路に隣接した一区画目の田んぼだと警戒されやすいが、対向車線をはさんでいたのでばっちり観察できた。\n9時30分過ぎ、ようやくシジュウカラガンを見つけた。マガンの群れの中に三羽ほど混じっていて、畦の上で採餌をしていた。ここで宮城で見られる亜種シジュウカラガンの特徴を少し挙げてみる\n\nマガンより一回りほど小さい\n首の付け根に白い首環がある\n\n今回観察できた個体は以上二つに該当しない。マガンと同大に見えるし、付け根の首環も確認できない。飛来数の多い亜種シジュウカラガンではなく、亜種アラスカシジュウカラガンの可能性がありそうだ。\n何より、そもそもその他2個体はシジュウカラガンっぽくもない。一個体目はかなりシジュウカラガンの特徴が出ているが、一般的なシジュウカラガンよりも顔の黒白模様のコントラストが曖昧に見える。幼鳥だとしてもここまでぼやぼやした個体は見たことがない。\nさらにもう一個体目を見てみると、同様に顔の黒白模様の曖昧なコントラストに加え、嘴のくすんだピンク色、嘴基部と目の周りの白色部、首の黒の弱さから、シジュウカラガンとマガンの交雑を疑いたくなる個体である。そのシジュウカラガンもおそらくアラスカシジュウカラガンなのだが…曰くありげなファミリーみたいだ。\n筆者はこの日以来発見出来ずにいるが、2024年10月のシーズンはTwitter上でも類似した個体の観察が報告されている。同じ個体だと嬉しい。何より当時写真を全く撮っていなかったので、もう少し特徴の分かる写真を撮ってみたい。\n10時前、謎のシジュウカラガンと分かれて直ぐに、十数羽のカリガネの群れを見つけた。行動の様子を見ると３家族くらいいそうだ。中には額の白色部がない幼鳥も混ざっていた。よちよち歩きながらしきりに採餌しつつ、数羽同士で首を上下に上げ下げしていた。「ウチの子どもをよろしくお願いします」みたいなご近所付き合いだろうか。\nサークルの同期と2021年10月に見つけたカリガネはマガンの群れの中で挙動不審にくねくねしていて、それ以来「くねくねしているならばカリガネである」という命題が屹立している。これも謎のくねくね行動だったのかもしれない。\n10:30頃、蕪栗沼に移動した。この日は蕪栗沼ではなく白鳥地区の方にヘラサギが２羽移動していた。白鳥地区内の湿地を見るために歩道をうろうろしていると、突然足下から大きな鳥が飛び立った。ずっと対岸に意識を向けていたため非常に驚いた。空中へ飛び去るゆったりとした飛び方を見つけると、更に驚いた。この沼で越冬しているサンカノゴイだったのだ。他に鳥屋はいなかったが、サンカノゴイには申し訳ないことをした…これからは慎重に覗くことにする。\nまだまだ見たりないが、この日は鳥とは関係なく普通の友人を連れていたので、鳥見はここで終わりにして県北を観光することにした。"
-  },
-  {
-    "objectID": "article/Miyagi/kenpoku_goose.html#の県北レポート",
-    "href": "article/Miyagi/kenpoku_goose.html#の県北レポート",
-    "title": "県北ガン",
-    "section": "2025.01の県北レポート",
-    "text": "2025.01の県北レポート\n年越し後のガンの分布はあまり知らなかったので、このシーズンはガンを集中的に探すことにした。幸い県北に訪れることが多かったので、用事を終えた後にパパッと行うことが出来た。\n\n第一週　市街地付近のシジュウカラガン\n宮城県の調査によれば、1月のシジュウカラガンは蕪栗沼から化女沼にねぐらを移し、古川市街地よりも西で採餌を行うそうだ。この日は古川から加美のあたりに目星を付け、田んぼを回ってみることにした。\n化女沼付近の田んぼに模型みたいにポツンと座っていた一羽のシジュウカラガン以外は、やはり西古川や加美市街地周囲の田んぼで採餌を行っていた。古川から離れてもほとんど雁行が見えなかったので不安だったが、市街地に近づくにつれパラパラと飛び始めた。もしかしてと思い窓を開けると、やはりシジュウカラガンの声だった！\n慎重に声が飛んでいった方に向かうと、マガンの群れに数十羽規模で混ざっていた。今まで年を越す前の11月や12月に蕪栗沼周辺で見ることが多かっただけ、この辺りで観察できるのは新鮮に感じた。\n\n\n第二週　ハクチョウ数羽\n加美の方まで分布していたと言うことはもっと西にもいるかな～と思い、小野田の方まで行ってみた。結果は積雪がものすごく、ガンが採餌出来ないので数羽のハクチョウしかいなかった…逆に君たちは何故いたの…？積雪が解けた頃にまた行ってみる\n\n\n第三周　伊豆沼ハクガン\nハクガンの分布を調べに行った。ハクガンと言えば伊豆沼をねぐらにしているので、そちらに行ってみる。周囲の田んぼにはオオヒシクイやマガンの群れは見られるけどハクガンの姿はない。試しに伊豆沼北部の若柳や志波姫へ行ってみた。こちらもマガンやヒシクイだけでハクガンは見えない。\n意気消沈して伊豆沼に戻ると、北部の一角に10羽の群れが見えた。四方をマガンにガードされているので近づけない。遠くから何とか観察できた。"
-  },
-  {
-    "objectID": "article/Miyagi/kenpoku_goose.html#の県北レポート-1",
-    "href": "article/Miyagi/kenpoku_goose.html#の県北レポート-1",
-    "title": "県北ガン",
-    "section": "2025.02の県北レポート",
-    "text": "2025.02の県北レポート\n一つ大きな仕事が一段落したので（まだのこってるけど）１月よりも時間を使えるようになった。\n\n第一週　ハクガン撃沈\n一月第三週のようにハクガンを探しに行った。結果は撃沈。何処を探してもいない。\n前回のように伊豆沼周辺を探し、今度は更に奥の石越辺りまで。途中若柳で標識オオヒシクイを見つけた。黄色首環で「B41」「B47」「B49」と記されていた。ここら辺は伊豆沼周辺よりもガンが多く、「越冬後期にはねぐら周辺の食べ尽くされた田んぼよりも遠くに散らばる」のは本当だと分かった。だからこそ年明けのガン探しは難しいのだが…\n秋田で観察したハクガンはねぐら入りが非常に遅かった。今回もねぐら入りを出待ちしてみたがいつまで経っても現れずタイムアップ。"
-  },
-  {
-    "objectID": "article/Miyagi/park.html",
-    "href": "article/Miyagi/park.html",
-    "title": "公園いろいろ",
-    "section": "",
-    "text": "新型コロナウイルス感染症対策でオンデマンド授業、サークル活動自粛期間中だったので、探鳥する時間がかなりあった。\n自転車で仙台市内の都市公園・森林公園を駆け回った記録。"
-  },
-  {
-    "objectID": "article/Miyagi/park.html#公園１",
-    "href": "article/Miyagi/park.html#公園１",
-    "title": "公園いろいろ",
-    "section": "公園１",
-    "text": "公園１"
-  },
-  {
-    "objectID": "article/Miyagi/park.html#初見のゴジュウカラ",
-    "href": "article/Miyagi/park.html#初見のゴジュウカラ",
-    "title": "公園いろいろ",
-    "section": "2020.12.28 初見のゴジュウカラ",
-    "text": "2020.12.28 初見のゴジュウカラ\n林道を歩いていると途中で折れた幹の上にゴジュウカラが乗っかっていた。コゲラ・エナガ・シジュウカラの鳴き声が近づいてきているのには気付いていたが、ゴジュウカラの鳴き声はしていなかった。\n急いで写真を撮って観察を始めると、数分も経たないうちに林道から外れた奥の木立に移動して行ってしまった。特有の「幹を垂直方向に上り下りする行動」、「幹と垂直に頭を持ち上げる行動」等は見られなかったので、次回に期待。\n「標高が高いところにいる鳥」というイメージしかなく、発見時は驚いた。しかし、その後調べると「標高が高いところにいる」のは繁殖期だけで、越冬は低い場所へ移動する「漂鳥」という生態を持っていることを知った。ヒガラ・コガラよりも先にゴジュウカラをライファーしてしまった。"
-  },
-  {
-    "objectID": "article/Miyagi.html",
-    "href": "article/Miyagi.html",
-    "title": "Miyagi",
-    "section": "",
-    "text": "沼１\n河口１\n河口２\n県北ガン\n県北その他\n県南\n田んぼ・川"
-  },
-  {
-    "objectID": "article/Miyagi.html#宮城の記録",
-    "href": "article/Miyagi.html#宮城の記録",
-    "title": "Miyagi",
-    "section": "",
-    "text": "沼１\n河口１\n河口２\n県北ガン\n県北その他\n県南\n田んぼ・川"
-  },
-  {
-    "objectID": "article/readme.html",
-    "href": "article/readme.html",
-    "title": "REDAME.md",
-    "section": "",
-    "text": "Rstudio上で.qmd記事を書き、htmlにrenderした後githubに公開したりしたい\n\n\n\nssh-keygen -t ed25519 -C youremail@hogehoge.com -f ~/.ssh/id_ed25519_githublog 生成した公開鍵（.pubファイル）をcatコマンドなどでコピーし、githubの「Settings -&gt; SSH and GPG keys -&gt; New ssh key」にペースト。 ＊githubアカウントを使い分けているときは、configファイルに記述しておく\n\n\n\neval “$(ssh-agent -s)”\nssh-add ~/.ssh/id_ed25519_githublog\n\n\n\nエラー２ 一部のファイルの変更が戻される\n症例：エクスプローラーなどの外部（？）で変更したものをVScodeでやるときに、変更が元に戻されている。 例えば、画像の名前を変えてディレクトリの変更などをしても、元々の状態に戻されるので画像が消えたり、記述した行がなくなっていたりする。"
-  },
-  {
-    "objectID": "article/readme.html#rmdで記事を執筆する",
-    "href": "article/readme.html#rmdで記事を執筆する",
-    "title": "REDAME.md",
-    "section": "",
-    "text": "Rstudio上で.qmd記事を書き、htmlにrenderした後githubに公開したりしたい\n\n\n\nssh-keygen -t ed25519 -C youremail@hogehoge.com -f ~/.ssh/id_ed25519_githublog 生成した公開鍵（.pubファイル）をcatコマンドなどでコピーし、githubの「Settings -&gt; SSH and GPG keys -&gt; New ssh key」にペースト。 ＊githubアカウントを使い分けているときは、configファイルに記述しておく\n\n\n\neval “$(ssh-agent -s)”\nssh-add ~/.ssh/id_ed25519_githublog\n\n\n\nエラー２ 一部のファイルの変更が戻される\n症例：エクスプローラーなどの外部（？）で変更したものをVScodeでやるときに、変更が元に戻されている。 例えば、画像の名前を変えてディレクトリの変更などをしても、元々の状態に戻されるので画像が消えたり、記述した行がなくなっていたりする。"
-  },
-  {
-    "objectID": "article/Trip/Dec22_Akita.html",
-    "href": "article/Trip/Dec22_Akita.html",
-    "title": "【工事中】秋田ハクガン",
-    "section": "",
-    "text": "カ　メ　ラ　が　壊　れ　た　の　で　証　拠　写　真　で　す　。\n一眼入門セットみたいなのを家族が15年くらい前に買っていたので、ないよりはマシだとそれを借りました。望遠レンズとかじゃないです。"
-  },
-  {
-    "objectID": "article/Trip/Dec22_Akita.html#section",
-    "href": "article/Trip/Dec22_Akita.html#section",
-    "title": "【工事中】秋田ハクガン",
-    "section": "",
-    "text": "カ　メ　ラ　が　壊　れ　た　の　で　証　拠　写　真　で　す　。\n一眼入門セットみたいなのを家族が15年くらい前に買っていたので、ないよりはマシだとそれを借りました。望遠レンズとかじゃないです。"
-  },
-  {
-    "objectID": "article/Trip/Dec22_Kyusyu.html",
-    "href": "article/Trip/Dec22_Kyusyu.html",
-    "title": "九州遠征",
-    "section": "",
-    "text": "ナベヅル"
+    "text": "特定の鳥ではないが、ハトっぽいシルエットの中に雲の浮かんだ青空が描かれる。"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "index",
     "section": "",
-    "text": "Branta"
+    "text": "Brant"
   },
   {
     "objectID": "index.html#サンプルページ",
     "href": "index.html#サンプルページ",
     "title": "index",
     "section": "",
-    "text": "Branta"
+    "text": "Brant"
   },
   {
-    "objectID": "setup.html",
-    "href": "setup.html",
-    "title": "Environment_setup",
-    "section": "",
-    "text": "Lenovoのやつ。スペックは以下"
-  },
-  {
-    "objectID": "setup.html#pcを新調した",
-    "href": "setup.html#pcを新調した",
-    "title": "Environment_setup",
-    "section": "",
-    "text": "Lenovoのやつ。スペックは以下"
-  },
-  {
-    "objectID": "setup.html#環境の新調",
-    "href": "setup.html#環境の新調",
-    "title": "Environment_setup",
-    "section": "環境の新調",
-    "text": "環境の新調\n大学入学当初に購入した以前のPCは著者の無知（ムチムチ）によりディレクトリの構造などが終わっている。（ホームディレクトリがCドライブ以下のユーザーではないディレクトリにあったりする）。\n\nGithub Pagesでブログ・ホムペ作成をする\n仕事・趣味で野良データを拾って解析したり可視化するのにtidyverse、ggplot2を使う\nVScodeとRstudioを引き継ぐことにした。Githubもね。"
-  },
-  {
-    "objectID": "setup.html#vscodeのセットアップ",
-    "href": "setup.html#vscodeのセットアップ",
-    "title": "Environment_setup",
-    "section": "1. VScodeのセットアップ",
-    "text": "1. VScodeのセットアップ\nVScodeをインストールし、コーディングに便利なもろもろの拡張機能をダウンロードした。\nwindowsではPowershellというターミナルが使われている。なんとここではwcなどの一部のコマンドが使えないのだ！lsは使えるのに…\nwcはLinux由来のコマンドらしい。windowsで使うにはWSL（LinuxをWindowsでも使えるようにします）を準備する必要がある。以前のPCに何となく入れたUbuntu22.04はこれだったのか"
-  },
-  {
-    "objectID": "setup.html#wslの準備",
-    "href": "setup.html#wslの準備",
-    "title": "Environment_setup",
-    "section": "2. WSLの準備",
-    "text": "2. WSLの準備\nVScodeでpowershellを開き、以下を入力\nwsl –install\nこれでwslインストールが始まる。その後PC本体を再起動するように求められる。\n再起動後、Ubuntu 24.04 01をmicrosoft storeからインストールし、startボタンから起動させる。\nEnter new UNIX username:\nNew password:\nRetype new password:\n上のように、UNIXの名前とパスワードを求められた。入力しておく。これで晴れて、WindowsでLinuxが使えるようになった！\nしっかりインストールされたか確認するために、VScodeで以下を実行\nwsl -l -v\nアウトプットはこちら\n  NAME            STATE           VERSION\n* Ubuntu-24.04    Running         2\n大丈夫そう"
-  },
-  {
-    "objectID": "setup.html#vscodeでubuntuを動かす",
-    "href": "setup.html#vscodeでubuntuを動かす",
-    "title": "Environment_setup",
-    "section": "3. VScodeでUbuntuを動かす",
-    "text": "3. VScodeでUbuntuを動かす\nVScodeの拡張機能でWSLをインストール。Remote-WSLがおすすめらしいが見当たらなかった。\nその後、Terminalの切り替えを行いUbuntuにアクセスできた。echo $SHELLで/bin/bashが表示されたので勝ち\nTo run a command as administrator (user \"root\"), use \"sudo &lt;command&gt;\".\nSee \"man sudo_root\" for details.\n\nusername@yourmachine:/mnt/c/Users/hogehoge/$\nせっかくなので、VScode起動時に開くデフォルトターミナルをUbuntuにしよう。\n\nCommand + Shift + Pでコマンドパレットを開く。\nTerminal: Select Default Profileで検索、WSLに変更する。\n\nこれでOK。"
-  },
-  {
-    "objectID": "setup.html#vscodeとgitの連携",
-    "href": "setup.html#vscodeとgitの連携",
-    "title": "Environment_setup",
-    "section": "4. VScodeとgitの連携",
-    "text": "4. VScodeとgitの連携\nGithubはあらかじめレポジトリを作成済。\n\n新しいPCにGitをインストール。ポップアップに従い進める。\n先ほど用意したVScodeのUbuntu環境で、以下を実行\n$ ssh-keygen``-t rsa -b 4096 -C \"your_email@example.com\"\nyour_email@example.comには、githubのレポジトリに登録したメアド。Enterを押して完成\ncat ~/.ssh/id_rsa.pubで公開鍵を表示しコピー。remote repositoryのsettingsからNew SSH keyを見つけ、登録する。この時コピーしたkeyをペーストする\nVScodeに戻り、ssh -T git@github.comで接続を確認する。初めて接続するときは、以下で始まる警告文が表示されるので、Yesをクリック\nThe authenticity of host\nさいごにlocalにgithubアカウントを教える\n\n$ git config user.email \"youremail\"\n$ git config user.name \"yourname\"\n$ git remote add origin git@github.com:Username/yourrepository\nここで入力するyournameとyouremailはremoteのレポジトリに登録したもの\nここで入力するorigin以降は、remote repositoryの緑色のcodeボタンを押し、「code-&gt;local」で表示されるsshを入力\nもろもろ\n\ngit branchをlocalでやるとmasterbranchなのに、remoteはmainだったとき\n\ngit branch m mainでlocalのbranch名をmainに変えた"
-  },
-  {
-    "objectID": "article/settings/how2thispage.html",
-    "href": "article/settings/how2thispage.html",
+    "objectID": "article/settings/how2thispage.html#エラー",
+    "href": "article/settings/how2thispage.html#エラー",
     "title": "How2ThisPage",
     "section": "",
-    "text": "このサイトの作り方\n以下を用いている。\n\nRstudio（Quarto）\nVScode（Powershell/ terminal）\nGithub\n\n\n.mdという拡張子で文章を執筆し、それをHTML形式にレンダリングしてくれるQuartoを、Rstudio上でいじる\nGithub Pagesの機能を使って個人サイトを作成した。アカウントを作ったり、Githubの知識が必要だけど無料でサイト運営できる（容量に制限があるので、大量の画像をアップしたりは出来ない）\nVScodeで、Local環境のQuarto記事をgithubにpushする。"
+    "text": "website開発中に遭遇したエラーを記述しておく\n\n\n症例：\n_quarto.ymlを記述後、「Build-&gt;render website」をすると、ディレクトリ内のすべての.qmdが.htmlにrenderされる。しかし、前々から出力先に置いていたimage/ディレクトリが消えてしまう。（いちいちgit restore docs/で復元しなければならなかった…）\n→\nrender時、デフォルトでは一度ディレクトリをresetするらしい。このときディレクトリのresetを回避するために、_quarto.ymlに以下を記述した。\nproject: \n  type: website\n  output-dir: docs\n  render: \n    - \"*.qmd\"\n  resources: \n    - \"image/\"\nもう一度renderしたら、無事残った！！\ndocs |- article |- site_libs |- static |- image"
   }
 ]

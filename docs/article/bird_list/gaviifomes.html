@@ -7,7 +7,10 @@
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
   <title>noumaのページ – Loons</title>
@@ -331,19 +334,34 @@
 </div>
 
 </section>
-<section>
 <section id="gaviiformes" class="title-slide slide level1 center">
 <h1>Gaviiformes</h1>
 <p>アビ類。八版には五種が記載されているが、宮城では４種が見られている（はず）</p>
 </section>
-<section id="loons-in-miyagi" class="slide level2">
-<h2>Loons in Miyagi</h2>
+
+<section>
+<section id="loons-in-miyagi" class="title-slide slide level1 center">
+<h1>Loons in Miyagi</h1>
 <ul>
 <li>アビ</li>
 <li>オオハム</li>
 <li>シロエリオオハム</li>
 </ul>
 </section>
+<section id="アビ" class="slide level2">
+<h2>アビ</h2>
+<p>嘴が上に反ったアビ類。 冬から春にかけて漁港や河口に入っていることがあるが、多くは沖合に浮いているのをスコープで観察する</p>
+
+<img data-src="../../image/bird_list/Gaviiformes/Red-throated_Loon1.jpg" class="r-stretch"></section>
+<section id="オオハム" class="slide level2">
+<h2>オオハム</h2>
+<p>アビと同じく、漁港や河口にいたらラッキー。アビより太い</p>
+</section>
+<section id="シロエリオオハム" class="slide level2">
+<h2>シロエリオオハム</h2>
+<p>アビと同じく、漁港や河口にいたらラッキー。アビより太い</p>
+
+<img data-src="../../image/bird_list/Gaviiformes/Pacific_Loon1.jpg" class="r-stretch"></section>
 <section id="宮城で観察されたことのあるアビ類" class="slide level2">
 <h2>宮城で観察されたことのあるアビ類</h2>
 <ul>
@@ -753,6 +771,38 @@
       }
     });
     </script>
+    <script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","loop":false,"closeEffect":"zoom","openEffect":"zoom"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
     
 
 </body></html>

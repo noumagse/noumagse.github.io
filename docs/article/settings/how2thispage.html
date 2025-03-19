@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../../docs/styles.css">
+<link rel="stylesheet" href="docs/styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../image/branta_icon.JPG" alt="" class="navbar-logo">
+    <img src="../../image/brant_icon.JPG" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">noumaのページ</span>
@@ -177,7 +177,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">目次</h2>
    
   <ul>
-  <li><a href="#このサイトの作り方" id="toc-このサイトの作り方" class="nav-link active" data-scroll-target="#このサイトの作り方">このサイトの作り方</a></li>
+  <li><a href="#このサイトの作り方" id="toc-このサイトの作り方" class="nav-link active" data-scroll-target="#このサイトの作り方">このサイトの作り方</a>
+  <ul class="collapse">
+  <li><a href="#quarto使用時の注意点" id="toc-quarto使用時の注意点" class="nav-link" data-scroll-target="#quarto使用時の注意点">Quarto使用時の注意点</a></li>
+  <li><a href="#エラー" id="toc-エラー" class="nav-link" data-scroll-target="#エラー">エラー</a>
+  <ul class="collapse">
+  <li><a href="#rstudioでquarto" id="toc-rstudioでquarto" class="nav-link" data-scroll-target="#rstudioでquarto">RstudioでQuarto</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
 </nav>
@@ -220,8 +227,32 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Github Pagesの機能を使って個人サイトを作成した。アカウントを作ったり、Githubの知識が必要だけど無料でサイト運営できる（容量に制限があるので、大量の画像をアップしたりは出来ない）</p></li>
 <li><p>VScodeで、Local環境のQuarto記事をgithubにpushする。</p></li>
 </ul>
+<section id="quarto使用時の注意点" class="level2">
+<h2 class="anchored" data-anchor-id="quarto使用時の注意点">Quarto使用時の注意点</h2>
+<p>・<code>_quarto.yml</code>を編集した後は、必ずqmdを一度renderする</p>
+</section>
+<section id="エラー" class="level2">
+<h2 class="anchored" data-anchor-id="エラー">エラー</h2>
+<p>website開発中に遭遇したエラーを記述しておく</p>
+<section id="rstudioでquarto" class="level3">
+<h3 class="anchored" data-anchor-id="rstudioでquarto">RstudioでQuarto</h3>
+<p>症例：</p>
+<p>_quarto.ymlを記述後、「Build-&gt;render website」をすると、ディレクトリ内のすべての.qmdが.htmlにrenderされる。しかし、前々から出力先に置いていたimage/ディレクトリが消えてしまう。（いちいちgit restore docs/で復元しなければならなかった…）</p>
+<p>→</p>
+<p>render時、デフォルトでは一度ディレクトリをresetするらしい。このときディレクトリのresetを回避するために、_quarto.ymlに以下を記述した。</p>
+<pre><code>project: 
+  type: website
+  output-dir: docs
+  render: 
+    - "*.qmd"
+  resources: 
+    - "image/"</code></pre>
+<p>もう一度renderしたら、無事残った！！</p>
+<p>docs |- article |- site_libs |- static |- image</p>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
