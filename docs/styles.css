@@ -64,3 +64,15 @@ body {
 [data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3 {
   color: #fff;  /* ダークモード時の見出し色 */
 }
+
+/*revealjsスライドの時だけ、画像のオプションを変更*/
+.reveal img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 通常のHTMLの画像オプション */
+body:not(.reveal-viewport) img {
+  width: 100%;
+  height: auto;
+}
