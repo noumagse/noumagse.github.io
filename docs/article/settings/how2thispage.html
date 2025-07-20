@@ -165,14 +165,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="https://noumagse.github.io/article/list_bird_Miyagi.html" class="sidebar-item-text sidebar-link">
+  <a href="https://noumagse.github.io/article/list_BirdList.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">【工事中】Bird in Miyagi</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://noumagse.github.io/article/list_bird_Japan.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">【工事中】Bird in Japan</span></a>
   </div>
 </li>
       </ul>
@@ -241,7 +235,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">目次</h2>
    
   <ul>
-  <li><a href="#このサイトの作り方" id="toc-このサイトの作り方" class="nav-link active" data-scroll-target="#このサイトの作り方">このサイトの作り方</a>
+  <li><a href="#このサイトの作り方" id="toc-このサイトの作り方" class="nav-link active" data-scroll-target="#このサイトの作り方">このサイトの作り方</a></li>
+  <li><a href="#具体的なやり方" id="toc-具体的なやり方" class="nav-link" data-scroll-target="#具体的なやり方">具体的なやり方</a>
   <ul class="collapse">
   <li><a href="#quarto使用時の注意点" id="toc-quarto使用時の注意点" class="nav-link" data-scroll-target="#quarto使用時の注意点">Quarto使用時の注意点</a></li>
   <li><a href="#エラー" id="toc-エラー" class="nav-link" data-scroll-target="#エラー">エラー</a>
@@ -281,17 +276,27 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="このサイトの作り方" class="level1">
 <h1>このサイトの作り方</h1>
-<p>以下を用いている。</p>
+<p>そもそもサイトの作成には「HTML」と「CSS」ファイルが必要。</p>
+<p>私は以下を用いてファイルを作成した。</p>
 <ol type="1">
-<li><p>Rstudio（Quarto）</p></li>
-<li><p>VScode（Powershell/ terminal）</p></li>
-<li><p>Github</p></li>
+<li><p>Rstudio（Quarto）：記事執筆ができるIDE（統合開発環境）。最悪なくてもVScodeで代用可能</p></li>
+<li><p>VScode（Powershell/ terminal）：記事以外の、ウェブサイトのレイアウトをつかさどる.cssや.ymlを、記事とは別で編集したかったのでVScodeを使用した。あとはgitコマンドでGithubに記事をぶん投げるのに使う。</p></li>
+<li><p>Github：記事をぶん投げる先。</p></li>
 </ol>
 <ul>
 <li><p>.mdという拡張子で文章を執筆し、それをHTML形式にレンダリングしてくれるQuartoを、Rstudio上でいじる</p></li>
 <li><p>Github Pagesの機能を使って個人サイトを作成した。アカウントを作ったり、Githubの知識が必要だけど無料でサイト運営できる（容量に制限があるので、大量の画像をアップしたりは出来ない）</p></li>
 <li><p>VScodeで、Local環境のQuarto記事をgithubにpushする。</p></li>
 </ul>
+</section>
+<section id="具体的なやり方" class="level1">
+<h1>具体的なやり方</h1>
+<ol type="1">
+<li>Rstudio上で記事を執筆する。「Quarto Document」をクリックして書き始める。</li>
+<li>記事を.qmdから.htmlにrenderする。上書き保存してからRenderボタンをクリックしてもいいし、私は保存と同時にrenderを実行している。</li>
+<li>htmlを作成したら、githubのサーバーに自分のPC上にあるhtmlを送信する。add→commit→pushでOK</li>
+</ol>
+<p>以上</p>
 <section id="quarto使用時の注意点" class="level2">
 <h2 class="anchored" data-anchor-id="quarto使用時の注意点">Quarto使用時の注意点</h2>
 <p>・<code>_quarto.yml</code>を編集した後は、必ずqmdを一度renderする</p>
