@@ -1,10 +1,14 @@
 project: 
   type: website
-  output-dir: "docs"
+  output-dir: docs
+  render: 
+    - "*.qmd"
+  resources: 
+    - "image/"
 
 website: 
   navbar: 
-    logo: image/branta_icon.JPG
+    logo: static/image/brant_icon.JPG
     tools:
       - icon: twitter
         href: https://x.com/ann0uman
@@ -23,10 +27,26 @@ website:
             href: https://noumagse.github.io/article/list_Trip.html
           - text: "Ferry"
             href: https://noumagse.github.io/article/list_ferry.html
+      - section: "Bird List"
+        contents: 
+          - text: "【工事中】Bird in Miyagi"
+            href: https://noumagse.github.io/article/list_BirdList.html
       - section: "Others"
         contents: 
           - text: "Food"
-            href: https://noumagse.github.io/article/others/food.html
+            href: https://noumagse.github.io/article/others/Food.html
+          - text: "【工事中】Bibliography"
+            href: https://noumagse.github.io/article/others/Bibliography.html
+          - text: "Paintings"
+            href: https://noumagse.github.io/article/others/Paintings.html
+          - text: "【工事中】Myth"
+            href: https://noumagse.github.io/article/others/Myth.html
+      - section: "Settings"
+        contents: 
+          - text: "【工事中】Githubでブログ開設"
+            href: https://noumagse.github.io/article/settings/how2thispage.html
+          - text: "【工事中】Quartoで記事執筆"
+            href: https://noumagse.github.io/article/settings/how2quarto.html
   page-footer: 
     left: "Copyright 2025"
 
@@ -44,4 +64,3 @@ format:
     mainfont: sans-serif;
     fontcolor: black;
     linkcolor: hsla(237deg 74% 33% / 61%);
-    
