@@ -27,11 +27,24 @@
     ]
   },
   {
+    "listing": "/article/list_BirdFerryList.html",
+    "items": [
+      "/article/bird_ferrylist/albatross_list.html",
+      "/article/bird_ferrylist/alcidae_list.html",
+      "/article/bird_ferrylist/appendix_list.html"
+    ]
+  },
+  {
+    "listing": "/article/list_BirdList.html",
+    "items": [
+      "/article/bird_list/anseriformes.html"
+    ]
+  },
+  {
     "listing": "/article/list_Trip.html",
     "items": [
       "/article/Trip/Aug23_Senjogahara.html",
       "/article/Trip/Dec22_Akita.html",
-      "/article/Trip/Dec22_Kyusyu.html",
       "/article/Trip/Dec22_bufflehead.html",
       "/article/Trip/Dec23_Hokkaido.html",
       "/article/Trip/Dec24_Sanbanze_Kasai.html",
