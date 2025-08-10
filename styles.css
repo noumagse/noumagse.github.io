@@ -50,20 +50,20 @@ body {
   vertical-align: middle;
 }
 
-/* ダークモード時のスタイル設定 */
+/*
 [data-theme="dark"] body {
-  color: #f8f9fa;  /* ライトグレーのテキスト色 */
-  background-color: #343a40;  /* ダークな背景色 */
+  color: #f8f9fa;
+  background-color: #343a40;
 }
 
-/* 必要に応じて他の要素も設定 */
 [data-theme="dark"] a {
-  color: #8bb9fe;  /* ダークモード時のリンク色 */
+  color: #8bb9fe;
 }
 
 [data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3 {
-  color: #fff;  /* ダークモード時の見出し色 */
+  color: #fff;
 }
+*/
 
 /*revealjsスライドの時だけ、画像のオプションを変更*/
 .reveal img {
