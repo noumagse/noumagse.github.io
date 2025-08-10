@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>関東ヒメハジロ – noumaのページ</title>
+<title>how2Ganalytics – noumaのページ</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -42,9 +42,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-566eb978bd889a32cdd8f0840a5ca5c1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark-96a4edd5f3ada47af00b69889ec90b6c.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -117,7 +114,7 @@ ga('send', {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">関東ヒメハジロ</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">how2Ganalytics</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -258,7 +255,17 @@ ga('send', {
     <h2 id="toc-title">目次</h2>
    
   <ul>
-  <li><a href="#関東某所" id="toc-関東某所" class="nav-link active" data-scroll-target="#関東某所">2022.12　関東某所</a></li>
+  <li><a href="#google-analyticsを入れてみた" id="toc-google-analyticsを入れてみた" class="nav-link active" data-scroll-target="#google-analyticsを入れてみた">Google Analyticsを入れてみた</a>
+  <ul class="collapse">
+  <li><a href="#アカウント作成" id="toc-アカウント作成" class="nav-link" data-scroll-target="#アカウント作成">1. アカウント作成</a>
+  <ul class="collapse">
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">1-3.</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">1-4.</a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">1-5.</a></li>
+  </ul></li>
+  <li><a href="#github-pagesとanalyticsの紐づけ" id="toc-github-pagesとanalyticsの紐づけ" class="nav-link" data-scroll-target="#github-pagesとanalyticsの紐づけ">2. github pagesとAnalyticsの紐づけ</a></li>
+  <li><a href="#内部トラフィックの除外" id="toc-内部トラフィックの除外" class="nav-link" data-scroll-target="#内部トラフィックの除外">3. 内部トラフィックの除外</a></li>
+  </ul></li>
   </ul>
 </nav>
 </nav>
@@ -271,7 +278,7 @@ ga('send', {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">関東ヒメハジロ</h1>
+<h1 class="title">how2Ganalytics</h1>
 </div>
 
 
@@ -288,36 +295,37 @@ ga('send', {
 </header>
 
 
-<section id="関東某所" class="level2">
-<h2 class="anchored" data-anchor-id="関東某所">2022.12　関東某所</h2>
-<p>有名すぎて伏せる意味はほとんどないと思いますが、関東某所に現れたヒメハジロを見てきました。</p>
-<p>出現情報がネットに流れ出してから（知っている限り）一ヶ月は経っていましたが、現場には10人ほどのバードウォッチャー？カメラマン？がいました。</p>
-<p>あしがゆめかわピンクでかわいかったです。</p>
-<div>
+<section id="google-analyticsを入れてみた" class="level1">
+<h1>Google Analyticsを入れてみた</h1>
+<p>自分のサイトが「どんなユーザーに」「どのくらいの数」「どんな時間帯に」アクセスされているのか気になるので、Google analyticsを実装した。</p>
+<p>Quartoのユーザーガイドにも書いてあるが、ちょいとわかりにくいのでまとめる。</p>
+<section id="アカウント作成" class="level2">
+<h2 class="anchored" data-anchor-id="アカウント作成">1. アカウント作成</h2>
+<p>Googleアカウントは作成済みなので、Google Analyticsアカウントを作成する。</p>
+<p>プロパティはよくわからんし後で修正できるとのことで、適当に名前を付けて日本に設定。</p>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section">1-3.</h3>
+<p>営利化は考えていないので、「その他のビジネスアクティビティ」、規模は「1~10人」に。</p>
+</section>
+<section id="section-1" class="level3">
+<h3 class="anchored" data-anchor-id="section-1">1-4.</h3>
+<p>「ウェブアプリのトラフィックの分析」に設定</p>
+</section>
+<section id="section-2" class="level3">
+<h3 class="anchored" data-anchor-id="section-2">1-5.</h3>
+<p>利用規約に同意し、「プラットフォームの選択」をウェブに設定</p>
+</section>
+</section>
+<section id="github-pagesとanalyticsの紐づけ" class="level2">
+<h2 class="anchored" data-anchor-id="github-pagesとanalyticsの紐づけ">2. github pagesとAnalyticsの紐づけ</h2>
+<p>「タグの実装手順を表示」をクリックし、自分のidを見つける（G-XXXXXX）。コピーして、_quarto.ymlに張り付ける。</p>
+</section>
+<section id="内部トラフィックの除外" class="level2">
+<h2 class="anchored" data-anchor-id="内部トラフィックの除外">3. 内部トラフィックの除外</h2>
+<p>アクセス数が少ない時、自分のアクセスもカウントされるのを防ぐ。やり方はこちらの<a href="https://www.xserver.ne.jp/blog/google-analytics-setting/">サイト</a>を参考にした</p>
 
-</div>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../../image/Trip/B_albeola1.JPG" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="ヒメハジロ"><img src="../../image/Trip/B_albeola1.JPG" class="img-fluid figure-img" style="width:100.0%" alt="ヒメハジロ"></a></p>
-<figcaption>ヒメハジロ</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../../image/Trip/B_albeola2.JPG" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="オオバンと行動する"><img src="../../image/Trip/B_albeola2.JPG" class="img-fluid figure-img" style="width:100.0%" alt="オオバンと行動する"></a></p>
-<figcaption>オオバンと行動する</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
 
-
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -896,38 +904,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 
