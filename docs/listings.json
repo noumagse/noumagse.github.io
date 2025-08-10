@@ -1,12 +1,34 @@
 [
   {
-    "listing": "/article/list_ferry.html",
+    "listing": "/article/list_Trip.html",
     "items": [
-      "/article/ferry/silverferry.html",
-      "/article/ferry/sunflower.html",
-      "/article/ferry/taiheiyoferry.html",
-      "/article/ferry/toukaikisen.html",
-      "/article/Miyagi/ajishima.html"
+      "/article/Trip/Aug23_Senjogahara.html",
+      "/article/Trip/Dec22_Akita.html",
+      "/article/Trip/Dec22_bufflehead.html",
+      "/article/Trip/Dec23_Hokkaido.html",
+      "/article/Trip/Dec24_Sanbanze_Kasai.html",
+      "/article/Trip/Kyusyu.html",
+      "/article/Trip/Mar21_Hokkaido.html",
+      "/article/Trip/Mar23_Ishigaki.html",
+      "/article/Trip/Mar24_Hokuriku.html",
+      "/article/Trip/May24_Teuri.html",
+      "/article/Trip/Nov24_Akita.html",
+      "/article/Trip/Oct24_Tobishima.html",
+      "/article/Trip/Sep2024_Aomori.html"
+    ]
+  },
+  {
+    "listing": "/article/list_BirdList.html",
+    "items": [
+      "/article/bird_list/anseriformes.html"
+    ]
+  },
+  {
+    "listing": "/article/list_BirdFerryList.html",
+    "items": [
+      "/article/bird_ferrylist/albatross_list.html",
+      "/article/bird_ferrylist/alcidae_list.html",
+      "/article/bird_ferrylist/appendix_list.html"
     ]
   },
   {
@@ -27,34 +49,13 @@
     ]
   },
   {
-    "listing": "/article/list_BirdFerryList.html",
+    "listing": "/article/list_ferry.html",
     "items": [
-      "/article/bird_ferrylist/albatross_list.html",
-      "/article/bird_ferrylist/alcidae_list.html",
-      "/article/bird_ferrylist/appendix_list.html"
-    ]
-  },
-  {
-    "listing": "/article/list_BirdList.html",
-    "items": [
-      "/article/bird_list/anseriformes.html"
-    ]
-  },
-  {
-    "listing": "/article/list_Trip.html",
-    "items": [
-      "/article/Trip/Aug23_Senjogahara.html",
-      "/article/Trip/Dec22_Akita.html",
-      "/article/Trip/Dec22_bufflehead.html",
-      "/article/Trip/Dec23_Hokkaido.html",
-      "/article/Trip/Dec24_Sanbanze_Kasai.html",
-      "/article/Trip/Kyusyu.html",
-      "/article/Trip/Mar21_Hokkaido.html",
-      "/article/Trip/Mar23_Ishigaki.html",
-      "/article/Trip/Mar24_Hokuriku.html",
-      "/article/Trip/May24_Teuri.html",
-      "/article/Trip/Nov24_Akita.html",
-      "/article/Trip/Oct24_Tobishima.html"
+      "/article/ferry/silverferry.html",
+      "/article/ferry/sunflower.html",
+      "/article/ferry/taiheiyoferry.html",
+      "/article/ferry/toukaikisen.html",
+      "/article/Miyagi/ajishima.html"
     ]
   }
 ]

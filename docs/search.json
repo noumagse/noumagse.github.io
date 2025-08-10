@@ -67,126 +67,406 @@
     "href": "article/settings/how2thispage.html#エラー",
     "title": "How2ThisPage",
     "section": "エラー",
-    "text": "エラー\nwebsite開発中に遭遇したエラーを記述しておく\n\nRstudioでQuarto\n症例：\n_quarto.ymlを記述後、「Build-&gt;render website」をすると、ディレクトリ内のすべての.qmdが.htmlにrenderされる。しかし、前々から出力先に置いていたimage/ディレクトリが消えてしまう。（いちいちgit restore docs/で復元しなければならなかった…）\n→\nrender時、デフォルトでは一度ディレクトリをresetするらしい。このときディレクトリのresetを回避するために、_quarto.ymlに以下を記述した。\nproject: \n  type: website\n  output-dir: docs\n  render: \n    - \"*.qmd\"\n  resources: \n    - \"image/\"\nもう一度renderしたら、無事残った！！\ndocs |- article |- site_libs |- static |- image\n\n\nGit中\n症例：git push origin mainでコミットした変更点をremoteに送るとき\n ! [rejected]        main -&gt; main (non-fast-forward)\nerror: failed to push some refs to 'github.com:hogehoge/hogehoge.github.io.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. If you want to integrate the remote changes,\nhint: use 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\nremoteとlocalでbranchが異なるので、矛盾が生じる。\nためしにgit statusで状況確認する。\n$ git status\nRefresh index: 100% (469/469), done.\nOn branch main\nYour branch and 'origin/main' have diverged,\nand have 1 and 1 different commits each, respectively.\n  (use \"git pull\" if you want to integrate the remote branch with yours)\nたしかに、branchが分かれてしまっている。"
+    "text": "エラー\nwebsite開発中に遭遇したエラーを記述しておく\n\nRstudioでQuarto\n症例：\n_quarto.ymlを記述後、「Build-&gt;render website」をすると、ディレクトリ内のすべての.qmdが.htmlにrenderされる。しかし、前々から出力先に置いていたimage/ディレクトリが消えてしまう。（いちいちgit restore docs/で復元しなければならなかった…）\n→\nrender時、デフォルトでは一度ディレクトリをresetするらしい。このときディレクトリのresetを回避するために、_quarto.ymlに以下を記述した。\nproject: \n  type: website\n  output-dir: docs\n  render: \n    - \"*.qmd\"\n  resources: \n    - \"image/\"\nもう一度renderしたら、無事残った！！\ndocs |- article |- site_libs |- static |- image\n\n\nGit中\n症例：git push origin mainでコミットした変更点をremoteに送るとき\n ! [rejected]        main -&gt; main (non-fast-forward)\nerror: failed to push some refs to 'github.com:hogehoge/hogehoge.github.io.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. If you want to integrate the remote changes,\nhint: use 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\nremoteとlocalでbranchが異なるので、矛盾が生じる。\nためしにgit statusで状況確認する。\n$ git status\nRefresh index: 100% (469/469), done.\nOn branch main\nYour branch and 'origin/main' have diverged,\nand have 1 and 1 different commits each, respectively.\n  (use \"git pull\" if you want to integrate the remote branch with yours)\nたしかに、branchが分かれてしまっている。\n\n\nウェブデザイン編\n\nダークモードにしてもテキストのカラーが黒のままで見づらい\n_quarto.ymlに\nformat: html: css: “styles.css” lightbox: true theme: light: flatly dark: darkly toc: true toc-title: 目次 toc-location: left number-sections: false mainfont: sans-serif; fontcolor: black; linkcolor: hsla(237deg 74% 33% / 61%);\nと入れている。\ntheme: darkにしているので、ダークモード切替のトグルがページ右上に表示されるが、切り替えると背景黒のダークモードになる。\nしかし、テキストの色が黒のままなので見づらい。\nこの場合、_quarto.yml内のfontcolorが強制で色を指定するので、この行を削除する\n\n\nfaviconの設定\n_quarto.ymlのwebsite:以下にfavicon引数を指定することで、ブックマークやタブ左側の画像を表示できる。しかし、これを相対パスで指定するとindex.htmlのみが参照可能となり、「ホームページは表示できているが、それ以外の記事では表示されない」ことが起こる。\n絶対パスで指定するべき"
   },
   {
-    "objectID": "article/list_ferry.html",
-    "href": "article/list_ferry.html",
-    "title": "航路探鳥リスト",
+    "objectID": "article/settings/how2iNat.html",
+    "href": "article/settings/how2iNat.html",
+    "title": "iNaturalist",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n     \n  \n\n\n\n\n\n\n\n\nシルバーフェリー\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n三井商船さんふらわあ（大洗→苫小牧）\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n太平洋フェリー（名古屋↔︎仙台↔︎苫小牧）\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n東海汽船\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n宮城県航路\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "大学で生態系の研究をしている時、ラボメンバーがiNaturalistのデータを使って研究を進めていた。\niNaturalistは「いつ・どこで・どんな生き物を」観察したかをアップロードすることで、世界中に情報を共有するサービス。市民科学としていろんな利点がある。\n・データを「不明瞭・非公開」にできるので、採掘圧・観察圧・希少種のデータを\n・誰でも無料でサインアップ、投稿可能\n・写真をもとにAIが類似種を出してくれる（その分、誤同定の可能性あり。自己責任）\n・世界中のユーザが投稿に対して同定の提案をしてくれる→精度が高いと研究用で使える\n・自分のフィールド写真のアーカイブにもなる（ポケモン図鑑みたいでうれしい）\nやってみる"
   },
   {
-    "objectID": "article/list_Miyagi.html",
-    "href": "article/list_Miyagi.html",
-    "title": "宮城の鳥見リスト",
+    "objectID": "article/settings/how2iNat.html#inaturalistを始めた話",
+    "href": "article/settings/how2iNat.html#inaturalistを始めた話",
+    "title": "iNaturalist",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n\n\n\n\n\n\n\n\n沼１\n\n\n\nducks\n\n\nshorebirds\n\n\n\nよく行く沼の記録\n\n\n\n\n\n\nFeb 11, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n宮城県航路\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCampus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nチャリ探\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n雲雀野\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n河口フィールド１\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n河口フィールド２\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n県南\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n県北その他\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n県北ガン\n\n\n\ngeese\n\n\n\n県北でガン探し。分布の参考になればいいかな\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n公園いろいろ\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n近所田んぼ・川\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "大学で生態系の研究をしている時、ラボメンバーがiNaturalistのデータを使って研究を進めていた。\niNaturalistは「いつ・どこで・どんな生き物を」観察したかをアップロードすることで、世界中に情報を共有するサービス。市民科学としていろんな利点がある。\n・データを「不明瞭・非公開」にできるので、採掘圧・観察圧・希少種のデータを\n・誰でも無料でサインアップ、投稿可能\n・写真をもとにAIが類似種を出してくれる（その分、誤同定の可能性あり。自己責任）\n・世界中のユーザが投稿に対して同定の提案をしてくれる→精度が高いと研究用で使える\n・自分のフィールド写真のアーカイブにもなる（ポケモン図鑑みたいでうれしい）\nやってみる"
   },
   {
-    "objectID": "article/list_BirdFerryList.html",
-    "href": "article/list_BirdFerryList.html",
-    "title": "海鳥リスト",
+    "objectID": "article/settings/how2iNat.html#セットアップ",
+    "href": "article/settings/how2iNat.html#セットアップ",
+    "title": "iNaturalist",
+    "section": "セットアップ",
+    "text": "セットアップ\nまずはサインアップ。めんどいので個人用Gmailを使ってサインアップ。\nGアカウントの設定がiNaturalistのプロフィール設定にいろいろ引き継がれたので、ちょっとプロフィールを修正する。\n・国内バーダーなので、デフォのGoogle mapは「Tokyo」、グリニッジ mean timeも標準時に設定。「GMT+09:00」。\n・アイコンはTwitterのコルリにした。"
+  },
+  {
+    "objectID": "article/settings/how2iNat.html#初めての投稿",
+    "href": "article/settings/how2iNat.html#初めての投稿",
+    "title": "iNaturalist",
+    "section": "初めての投稿",
+    "text": "初めての投稿\nアイコンのコルリをアップロード。種名、場所、時間を入れるだけで投稿完了。使ってみると、写真のプロファイルに保存された「撮影日時」をそのまま引き継いでくれるので、いちいち打つ必要はなく便利。"
+  },
+  {
+    "objectID": "article/list_Trip.html",
+    "href": "article/list_Trip.html",
+    "title": "遠征リスト",
     "section": "",
-    "text": "航路で見た鳥についての備忘録\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n\n\n\n\n\n\n\n\nAlbatross\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMurres, Murrelets and Guillemots\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAppendix\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n     \n  \n\n\n\n\n\n\n\n\n戦場ヶ原\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n【工事中】秋田ハクガン\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n関東ヒメハジロ\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n道東遠征\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n三番瀬・葛西\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n九州遠征\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2021.03 道東遠征\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n【工事中】石垣島遠征\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n北陸・中部辺り周遊\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n天売島\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n秋田ハクガンその２\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n飛島\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n津軽半島\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "article/ferry/taiheiyoferry.html",
-    "href": "article/ferry/taiheiyoferry.html",
-    "title": "太平洋フェリー（名古屋↔︎仙台↔︎苫小牧）",
+    "objectID": "article/list_BirdList.html",
+    "href": "article/list_BirdList.html",
+    "title": "名鑑リスト",
     "section": "",
-    "text": "2021.03.11 仙台→苫小牧\n初めての仙苫。航路大好き友人に連れられて三人で北海道遠征をすることになった。\n仙台からは19:40発になるため、17:00頃にターミナルに到着し、スーパーで買った惣菜などの夜ご飯を2m離れて食べたり、見られそうな鳥や見たい鳥を2m離れて談義するなどして過ごした。コロナパンデミックから1年後だったので、ソーシャルディスタンスしていた。\n19:30には乗船を済ませ、翌朝から始まる航路探鳥の舞台である甲板を下見した。冷たい夜風と共に体に付着した潮を落とすため、混雑前に大浴場に入った。太平洋フェリーは大浴場付きなのだ。うれしい\n日の出と共に航路探鳥を始めるため寝台に駆け込んだ。同室には一般の方も利用されていたので、目覚ましの音は最小限に控えた。航路探鳥はまだ2回目。どんな鳥と出会えるか、さながらキジバトの求愛ダンスみてーに胸を膨らませながら床に就いた。\n翌朝は5:00くらいから観察を始めた。太平洋の波をかき分け征くフェリーの重低音が覚醒の助けになってくれていた。朝のルーティンをしっかりこなして甲板に陣取る。まだ日も出ていなかったように記憶しているが、ミツユビカモメ（学名もtridactyla）がたくさん飛んでいて楽しい。遠くを滑翔するコアホウドリの大きさに驚いたり、船体付近に現れたウミガラスsp.などに発狂したり、今まで航路以外で見る機会がなかった海鳥を見ることが出来て嬉しかった。\n左舷で観察すると本州沿岸沿いをハクチョウ・ガンの群れが並走しているのが見えた。更に甲板での観察中、上空をマガンとシジュウカラガンの群れが追い抜いていった。青空を背景にこれからシベリアやカムチャツカに向かうのだろう。航路経験が少なく、海鳥を見るものだと思っていたがこのように渡りを観察できるチャンスでもある事を知った。なるべく船首の方で観察していたがそれでもコンスタントに風が吹き付けるので、手袋貫通して霜焼けになる。太平洋フェリーのあつあつお茶サーバーを利用して休憩しながら苫小牧港まで楽しんだ。\n\n\n2021.03.16 苫小牧→仙台\n北海道遠征の最終日。岩手沖からの観察。旅愁に浸る間もないほど海鳥が多かった。3.11の往路では観察できなかったオオミズナギドリ、クロアシアホウドリ、ウトウ、ウミスズメなどのほか、ウミガラスsp.の数も多く楽しめた。\nウトウがめちゃくちゃに多かったが、足島（2020年、コシジロウミツバメのヒナが見つかっている。今まで岩手県三貫島が繁殖南限だと考えられていたが、その記録を更新）での繁殖に向けて集まってきていたのだろうか。\n\n\n2022.08.25　苫小牧→仙台\n函館から苫小牧まで一人旅をした帰り。ちなみに函館まではシンプルに新幹線で行った。\nオオミズナギドリがめちゃくちゃ飛んだ。水面付近をアカエリヒレアシシギが飛んでいた。あと同世代くらいの鳥屋にあった。めちゃくちゃな虚無だったけど航路自体が好きなのでまぁOKという感じ。トビウオ眺めてた。\n\n\n2023.09.20, 09.21　仙台→名古屋\n就活終わって漸く時間が出来たので、シンプル旅行で名古屋に行ってみた。\n11:00から汗が止めどなく流れるバス停。働かない頭で座った場所は優先席で居心地が悪かった。領収書を受付の方に見せて乗船→場所取り（とはいえ鳥屋は私一人だったが…）。名古屋行きのフェリーは12:50発なので、苫小牧行きと違って昼前から移動しなければならない。寝室を確認して早速甲板で待機。\nウミネコにかっぱえびせん上げてる人いっぱいいて、たまにオオセグロ幼鳥混ざってた。最初の方は渡りのシギチが数十羽で飛んでいるのが多かったが、14:50を最後に何も飛ばなくなった（海面の波が朧気な輪郭を持った夢想に変わるのに時間はかからなかった）。\n16:30からフェリー前方をオオナギが舞い始め、いわき沖でドカンと500+いそうなオオナギ爆弾が遠くの沖に見えた（一直線上になっていたので撮影してみると、その直線から少し離れたところにも30羽ほどまとまっていて、なんだか嘴が大きい。アホウか？）。いわき沖までアカエリヒレアシシギがちょろちょろ出たくらいだったが、いわき沖はオオミズナギドリ、ウミネコの巨大な塊が見えて面白かった。まだ鳥山が見えていたが日も暮れてきたので、その後は日が暮れた17:00過ぎまで探鳥し、17:40に切り上げて今執筆している。\n翌日は5:30から観察を開始。静岡県御前崎沖から。三河あたりが鳥の密度が高く、コンスタントにオオミズナギドリやウミネコが飛んでいた。伊良湖崎あたりでタカ見えないかなぁと、頑張って8倍双眼鏡で曇天を凝視したが、トビっぽいシルエットが飛んでいることしか分からなかった。あり得ないくらい高所をクロアシアホウドリが1羽だけ旋回していた。種数は稼げなかったが（時期が微妙すぎる…）、初めて乗った航路だったので楽しめた。\n\n\n2023.09.25　名古屋→仙台\n5:30、鴨川沖からスタート。オオミズナギドリたくさん、ウミネコ、オオセグロカモメ、ウミウ、以上。アカエリヒレアシシギも見られなくなって虚無さが増した。相変わらずいわき沖は賑やかだった。16:30の仙台港着時はどっと疲れた。\n\n\n2024.03.30　名古屋→仙台\n帰りだけフェリーを利用した。5:30、房総半島沖からスタート。\n半年前にも乗っていたが、今回は海鳥が多かった。やっぱり時期の問題が大きそう。\nクロガモ、アカエリカイツブリ、カンムリカイツブリ、ハジロカイツブリなどが界面に浮いていた。またアホウドリも成幼合わせて9羽ほど観察できた。クロアシアホウドリやコアホウドリもいた。ヒメウがいたのには驚いた。東北以北のイメージが強いが、関東辺りにもいるのは知らなかった。あとハクセキレイが飛んでいた。仙台着は15:30\n\n\n2024.09.21　仙台→苫小牧\n八戸↔︎苫小牧のフェリーに乗るために、一度苫小牧までフェリーで行くことにした。9月の三連休は、2023年の仙台↔︎名古屋につづき二度目の航路。\nきそフェリーに乗る。平日夜の帰宅ラッシュに巻き込まれ、20分遅延したターミナル行きバスだったが、流石に乗客が多いことと直結バスがこれしかないため、乗船手続き時刻を過ぎていたが何とか乗ることが出来た。\n初日はカップラ食べて風呂入って、あと今までスルーしていたラウンジで元劇団四季のVoとピアノ奏者のコンサートを楽しんだ。\n・歌詞はタブレット端末で表示していた。\n・記録端末が発達してから、CDからWalkmanから、配信サービスまで変化していったが、そもそも音楽とはこのように、決められた時間に生の音楽家が奏でるものを対面で鑑賞する起源があったんだよな\n・絵画と同じで、記録端末が出てきてから市民にも門戸が開かれたのかな。気になる一方で市民から発達したポップミュージックとかもありそう。\n・新しい歌の発表の場も、今はYouTubeやライブが多いが…\n・今まで記録された曲を聴く習慣で生きてきたから、ライブとかである声の裏返りとかアレンジとかが苦手だったんだよね～それってこの歌の正解じゃないよね？って気持ち\n・将来は演奏家ではなく、AIによる固定化された音楽が演奏されるようになるのか\n5:00前起床、パン食べて観察開始。懸念されていた天気だったが幸い曇り。7:00まで憧れのPterodroma（ハジロナギ）が40羽ほど登場。昨年同時期に仙台↔︎名古屋を行ったが、海域の違いなのか、仙名航路では見られなかった。Pterodroma属は海鳥ハンドなどで見る限り、他のミズナギドリの中で顔が可愛い感じがする。たぶん瞼がかさになっていて、目元が大きく見えるからだろう。黒白のコントラストがはっきりしていてキャッチーなのもあるかもしれない。吻が寸詰まりで面長な印象がないからかもしれない。曇天の中、一定の頻度の羽ばたきを繰り返しつつも体がブレない飛び方をしており、プロペラのおもちゃみたいだと感じた。オオナギと比べ飛び方に余裕がない。SharwaterとPetrelの違いか？\nそれからはほとんど虚無だったが、マグロが元気に跳ねていた。海上にウミネコ・オオセが群れていたので、水面の小魚にとっては地獄だろう。\n入港・出港時は甲板に人が出てくる時間。苫小牧港入港時も遠く砂浜にわちゃわちゃしているシギチを識別していると甲板に人が集まってきて、入港の様子を撮影したり眺めたりしていた。ちなみにシギチはムナグロとオオソリハシシギだった。識別を終了した辺りで苫小牧港の堤防が現れた。念のため変なカモメが入っていないか観察することにした。\n苫小牧港に入港。スマホ弄ってて堤防に気付くのが遅れて慌てて観察開始。船の動きに身を任せ、双眼鏡には次から次へ新しいカモメとウミウが映る。ウミウウミウウミウ、オオセオオセオオセ、ボソボソミヤコ…は？ほとんどがウミネコとオオセグロカモメだったが、急に１羽、真っ黒なカモメが入ってきた。よく見るとミヤコドリだ！東北ではまず見られない鳥で、2023年始に福岡の干潟で見て以来だった。驚いて小さく叫んでしまった…急いで撮影して観察を続けた。こういうことがあるから航路は楽しいよな～となった。\n\n\n2024.09.24　苫小牧→仙台\n5:30頃から観察開始。苫仙は2021年3月以来当てていないのであまり期待しないでいた。6:00頃、船尾の方から口笛のような音が聞こえる。凪いでいたとはいえフェリーの駆動音に負けずに船首まで聞こえてくる。相当大きな声で口笛でも吹いているのかしら、と思ったが、上空を１羽のチュウシャクシギが追い越していくのを見て何が起こっていたのかを理解した。\n識別出来なかったがヒレアシシギ類が40、コアホウドリ7、クロアシアホウドリ3といった感じ。コアホウは数個体が船の近くを並走してくれた。\n\n\n2025.03.16　苫小牧→仙台\n6:00頃から観察開始。2021年3月に乗った苫仙では大量のウトウが海面に浮いていたので、ウトウの群れを期待した。岩手沖からコアホウドリがたくさん出現した。その後、船のすぐそばに別のアホウドリ類が現れた。くちばしの桃色が淡くコアホウドリよりも太く、体全体を覆う羽衣が一様に茶色な鳥だった。\nこの季節の仙苫は4年前に一度乗ったきりだったが、その時は見ることができないでいた。アホウドリといえば鳥を見る前の自分だったら「南の島の珍しい鳥」という印象だったので、改めてこんなにキレイな鳥が仙台の海で見られることに感動した。\n\n\n2025.03.30 苫小牧→仙台\n東京の展覧会を見に行って、そこから仙台まで帰るのに本便を利用した。つまり、東京-（特急ひたち）-&gt;大洗-（さんふらわあ　しれとこ）-&gt;苫小牧-（-（シルバーティアラ）-&gt;八戸-（シルバープリンセス）-&gt;苫小牧）-（きそ）-&gt;仙台といったItenaryだ。個別に記事を書いている。\n苫小牧西港からは前日の19:00に便が出る。29日の夕方17:30からの乗船を前に、ターミナルの待合室は仙台・名古屋に向かう人々でごった返していた。次年度から社会人になり、今後しばらくは航路に乗る時間が取れなくなる。また学生生活最後の航路探鳥だと思うとちょっと感慨深い。いろいろエクスキューズで理論武装できたので、初めてのフェリー内レストランに出陣した。\nきそのレストラン「タヒチ」は夕食バイキングを提供している。レストラン前で２北里とちょっとの小銭を券売機に投入して、食券を購入した。太平洋フェリーには10回ほど乗っているが、このバイキングに挑戦するのは初めてだ。航路探鳥より緊張した。\n名古屋（みそもつ鍋）・仙台（仙台サーモン）など、寄港地のグルメをいろいろ取り揃えていたようで、すべておいしかった。特にお気に入りだったのはショウガ入りつみれ汁、仙台サーモンのお寿司、ごろごろポテサラ。\nご飯を食べた後、二日連続の航路探鳥の疲れが一気に押し寄せてきた。ターミナルで購入したホワイトエールの網走ビール（著者はホワイトビールが好き）を飲みながらちょっと読書して、22:00前には雑魚寝部屋に戻り寝た。\n翌5:00、静かに起床し航路探鳥遠征で蓄えていた菓子パンの残りを平らげ、左舷側に陣取ることにした。5:30。この日は曇りで、普段の苫仙左舷側は逆光になるのだが、この日は日の出を拝むことはできなかった。一応水平線のきわきわにウトウ二羽が飛んで行ったのが見えただけで虚無が続いていた。左舷側は海しか広がっていないので、鳥を見つけても目印がなく再度補足が難しい。このためしばらく様子見した後右舷側に行った。\n6:00頃から右舷側を観察し、6:40頃に南三陸沖を通過。ここからウミスズメの小さな群れがぽつぽつと飛び始めた。今回の航路遠征では「へんなウミスズメを探す」を目標にしていたので、ほとんどすべてのパタパタウミスズメを撮影し、マダラやエトウミコウミが入っていないか確かめていった。二日前の大苫では南三陸沖で鳥山は現れなかったのだが、どんどん数が増えていった。\nしまいには6:55にウミスズメの34羽の巨大な群れが現れた。学級じゃん。この間はウミスズメ以外のウミスズメ類は現れなかったが、それ以外には一羽の亜成鳥アホウドリが船のすぐそばを通過したり、トウゾクカモメが陸のほうへ飛んで行った（のを写真に撮ったら、海面にウミスズメがパタパタしているのが一緒に映った）など。\n7:30、このころからウミスズメのフィーバーが終了し、オオナギがちらほら舞うだけになった。一応トウゾクカモメが一羽飛んだが、それ以外は鳥が少なくなった。ヒートテック＋トレーナー＋もこもこアウター＋雨合羽の四枚重ねではさすがに寒くなり、いったん休憩した。\nその後8:00、金華山沖からウトウが現れ始めた。ウトウはウミスズメ類だが、ウミスズメのように５～１５羽程度の群れになって飛ぶことは少なく、多くて３，４羽の群れで飛んでいるので、少し発見が難しい。また、この航路遠征中で初のアビ類が姿を現し始めた。金華山を過ぎ、仙台湾に差し掛かると、船のすぐそばから水面を足で蹴りながら長い翼をバタバタさせて慌てて船から離れていくアビ類がどんどん現れ、22羽ほど見ることができた。ほとんどがシロハム・オオハムだった。\nミツユビカモメをウミネコが複数羽で追いかけているのが目に入った。だいぶもみくちゃしていたので、写真を撮ってみると、ミツユビカモメが小魚を加えていた。どうやらこれを強襲して奪うつもりだったようだ。トウゾクだけでなくウミネコからも襲われるのか\nまた、船のすぐそばを離れていくアビ類も、よく見ると様々な羽衣がいた。くちばしが生殖羽に見られる黒さを帯び、上面も星をちりばめたような美しいドットが見える一方、頭部の模様は黒褐色で換羽中だったり。チンストラップもベントストラップも、脇の白色部も見えないので、ほとんどすべての識別点を封印した個体。\nほかにはオットセイやイルカなどの海獣も観察できた。非常に良い航路だった！"
+    "text": "私的野鳥目録。 ・識別点&lt;-専門性なし ・鳥周りの知識まとめ ・鳥についての所感\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n\n\n\n\n\n\n\n\nGeese, Swans, Ducks\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "article/ferry/silverferry.html",
-    "href": "article/ferry/silverferry.html",
-    "title": "シルバーフェリー",
+    "objectID": "article/ferry/toukaikisen.html",
+    "href": "article/ferry/toukaikisen.html",
+    "title": "東海汽船",
     "section": "",
-    "text": "八戸↔︎苫小牧を結ぶシルバーフェリーでの探鳥記録\n\n2024.09.23　八戸→苫小牧\nシルバープリンセス乗船。ターミナルはなかなかキレイ。9/21に23:59発の苫小牧→八戸に乗ったが、就寝が遅く睡眠時間が取れなかったこと、海況が荒れていたことから、9/22の5:30に起きても半規管がやられてしまい（というか甲板に出られないくらい荒れてた…）、観察を断念。太平洋フェリーが大型でシンメトリーな感じだとすれば、シルバーフェリーは小柄な分、いろいろな部屋が迷路のように敷き詰められていて秘密基地みたいな感覚。甲板には屋根があり5Fと6Fで観察が可能なようだ。雑魚寝部屋を取ったがコインロッカーがあるので安心できる。乗船後は段々と天候が回復し、左舷側（順光）で観察を始めることにした。\n出港直後から小さな黒い鳥が波間を縫うように飛んでいた。初見のウミツバメ属だ。コシジロウミツバメが何度も出現したが、想像以上に小さく、素速く、海面すれすれを飛ぶので観察・撮影が難しい。本当に海のツバメという感じで感動。あとはコアホウドリやハジロミズナギドリが飛んだ。普段乗っている太平洋フェリーよりも鳥との距離が近く、とても楽しい。これは鳥屋に大人気なのも分かるなぁと感じた。\n12:30頃に船内でお昼休憩を取り、午前中は逆行だった右舷側にでて午後の観察を始めた。音に聞く八苫、三連休なのに鳥屋がいないはずがなく、午前中から右舷側で観察をしていた3名の鳥屋に挨拶して観察を始めた。オオトウゾクカモメは憧れだったので嬉しかった。少ししか観察できなかったので、いつか再チャレンジが必要だ。また、クロハラアジサシが遠くを飛んでいたり、大きなカジキが4度ほど海面にジャンプしたり、船の直ぐ脇でウミネコとマグロの大きな群れが出来ているのを見たりして、本当に楽しかった。\n総じて八苫は大満足。もっと早く知っておけば良かったと感じた。\n\n\n\n\n\n\n\n\n\nコシジロウミツバメ\n\n\n\n\n\n\n\nオオトウゾクカモメ\n\n\n\n\n\n\n\n\n\nコアホウドリ\n\n\n\n\n\n\n\nカジキ\n\n\n\n\n\n\n\n25.03.14 八→苫\n\n\n25.03.29 苫→八\nシルバーティアラで、3/28 23:59苫小牧発。この時間にターミナルまでアクセスするバスがないので、陸からターミナルに行く場合が注意が必要だ。ただ、今回は海からアクセスした。大苫に乗ってきたので問題ない。\n翌3/29は5:00頃起床。金曜の夜に出発する船だったからか、かなりの数の客を乗せていた。5:30から観察を開始し、コアホウドリがちらほら舞っていた。この日も曇天で、試しに写真を撮影したが真っ暗でダメだった。クロアシアホウドリも飛んでいた。くちばしの付け根に注目しながら、丁寧に識別していった。\n6:00過ぎ、トウゾクカモメが一羽登場。これまた非生殖羽だったので尾羽から種同定するのは難しい。しかし、この個体は翼下面の二つの白色斑が目立つので、トウゾクカモメかもしれない。\n6:30、キングペンギンの雛のように茶色の塊となったアホウドリの幼鳥が出現。クロアシと異なり、くちばしの桃色がはっきりしており識別は容易。ウミスズメ類もパラパラと飛び、ウトウとハシブトウミガラスも少ないながら観察できた。7:00に入港して終了。\n\n\n25.03.29 八→苫\n大変苦しい航路だった。さしもの八苫でも外れるときは外れるんだなぁ…という感じ。\nシルバーティアラを7:00に下船した後、八戸港ターミナルで乗船手続きをして、8:45八戸出港のシルバープリンセスに乗船する。乗船までターミナルの椅子でうとうとして、いざ乗船。\n八戸港出港時、よくいるウミウとカンムリカイツブリ・ウミアイサを眺めた。9:15、水平線のすぐ下、非常に遠い位置を細長い鳥が飛んで行った。写真で確認すると、くちばしが少し上にそりあがった、２羽のアビだった。ウトウも少しずつ顔を見せ始めた…が、あまりにも遠い…写真で撮ってギリギリわかるレベル。\n9:45、トウゾクカモメsp.が二羽登場。こちらも遠いが、翼下面の二つの白色斑でなんとかトウゾクカモメとわかる。もう一方の個体は尾羽がスプーン状をしているので、不勉強な著者でもトウゾクカモメとわかることができた。またウミスズメ類やアホウドリ類も2,3回ほど出現した。鳥が少なく、少し休憩\n11:30、本航路最大の鳥密度を感じた。ウミスズメ類が一気に現れ、アホウドリ類も飛んだ。おりしも尻屋崎を超えて津軽海峡に差し掛かろうとしており、ウミスズメの10数羽の群れが比較的船の近くを飛んだ。中にはハシブトウミガラスの10数羽の群れもいた。ブトウミはウトウのように2~5羽程度でしか蒸れないと思っていたが、この規模のものも存在するのかと驚いた。たまにウミガラス十羽程度の群れにウトウが2,3羽混ざって飛んでいることもあり面白かった。引率の先生みたい。\n同時に、体が黒褐色のミズナギドリも現れた。これも例外にもれず遠く、ピントを合わせた写真を撮ることは困難だったが、いくつかの個体の写真を見ると額がなだらかのように見え、翼下面もなだらかなのでハイイロミズナギドリのような気がする。\nその後も同じような暗色ミズナギドリがでた。写真でとれた個体は、くちばし基部が赤く、足も赤いように見えたのでアカアシミズナギドリかもしれない。もう少しハイナギやボソナギと比較できたらよかったのだが。いずれにせよ暗色ミズナギドリ類はらいふぁー。\n12:00には昨日と同様、オットセイが現れた。昨日見た座標をGoogleマップでラベリングしていたが、比べるとほとんど一緒の場所だった。八苫でオットセイを報告している人は少ないイメージがあったので、ちょっと嬉しい。\nその後は類を見ないほどの虚無だった。一面鳥がいない。カモメ・ウミネコすらいない。あきらめてお風呂に入った。次に鳥を見たのは15:30、苫小牧港周辺のシノリガモとクロガモ。まだ残ってるんだな。"
+    "text": "==noteからの転載==\n八丈島に航路で上陸しようとした記録です。素敵なバーテンダー、太平洋君によって船ごとしこたま攪拌されてきました。酔いお手前でした。ネットの海にリリースしておきます。\n乗船までの経緯\nバーダーなら一度は憧れる八丈航路。私もそうでした。季節によって多種多様の海鳥を観察できるそうです。乗船を試みた３月はアホウドリ類のシーズン。一度は絶滅の縁まで追いやられれたアホウドリPhoebastria albatrusは、懸命な保護活動により個体数を回復させています。現在では1,000羽以上のヒナが確認され、メイン繁殖地の伊豆諸島鳥島の個体群は7,000羽を超えたとか（2023年6月　山階鳥研プレスリリース）。\n2021年3月中旬に仙台→苫小牧航路に乗船した際は、コアホウドリとクロアシアホウドリが数羽観察できましたが、それ以来、アホウドリ類の観察機会に恵まれませんでした。真っ青な海面を背景にしたコアホウとクロアシのダイナミックソアリングを見て以来、折に触れて「アホウドリ（Short-tailed）見てみてぇ～」という気持ちが鎌首をもたげたりもたげなかったりしていました。自然系の番組でたまに特集されてる求愛ダンスは面白いし、一夫一妻で生涯添い遂げる配偶システムも非常に良い。あと白黒のコントラストがスーパーキレイだしヒナはめちゃくちゃかわいい。属性もりもりバード。\n東海汽船でたまにやってるキャンペーンを見つけました。\n「八丈島往復きっぷ　二等和室限定￥12,000/人」\n往復で￥12,000！？お求めやすい…！カレンダーやスケジュール帳と相談して、３月乗船の機会を得ました（元々キツキツ予定だったので、”島流し”リスクは大きかったのですが、無理矢理ねじこみました）。キャンペーンの仕様上、今回は電話で予約を取りました。費用は竹芝到着後、窓口で精算します。予約番号の控えはいつでも参照できるようにしておきましょう。私は大体LINE Keepメモに残しておいています。\n絶対アホウドリ見てやるぜ。長谷川博さんの「アホウドリからオキノタユウへ」を読んで予習はバッチリです。クジラさんも見てみたい。あと八丈島でアカコッコとか見たいしサイクリング楽しそう。"
   },
   {
-    "objectID": "article/bird_ferrylist/appendix_list.html#geese",
-    "href": "article/bird_ferrylist/appendix_list.html#geese",
-    "title": "Appendix",
-    "section": "Geese",
-    "text": "Geese\n\n概要詳細\n\n\n・2021年3月上旬\n・太平洋フェリー（仙台→苫小牧）\n・シジュウカラガンとマガンの群れの北帰行\n\n\n甲板上空をガンの声がすると思い、見上げると実際に飛んでいた。岩手県沖では陸側にハクチョウsp.が前後に並んで飛んでいるのも見えた。\nこれが初めての大型フェリー探鳥だったので非常に印象に残った。"
+    "objectID": "article/ferry/toukaikisen.html#準備乗船まで",
+    "href": "article/ferry/toukaikisen.html#準備乗船まで",
+    "title": "東海汽船",
+    "section": "準備・乗船まで",
+    "text": "準備・乗船まで\n八丈島へ海路で渡るには以下の日程で航海を行う大型客船「たちばな丸」に乗船する必要があります。\n\n東京竹芝桟橋　22:30出港\n三宅島阿古港　翌5:00到着\n御蔵島御蔵島港　6:00到着\n八丈島底土港　8:50到着\n\n船内で１泊する必要があります。ただ、22:00乗船開始としても、三宅島到着時に朝5:00強制起床です。鳥屋なら平気かな（平気ではない）。\n太平洋フェリーには何度か乗ったことがあります。心強い準備物君達をデカスーツケースに放り込むことにしました。\n\n着替え：それはそう。雨合羽も一応持って行ってます。\n双眼鏡、カメラ：それはそう２。カメラはビニール袋と輪ゴムで適当にあしらったレインカバーで保護しておく。\n海鳥ハンド：それはそう３。フェリーで寝る前に読んでニヤニヤできる。\n酔い止め：乗り物酔いしやすいタイプなので。万全の状態で鳥見ができるようにいつもトラベルミンを使用しています。\nタオル類：観察器具含め持ち物に潮水かかったりするので。\n夜ルーティン用のいろいろ：音楽プレーヤーとイヤホン、常備薬、アイマスク。\n歯磨きセット・風呂セット\n軽食：観察中も食べられるクラッカーとか。ゴミが出ないようなものだとGOOD\n\n準備が出来たら当日まで待ちましょう。刹那・遠距離観察の多い海鳥ウォッチング（そこが面白いのもある）では、海鳥の予習が大変役立ちます。検索すれば海鳥の動画は結構あります。ありがたく利用させて頂きましょう（飛翔の様子や船からの大きさ・距離など役立ちます。集合知を活用しましょう）。\n当日はJR浜松町駅から歩いてフェリーターミナルに向かいました。アクセス性ヨシ！お腹が空いたら近くのビルとかでご飯を食べましょう。私は西京焼きを食べました。最強。なんでこんな美味いんだろう。コンビニとかドラッグストアで、船内で食べるものを用意しておきましょう。\nフェリーターミナルの待合には19:50頃に到着。窓口は20:00からオープンしました。手続きを終えて椅子に腰掛けると、周りにもたくさんの人がいることに気付きます。同業者っぽい人、釣り竿みたいなものを持ってる人、めちゃ眠そうにしてる人、寝てる人等々…（中身スカスカでごめんなさい）。それもそのはず、ターミナルには三宅島・御蔵島・八丈島行きの「橘丸」だけでなく、大島・利島・新島・式根島・神津島へ向かう大型客船「さるびあ丸」も就航します。後者の船は22:00には竹芝を出港し、ターミナルで待機していた40%程の人が足取り軽く乗船していきました。\nX（旧Twitter（2024年4月4日時点））では、鳥屋の方々は航路探鳥を行うとき、世話になる船を撮影した写真を一言の意気込みと共にポスト（旧ツイート（2024年4月4日時点））します。例に倣ってやっといた。"
   },
   {
-    "objectID": "article/bird_ferrylist/appendix_list.html#オナガガモヒドリガモ",
-    "href": "article/bird_ferrylist/appendix_list.html#オナガガモヒドリガモ",
-    "title": "Appendix",
-    "section": "オナガガモ＋ヒドリガモ",
-    "text": "オナガガモ＋ヒドリガモ\n・2025年3月下旬　さんふらわあ　しれとこ"
+    "objectID": "article/ferry/toukaikisen.html#乗船鳥見まで",
+    "href": "article/ferry/toukaikisen.html#乗船鳥見まで",
+    "title": "東海汽船",
+    "section": "乗船～鳥見まで",
+    "text": "乗船～鳥見まで\n乗船後にすることをまとめてみました。\n\n部屋の確認：\n今回は二等和室だったので、雑魚寝 on 畳です。寝袋を持参したのでそれに包まりました。\n夕食：\nお腹が空いていると酔いやすいものです。しっかり腹ごなしをしましょう。尚、乗船までに済ませておくのもよいでしょう。\n歯磨き：\nはにがきはお手洗いの洗面台で行いました。\n動線確保、下見：\n甲板の下見です。海面からの高さ、手すりや屋根の有無、広さ、部屋からのアクセスを確認します。特に風よけになるアンチの場所を把握しておきたいですね。\n（いつも航路探鳥をさせて頂いている太平洋フェリーには甲板に屋根がないので、かなり新鮮に感じました…）\n夜景・ユリカモメ・レインボーブリッジの観察：\n東京都の鳥、ユリカモメがレインボーブリッジを超える辺りまで海面に浮かんでいました。底を見通せない漆黒の海面に真っ白なおもちが浮かんでいるようでほっこりしました。流石東京は日本の首都だけあって、クソデカ不夜城の様相を呈しています。ターミナル周辺もArtificial Light At Night(ALAN)がビカビカギンギンに都市生態系に影響しているんだろうな～とか考えてみたり。\n東京湾を出航するフェリーは、漆黒の夜の中、際立つビカビカレインボーブリッジをくぐります。\n\nいろいろ興奮冷めやらぬですが、時刻は既に22:30を回っています。翌日は八丈島に上陸して一日遊びまくる予定です。鳥見たりお散歩したり放蕩したりする体力をキープしておくためにも、おくすり（酔い止め）飲んで寝ましょう。"
   },
   {
-    "objectID": "article/bird_ferrylist/appendix_list.html#キジバト",
-    "href": "article/bird_ferrylist/appendix_list.html#キジバト",
-    "title": "Appendix",
-    "section": "キジバト",
-    "text": "キジバト\nこれもよく観察報告が上がっているイメージ。\n・2025年3月下旬　引退間近のさんふらわあ　しれとこ（大洗→苫小牧）にて\n船の右舷後方にピッタリ寄り添うように飛んでいた。渡りだったのか？"
+    "objectID": "article/ferry/toukaikisen.html#三宅島就航",
+    "href": "article/ferry/toukaikisen.html#三宅島就航",
+    "title": "東海汽船",
+    "section": "三宅島就航～",
+    "text": "三宅島就航～\n微睡みの暗闇から、何か人語が聞こえてきました。続いて世界が点灯した雰囲気。まぶたを開けて、船内で一夜を明かしたことを思い出します。時刻は5:00。三宅島への到着を知らせる船長のアナウンスが響いていました。\n着替えて顔を洗って、本土で調達した惣菜パンをもしゃもしゃ食べていたときです。突然の不快感に襲われました。体が覚醒し始めてようやく、太平洋沖の大海流、黒潮に揺られていることを認識したんでしょう…\n酔い止めを光の速さで消化管へぶち込みました。しばらくは耐えられていたのですが、遂にあぁこれはまずいと思いお手洗いへ急行しました。個室を占拠してしまってごめんなさい。Vomitはしませんでしたがずっと苦しかった。あぁ～酔。甲板に出て野鳥観察したかったけど、出来る余裕なんて全くありません。八丈航路に乗船すれば、太平洋沖に元気なザトウクジラのブリーチングが見られると伺っています。私の胃酸の海でもクジラが元気にブリーチングしまくっています。食道を逆流する濁流の奔流には流石に疲弊しました。半規管脱毛したい。\n皆も大好きな鳥さんですが、猛禽類などを除き彼らは目が横に付いています。そのため、移動の際は顔をピタッと停止させて周囲の情報を取得するようです。街中のドバト先輩が観察しやすい好例ですが、キジやボソガラスもそう。カワセミやシギチも首をしきりに上下に動かし、顔の角度を頻繁に調整して水面下の餌を探ることをしています（かわいい）。ホバリングするチョウゲンボウなどは、翼を懸命にはためかせながらも、頭はまるで空間に固定したように動きません。私もチョウゲンボウになれば、八丈航路で鳥を楽しむ余裕もできるでしょうね。\n御蔵島を過ぎたあたりからようやく楽になってきました。甲板に出てみると既にゴッツい大砲カメラの面々が20名ほど集まっていました。アホウドリ類は秋頃から繁殖を始め、私が乗船した3月には既にヒナが生まれているはずです。親鳥夫婦は懸命に海原を滑翔し餌を集めているでしょう。すなわち、アホウドリ類の観察にはベストシーズン且つ最適な時期なのです。期待もひとしおどころか百しおくらいあります。\n大荒れの海面状況に鑑みて、三宅島の次に寄港する予定だった御蔵島は欠航を決めたようです。御蔵島をそのまま通り過ぎる橘丸。黒潮さんが容赦なく船体を打ち付けるたびにグラつきます。なんで他のバーダーは全く動じないんだ？足が甲板にくっついているのかもしれないなぁと思っていました。"
   },
   {
-    "objectID": "article/bird_ferrylist/appendix_list.html#カマイルカ",
-    "href": "article/bird_ferrylist/appendix_list.html#カマイルカ",
-    "title": "Appendix",
-    "section": "カマイルカ",
-    "text": "カマイルカ\n太平洋フェリーなどで多く見られる"
+    "objectID": "article/ferry/toukaikisen.html#就航不可能",
+    "href": "article/ferry/toukaikisen.html#就航不可能",
+    "title": "東海汽船",
+    "section": "就航不可能！",
+    "text": "就航不可能！\nAh~（絶望）\n嫌な予感が的中しました。御蔵島同様、海面状況に鑑みた欠航です。八丈島底土港への寄港を見送り、橘丸は本土の竹芝桟橋へ舵を切ります。アカコッコ…カラスバト…キョン…アシタバ…\n体力の限界、気力もなくなり船室で横になることにしました。あとまた酔ってきて鳥見出来なさそうだったし、ちょっぴり休憩です。\n目が覚めたのは7:30。三宅島への再度の寄港を告げるアナウンスが覚醒を促したようです。大分波が落ち着いてきたので、いよいよアホウドリ類ウォッチングの開始です！\n右舷も左舷もヒトで埋まっていました。ちょっとの隙間に入れさせてもらい、海面を凪ぐ巨大な影を探します。まず現われたのはコアホウドリ。強面（つよおもてこわもて）だけどかっこいいね。\nその後もコアホウ、コアホウ、コアホウ…と続きます。X（旧Twitter）やブログで予習した限り、八丈航路にコアホウは少ないはずですが、ずっとコアホウが飛んでました。その後、一羽真っ黒なアホウドリ類が飛んでいるのが確認できました。双眼鏡を覗くと\n「アホウドリだ！！」\nピンクのクチバシと、申し訳程度に残された顔の白色部、コアホウやクロアシに認められる強面さがありません。間違いなくアホウドリです！うっひょ～\nかねてよりの憧れの鳥を見られて満足でした。その後も立て続けに飛んでくれて、合計8羽ほど観察できました。黒い幼羽が完全に生え替わるまでは数年かかると言われています。深い蒼を湛えた大海を飛ぶ純白の翼を見た人々が「オキノタユウ（信天翁）」と呼んだのも納得の神々しさです。たまらん\n三宅島を過ぎた辺りから、周囲の鳥屋が解散し始めました。ここから竹芝までの海域は渋いのでしょうか。私も空腹＆眠気に耐えかねて甲板を去り、採餌行動を始めました。船内レストラン隣には、レンジでチンだけの簡単なインスタント飯が豊富に取りそろえられた自販機がありました。寒いのでグラタン食べました。\n部屋に戻ると、グラタンで取り戻した体熱と早朝の酔いの疲労感で一気に眠りに落ちました。気付いたときには竹芝桟橋に到着しており、急いで荷物をまとめて下船します。ここに私の八丈島上陸計画は未遂に終わったのでした。くっそ～💦アカコッコ、覚えてろよ～💦💦（運賃は全額払い戻されました）"
   },
   {
-    "objectID": "article/bird_ferrylist/appendix_list.html#イシイルカ",
-    "href": "article/bird_ferrylist/appendix_list.html#イシイルカ",
-    "title": "Appendix",
-    "section": "イシイルカ",
-    "text": "イシイルカ\n生息海域は北日本以北だそうだが、個人的に羽幌沿海フェリーでしか観察経験がない"
+    "objectID": "article/ferry/toukaikisen.html#バードウォッチングの話",
+    "href": "article/ferry/toukaikisen.html#バードウォッチングの話",
+    "title": "東海汽船",
+    "section": "バードウォッチングの話",
+    "text": "バードウォッチングの話\nこの日は北風が強かったことから、より北の海域で観察できるイメージのコアホウが多かったと考えられます。あとは天気が良かったためか、八丈航路で観察機会の多い（と聴いている）ウミツバメ類も飛ぶことはありませんでした。鳥の出が悪いときもよく飛んでくれるオオミズナギドリって偉大だな…オオナギくん、いっつも航路で飛んでくれてありがとう。\n覚えている範囲で鳥あわせしてみます。\n\nアホウドリ\nコアホウドリ\nクロアシアホウドリ\nオオミズナギドリ\nウミネコ\nユリカモメ\n\n以　上　で　す　。\n酔いによるグロッキー状態と現場の知識（海域とか）の欠如などで、思ったよりも探すのに苦労しました。今まで行ってきた航路の中で一番渋かったかも。オーストンウミとかいろんなShearwater探したかったという感じ。あわよくばPterodroma属を見てみたかったけど、流石に小笠原まで行かないと見れないですかね。あとヤツガシラの無賃乗船も期待していました（これもXで情報あったです）\n種数で言ったらご覧の有様ですが、アホウドリ類が近くて嬉しかったです！じっくり観察するにはいいな～と思いました。一方近すぎて撮影には難儀しました。大きく写せる一方で、ちょっとしたことで画角からはみ出ます。次は視力と飛びものの撮影技術、半規管を鍛えてから乗りたいです。観察道具に飛沫がかかるので、クリーナー、後処理など忘れずに。"
   },
   {
-    "objectID": "article/bird_ferrylist/appendix_list.html#オットセイ",
-    "href": "article/bird_ferrylist/appendix_list.html#オットセイ",
-    "title": "Appendix",
-    "section": "オットセイ",
-    "text": "オットセイ\n太平洋フェリー、シルバーフェリー、三井商船で観察したことがある"
+    "objectID": "article/ferry/sunflower.html",
+    "href": "article/ferry/sunflower.html",
+    "title": "三井商船さんふらわあ（大洗→苫小牧）",
+    "section": "",
+    "text": "2025.03.28　大洗→苫小牧（深夜便）\n2025.03.27（木）、上野で見たい展覧会があったので東京に来た。東北でも開催してほしいけど、東北にはデカい美術館やキャパのある会場がなさそうなので仕方がない。上野からただ仙台に帰るのも興がないので、いっそ大洗まで行って、船で帰ろうと思った。\n20:00頃、上野駅から常磐線の特急ひたちに乗って一時間ほどで水戸駅に到着。21:20に水戸駅から大洗港フェリーターミナル経由のバスが出ているので、これに揺られて21:50にターミナルに到着。深夜便の出立は翌1:45だが、乗船自体は22:30から可能らしい。誰もいないターミナルで流れていた誰も知らないテレビを眺めていると、あっという間に乗船の時間が来た。\n6:30頃起床し、用意していた朝食用のパンを食べ、7:00頃から右舷側で観察を開始した。小雨だったが右舷側の屋根で雨宿りしながら観察。ちょうど金華山沖からだっただろうか、曇りの中、さっそくクロアシアホウドリ・コアホウドリが一羽ずつ飛んだ。またウミスズメもちらほら飛んでいた。さらにアホウドリも少数現れた。アホウドリは背面が茶褐色で眼の周囲だけ白みがかった若鳥や、背面が白い成鳥も見られた。\nアホウドリを観察していると、船の後方から中空を飛んでくるハト位の鳥が見えた。今まで見たことのない飛び方の海鳥だと思い、びっくりしながら確認したらまさにキジバトだった。30秒ほど右舷側にくっつきながら飛んでいた。\n今回興味深かったのはアホウドリ類が海面に降りていたこと。アホウドリはダイナミックソアリングに適した長い翼をもつが、飛翔時はハクチョウのように助走をつけて飛ぶ。魚食性なので当然なのだが、そんなアホウドリが海面に降りているのはあまり見ない光景だったので、面白かった。\n9:00頃、小雨がやみ風もおさまったので、遮るものが少ない左舷側（陸側）に出てみた。トウゾクカモメが現れた。といってもトウゾクカモメ4種は多型が多く（supergeneによってmorphが決定するらしい。ハクガンと同じ）、私が初見したのもつい半年前だったこともあり、現地では識別できなかった。ただ、船の上から飛び方の力強い、海面すれすれを飛ぶでっぷりした鳥をトウゾクだとわかるようになったのは成長だと思う。生殖羽は尾羽が特徴的で識別しやすそうなものだが、見るトウゾクどれもが尾羽が短く、\n9:30頃からミツユビカモメの数百羽の規模の群れが見られるようになった。上空を乱舞する群れの中で一羽だけ、大きくて真っ黒な個体がいた。トウゾクカモメが襲っている様子だった。また、11時方向からトウゾクカモメが3羽まとまって出現し、興奮してピントが甘くなってしまった。トウゾクも群れることがあるのか。数羽で襲撃したほうが成功しやすいのかもしれない。\n11:30頃、船内に戻って昼食を食べていた。鳥の出が少なくなったこともあり、朝飯が早かったこともある。窓際に座って船内の温かいお茶を飲んでいると、窓の外側を巨大な鳥の群れが流れていった。一服モードから鳥見モードに切り替え、すぐカメラを向けて証拠写真を撮る。見るとアホウドリの成幼入り混じった13羽の群れが海面に浮いていた。これはさすがに悔しすぎる。この航路でアホウドリの10羽を超える群れを見るのは、後にも先にもこれが最初で最後だった。\n急いでデッキに戻った。風が強くなってきたので、右舷側での観察にする。同じように船から離れていくウミスズメ類をさばいていると、その中にハシブトウミガラスが入った。12:30頃にはウトウもトビ始めた。\n13:00、同じように海面から飛び出した小鳥を見ると、ウミスズメより明らかに大型。よく見るとオナガガモ8羽の群れだった。海を渡って北へ向かうのだろうか。冬場は公園や沼でころころしているかわいいオナガガモの勇敢な一面を見たような気がした。\n14:00、トウゾクカモメがたくさん出た。\n14;:30　疲れからか酔ってきたので個室に戻り寝た。個室なのがポイント高い。16:00頃、観察を再開。この日は日が出ることはなかったが、それでもこの時間になると分厚い雲に覆われた天蓋の上に上る日も傾いてくる。コアホウドリとクロアシアホウドリを何とか識別し、また粛々とウミスズメ類をさばいていく。そうするとまたカモ軍団が現れた。今度はPintailオンリーではなく、Wigeonも混ざっている。\nさらに、津軽海峡沖で海面に褐色の球体と三角形が浮かんでいるのが見えた。よく見るとオットセイの頭と四肢だったようだ。球体には白いひげが生えていて、頭部を海面に出していた。"
   },
   {
-    "objectID": "article/bird_ferrylist/appendix_list.html#マグロ",
-    "href": "article/bird_ferrylist/appendix_list.html#マグロ",
-    "title": "Appendix",
-    "section": "マグロ",
-    "text": "マグロ\n太平洋フェリー、シルバーフェリー。津軽海峡で多い"
+    "objectID": "article/bird_list/anseriformes.html#geese-in-miyagi",
+    "href": "article/bird_list/anseriformes.html#geese-in-miyagi",
+    "title": "Geese, Swans, Ducks",
+    "section": "Geese in Miyagi",
+    "text": "Geese in Miyagi\n宮城で観察したことのあるガン\n\nコクガン\nシジュウカラガン\nハクガン\nヒシクイ\nマガン\nカリガネ"
   },
   {
-    "objectID": "article/bird_ferrylist/appendix_list.html#サメ",
-    "href": "article/bird_ferrylist/appendix_list.html#サメ",
-    "title": "Appendix",
-    "section": "サメ",
-    "text": "サメ\n謎のサメ。シルバーフェリーにて"
+    "objectID": "article/bird_list/anseriformes.html#コクガン",
+    "href": "article/bird_list/anseriformes.html#コクガン",
+    "title": "Geese, Swans, Ducks",
+    "section": "コクガン",
+    "text": "コクガン\n\n冬鳥。南三陸志津川湾の漁港や石巻湾、仙台市東部海岸で越冬。\n家族の絆が強く、ファミリー単位で威嚇し合ったり、別ファミリーの個体を追い払ったりしている。ガラが悪い\n志津川湾では潜水してアマモなどの海藻を食べるオオバンに絡んで、横取りしてしまう労働寄生の様子を観察できることがある。ガラが悪い\n\n\nビジュは良いコクガン"
   },
   {
-    "objectID": "article/bird_ferrylist/appendix_list.html#カジキ",
-    "href": "article/bird_ferrylist/appendix_list.html#カジキ",
-    "title": "Appendix",
-    "section": "カジキ",
-    "text": "カジキ\n謎のカジキ。シルバーフェリーにて"
+    "objectID": "article/bird_list/anseriformes.html#シジュウカラガン",
+    "href": "article/bird_list/anseriformes.html#シジュウカラガン",
+    "title": "Geese, Swans, Ducks",
+    "section": "シジュウカラガン",
+    "text": "シジュウカラガン\n\n一時大きく数を減らし絶滅が危ぶまれたガン。八木山動物公園や宮城・ロシアの研究者の尽力によって復活した。詳細は「シジュウカラガン物語」参考\n江戸時代は「いぬがん」と呼ばれており、英名は「Cackling Goose」。どちらも鳴き声が犬の鳴き声ににることに由来。\n亜種シジュウカラガンはマガンよりも一回り小さい。\nたまにマガン同大で首の付け根の白い首輪が見えない個体がいる。亜種アラスカシジュウカラガン\n嘴も華奢で更に小さいのは亜種ヒメシジュウカラガンらしい（見たことない）\n\n\nシジュウカラガン"
   },
   {
-    "objectID": "article/bird_ferrylist/albatross_list.html#short-tailed-albatross",
-    "href": "article/bird_ferrylist/albatross_list.html#short-tailed-albatross",
-    "title": "Albatross",
-    "section": "Short-tailed Albatross",
-    "text": "Short-tailed Albatross\nアホウドリ。 2020年にpublishされた論文によれば、鳥島個体群と尖閣諸島個体群間のくちばしのサイズが有意に異なることから、これらの個体群は別種とされた。\n鳥島の種アホウドリはすべての個体が足環標識されているため、足環のない個体はすべてセンカクアホウドリ。2023年大阪に現れたアホウドリはこのようにして尖閣個体群だと確認されたらしい。"
+    "objectID": "article/bird_list/anseriformes.html#ハクガン",
+    "href": "article/bird_list/anseriformes.html#ハクガン",
+    "title": "Geese, Swans, Ducks",
+    "section": "ハクガン",
+    "text": "ハクガン\n\n主に秋田県大潟村の巨大干拓で越冬しに来る。一部の個体群が宮城県北にやってきている可能性\nこちらも絶滅が危ぶまれたガン。"
   },
   {
-    "objectID": "article/bird_ferrylist/albatross_list.html#laysan-albatross",
-    "href": "article/bird_ferrylist/albatross_list.html#laysan-albatross",
-    "title": "Albatross",
-    "section": "Laysan Albatross",
-    "text": "Laysan Albatross\nコアホウドリ。 世界最高齢の74歳で産卵したウィズダムが有名。\nほかのアホウドリ類に比べ、北の海域で見られる印象\n\n2023年春の八丈航路でも強い北風の影響でコアホウドリが多く見られた。"
+    "objectID": "article/bird_list/anseriformes.html#ヒシクイ",
+    "href": "article/bird_list/anseriformes.html#ヒシクイ",
+    "title": "Geese, Swans, Ducks",
+    "section": "ヒシクイ",
+    "text": "ヒシクイ\n\n蕪栗沼や伊豆沼には亜種オオヒシクイが越冬。嘴がなだらかで大きく、首も長い。\n蕪栗沼では集団で越冬しているが、よく他個体を威嚇していてガラが悪い。鳴き声が他のガンと比べて低く、ちょっとおじさんみたい"
   },
   {
-    "objectID": "article/bird_ferrylist/albatross_list.html#black-footed-albatross",
-    "href": "article/bird_ferrylist/albatross_list.html#black-footed-albatross",
-    "title": "Albatross",
-    "section": "Black-footed Albatross",
-    "text": "Black-footed Albatross\nクロアシアホウドリ。アホウドリjuvと似ているが、くちばしの色で識別がある程度可能"
+    "objectID": "article/bird_list/anseriformes.html#マガン",
+    "href": "article/bird_list/anseriformes.html#マガン",
+    "title": "Geese, Swans, Ducks",
+    "section": "マガン",
+    "text": "マガン\n\n宮城県に10万羽くらい越冬しに来る鳥。県鳥。"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#カリガネ",
+    "href": "article/bird_list/anseriformes.html#カリガネ",
+    "title": "Geese, Swans, Ducks",
+    "section": "カリガネ",
+    "text": "カリガネ\n\nマガンより一回り小さく、金色のアイリングや嘴のピンク色、額の白色部の広さで識別可能。\nかわいいと言われる。東北大学野鳥の会ではカリガネとマガンとの識別が必修科目になる（ことが多い）。\n幼鳥は白色部がない。"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#コハクチョウ-tundra-swan",
+    "href": "article/bird_list/anseriformes.html#コハクチョウ-tundra-swan",
+    "title": "Geese, Swans, Ducks",
+    "section": "コハクチョウ Tundra Swan",
+    "text": "コハクチョウ Tundra Swan\nオオハクチョウより小さく、首も短い（個体が多い） 亜種アメリカコハクチョウは毎冬県内で数羽くらい来てるはず。 オオハクチョウより一回り小さく、くちばしの黄色い部分が少ない\n\nコハクチョウ"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#オオハクチョウ-whoopr-swan",
+    "href": "article/bird_list/anseriformes.html#オオハクチョウ-whoopr-swan",
+    "title": "Geese, Swans, Ducks",
+    "section": "オオハクチョウ Whoopr Swan",
+    "text": "オオハクチョウ Whoopr Swan\n毎冬、県内の湖沼や河川に飛来。 翼の骨が折れたりして北帰行できなくなったのが越夏してる\n\nオオハクチョウ"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#ツクシガモ-common-shelduck",
+    "href": "article/bird_list/anseriformes.html#ツクシガモ-common-shelduck",
+    "title": "Geese, Swans, Ducks",
+    "section": "ツクシガモ Common Shelduck",
+    "text": "ツクシガモ Common Shelduck\n県内でたまに見られる。観察できても次の日とかにはすぐ抜ける印象"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#アカツクシガモ-ruddy-shelduck",
+    "href": "article/bird_list/anseriformes.html#アカツクシガモ-ruddy-shelduck",
+    "title": "Geese, Swans, Ducks",
+    "section": "アカツクシガモ Ruddy Shelduck",
+    "text": "アカツクシガモ Ruddy Shelduck\n2023年冬、県内某所に飛来した一例がある アルパカやちくわのような色合い \n##オシドリ Mandarin Duck 冬に川や公園内の池などで見られることが多い印象 東北大学野鳥の会の定期探鳥で2020年までコンスタントに見られていた\n\n\n\nオシドリのオス"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#トモエガモ-baikal-teal",
+    "href": "article/bird_list/anseriformes.html#トモエガモ-baikal-teal",
+    "title": "Geese, Swans, Ducks",
+    "section": "トモエガモ Baikal Teal",
+    "text": "トモエガモ Baikal Teal\n最近はフィールドでも百数羽単位で見られるようになった嬉しいカモ。見つけると嬉しい 通称トモちゃん 山陰・九州ではすごい数が観察されることもあるとか"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#シマアジ-garganey",
+    "href": "article/bird_list/anseriformes.html#シマアジ-garganey",
+    "title": "Geese, Swans, Ducks",
+    "section": "シマアジ Garganey",
+    "text": "シマアジ Garganey\n春と秋の渡りの時期にちょろっと沼に立ち寄る。 2024年は結構あたりだったかも？\n\nシマアジのオス"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#ハシビロガモ-northern-shoveler",
+    "href": "article/bird_list/anseriformes.html#ハシビロガモ-northern-shoveler",
+    "title": "Geese, Swans, Ducks",
+    "section": "ハシビロガモ Northern Shoveler",
+    "text": "ハシビロガモ Northern Shoveler\n晩冬にやってくる。渡去もかなり遅い印象。\n\nハシビロガモ"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#オカヨシガモ-gadwall",
+    "href": "article/bird_list/anseriformes.html#オカヨシガモ-gadwall",
+    "title": "Geese, Swans, Ducks",
+    "section": "オカヨシガモ Gadwall",
+    "text": "オカヨシガモ Gadwall\n河口や海岸近くの湖沼によくいるイメージ。内陸の池などでは見たことがない。 オスはシックで大人なねずみ色\n\nオカヨシガモ"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#ヨシガモ-falcated-duck",
+    "href": "article/bird_list/anseriformes.html#ヨシガモ-falcated-duck",
+    "title": "Geese, Swans, Ducks",
+    "section": "ヨシガモ Falcated Duck",
+    "text": "ヨシガモ Falcated Duck\n宮城県では少ない。秋にエクリプス一羽と晩春に沼で数羽の生殖羽を見たことがあるのみ\n ## ヒドリガモ Eurasian Wigeon 河口や漁港など。船着き場に生えた海藻を食べてる。公園などにはいないので、陸に上がって草の上で集団採餌する様子は見たことがない お人形さんみたい。 アメリカヒドリとなにかっちゃあ交雑している"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#アメリカヒドリ",
+    "href": "article/bird_list/anseriformes.html#アメリカヒドリ",
+    "title": "Geese, Swans, Ducks",
+    "section": "アメリカヒドリ",
+    "text": "アメリカヒドリ\n毎冬フィールドに数羽ほど訪れる。ヒドリとの雑種（アメヒヒ）も多い。 クリーム色の顔とブドウ色の羽と形容される\n\nアメリカヒドリのオス"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#カルガモ",
+    "href": "article/bird_list/anseriformes.html#カルガモ",
+    "title": "Geese, Swans, Ducks",
+    "section": "カルガモ",
+    "text": "カルガモ\n留鳥。繁殖もする。ヒナを連れてることがある 都市公園とかだと恐ろしく人慣れしてる。"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#マガモ",
+    "href": "article/bird_list/anseriformes.html#マガモ",
+    "title": "Geese, Swans, Ducks",
+    "section": "マガモ",
+    "text": "マガモ\n冬鳥。たまにオスの羽衣にそっくりなアヒルが混ざっている。\n ## オナガガモ 冬鳥。体感最も数が多いカモ。\nカルガモが牛耳っていた沼は11月になるとオナガガモで溢れかえるので、カルガモは別の場所へ移動して静かにしているのを目にする\n\n\n\nオナガガモ"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#コガモ-green-winged-teal",
+    "href": "article/bird_list/anseriformes.html#コガモ-green-winged-teal",
+    "title": "Geese, Swans, Ducks",
+    "section": "コガモ Green-winged Teal",
+    "text": "コガモ Green-winged Teal\n他のカモに比べて小さいからか、小ガモ単一の集団を作って越冬していることが多い印象。 春先にはかわいい求愛ダンスを観察できたりする。\n\nコガモ"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#オオホシハジロ-canvasback",
+    "href": "article/bird_list/anseriformes.html#オオホシハジロ-canvasback",
+    "title": "Geese, Swans, Ducks",
+    "section": "オオホシハジロ Canvasback",
+    "text": "オオホシハジロ Canvasback\n一度だけ河口で観察した。遠すぎてよく分からなかったが…"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#ホシハジロ-common-pochard",
+    "href": "article/bird_list/anseriformes.html#ホシハジロ-common-pochard",
+    "title": "Geese, Swans, Ducks",
+    "section": "ホシハジロ Common Pochard",
+    "text": "ホシハジロ Common Pochard\n冬鳥。沼や河口にやってくる 瞳孔が赤くて怖い\n\nホシハジロ"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#キンクロハジロ-tufted-duck",
+    "href": "article/bird_list/anseriformes.html#キンクロハジロ-tufted-duck",
+    "title": "Geese, Swans, Ducks",
+    "section": "キンクロハジロ Tufted Duck",
+    "text": "キンクロハジロ Tufted Duck\n英名通り、冠羽のあるカモ 毎冬やってくる\n\nキンクロハジロ"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#スズガモ-greater-scaup",
+    "href": "article/bird_list/anseriformes.html#スズガモ-greater-scaup",
+    "title": "Geese, Swans, Ducks",
+    "section": "スズガモ Greater Scaup",
+    "text": "スズガモ Greater Scaup\n冠羽のない方。メスは嘴基部が白い。キンクロよりも海水環境を好んでいる印象\n\nスズガモのメス"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#シノリガモ-harlequin-duck",
+    "href": "article/bird_list/anseriformes.html#シノリガモ-harlequin-duck",
+    "title": "Geese, Swans, Ducks",
+    "section": "シノリガモ Harlequin Duck",
+    "text": "シノリガモ Harlequin Duck\n冬鳥。漁港や河口にいたらラッキー。網地島で狙いたい鳥\n\nシノリガモ"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#ビロードキンクロ-velvet-scoter",
+    "href": "article/bird_list/anseriformes.html#ビロードキンクロ-velvet-scoter",
+    "title": "Geese, Swans, Ducks",
+    "section": "ビロードキンクロ Velvet Scoter",
+    "text": "ビロードキンクロ Velvet Scoter\n冬鳥。漁港や河口にいたらラッキー。クロガモよりも観察頻度が少ない\n\nビロードキンクロj"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#クロガモ-black-scoter",
+    "href": "article/bird_list/anseriformes.html#クロガモ-black-scoter",
+    "title": "Geese, Swans, Ducks",
+    "section": "クロガモ Black Scoter",
+    "text": "クロガモ Black Scoter\nよく漁港や河口に数羽だけ入っている。堤防からスコープを覗いて沖合を探すのがメイン\n\nオムライス"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#ホオジロガモ-common-goldenee",
+    "href": "article/bird_list/anseriformes.html#ホオジロガモ-common-goldenee",
+    "title": "Geese, Swans, Ducks",
+    "section": "ホオジロガモ Common Goldenee",
+    "text": "ホオジロガモ Common Goldenee\nよく漁港や河口に入っている。気合いの入った応援団みたいな求愛ダンスは見たことない"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#ミコアイサ-smew",
+    "href": "article/bird_list/anseriformes.html#ミコアイサ-smew",
+    "title": "Geese, Swans, Ducks",
+    "section": "ミコアイサ Smew",
+    "text": "ミコアイサ Smew\n沼に多く入っている。オナガガモは越冬中もねぐらを変えるが、ミコアイサはずっと同じ沼を使っている印象\n\nパンダ"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#ウミアイサ-red-brested-merganser",
+    "href": "article/bird_list/anseriformes.html#ウミアイサ-red-brested-merganser",
+    "title": "Geese, Swans, Ducks",
+    "section": "ウミアイサ Red-brested Merganser",
+    "text": "ウミアイサ Red-brested Merganser\nよく河口や漁港に入っている。求愛が面白い"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#カワアイサ-common-merganser",
+    "href": "article/bird_list/anseriformes.html#カワアイサ-common-merganser",
+    "title": "Geese, Swans, Ducks",
+    "section": "カワアイサ Common Merganser",
+    "text": "カワアイサ Common Merganser\n川に入ってることが多い。著者はあまり会う機会がない"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#コブハクチョウ-mute-swan",
+    "href": "article/bird_list/anseriformes.html#コブハクチョウ-mute-swan",
+    "title": "Geese, Swans, Ducks",
+    "section": "コブハクチョウ　Mute Swan",
+    "text": "コブハクチョウ　Mute Swan\n2022年7月、沼１で発見。福島県松川浦で繁殖している\n\nコブハクチョウ"
+  },
+  {
+    "objectID": "article/bird_list/anseriformes.html#コクチョウ-black-swan",
+    "href": "article/bird_list/anseriformes.html#コクチョウ-black-swan",
+    "title": "Geese, Swans, Ducks",
+    "section": "コクチョウ Black Swan",
+    "text": "コクチョウ Black Swan\n2025年3月、宮城県某所に出現。一気に地元住民の人気者に\n\nブラックスワン"
+  },
+  {
+    "objectID": "article/bird_ferrylist/alcidae_list.html#thick-billed-murre",
+    "href": "article/bird_ferrylist/alcidae_list.html#thick-billed-murre",
+    "title": "Murres, Murrelets and Guillemots",
+    "section": "Thick-billed Murre",
+    "text": "Thick-billed Murre\nハシブトウミガラス。国内に繁殖地はないが、冬季に北日本の海域を運航するフェリーに乗るとみられる。"
+  },
+  {
+    "objectID": "article/bird_ferrylist/alcidae_list.html#common-murre",
+    "href": "article/bird_ferrylist/alcidae_list.html#common-murre",
+    "title": "Murres, Murrelets and Guillemots",
+    "section": "Common Murre",
+    "text": "Common Murre\nウミガラス。\n日本では北海道天売島で少数が繁殖。環境省による調査が2003年に始まった際の個体数は15羽だったが、2024年は122羽まで回復した。しかしながら繁殖に参加した個体数はいまだ少ないようだ。\n赤岩にはデコイや音声誘因が行われていて、2024年の5月に当地を訪れた際は赤岩展望台の下部から電子のウミガラスの声が絶えず響いていた。"
+  },
+  {
+    "objectID": "article/bird_ferrylist/alcidae_list.html#spectacled-guillemot",
+    "href": "article/bird_ferrylist/alcidae_list.html#spectacled-guillemot",
+    "title": "Murres, Murrelets and Guillemots",
+    "section": "Spectacled Guillemot",
+    "text": "Spectacled Guillemot\nケイマフリ。\nアイヌ語で「足＋赤い」の意。海のカナリアと言われ、美しい声でさえずる。英名のSpectacledは目の周りの白い模様をさしたもの。この模様は夏羽でも冬羽でも消えることはない。"
+  },
+  {
+    "objectID": "article/bird_ferrylist/alcidae_list.html#long-billed_murrelet",
+    "href": "article/bird_ferrylist/alcidae_list.html#long-billed_murrelet",
+    "title": "Murres, Murrelets and Guillemots",
+    "section": "Long-billed_Murrelet",
+    "text": "Long-billed_Murrelet\nマダラウミスズメ。ごくまれにフェリー上で観察されることがある。"
+  },
+  {
+    "objectID": "article/bird_ferrylist/alcidae_list.html#ancient-murrelet",
+    "href": "article/bird_ferrylist/alcidae_list.html#ancient-murrelet",
+    "title": "Murres, Murrelets and Guillemots",
+    "section": "Ancient Murrelet",
+    "text": "Ancient Murrelet\n\nウミスズメ航路探鳥では\n\n\n個人的に最も身近なウミスズメ類。冬季の北日本海域で十数羽の群れで海面すれすれを超高速の羽ばたきで飛ぶ姿がよく見られる。\n\n\nフェリーが近づくと一気に飛び立ち、すぐに着水する。着水と同時に潜水しやがるので目を慣らさないと見つけるのに苦労する。\n宮城県では網地島フェリーに乗れば日帰りでウミスズメを観察するチャンスがある。\n\n\n\nたくさんいると嬉しい"
+  },
+  {
+    "objectID": "article/bird_ferrylist/alcidae_list.html#japanese-murrelet",
+    "href": "article/bird_ferrylist/alcidae_list.html#japanese-murrelet",
+    "title": "Murres, Murrelets and Guillemots",
+    "section": "Japanese Murrelet",
+    "text": "Japanese Murrelet\nカンムリウミスズメは日本で繁殖するウミスズメ科としては最も南まで分布し、九州地方の近海で見たことがある。\n英名からもわかるように日本近海にのみ分布する。伊豆諸島で繁殖するため、八丈航路でも見られるらしい（経験なし）"
+  },
+  {
+    "objectID": "article/bird_ferrylist/alcidae_list.html#aethia属",
+    "href": "article/bird_ferrylist/alcidae_list.html#aethia属",
+    "title": "Murres, Murrelets and Guillemots",
+    "section": "Aethia属",
+    "text": "Aethia属\nエトロフウミスズメ、コウミスズメは以前は2~3月の北日本の海域でよく見られていたらしく、三井商船のさんふらわあやシルバーフェリーでの観察例が多かった。しかしながら、2020年からはパッタリ観察例が見られなくなる。\nこれは2017年から始まった黒潮の大蛇行により日本の海の平均海水温が極端に増加した結果だと考えられる。海水温の増加は偏西風の蛇行やそれに伴う太平洋高気圧の大きな張り出しも影響しているとみられる。\n著者が航路探鳥を始めたのは2021年の1月からなので、もちろん見たことがない。"
+  },
+  {
+    "objectID": "article/bird_ferrylist/alcidae_list.html#rhinoceros-auklet",
+    "href": "article/bird_ferrylist/alcidae_list.html#rhinoceros-auklet",
+    "title": "Murres, Murrelets and Guillemots",
+    "section": "Rhinoceros Auklet",
+    "text": "Rhinoceros Auklet\n\nウトウ繁殖地では\n\n\nウトウ。サイの角のように見える生殖羽が英名の由来。顔の上下を流れるヒゲがユニーク\n冬季の北日本海域で見られる。太平洋フェリーなら体感ウミスズメの次に多い。船の上からでも特徴的な顔がよく見える。\n\n\n天売島で80万羽が繁殖している。５～６月の夕暮れにはオホーツク海で採餌から戻ってきたウトウが赤岩の上空を舞い、地面に落下する様子が観察される。むくっと起き上がると急いで自分の巣穴に駆け込んでしまう。急がないとオオセグロカモメなどに取ってきた小魚を奪われる。カモメも繁殖期で餌が必要なのだ。\nくちばしが湾曲しているため、一度に複数の小魚を加えることができる。しかしそれをすべてカモメに奪われることもあるらしい。\n\n\n\nウミネコでこのサイズ差なのだから、オオセグロは推して知るべし"
+  },
+  {
+    "objectID": "article/about.html",
+    "href": "article/about.html",
+    "title": "About me",
+    "section": "",
+    "text": "動物の進化や多様性に興味あり 野鳥の観察をしている quarto勉強中。ページがガタガタしている可能性あり。改善していきたい。"
+  },
+  {
+    "objectID": "article/about.html#about-me",
+    "href": "article/about.html#about-me",
+    "title": "About me",
+    "section": "",
+    "text": "動物の進化や多様性に興味あり 野鳥の観察をしている quarto勉強中。ページがガタガタしている可能性あり。改善していきたい。"
+  },
+  {
+    "objectID": "article/about.html#settings",
+    "href": "article/about.html#settings",
+    "title": "About me",
+    "section": "Settings",
+    "text": "Settings\n\nCamera\n\nNikon P900\nNikon D500 + NIKKOR 200-500\n\n\n\nField Scope\n\nKOWA TSN-664M\nTE-14WD"
   },
   {
     "objectID": "article/Trip/Kyusyu.html#和白干潟とは",
@@ -777,375 +1057,137 @@
     "text": "有名すぎて伏せる意味はほとんどないと思いますが、関東某所に現れたヒメハジロを見てきました。\n出現情報がネットに流れ出してから（知っている限り）一ヶ月は経っていましたが、現場には10人ほどのバードウォッチャー？カメラマン？がいました。\nあしがゆめかわピンクでかわいかったです。\n\n\n\n\n\n\n\n\n\nヒメハジロ\n\n\n\n\n\n\n\nオオバンと行動する"
   },
   {
-    "objectID": "article/about.html",
-    "href": "article/about.html",
-    "title": "About me",
+    "objectID": "article/Trip/Sep2024_Aomori.html",
+    "href": "article/Trip/Sep2024_Aomori.html",
+    "title": "津軽半島",
     "section": "",
-    "text": "動物の進化や多様性に興味あり 野鳥の観察をしている quarto勉強中。ページがガタガタしている可能性あり。改善していきたい。"
+    "text": "2024年9月8日~10日、津軽半島を周ってみた。"
   },
   {
-    "objectID": "article/about.html#about-me",
-    "href": "article/about.html#about-me",
-    "title": "About me",
+    "objectID": "article/Trip/Sep2024_Aomori.html#竜泊ドライブ特天タンチョウ土星の観察",
+    "href": "article/Trip/Sep2024_Aomori.html#竜泊ドライブ特天タンチョウ土星の観察",
+    "title": "津軽半島",
+    "section": "9/9 竜泊ドライブ＆特天タンチョウ＆土星の観察",
+    "text": "9/9 竜泊ドライブ＆特天タンチョウ＆土星の観察\n小さいころに家族と行ったきりだった竜飛崎を後にして、竜泊ラインを走る。起伏あり、景色よしのいい道路だった。所々に設置された駐車場で休憩し、眼下に広がる蒼い海と碧い森を見下ろしながらほおばるおにぎりが最高だった。まさに「青森」だと感じる。\n竜泊ラインを降りるとすぐ、「道の駅こどまり」が見えたので立ち寄ってみた。店内にはカワハギやカレイなどが水槽の中で飼育されていた。餌槍ができるらしい。さらに南下して道の駅十三湖高原へ。写真を振り返っていて気づいたが、外装が牛をモチーフにしている。あまり調べてこなかったが牛の放牧などがされているのだろうか。十三湖と言えばトゥルルなしじみが有名なところといおう印象があった。\n小泊・夏泊などはなにやらアイヌ語由来の地名っぽい感じがする。今度ものの本で調べてみようと思った。郷土史には明るくないが、知っていると旅行が楽しくなるだろうと思う。\n十三湖から五所川原までひたすらまっすぐに縦貫する、その名も「コメ・米ロード」を南下しつづけた。途中少し左折し、秘境駅として有名な毘沙門駅を見に行った。鉄オタではないと思うが、駅は結構好き。毘沙門って名前がかっこいいよね\nその後は鶴田腸の丹頂鶴自然公園に行ってみた。シンプルな自然公園だが、異様なのは湖畔に面したフェンスの中にタンチョウが飼育されていること。ちょっと暑そうだった。立派な鶴の舞橋もあったが、疲れていたので五所川原市街地に戻ることにした。\n五所川原で銭湯に入って、明日からの海洋実習のためのご飯を買い込む。なんとロピアに入店した。地元仙台駅にもロピアができたのだが、初めてのロピアは五所川原だ。ショッピングモール内のフードコートででかラーメンを食べて、近隣の道の駅で車中泊をした。ここは広い駐車場に大型トラックや乗用車が計25台ほど停まっていた。\n竜飛崎で会った鳥屋から実は今土星が観察できることを教えてもらった。せっかく青森までスコープを持ってきていたので、人通りの少ない駐車場の端っこでスコープを広げ、観察してみることにした。天体観測はあこがれているものの熱心にしたことはない。スマホで方角を確認して探すと、ぼんやり見える恒星の中にカレーパンマンみたいな円盤形の星が見えた。\n想像よりもずっと円環が見えてハッピー。アダプターなしの気合スマスコで写真撮影した。この日も早めに寝たが、昨夜とは反対に非常に冷えた。半袖とパーカーだけではしのぎ切れない肌寒さに何度も目を覚ましてしまった…\n\n9/10 岩木山\n朝4時、気温を見ると15度。そりゃ寒いわけだ…寒すぎるのでコンビニでカフェラテと肉まんを購入。予定していた岩木山ドライブに出発。\n薄明りの中、鶴田から望む岩木山はとても美しかった。良すぎて路駐して何枚か写真を撮った。全貌が一目で見れる山が地元にはないのでわくわくである。岩木山に近づくにつれてリンゴ畑が増えてきた。道路のいたるところに落下したリンゴが転がっている。圧倒的なリンゴの物量だ。リンゴ大好きなのでうれしい。\n岩木山神社を訪れた。時刻は5:30。地元の方が一人散歩している以外に人はいなかった。境内の中は広々としていて、暑さ続きだった9月頭、冷ややかな落ち着いた空気の中で参拝できた。\n山、というくらいなので面白い鳥（ヤマドリ、オシドリ、ヤマセミ、カワガラスなど）が観察できないか期待したが、鳥は少なかった。初めて訪れた場所でもあったので十分に開拓できなかったのもある。ニホンザルには会った。温泉もいろいろあるみたいだが、こんな平日の早朝からやっているところはなく、寒さに震えながら青森市へと戻った。"
+  },
+  {
+    "objectID": "article/bird_ferrylist/albatross_list.html#short-tailed-albatross",
+    "href": "article/bird_ferrylist/albatross_list.html#short-tailed-albatross",
+    "title": "Albatross",
+    "section": "Short-tailed Albatross",
+    "text": "Short-tailed Albatross\nアホウドリ。 2020年にpublishされた論文によれば、鳥島個体群と尖閣諸島個体群間のくちばしのサイズが有意に異なることから、これらの個体群は別種とされた。\n鳥島の種アホウドリはすべての個体が足環標識されているため、足環のない個体はすべてセンカクアホウドリ。2023年大阪に現れたアホウドリはこのようにして尖閣個体群だと確認されたらしい。"
+  },
+  {
+    "objectID": "article/bird_ferrylist/albatross_list.html#laysan-albatross",
+    "href": "article/bird_ferrylist/albatross_list.html#laysan-albatross",
+    "title": "Albatross",
+    "section": "Laysan Albatross",
+    "text": "Laysan Albatross\nコアホウドリ。 世界最高齢の74歳で産卵したウィズダムが有名。\nほかのアホウドリ類に比べ、北の海域で見られる印象\n\n2023年春の八丈航路でも強い北風の影響でコアホウドリが多く見られた。"
+  },
+  {
+    "objectID": "article/bird_ferrylist/albatross_list.html#black-footed-albatross",
+    "href": "article/bird_ferrylist/albatross_list.html#black-footed-albatross",
+    "title": "Albatross",
+    "section": "Black-footed Albatross",
+    "text": "Black-footed Albatross\nクロアシアホウドリ。アホウドリjuvと似ているが、くちばしの色で識別がある程度可能"
+  },
+  {
+    "objectID": "article/bird_ferrylist/appendix_list.html#geese",
+    "href": "article/bird_ferrylist/appendix_list.html#geese",
+    "title": "Appendix",
+    "section": "Geese",
+    "text": "Geese\n\n概要詳細\n\n\n・2021年3月上旬\n・太平洋フェリー（仙台→苫小牧）\n・シジュウカラガンとマガンの群れの北帰行\n\n\n甲板上空をガンの声がすると思い、見上げると実際に飛んでいた。岩手県沖では陸側にハクチョウsp.が前後に並んで飛んでいるのも見えた。\nこれが初めての大型フェリー探鳥だったので非常に印象に残った。"
+  },
+  {
+    "objectID": "article/bird_ferrylist/appendix_list.html#オナガガモヒドリガモ",
+    "href": "article/bird_ferrylist/appendix_list.html#オナガガモヒドリガモ",
+    "title": "Appendix",
+    "section": "オナガガモ＋ヒドリガモ",
+    "text": "オナガガモ＋ヒドリガモ\n・2025年3月下旬　さんふらわあ　しれとこ"
+  },
+  {
+    "objectID": "article/bird_ferrylist/appendix_list.html#キジバト",
+    "href": "article/bird_ferrylist/appendix_list.html#キジバト",
+    "title": "Appendix",
+    "section": "キジバト",
+    "text": "キジバト\nこれもよく観察報告が上がっているイメージ。\n・2025年3月下旬　引退間近のさんふらわあ　しれとこ（大洗→苫小牧）にて\n船の右舷後方にピッタリ寄り添うように飛んでいた。渡りだったのか？"
+  },
+  {
+    "objectID": "article/bird_ferrylist/appendix_list.html#カマイルカ",
+    "href": "article/bird_ferrylist/appendix_list.html#カマイルカ",
+    "title": "Appendix",
+    "section": "カマイルカ",
+    "text": "カマイルカ\n太平洋フェリーなどで多く見られる"
+  },
+  {
+    "objectID": "article/bird_ferrylist/appendix_list.html#イシイルカ",
+    "href": "article/bird_ferrylist/appendix_list.html#イシイルカ",
+    "title": "Appendix",
+    "section": "イシイルカ",
+    "text": "イシイルカ\n生息海域は北日本以北だそうだが、個人的に羽幌沿海フェリーでしか観察経験がない"
+  },
+  {
+    "objectID": "article/bird_ferrylist/appendix_list.html#オットセイ",
+    "href": "article/bird_ferrylist/appendix_list.html#オットセイ",
+    "title": "Appendix",
+    "section": "オットセイ",
+    "text": "オットセイ\n太平洋フェリー、シルバーフェリー、三井商船で観察したことがある"
+  },
+  {
+    "objectID": "article/bird_ferrylist/appendix_list.html#マグロ",
+    "href": "article/bird_ferrylist/appendix_list.html#マグロ",
+    "title": "Appendix",
+    "section": "マグロ",
+    "text": "マグロ\n太平洋フェリー、シルバーフェリー。津軽海峡で多い"
+  },
+  {
+    "objectID": "article/bird_ferrylist/appendix_list.html#サメ",
+    "href": "article/bird_ferrylist/appendix_list.html#サメ",
+    "title": "Appendix",
+    "section": "サメ",
+    "text": "サメ\n謎のサメ。シルバーフェリーにて"
+  },
+  {
+    "objectID": "article/bird_ferrylist/appendix_list.html#カジキ",
+    "href": "article/bird_ferrylist/appendix_list.html#カジキ",
+    "title": "Appendix",
+    "section": "カジキ",
+    "text": "カジキ\n謎のカジキ。シルバーフェリーにて"
+  },
+  {
+    "objectID": "article/ferry/silverferry.html",
+    "href": "article/ferry/silverferry.html",
+    "title": "シルバーフェリー",
     "section": "",
-    "text": "動物の進化や多様性に興味あり 野鳥の観察をしている quarto勉強中。ページがガタガタしている可能性あり。改善していきたい。"
+    "text": "八戸↔︎苫小牧を結ぶシルバーフェリーでの探鳥記録\n\n2024.09.23　八戸→苫小牧\nシルバープリンセス乗船。ターミナルはなかなかキレイ。9/21に23:59発の苫小牧→八戸に乗ったが、就寝が遅く睡眠時間が取れなかったこと、海況が荒れていたことから、9/22の5:30に起きても半規管がやられてしまい（というか甲板に出られないくらい荒れてた…）、観察を断念。太平洋フェリーが大型でシンメトリーな感じだとすれば、シルバーフェリーは小柄な分、いろいろな部屋が迷路のように敷き詰められていて秘密基地みたいな感覚。甲板には屋根があり5Fと6Fで観察が可能なようだ。雑魚寝部屋を取ったがコインロッカーがあるので安心できる。乗船後は段々と天候が回復し、左舷側（順光）で観察を始めることにした。\n出港直後から小さな黒い鳥が波間を縫うように飛んでいた。初見のウミツバメ属だ。コシジロウミツバメが何度も出現したが、想像以上に小さく、素速く、海面すれすれを飛ぶので観察・撮影が難しい。本当に海のツバメという感じで感動。あとはコアホウドリやハジロミズナギドリが飛んだ。普段乗っている太平洋フェリーよりも鳥との距離が近く、とても楽しい。これは鳥屋に大人気なのも分かるなぁと感じた。\n12:30頃に船内でお昼休憩を取り、午前中は逆行だった右舷側にでて午後の観察を始めた。音に聞く八苫、三連休なのに鳥屋がいないはずがなく、午前中から右舷側で観察をしていた3名の鳥屋に挨拶して観察を始めた。オオトウゾクカモメは憧れだったので嬉しかった。少ししか観察できなかったので、いつか再チャレンジが必要だ。また、クロハラアジサシが遠くを飛んでいたり、大きなカジキが4度ほど海面にジャンプしたり、船の直ぐ脇でウミネコとマグロの大きな群れが出来ているのを見たりして、本当に楽しかった。\n総じて八苫は大満足。もっと早く知っておけば良かったと感じた。\n\n\n\n\n\n\n\n\n\nコシジロウミツバメ\n\n\n\n\n\n\n\nオオトウゾクカモメ\n\n\n\n\n\n\n\n\n\nコアホウドリ\n\n\n\n\n\n\n\nカジキ\n\n\n\n\n\n\n\n25.03.14 八→苫\n\n\n25.03.29 苫→八\nシルバーティアラで、3/28 23:59苫小牧発。この時間にターミナルまでアクセスするバスがないので、陸からターミナルに行く場合が注意が必要だ。ただ、今回は海からアクセスした。大苫に乗ってきたので問題ない。\n翌3/29は5:00頃起床。金曜の夜に出発する船だったからか、かなりの数の客を乗せていた。5:30から観察を開始し、コアホウドリがちらほら舞っていた。この日も曇天で、試しに写真を撮影したが真っ暗でダメだった。クロアシアホウドリも飛んでいた。くちばしの付け根に注目しながら、丁寧に識別していった。\n6:00過ぎ、トウゾクカモメが一羽登場。これまた非生殖羽だったので尾羽から種同定するのは難しい。しかし、この個体は翼下面の二つの白色斑が目立つので、トウゾクカモメかもしれない。\n6:30、キングペンギンの雛のように茶色の塊となったアホウドリの幼鳥が出現。クロアシと異なり、くちばしの桃色がはっきりしており識別は容易。ウミスズメ類もパラパラと飛び、ウトウとハシブトウミガラスも少ないながら観察できた。7:00に入港して終了。\n\n\n25.03.29 八→苫\n大変苦しい航路だった。さしもの八苫でも外れるときは外れるんだなぁ…という感じ。\nシルバーティアラを7:00に下船した後、八戸港ターミナルで乗船手続きをして、8:45八戸出港のシルバープリンセスに乗船する。乗船までターミナルの椅子でうとうとして、いざ乗船。\n八戸港出港時、よくいるウミウとカンムリカイツブリ・ウミアイサを眺めた。9:15、水平線のすぐ下、非常に遠い位置を細長い鳥が飛んで行った。写真で確認すると、くちばしが少し上にそりあがった、２羽のアビだった。ウトウも少しずつ顔を見せ始めた…が、あまりにも遠い…写真で撮ってギリギリわかるレベル。\n9:45、トウゾクカモメsp.が二羽登場。こちらも遠いが、翼下面の二つの白色斑でなんとかトウゾクカモメとわかる。もう一方の個体は尾羽がスプーン状をしているので、不勉強な著者でもトウゾクカモメとわかることができた。またウミスズメ類やアホウドリ類も2,3回ほど出現した。鳥が少なく、少し休憩\n11:30、本航路最大の鳥密度を感じた。ウミスズメ類が一気に現れ、アホウドリ類も飛んだ。おりしも尻屋崎を超えて津軽海峡に差し掛かろうとしており、ウミスズメの10数羽の群れが比較的船の近くを飛んだ。中にはハシブトウミガラスの10数羽の群れもいた。ブトウミはウトウのように2~5羽程度でしか蒸れないと思っていたが、この規模のものも存在するのかと驚いた。たまにウミガラス十羽程度の群れにウトウが2,3羽混ざって飛んでいることもあり面白かった。引率の先生みたい。\n同時に、体が黒褐色のミズナギドリも現れた。これも例外にもれず遠く、ピントを合わせた写真を撮ることは困難だったが、いくつかの個体の写真を見ると額がなだらかのように見え、翼下面もなだらかなのでハイイロミズナギドリのような気がする。\nその後も同じような暗色ミズナギドリがでた。写真でとれた個体は、くちばし基部が赤く、足も赤いように見えたのでアカアシミズナギドリかもしれない。もう少しハイナギやボソナギと比較できたらよかったのだが。いずれにせよ暗色ミズナギドリ類はらいふぁー。\n12:00には昨日と同様、オットセイが現れた。昨日見た座標をGoogleマップでラベリングしていたが、比べるとほとんど一緒の場所だった。八苫でオットセイを報告している人は少ないイメージがあったので、ちょっと嬉しい。\nその後は類を見ないほどの虚無だった。一面鳥がいない。カモメ・ウミネコすらいない。あきらめてお風呂に入った。次に鳥を見たのは15:30、苫小牧港周辺のシノリガモとクロガモ。まだ残ってるんだな。"
   },
   {
-    "objectID": "article/about.html#settings",
-    "href": "article/about.html#settings",
-    "title": "About me",
-    "section": "Settings",
-    "text": "Settings\n\nCamera\n\nNikon P900\nNikon D500 + NIKKOR 200-500\n\n\n\nField Scope\n\nKOWA TSN-664M\nTE-14WD"
-  },
-  {
-    "objectID": "article/bird_ferrylist/alcidae_list.html#thick-billed-murre",
-    "href": "article/bird_ferrylist/alcidae_list.html#thick-billed-murre",
-    "title": "Murres, Murrelets and Guillemots",
-    "section": "Thick-billed Murre",
-    "text": "Thick-billed Murre\nハシブトウミガラス。国内に繁殖地はないが、冬季に北日本の海域を運航するフェリーに乗るとみられる。"
-  },
-  {
-    "objectID": "article/bird_ferrylist/alcidae_list.html#common-murre",
-    "href": "article/bird_ferrylist/alcidae_list.html#common-murre",
-    "title": "Murres, Murrelets and Guillemots",
-    "section": "Common Murre",
-    "text": "Common Murre\nウミガラス。\n日本では北海道天売島で少数が繁殖。環境省による調査が2003年に始まった際の個体数は15羽だったが、2024年は122羽まで回復した。しかしながら繁殖に参加した個体数はいまだ少ないようだ。\n赤岩にはデコイや音声誘因が行われていて、2024年の5月に当地を訪れた際は赤岩展望台の下部から電子のウミガラスの声が絶えず響いていた。"
-  },
-  {
-    "objectID": "article/bird_ferrylist/alcidae_list.html#spectacled-guillemot",
-    "href": "article/bird_ferrylist/alcidae_list.html#spectacled-guillemot",
-    "title": "Murres, Murrelets and Guillemots",
-    "section": "Spectacled Guillemot",
-    "text": "Spectacled Guillemot\nケイマフリ。\nアイヌ語で「足＋赤い」の意。海のカナリアと言われ、美しい声でさえずる。英名のSpectacledは目の周りの白い模様をさしたもの。この模様は夏羽でも冬羽でも消えることはない。"
-  },
-  {
-    "objectID": "article/bird_ferrylist/alcidae_list.html#long-billed_murrelet",
-    "href": "article/bird_ferrylist/alcidae_list.html#long-billed_murrelet",
-    "title": "Murres, Murrelets and Guillemots",
-    "section": "Long-billed_Murrelet",
-    "text": "Long-billed_Murrelet\nマダラウミスズメ。ごくまれにフェリー上で観察されることがある。"
-  },
-  {
-    "objectID": "article/bird_ferrylist/alcidae_list.html#ancient-murrelet",
-    "href": "article/bird_ferrylist/alcidae_list.html#ancient-murrelet",
-    "title": "Murres, Murrelets and Guillemots",
-    "section": "Ancient Murrelet",
-    "text": "Ancient Murrelet\n\nウミスズメ航路探鳥では\n\n\n個人的に最も身近なウミスズメ類。冬季の北日本海域で十数羽の群れで海面すれすれを超高速の羽ばたきで飛ぶ姿がよく見られる。\n\n\nフェリーが近づくと一気に飛び立ち、すぐに着水する。着水と同時に潜水しやがるので目を慣らさないと見つけるのに苦労する。\n宮城県では網地島フェリーに乗れば日帰りでウミスズメを観察するチャンスがある。\n\n\n\nたくさんいると嬉しい"
-  },
-  {
-    "objectID": "article/bird_ferrylist/alcidae_list.html#japanese-murrelet",
-    "href": "article/bird_ferrylist/alcidae_list.html#japanese-murrelet",
-    "title": "Murres, Murrelets and Guillemots",
-    "section": "Japanese Murrelet",
-    "text": "Japanese Murrelet\nカンムリウミスズメは日本で繁殖するウミスズメ科としては最も南まで分布し、九州地方の近海で見たことがある。\n英名からもわかるように日本近海にのみ分布する。伊豆諸島で繁殖するため、八丈航路でも見られるらしい（経験なし）"
-  },
-  {
-    "objectID": "article/bird_ferrylist/alcidae_list.html#aethia属",
-    "href": "article/bird_ferrylist/alcidae_list.html#aethia属",
-    "title": "Murres, Murrelets and Guillemots",
-    "section": "Aethia属",
-    "text": "Aethia属\nエトロフウミスズメ、コウミスズメは以前は2~3月の北日本の海域でよく見られていたらしく、三井商船のさんふらわあやシルバーフェリーでの観察例が多かった。しかしながら、2020年からはパッタリ観察例が見られなくなる。\nこれは2017年から始まった黒潮の大蛇行により日本の海の平均海水温が極端に増加した結果だと考えられる。海水温の増加は偏西風の蛇行やそれに伴う太平洋高気圧の大きな張り出しも影響しているとみられる。\n著者が航路探鳥を始めたのは2021年の1月からなので、もちろん見たことがない。"
-  },
-  {
-    "objectID": "article/bird_ferrylist/alcidae_list.html#rhinoceros-auklet",
-    "href": "article/bird_ferrylist/alcidae_list.html#rhinoceros-auklet",
-    "title": "Murres, Murrelets and Guillemots",
-    "section": "Rhinoceros Auklet",
-    "text": "Rhinoceros Auklet\n\nウトウ繁殖地では\n\n\nウトウ。サイの角のように見える生殖羽が英名の由来。顔の上下を流れるヒゲがユニーク\n冬季の北日本海域で見られる。太平洋フェリーなら体感ウミスズメの次に多い。船の上からでも特徴的な顔がよく見える。\n\n\n天売島で80万羽が繁殖している。５～６月の夕暮れにはオホーツク海で採餌から戻ってきたウトウが赤岩の上空を舞い、地面に落下する様子が観察される。むくっと起き上がると急いで自分の巣穴に駆け込んでしまう。急がないとオオセグロカモメなどに取ってきた小魚を奪われる。カモメも繁殖期で餌が必要なのだ。\nくちばしが湾曲しているため、一度に複数の小魚を加えることができる。しかしそれをすべてカモメに奪われることもあるらしい。\n\n\n\nウミネコでこのサイズ差なのだから、オオセグロは推して知るべし"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#geese-in-miyagi",
-    "href": "article/bird_list/anseriformes.html#geese-in-miyagi",
-    "title": "Geese, Swans, Ducks",
-    "section": "Geese in Miyagi",
-    "text": "Geese in Miyagi\n宮城で観察したことのあるガン\n\nコクガン\nシジュウカラガン\nハクガン\nヒシクイ\nマガン\nカリガネ"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#コクガン",
-    "href": "article/bird_list/anseriformes.html#コクガン",
-    "title": "Geese, Swans, Ducks",
-    "section": "コクガン",
-    "text": "コクガン\n\n冬鳥。南三陸志津川湾の漁港や石巻湾、仙台市東部海岸で越冬。\n家族の絆が強く、ファミリー単位で威嚇し合ったり、別ファミリーの個体を追い払ったりしている。ガラが悪い\n志津川湾では潜水してアマモなどの海藻を食べるオオバンに絡んで、横取りしてしまう労働寄生の様子を観察できることがある。ガラが悪い\n\n\nビジュは良いコクガン"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#シジュウカラガン",
-    "href": "article/bird_list/anseriformes.html#シジュウカラガン",
-    "title": "Geese, Swans, Ducks",
-    "section": "シジュウカラガン",
-    "text": "シジュウカラガン\n\n一時大きく数を減らし絶滅が危ぶまれたガン。八木山動物公園や宮城・ロシアの研究者の尽力によって復活した。詳細は「シジュウカラガン物語」参考\n江戸時代は「いぬがん」と呼ばれており、英名は「Cackling Goose」。どちらも鳴き声が犬の鳴き声ににることに由来。\n亜種シジュウカラガンはマガンよりも一回り小さい。\nたまにマガン同大で首の付け根の白い首輪が見えない個体がいる。亜種アラスカシジュウカラガン\n嘴も華奢で更に小さいのは亜種ヒメシジュウカラガンらしい（見たことない）\n\n\nシジュウカラガン"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#ハクガン",
-    "href": "article/bird_list/anseriformes.html#ハクガン",
-    "title": "Geese, Swans, Ducks",
-    "section": "ハクガン",
-    "text": "ハクガン\n\n主に秋田県大潟村の巨大干拓で越冬しに来る。一部の個体群が宮城県北にやってきている可能性\nこちらも絶滅が危ぶまれたガン。"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#ヒシクイ",
-    "href": "article/bird_list/anseriformes.html#ヒシクイ",
-    "title": "Geese, Swans, Ducks",
-    "section": "ヒシクイ",
-    "text": "ヒシクイ\n\n蕪栗沼や伊豆沼には亜種オオヒシクイが越冬。嘴がなだらかで大きく、首も長い。\n蕪栗沼では集団で越冬しているが、よく他個体を威嚇していてガラが悪い。鳴き声が他のガンと比べて低く、ちょっとおじさんみたい"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#マガン",
-    "href": "article/bird_list/anseriformes.html#マガン",
-    "title": "Geese, Swans, Ducks",
-    "section": "マガン",
-    "text": "マガン\n\n宮城県に10万羽くらい越冬しに来る鳥。県鳥。"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#カリガネ",
-    "href": "article/bird_list/anseriformes.html#カリガネ",
-    "title": "Geese, Swans, Ducks",
-    "section": "カリガネ",
-    "text": "カリガネ\n\nマガンより一回り小さく、金色のアイリングや嘴のピンク色、額の白色部の広さで識別可能。\nかわいいと言われる。東北大学野鳥の会ではカリガネとマガンとの識別が必修科目になる（ことが多い）。\n幼鳥は白色部がない。"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#コハクチョウ-tundra-swan",
-    "href": "article/bird_list/anseriformes.html#コハクチョウ-tundra-swan",
-    "title": "Geese, Swans, Ducks",
-    "section": "コハクチョウ Tundra Swan",
-    "text": "コハクチョウ Tundra Swan\nオオハクチョウより小さく、首も短い（個体が多い） 亜種アメリカコハクチョウは毎冬県内で数羽くらい来てるはず。 オオハクチョウより一回り小さく、くちばしの黄色い部分が少ない\n\nコハクチョウ"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#オオハクチョウ-whoopr-swan",
-    "href": "article/bird_list/anseriformes.html#オオハクチョウ-whoopr-swan",
-    "title": "Geese, Swans, Ducks",
-    "section": "オオハクチョウ Whoopr Swan",
-    "text": "オオハクチョウ Whoopr Swan\n毎冬、県内の湖沼や河川に飛来。 翼の骨が折れたりして北帰行できなくなったのが越夏してる\n\nオオハクチョウ"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#ツクシガモ-common-shelduck",
-    "href": "article/bird_list/anseriformes.html#ツクシガモ-common-shelduck",
-    "title": "Geese, Swans, Ducks",
-    "section": "ツクシガモ Common Shelduck",
-    "text": "ツクシガモ Common Shelduck\n県内でたまに見られる。観察できても次の日とかにはすぐ抜ける印象"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#アカツクシガモ-ruddy-shelduck",
-    "href": "article/bird_list/anseriformes.html#アカツクシガモ-ruddy-shelduck",
-    "title": "Geese, Swans, Ducks",
-    "section": "アカツクシガモ Ruddy Shelduck",
-    "text": "アカツクシガモ Ruddy Shelduck\n2023年冬、県内某所に飛来した一例がある アルパカやちくわのような色合い \n##オシドリ Mandarin Duck 冬に川や公園内の池などで見られることが多い印象 東北大学野鳥の会の定期探鳥で2020年までコンスタントに見られていた\n\n\n\nオシドリのオス"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#トモエガモ-baikal-teal",
-    "href": "article/bird_list/anseriformes.html#トモエガモ-baikal-teal",
-    "title": "Geese, Swans, Ducks",
-    "section": "トモエガモ Baikal Teal",
-    "text": "トモエガモ Baikal Teal\n最近はフィールドでも百数羽単位で見られるようになった嬉しいカモ。見つけると嬉しい 通称トモちゃん 山陰・九州ではすごい数が観察されることもあるとか"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#シマアジ-garganey",
-    "href": "article/bird_list/anseriformes.html#シマアジ-garganey",
-    "title": "Geese, Swans, Ducks",
-    "section": "シマアジ Garganey",
-    "text": "シマアジ Garganey\n春と秋の渡りの時期にちょろっと沼に立ち寄る。 2024年は結構あたりだったかも？\n\nシマアジのオス"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#ハシビロガモ-northern-shoveler",
-    "href": "article/bird_list/anseriformes.html#ハシビロガモ-northern-shoveler",
-    "title": "Geese, Swans, Ducks",
-    "section": "ハシビロガモ Northern Shoveler",
-    "text": "ハシビロガモ Northern Shoveler\n晩冬にやってくる。渡去もかなり遅い印象。\n\nハシビロガモ"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#オカヨシガモ-gadwall",
-    "href": "article/bird_list/anseriformes.html#オカヨシガモ-gadwall",
-    "title": "Geese, Swans, Ducks",
-    "section": "オカヨシガモ Gadwall",
-    "text": "オカヨシガモ Gadwall\n河口や海岸近くの湖沼によくいるイメージ。内陸の池などでは見たことがない。 オスはシックで大人なねずみ色\n\nオカヨシガモ"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#ヨシガモ-falcated-duck",
-    "href": "article/bird_list/anseriformes.html#ヨシガモ-falcated-duck",
-    "title": "Geese, Swans, Ducks",
-    "section": "ヨシガモ Falcated Duck",
-    "text": "ヨシガモ Falcated Duck\n宮城県では少ない。秋にエクリプス一羽と晩春に沼で数羽の生殖羽を見たことがあるのみ\n ## ヒドリガモ Eurasian Wigeon 河口や漁港など。船着き場に生えた海藻を食べてる。公園などにはいないので、陸に上がって草の上で集団採餌する様子は見たことがない お人形さんみたい。 アメリカヒドリとなにかっちゃあ交雑している"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#アメリカヒドリ",
-    "href": "article/bird_list/anseriformes.html#アメリカヒドリ",
-    "title": "Geese, Swans, Ducks",
-    "section": "アメリカヒドリ",
-    "text": "アメリカヒドリ\n毎冬フィールドに数羽ほど訪れる。ヒドリとの雑種（アメヒヒ）も多い。 クリーム色の顔とブドウ色の羽と形容される\n\nアメリカヒドリのオス"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#カルガモ",
-    "href": "article/bird_list/anseriformes.html#カルガモ",
-    "title": "Geese, Swans, Ducks",
-    "section": "カルガモ",
-    "text": "カルガモ\n留鳥。繁殖もする。ヒナを連れてることがある 都市公園とかだと恐ろしく人慣れしてる。"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#マガモ",
-    "href": "article/bird_list/anseriformes.html#マガモ",
-    "title": "Geese, Swans, Ducks",
-    "section": "マガモ",
-    "text": "マガモ\n冬鳥。たまにオスの羽衣にそっくりなアヒルが混ざっている。\n ## オナガガモ 冬鳥。体感最も数が多いカモ。\nカルガモが牛耳っていた沼は11月になるとオナガガモで溢れかえるので、カルガモは別の場所へ移動して静かにしているのを目にする\n\n\n\nオナガガモ"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#コガモ-green-winged-teal",
-    "href": "article/bird_list/anseriformes.html#コガモ-green-winged-teal",
-    "title": "Geese, Swans, Ducks",
-    "section": "コガモ Green-winged Teal",
-    "text": "コガモ Green-winged Teal\n他のカモに比べて小さいからか、小ガモ単一の集団を作って越冬していることが多い印象。 春先にはかわいい求愛ダンスを観察できたりする。\n\nコガモ"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#オオホシハジロ-canvasback",
-    "href": "article/bird_list/anseriformes.html#オオホシハジロ-canvasback",
-    "title": "Geese, Swans, Ducks",
-    "section": "オオホシハジロ Canvasback",
-    "text": "オオホシハジロ Canvasback\n一度だけ河口で観察した。遠すぎてよく分からなかったが…"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#ホシハジロ-common-pochard",
-    "href": "article/bird_list/anseriformes.html#ホシハジロ-common-pochard",
-    "title": "Geese, Swans, Ducks",
-    "section": "ホシハジロ Common Pochard",
-    "text": "ホシハジロ Common Pochard\n冬鳥。沼や河口にやってくる 瞳孔が赤くて怖い\n\nホシハジロ"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#キンクロハジロ-tufted-duck",
-    "href": "article/bird_list/anseriformes.html#キンクロハジロ-tufted-duck",
-    "title": "Geese, Swans, Ducks",
-    "section": "キンクロハジロ Tufted Duck",
-    "text": "キンクロハジロ Tufted Duck\n英名通り、冠羽のあるカモ 毎冬やってくる\n\nキンクロハジロ"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#スズガモ-greater-scaup",
-    "href": "article/bird_list/anseriformes.html#スズガモ-greater-scaup",
-    "title": "Geese, Swans, Ducks",
-    "section": "スズガモ Greater Scaup",
-    "text": "スズガモ Greater Scaup\n冠羽のない方。メスは嘴基部が白い。キンクロよりも海水環境を好んでいる印象\n\nスズガモのメス"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#シノリガモ-harlequin-duck",
-    "href": "article/bird_list/anseriformes.html#シノリガモ-harlequin-duck",
-    "title": "Geese, Swans, Ducks",
-    "section": "シノリガモ Harlequin Duck",
-    "text": "シノリガモ Harlequin Duck\n冬鳥。漁港や河口にいたらラッキー。網地島で狙いたい鳥\n\nシノリガモ"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#ビロードキンクロ-velvet-scoter",
-    "href": "article/bird_list/anseriformes.html#ビロードキンクロ-velvet-scoter",
-    "title": "Geese, Swans, Ducks",
-    "section": "ビロードキンクロ Velvet Scoter",
-    "text": "ビロードキンクロ Velvet Scoter\n冬鳥。漁港や河口にいたらラッキー。クロガモよりも観察頻度が少ない\n\nビロードキンクロj"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#クロガモ-black-scoter",
-    "href": "article/bird_list/anseriformes.html#クロガモ-black-scoter",
-    "title": "Geese, Swans, Ducks",
-    "section": "クロガモ Black Scoter",
-    "text": "クロガモ Black Scoter\nよく漁港や河口に数羽だけ入っている。堤防からスコープを覗いて沖合を探すのがメイン\n\nオムライス"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#ホオジロガモ-common-goldenee",
-    "href": "article/bird_list/anseriformes.html#ホオジロガモ-common-goldenee",
-    "title": "Geese, Swans, Ducks",
-    "section": "ホオジロガモ Common Goldenee",
-    "text": "ホオジロガモ Common Goldenee\nよく漁港や河口に入っている。気合いの入った応援団みたいな求愛ダンスは見たことない"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#ミコアイサ-smew",
-    "href": "article/bird_list/anseriformes.html#ミコアイサ-smew",
-    "title": "Geese, Swans, Ducks",
-    "section": "ミコアイサ Smew",
-    "text": "ミコアイサ Smew\n沼に多く入っている。オナガガモは越冬中もねぐらを変えるが、ミコアイサはずっと同じ沼を使っている印象\n\nパンダ"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#ウミアイサ-red-brested-merganser",
-    "href": "article/bird_list/anseriformes.html#ウミアイサ-red-brested-merganser",
-    "title": "Geese, Swans, Ducks",
-    "section": "ウミアイサ Red-brested Merganser",
-    "text": "ウミアイサ Red-brested Merganser\nよく河口や漁港に入っている。求愛が面白い"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#カワアイサ-common-merganser",
-    "href": "article/bird_list/anseriformes.html#カワアイサ-common-merganser",
-    "title": "Geese, Swans, Ducks",
-    "section": "カワアイサ Common Merganser",
-    "text": "カワアイサ Common Merganser\n川に入ってることが多い。著者はあまり会う機会がない"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#コブハクチョウ-mute-swan",
-    "href": "article/bird_list/anseriformes.html#コブハクチョウ-mute-swan",
-    "title": "Geese, Swans, Ducks",
-    "section": "コブハクチョウ　Mute Swan",
-    "text": "コブハクチョウ　Mute Swan\n2022年7月、沼１で発見。福島県松川浦で繁殖している\n\nコブハクチョウ"
-  },
-  {
-    "objectID": "article/bird_list/anseriformes.html#コクチョウ-black-swan",
-    "href": "article/bird_list/anseriformes.html#コクチョウ-black-swan",
-    "title": "Geese, Swans, Ducks",
-    "section": "コクチョウ Black Swan",
-    "text": "コクチョウ Black Swan\n2025年3月、宮城県某所に出現。一気に地元住民の人気者に\n\nブラックスワン"
-  },
-  {
-    "objectID": "article/ferry/sunflower.html",
-    "href": "article/ferry/sunflower.html",
-    "title": "三井商船さんふらわあ（大洗→苫小牧）",
+    "objectID": "article/ferry/taiheiyoferry.html",
+    "href": "article/ferry/taiheiyoferry.html",
+    "title": "太平洋フェリー（名古屋↔︎仙台↔︎苫小牧）",
     "section": "",
-    "text": "2025.03.28　大洗→苫小牧（深夜便）\n2025.03.27（木）、上野で見たい展覧会があったので東京に来た。東北でも開催してほしいけど、東北にはデカい美術館やキャパのある会場がなさそうなので仕方がない。上野からただ仙台に帰るのも興がないので、いっそ大洗まで行って、船で帰ろうと思った。\n20:00頃、上野駅から常磐線の特急ひたちに乗って一時間ほどで水戸駅に到着。21:20に水戸駅から大洗港フェリーターミナル経由のバスが出ているので、これに揺られて21:50にターミナルに到着。深夜便の出立は翌1:45だが、乗船自体は22:30から可能らしい。誰もいないターミナルで流れていた誰も知らないテレビを眺めていると、あっという間に乗船の時間が来た。\n6:30頃起床し、用意していた朝食用のパンを食べ、7:00頃から右舷側で観察を開始した。小雨だったが右舷側の屋根で雨宿りしながら観察。ちょうど金華山沖からだっただろうか、曇りの中、さっそくクロアシアホウドリ・コアホウドリが一羽ずつ飛んだ。またウミスズメもちらほら飛んでいた。さらにアホウドリも少数現れた。アホウドリは背面が茶褐色で眼の周囲だけ白みがかった若鳥や、背面が白い成鳥も見られた。\nアホウドリを観察していると、船の後方から中空を飛んでくるハト位の鳥が見えた。今まで見たことのない飛び方の海鳥だと思い、びっくりしながら確認したらまさにキジバトだった。30秒ほど右舷側にくっつきながら飛んでいた。\n今回興味深かったのはアホウドリ類が海面に降りていたこと。アホウドリはダイナミックソアリングに適した長い翼をもつが、飛翔時はハクチョウのように助走をつけて飛ぶ。魚食性なので当然なのだが、そんなアホウドリが海面に降りているのはあまり見ない光景だったので、面白かった。\n9:00頃、小雨がやみ風もおさまったので、遮るものが少ない左舷側（陸側）に出てみた。トウゾクカモメが現れた。といってもトウゾクカモメ4種は多型が多く（supergeneによってmorphが決定するらしい。ハクガンと同じ）、私が初見したのもつい半年前だったこともあり、現地では識別できなかった。ただ、船の上から飛び方の力強い、海面すれすれを飛ぶでっぷりした鳥をトウゾクだとわかるようになったのは成長だと思う。生殖羽は尾羽が特徴的で識別しやすそうなものだが、見るトウゾクどれもが尾羽が短く、\n9:30頃からミツユビカモメの数百羽の規模の群れが見られるようになった。上空を乱舞する群れの中で一羽だけ、大きくて真っ黒な個体がいた。トウゾクカモメが襲っている様子だった。また、11時方向からトウゾクカモメが3羽まとまって出現し、興奮してピントが甘くなってしまった。トウゾクも群れることがあるのか。数羽で襲撃したほうが成功しやすいのかもしれない。\n11:30頃、船内に戻って昼食を食べていた。鳥の出が少なくなったこともあり、朝飯が早かったこともある。窓際に座って船内の温かいお茶を飲んでいると、窓の外側を巨大な鳥の群れが流れていった。一服モードから鳥見モードに切り替え、すぐカメラを向けて証拠写真を撮る。見るとアホウドリの成幼入り混じった13羽の群れが海面に浮いていた。これはさすがに悔しすぎる。この航路でアホウドリの10羽を超える群れを見るのは、後にも先にもこれが最初で最後だった。\n急いでデッキに戻った。風が強くなってきたので、右舷側での観察にする。同じように船から離れていくウミスズメ類をさばいていると、その中にハシブトウミガラスが入った。12:30頃にはウトウもトビ始めた。\n13:00、同じように海面から飛び出した小鳥を見ると、ウミスズメより明らかに大型。よく見るとオナガガモ8羽の群れだった。海を渡って北へ向かうのだろうか。冬場は公園や沼でころころしているかわいいオナガガモの勇敢な一面を見たような気がした。\n14:00、トウゾクカモメがたくさん出た。\n14;:30　疲れからか酔ってきたので個室に戻り寝た。個室なのがポイント高い。16:00頃、観察を再開。この日は日が出ることはなかったが、それでもこの時間になると分厚い雲に覆われた天蓋の上に上る日も傾いてくる。コアホウドリとクロアシアホウドリを何とか識別し、また粛々とウミスズメ類をさばいていく。そうするとまたカモ軍団が現れた。今度はPintailオンリーではなく、Wigeonも混ざっている。\nさらに、津軽海峡沖で海面に褐色の球体と三角形が浮かんでいるのが見えた。よく見るとオットセイの頭と四肢だったようだ。球体には白いひげが生えていて、頭部を海面に出していた。"
+    "text": "2021.03.11 仙台→苫小牧\n初めての仙苫。航路大好き友人に連れられて三人で北海道遠征をすることになった。\n仙台からは19:40発になるため、17:00頃にターミナルに到着し、スーパーで買った惣菜などの夜ご飯を2m離れて食べたり、見られそうな鳥や見たい鳥を2m離れて談義するなどして過ごした。コロナパンデミックから1年後だったので、ソーシャルディスタンスしていた。\n19:30には乗船を済ませ、翌朝から始まる航路探鳥の舞台である甲板を下見した。冷たい夜風と共に体に付着した潮を落とすため、混雑前に大浴場に入った。太平洋フェリーは大浴場付きなのだ。うれしい\n日の出と共に航路探鳥を始めるため寝台に駆け込んだ。同室には一般の方も利用されていたので、目覚ましの音は最小限に控えた。航路探鳥はまだ2回目。どんな鳥と出会えるか、さながらキジバトの求愛ダンスみてーに胸を膨らませながら床に就いた。\n翌朝は5:00くらいから観察を始めた。太平洋の波をかき分け征くフェリーの重低音が覚醒の助けになってくれていた。朝のルーティンをしっかりこなして甲板に陣取る。まだ日も出ていなかったように記憶しているが、ミツユビカモメ（学名もtridactyla）がたくさん飛んでいて楽しい。遠くを滑翔するコアホウドリの大きさに驚いたり、船体付近に現れたウミガラスsp.などに発狂したり、今まで航路以外で見る機会がなかった海鳥を見ることが出来て嬉しかった。\n左舷で観察すると本州沿岸沿いをハクチョウ・ガンの群れが並走しているのが見えた。更に甲板での観察中、上空をマガンとシジュウカラガンの群れが追い抜いていった。青空を背景にこれからシベリアやカムチャツカに向かうのだろう。航路経験が少なく、海鳥を見るものだと思っていたがこのように渡りを観察できるチャンスでもある事を知った。なるべく船首の方で観察していたがそれでもコンスタントに風が吹き付けるので、手袋貫通して霜焼けになる。太平洋フェリーのあつあつお茶サーバーを利用して休憩しながら苫小牧港まで楽しんだ。\n\n\n2021.03.16 苫小牧→仙台\n北海道遠征の最終日。岩手沖からの観察。旅愁に浸る間もないほど海鳥が多かった。3.11の往路では観察できなかったオオミズナギドリ、クロアシアホウドリ、ウトウ、ウミスズメなどのほか、ウミガラスsp.の数も多く楽しめた。\nウトウがめちゃくちゃに多かったが、足島（2020年、コシジロウミツバメのヒナが見つかっている。今まで岩手県三貫島が繁殖南限だと考えられていたが、その記録を更新）での繁殖に向けて集まってきていたのだろうか。\n\n\n2022.08.25　苫小牧→仙台\n函館から苫小牧まで一人旅をした帰り。ちなみに函館まではシンプルに新幹線で行った。\nオオミズナギドリがめちゃくちゃ飛んだ。水面付近をアカエリヒレアシシギが飛んでいた。あと同世代くらいの鳥屋にあった。めちゃくちゃな虚無だったけど航路自体が好きなのでまぁOKという感じ。トビウオ眺めてた。\n\n\n2023.09.20, 09.21　仙台→名古屋\n就活終わって漸く時間が出来たので、シンプル旅行で名古屋に行ってみた。\n11:00から汗が止めどなく流れるバス停。働かない頭で座った場所は優先席で居心地が悪かった。領収書を受付の方に見せて乗船→場所取り（とはいえ鳥屋は私一人だったが…）。名古屋行きのフェリーは12:50発なので、苫小牧行きと違って昼前から移動しなければならない。寝室を確認して早速甲板で待機。\nウミネコにかっぱえびせん上げてる人いっぱいいて、たまにオオセグロ幼鳥混ざってた。最初の方は渡りのシギチが数十羽で飛んでいるのが多かったが、14:50を最後に何も飛ばなくなった（海面の波が朧気な輪郭を持った夢想に変わるのに時間はかからなかった）。\n16:30からフェリー前方をオオナギが舞い始め、いわき沖でドカンと500+いそうなオオナギ爆弾が遠くの沖に見えた（一直線上になっていたので撮影してみると、その直線から少し離れたところにも30羽ほどまとまっていて、なんだか嘴が大きい。アホウか？）。いわき沖までアカエリヒレアシシギがちょろちょろ出たくらいだったが、いわき沖はオオミズナギドリ、ウミネコの巨大な塊が見えて面白かった。まだ鳥山が見えていたが日も暮れてきたので、その後は日が暮れた17:00過ぎまで探鳥し、17:40に切り上げて今執筆している。\n翌日は5:30から観察を開始。静岡県御前崎沖から。三河あたりが鳥の密度が高く、コンスタントにオオミズナギドリやウミネコが飛んでいた。伊良湖崎あたりでタカ見えないかなぁと、頑張って8倍双眼鏡で曇天を凝視したが、トビっぽいシルエットが飛んでいることしか分からなかった。あり得ないくらい高所をクロアシアホウドリが1羽だけ旋回していた。種数は稼げなかったが（時期が微妙すぎる…）、初めて乗った航路だったので楽しめた。\n\n\n2023.09.25　名古屋→仙台\n5:30、鴨川沖からスタート。オオミズナギドリたくさん、ウミネコ、オオセグロカモメ、ウミウ、以上。アカエリヒレアシシギも見られなくなって虚無さが増した。相変わらずいわき沖は賑やかだった。16:30の仙台港着時はどっと疲れた。\n\n\n2024.03.30　名古屋→仙台\n帰りだけフェリーを利用した。5:30、房総半島沖からスタート。\n半年前にも乗っていたが、今回は海鳥が多かった。やっぱり時期の問題が大きそう。\nクロガモ、アカエリカイツブリ、カンムリカイツブリ、ハジロカイツブリなどが界面に浮いていた。またアホウドリも成幼合わせて9羽ほど観察できた。クロアシアホウドリやコアホウドリもいた。ヒメウがいたのには驚いた。東北以北のイメージが強いが、関東辺りにもいるのは知らなかった。あとハクセキレイが飛んでいた。仙台着は15:30\n\n\n2024.09.21　仙台→苫小牧\n八戸↔︎苫小牧のフェリーに乗るために、一度苫小牧までフェリーで行くことにした。9月の三連休は、2023年の仙台↔︎名古屋につづき二度目の航路。\nきそフェリーに乗る。平日夜の帰宅ラッシュに巻き込まれ、20分遅延したターミナル行きバスだったが、流石に乗客が多いことと直結バスがこれしかないため、乗船手続き時刻を過ぎていたが何とか乗ることが出来た。\n初日はカップラ食べて風呂入って、あと今までスルーしていたラウンジで元劇団四季のVoとピアノ奏者のコンサートを楽しんだ。\n・歌詞はタブレット端末で表示していた。\n・記録端末が発達してから、CDからWalkmanから、配信サービスまで変化していったが、そもそも音楽とはこのように、決められた時間に生の音楽家が奏でるものを対面で鑑賞する起源があったんだよな\n・絵画と同じで、記録端末が出てきてから市民にも門戸が開かれたのかな。気になる一方で市民から発達したポップミュージックとかもありそう。\n・新しい歌の発表の場も、今はYouTubeやライブが多いが…\n・今まで記録された曲を聴く習慣で生きてきたから、ライブとかである声の裏返りとかアレンジとかが苦手だったんだよね～それってこの歌の正解じゃないよね？って気持ち\n・将来は演奏家ではなく、AIによる固定化された音楽が演奏されるようになるのか\n5:00前起床、パン食べて観察開始。懸念されていた天気だったが幸い曇り。7:00まで憧れのPterodroma（ハジロナギ）が40羽ほど登場。昨年同時期に仙台↔︎名古屋を行ったが、海域の違いなのか、仙名航路では見られなかった。Pterodroma属は海鳥ハンドなどで見る限り、他のミズナギドリの中で顔が可愛い感じがする。たぶん瞼がかさになっていて、目元が大きく見えるからだろう。黒白のコントラストがはっきりしていてキャッチーなのもあるかもしれない。吻が寸詰まりで面長な印象がないからかもしれない。曇天の中、一定の頻度の羽ばたきを繰り返しつつも体がブレない飛び方をしており、プロペラのおもちゃみたいだと感じた。オオナギと比べ飛び方に余裕がない。SharwaterとPetrelの違いか？\nそれからはほとんど虚無だったが、マグロが元気に跳ねていた。海上にウミネコ・オオセが群れていたので、水面の小魚にとっては地獄だろう。\n入港・出港時は甲板に人が出てくる時間。苫小牧港入港時も遠く砂浜にわちゃわちゃしているシギチを識別していると甲板に人が集まってきて、入港の様子を撮影したり眺めたりしていた。ちなみにシギチはムナグロとオオソリハシシギだった。識別を終了した辺りで苫小牧港の堤防が現れた。念のため変なカモメが入っていないか観察することにした。\n苫小牧港に入港。スマホ弄ってて堤防に気付くのが遅れて慌てて観察開始。船の動きに身を任せ、双眼鏡には次から次へ新しいカモメとウミウが映る。ウミウウミウウミウ、オオセオオセオオセ、ボソボソミヤコ…は？ほとんどがウミネコとオオセグロカモメだったが、急に１羽、真っ黒なカモメが入ってきた。よく見るとミヤコドリだ！東北ではまず見られない鳥で、2023年始に福岡の干潟で見て以来だった。驚いて小さく叫んでしまった…急いで撮影して観察を続けた。こういうことがあるから航路は楽しいよな～となった。\n\n\n2024.09.24　苫小牧→仙台\n5:30頃から観察開始。苫仙は2021年3月以来当てていないのであまり期待しないでいた。6:00頃、船尾の方から口笛のような音が聞こえる。凪いでいたとはいえフェリーの駆動音に負けずに船首まで聞こえてくる。相当大きな声で口笛でも吹いているのかしら、と思ったが、上空を１羽のチュウシャクシギが追い越していくのを見て何が起こっていたのかを理解した。\n識別出来なかったがヒレアシシギ類が40、コアホウドリ7、クロアシアホウドリ3といった感じ。コアホウは数個体が船の近くを並走してくれた。\n\n\n2025.03.16　苫小牧→仙台\n6:00頃から観察開始。2021年3月に乗った苫仙では大量のウトウが海面に浮いていたので、ウトウの群れを期待した。岩手沖からコアホウドリがたくさん出現した。その後、船のすぐそばに別のアホウドリ類が現れた。くちばしの桃色が淡くコアホウドリよりも太く、体全体を覆う羽衣が一様に茶色な鳥だった。\nこの季節の仙苫は4年前に一度乗ったきりだったが、その時は見ることができないでいた。アホウドリといえば鳥を見る前の自分だったら「南の島の珍しい鳥」という印象だったので、改めてこんなにキレイな鳥が仙台の海で見られることに感動した。\n\n\n2025.03.30 苫小牧→仙台\n東京の展覧会を見に行って、そこから仙台まで帰るのに本便を利用した。つまり、東京-（特急ひたち）-&gt;大洗-（さんふらわあ　しれとこ）-&gt;苫小牧-（-（シルバーティアラ）-&gt;八戸-（シルバープリンセス）-&gt;苫小牧）-（きそ）-&gt;仙台といったItenaryだ。個別に記事を書いている。\n苫小牧西港からは前日の19:00に便が出る。29日の夕方17:30からの乗船を前に、ターミナルの待合室は仙台・名古屋に向かう人々でごった返していた。次年度から社会人になり、今後しばらくは航路に乗る時間が取れなくなる。また学生生活最後の航路探鳥だと思うとちょっと感慨深い。いろいろエクスキューズで理論武装できたので、初めてのフェリー内レストランに出陣した。\nきそのレストラン「タヒチ」は夕食バイキングを提供している。レストラン前で２北里とちょっとの小銭を券売機に投入して、食券を購入した。太平洋フェリーには10回ほど乗っているが、このバイキングに挑戦するのは初めてだ。航路探鳥より緊張した。\n名古屋（みそもつ鍋）・仙台（仙台サーモン）など、寄港地のグルメをいろいろ取り揃えていたようで、すべておいしかった。特にお気に入りだったのはショウガ入りつみれ汁、仙台サーモンのお寿司、ごろごろポテサラ。\nご飯を食べた後、二日連続の航路探鳥の疲れが一気に押し寄せてきた。ターミナルで購入したホワイトエールの網走ビール（著者はホワイトビールが好き）を飲みながらちょっと読書して、22:00前には雑魚寝部屋に戻り寝た。\n翌5:00、静かに起床し航路探鳥遠征で蓄えていた菓子パンの残りを平らげ、左舷側に陣取ることにした。5:30。この日は曇りで、普段の苫仙左舷側は逆光になるのだが、この日は日の出を拝むことはできなかった。一応水平線のきわきわにウトウ二羽が飛んで行ったのが見えただけで虚無が続いていた。左舷側は海しか広がっていないので、鳥を見つけても目印がなく再度補足が難しい。このためしばらく様子見した後右舷側に行った。\n6:00頃から右舷側を観察し、6:40頃に南三陸沖を通過。ここからウミスズメの小さな群れがぽつぽつと飛び始めた。今回の航路遠征では「へんなウミスズメを探す」を目標にしていたので、ほとんどすべてのパタパタウミスズメを撮影し、マダラやエトウミコウミが入っていないか確かめていった。二日前の大苫では南三陸沖で鳥山は現れなかったのだが、どんどん数が増えていった。\nしまいには6:55にウミスズメの34羽の巨大な群れが現れた。学級じゃん。この間はウミスズメ以外のウミスズメ類は現れなかったが、それ以外には一羽の亜成鳥アホウドリが船のすぐそばを通過したり、トウゾクカモメが陸のほうへ飛んで行った（のを写真に撮ったら、海面にウミスズメがパタパタしているのが一緒に映った）など。\n7:30、このころからウミスズメのフィーバーが終了し、オオナギがちらほら舞うだけになった。一応トウゾクカモメが一羽飛んだが、それ以外は鳥が少なくなった。ヒートテック＋トレーナー＋もこもこアウター＋雨合羽の四枚重ねではさすがに寒くなり、いったん休憩した。\nその後8:00、金華山沖からウトウが現れ始めた。ウトウはウミスズメ類だが、ウミスズメのように５～１５羽程度の群れになって飛ぶことは少なく、多くて３，４羽の群れで飛んでいるので、少し発見が難しい。また、この航路遠征中で初のアビ類が姿を現し始めた。金華山を過ぎ、仙台湾に差し掛かると、船のすぐそばから水面を足で蹴りながら長い翼をバタバタさせて慌てて船から離れていくアビ類がどんどん現れ、22羽ほど見ることができた。ほとんどがシロハム・オオハムだった。\nミツユビカモメをウミネコが複数羽で追いかけているのが目に入った。だいぶもみくちゃしていたので、写真を撮ってみると、ミツユビカモメが小魚を加えていた。どうやらこれを強襲して奪うつもりだったようだ。トウゾクだけでなくウミネコからも襲われるのか\nまた、船のすぐそばを離れていくアビ類も、よく見ると様々な羽衣がいた。くちばしが生殖羽に見られる黒さを帯び、上面も星をちりばめたような美しいドットが見える一方、頭部の模様は黒褐色で換羽中だったり。チンストラップもベントストラップも、脇の白色部も見えないので、ほとんどすべての識別点を封印した個体。\nほかにはオットセイやイルカなどの海獣も観察できた。非常に良い航路だった！"
   },
   {
-    "objectID": "article/ferry/toukaikisen.html",
-    "href": "article/ferry/toukaikisen.html",
-    "title": "東海汽船",
+    "objectID": "article/list_BirdFerryList.html",
+    "href": "article/list_BirdFerryList.html",
+    "title": "海鳥リスト",
     "section": "",
-    "text": "==noteからの転載==\n八丈島に航路で上陸しようとした記録です。素敵なバーテンダー、太平洋君によって船ごとしこたま攪拌されてきました。酔いお手前でした。ネットの海にリリースしておきます。\n乗船までの経緯\nバーダーなら一度は憧れる八丈航路。私もそうでした。季節によって多種多様の海鳥を観察できるそうです。乗船を試みた３月はアホウドリ類のシーズン。一度は絶滅の縁まで追いやられれたアホウドリPhoebastria albatrusは、懸命な保護活動により個体数を回復させています。現在では1,000羽以上のヒナが確認され、メイン繁殖地の伊豆諸島鳥島の個体群は7,000羽を超えたとか（2023年6月　山階鳥研プレスリリース）。\n2021年3月中旬に仙台→苫小牧航路に乗船した際は、コアホウドリとクロアシアホウドリが数羽観察できましたが、それ以来、アホウドリ類の観察機会に恵まれませんでした。真っ青な海面を背景にしたコアホウとクロアシのダイナミックソアリングを見て以来、折に触れて「アホウドリ（Short-tailed）見てみてぇ～」という気持ちが鎌首をもたげたりもたげなかったりしていました。自然系の番組でたまに特集されてる求愛ダンスは面白いし、一夫一妻で生涯添い遂げる配偶システムも非常に良い。あと白黒のコントラストがスーパーキレイだしヒナはめちゃくちゃかわいい。属性もりもりバード。\n東海汽船でたまにやってるキャンペーンを見つけました。\n「八丈島往復きっぷ　二等和室限定￥12,000/人」\n往復で￥12,000！？お求めやすい…！カレンダーやスケジュール帳と相談して、３月乗船の機会を得ました（元々キツキツ予定だったので、”島流し”リスクは大きかったのですが、無理矢理ねじこみました）。キャンペーンの仕様上、今回は電話で予約を取りました。費用は竹芝到着後、窓口で精算します。予約番号の控えはいつでも参照できるようにしておきましょう。私は大体LINE Keepメモに残しておいています。\n絶対アホウドリ見てやるぜ。長谷川博さんの「アホウドリからオキノタユウへ」を読んで予習はバッチリです。クジラさんも見てみたい。あと八丈島でアカコッコとか見たいしサイクリング楽しそう。"
+    "text": "航路で見た鳥についての備忘録\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n\n\n\n\n\n\n\n\nAlbatross\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMurres, Murrelets and Guillemots\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAppendix\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "article/ferry/toukaikisen.html#準備乗船まで",
-    "href": "article/ferry/toukaikisen.html#準備乗船まで",
-    "title": "東海汽船",
-    "section": "準備・乗船まで",
-    "text": "準備・乗船まで\n八丈島へ海路で渡るには以下の日程で航海を行う大型客船「たちばな丸」に乗船する必要があります。\n\n東京竹芝桟橋　22:30出港\n三宅島阿古港　翌5:00到着\n御蔵島御蔵島港　6:00到着\n八丈島底土港　8:50到着\n\n船内で１泊する必要があります。ただ、22:00乗船開始としても、三宅島到着時に朝5:00強制起床です。鳥屋なら平気かな（平気ではない）。\n太平洋フェリーには何度か乗ったことがあります。心強い準備物君達をデカスーツケースに放り込むことにしました。\n\n着替え：それはそう。雨合羽も一応持って行ってます。\n双眼鏡、カメラ：それはそう２。カメラはビニール袋と輪ゴムで適当にあしらったレインカバーで保護しておく。\n海鳥ハンド：それはそう３。フェリーで寝る前に読んでニヤニヤできる。\n酔い止め：乗り物酔いしやすいタイプなので。万全の状態で鳥見ができるようにいつもトラベルミンを使用しています。\nタオル類：観察器具含め持ち物に潮水かかったりするので。\n夜ルーティン用のいろいろ：音楽プレーヤーとイヤホン、常備薬、アイマスク。\n歯磨きセット・風呂セット\n軽食：観察中も食べられるクラッカーとか。ゴミが出ないようなものだとGOOD\n\n準備が出来たら当日まで待ちましょう。刹那・遠距離観察の多い海鳥ウォッチング（そこが面白いのもある）では、海鳥の予習が大変役立ちます。検索すれば海鳥の動画は結構あります。ありがたく利用させて頂きましょう（飛翔の様子や船からの大きさ・距離など役立ちます。集合知を活用しましょう）。\n当日はJR浜松町駅から歩いてフェリーターミナルに向かいました。アクセス性ヨシ！お腹が空いたら近くのビルとかでご飯を食べましょう。私は西京焼きを食べました。最強。なんでこんな美味いんだろう。コンビニとかドラッグストアで、船内で食べるものを用意しておきましょう。\nフェリーターミナルの待合には19:50頃に到着。窓口は20:00からオープンしました。手続きを終えて椅子に腰掛けると、周りにもたくさんの人がいることに気付きます。同業者っぽい人、釣り竿みたいなものを持ってる人、めちゃ眠そうにしてる人、寝てる人等々…（中身スカスカでごめんなさい）。それもそのはず、ターミナルには三宅島・御蔵島・八丈島行きの「橘丸」だけでなく、大島・利島・新島・式根島・神津島へ向かう大型客船「さるびあ丸」も就航します。後者の船は22:00には竹芝を出港し、ターミナルで待機していた40%程の人が足取り軽く乗船していきました。\nX（旧Twitter（2024年4月4日時点））では、鳥屋の方々は航路探鳥を行うとき、世話になる船を撮影した写真を一言の意気込みと共にポスト（旧ツイート（2024年4月4日時点））します。例に倣ってやっといた。"
-  },
-  {
-    "objectID": "article/ferry/toukaikisen.html#乗船鳥見まで",
-    "href": "article/ferry/toukaikisen.html#乗船鳥見まで",
-    "title": "東海汽船",
-    "section": "乗船～鳥見まで",
-    "text": "乗船～鳥見まで\n乗船後にすることをまとめてみました。\n\n部屋の確認：\n今回は二等和室だったので、雑魚寝 on 畳です。寝袋を持参したのでそれに包まりました。\n夕食：\nお腹が空いていると酔いやすいものです。しっかり腹ごなしをしましょう。尚、乗船までに済ませておくのもよいでしょう。\n歯磨き：\nはにがきはお手洗いの洗面台で行いました。\n動線確保、下見：\n甲板の下見です。海面からの高さ、手すりや屋根の有無、広さ、部屋からのアクセスを確認します。特に風よけになるアンチの場所を把握しておきたいですね。\n（いつも航路探鳥をさせて頂いている太平洋フェリーには甲板に屋根がないので、かなり新鮮に感じました…）\n夜景・ユリカモメ・レインボーブリッジの観察：\n東京都の鳥、ユリカモメがレインボーブリッジを超える辺りまで海面に浮かんでいました。底を見通せない漆黒の海面に真っ白なおもちが浮かんでいるようでほっこりしました。流石東京は日本の首都だけあって、クソデカ不夜城の様相を呈しています。ターミナル周辺もArtificial Light At Night(ALAN)がビカビカギンギンに都市生態系に影響しているんだろうな～とか考えてみたり。\n東京湾を出航するフェリーは、漆黒の夜の中、際立つビカビカレインボーブリッジをくぐります。\n\nいろいろ興奮冷めやらぬですが、時刻は既に22:30を回っています。翌日は八丈島に上陸して一日遊びまくる予定です。鳥見たりお散歩したり放蕩したりする体力をキープしておくためにも、おくすり（酔い止め）飲んで寝ましょう。"
-  },
-  {
-    "objectID": "article/ferry/toukaikisen.html#三宅島就航",
-    "href": "article/ferry/toukaikisen.html#三宅島就航",
-    "title": "東海汽船",
-    "section": "三宅島就航～",
-    "text": "三宅島就航～\n微睡みの暗闇から、何か人語が聞こえてきました。続いて世界が点灯した雰囲気。まぶたを開けて、船内で一夜を明かしたことを思い出します。時刻は5:00。三宅島への到着を知らせる船長のアナウンスが響いていました。\n着替えて顔を洗って、本土で調達した惣菜パンをもしゃもしゃ食べていたときです。突然の不快感に襲われました。体が覚醒し始めてようやく、太平洋沖の大海流、黒潮に揺られていることを認識したんでしょう…\n酔い止めを光の速さで消化管へぶち込みました。しばらくは耐えられていたのですが、遂にあぁこれはまずいと思いお手洗いへ急行しました。個室を占拠してしまってごめんなさい。Vomitはしませんでしたがずっと苦しかった。あぁ～酔。甲板に出て野鳥観察したかったけど、出来る余裕なんて全くありません。八丈航路に乗船すれば、太平洋沖に元気なザトウクジラのブリーチングが見られると伺っています。私の胃酸の海でもクジラが元気にブリーチングしまくっています。食道を逆流する濁流の奔流には流石に疲弊しました。半規管脱毛したい。\n皆も大好きな鳥さんですが、猛禽類などを除き彼らは目が横に付いています。そのため、移動の際は顔をピタッと停止させて周囲の情報を取得するようです。街中のドバト先輩が観察しやすい好例ですが、キジやボソガラスもそう。カワセミやシギチも首をしきりに上下に動かし、顔の角度を頻繁に調整して水面下の餌を探ることをしています（かわいい）。ホバリングするチョウゲンボウなどは、翼を懸命にはためかせながらも、頭はまるで空間に固定したように動きません。私もチョウゲンボウになれば、八丈航路で鳥を楽しむ余裕もできるでしょうね。\n御蔵島を過ぎたあたりからようやく楽になってきました。甲板に出てみると既にゴッツい大砲カメラの面々が20名ほど集まっていました。アホウドリ類は秋頃から繁殖を始め、私が乗船した3月には既にヒナが生まれているはずです。親鳥夫婦は懸命に海原を滑翔し餌を集めているでしょう。すなわち、アホウドリ類の観察にはベストシーズン且つ最適な時期なのです。期待もひとしおどころか百しおくらいあります。\n大荒れの海面状況に鑑みて、三宅島の次に寄港する予定だった御蔵島は欠航を決めたようです。御蔵島をそのまま通り過ぎる橘丸。黒潮さんが容赦なく船体を打ち付けるたびにグラつきます。なんで他のバーダーは全く動じないんだ？足が甲板にくっついているのかもしれないなぁと思っていました。"
-  },
-  {
-    "objectID": "article/ferry/toukaikisen.html#就航不可能",
-    "href": "article/ferry/toukaikisen.html#就航不可能",
-    "title": "東海汽船",
-    "section": "就航不可能！",
-    "text": "就航不可能！\nAh~（絶望）\n嫌な予感が的中しました。御蔵島同様、海面状況に鑑みた欠航です。八丈島底土港への寄港を見送り、橘丸は本土の竹芝桟橋へ舵を切ります。アカコッコ…カラスバト…キョン…アシタバ…\n体力の限界、気力もなくなり船室で横になることにしました。あとまた酔ってきて鳥見出来なさそうだったし、ちょっぴり休憩です。\n目が覚めたのは7:30。三宅島への再度の寄港を告げるアナウンスが覚醒を促したようです。大分波が落ち着いてきたので、いよいよアホウドリ類ウォッチングの開始です！\n右舷も左舷もヒトで埋まっていました。ちょっとの隙間に入れさせてもらい、海面を凪ぐ巨大な影を探します。まず現われたのはコアホウドリ。強面（つよおもてこわもて）だけどかっこいいね。\nその後もコアホウ、コアホウ、コアホウ…と続きます。X（旧Twitter）やブログで予習した限り、八丈航路にコアホウは少ないはずですが、ずっとコアホウが飛んでました。その後、一羽真っ黒なアホウドリ類が飛んでいるのが確認できました。双眼鏡を覗くと\n「アホウドリだ！！」\nピンクのクチバシと、申し訳程度に残された顔の白色部、コアホウやクロアシに認められる強面さがありません。間違いなくアホウドリです！うっひょ～\nかねてよりの憧れの鳥を見られて満足でした。その後も立て続けに飛んでくれて、合計8羽ほど観察できました。黒い幼羽が完全に生え替わるまでは数年かかると言われています。深い蒼を湛えた大海を飛ぶ純白の翼を見た人々が「オキノタユウ（信天翁）」と呼んだのも納得の神々しさです。たまらん\n三宅島を過ぎた辺りから、周囲の鳥屋が解散し始めました。ここから竹芝までの海域は渋いのでしょうか。私も空腹＆眠気に耐えかねて甲板を去り、採餌行動を始めました。船内レストラン隣には、レンジでチンだけの簡単なインスタント飯が豊富に取りそろえられた自販機がありました。寒いのでグラタン食べました。\n部屋に戻ると、グラタンで取り戻した体熱と早朝の酔いの疲労感で一気に眠りに落ちました。気付いたときには竹芝桟橋に到着しており、急いで荷物をまとめて下船します。ここに私の八丈島上陸計画は未遂に終わったのでした。くっそ～💦アカコッコ、覚えてろよ～💦💦（運賃は全額払い戻されました）"
-  },
-  {
-    "objectID": "article/ferry/toukaikisen.html#バードウォッチングの話",
-    "href": "article/ferry/toukaikisen.html#バードウォッチングの話",
-    "title": "東海汽船",
-    "section": "バードウォッチングの話",
-    "text": "バードウォッチングの話\nこの日は北風が強かったことから、より北の海域で観察できるイメージのコアホウが多かったと考えられます。あとは天気が良かったためか、八丈航路で観察機会の多い（と聴いている）ウミツバメ類も飛ぶことはありませんでした。鳥の出が悪いときもよく飛んでくれるオオミズナギドリって偉大だな…オオナギくん、いっつも航路で飛んでくれてありがとう。\n覚えている範囲で鳥あわせしてみます。\n\nアホウドリ\nコアホウドリ\nクロアシアホウドリ\nオオミズナギドリ\nウミネコ\nユリカモメ\n\n以　上　で　す　。\n酔いによるグロッキー状態と現場の知識（海域とか）の欠如などで、思ったよりも探すのに苦労しました。今まで行ってきた航路の中で一番渋かったかも。オーストンウミとかいろんなShearwater探したかったという感じ。あわよくばPterodroma属を見てみたかったけど、流石に小笠原まで行かないと見れないですかね。あとヤツガシラの無賃乗船も期待していました（これもXで情報あったです）\n種数で言ったらご覧の有様ですが、アホウドリ類が近くて嬉しかったです！じっくり観察するにはいいな～と思いました。一方近すぎて撮影には難儀しました。大きく写せる一方で、ちょっとしたことで画角からはみ出ます。次は視力と飛びものの撮影技術、半規管を鍛えてから乗りたいです。観察道具に飛沫がかかるので、クリーナー、後処理など忘れずに。"
-  },
-  {
-    "objectID": "article/list_BirdList.html",
-    "href": "article/list_BirdList.html",
-    "title": "名鑑リスト",
+    "objectID": "article/list_Miyagi.html",
+    "href": "article/list_Miyagi.html",
+    "title": "宮城の鳥見リスト",
     "section": "",
-    "text": "私的野鳥目録。 ・識別点&lt;-専門性なし ・鳥周りの知識まとめ ・鳥についての所感\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n\n\n\n\n\n\n\n\nGeese, Swans, Ducks\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n\n\n\n\n\n\n\n\n沼１\n\n\n\nducks\n\n\nshorebirds\n\n\n\nよく行く沼の記録\n\n\n\n\n\n\nFeb 11, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n宮城県航路\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCampus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nチャリ探\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n雲雀野\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n河口フィールド１\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n河口フィールド２\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n県南\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n県北その他\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n県北ガン\n\n\n\ngeese\n\n\n\n県北でガン探し。分布の参考になればいいかな\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n公園いろいろ\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n近所田んぼ・川\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "article/list_Trip.html",
-    "href": "article/list_Trip.html",
-    "title": "遠征リスト",
+    "objectID": "article/list_ferry.html",
+    "href": "article/list_ferry.html",
+    "title": "航路探鳥リスト",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n     \n  \n\n\n\n\n\n\n\n\n戦場ヶ原\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n【工事中】秋田ハクガン\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n関東ヒメハジロ\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n道東遠征\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n三番瀬・葛西\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n九州遠征\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2021.03 道東遠征\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n【工事中】石垣島遠征\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n北陸・中部辺り周遊\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n天売島\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n秋田ハクガンその２\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n飛島\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n     \n  \n\n\n\n\n\n\n\n\nシルバーフェリー\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n三井商船さんふらわあ（大洗→苫小牧）\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n太平洋フェリー（名古屋↔︎仙台↔︎苫小牧）\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n東海汽船\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n宮城県航路\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "article/settings/how2quarto.html",

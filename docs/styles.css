@@ -11,6 +11,7 @@ body {
 }
 
 /* 現在のTOC項目をハイライト */
+
 #TOC a.active {
   background-color: #f0f4ff;  /* 背景色 */
   color: #1a3d7c;             /* テキスト色 */
@@ -20,11 +21,11 @@ body {
   position: relative;
 }
 
+
 /* アイコンを擬似要素で追加 */
-/*
+
 #TOC a.active::before {
-  content: "";
-  background-image: url("static/image/brant_icon.jpg");
+  content: ""; 
   background-size: contain;
   background-repeat: no-repeat;
   width: 18px;
@@ -34,7 +35,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
-*/
+
 
 /*favicon*/
 .favicon {
