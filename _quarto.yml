@@ -7,8 +7,11 @@ project:
     - "image/"
 
 website: 
+  favicon: /static/image/favicon.png
   navbar: 
-    logo: static/image/brant_icon.JPG
+    background: "primary"
+    foreground: "light"
+    logo: static/image/favicon.png
     tools:
       - icon: twitter
         href: https://x.com/ann0uman
@@ -31,16 +34,12 @@ website:
         contents: 
           - text: "【工事中】Bird in Miyagi"
             href: https://noumagse.github.io/article/list_BirdList.html
+          - text: "【工事中】Bird of Ferry"
+            href: https://noumagse.github.io/article/list_BirdFerryList.html
       - section: "Others"
         contents: 
           - text: "Food"
             href: https://noumagse.github.io/article/others/Food.html
-          - text: "【工事中】Bibliography"
-            href: https://noumagse.github.io/article/others/Bibliography.html
-          - text: "Paintings"
-            href: https://noumagse.github.io/article/others/Paintings.html
-          - text: "【工事中】Myth"
-            href: https://noumagse.github.io/article/others/Myth.html
       - section: "Settings"
         contents: 
           - text: "【工事中】Githubでブログ開設"
@@ -52,7 +51,7 @@ website:
 
 format:
   html:
-    css: "docs/styles.css"  # 共通のCSSファイル
+    css: "styles.css"  # 共通のCSSファイル
     lightbox: true
     theme: 
       light: flatly
@@ -61,6 +60,8 @@ format:
     toc-title: 目次
     toc-location: left
     number-sections: false  # セクション番号を非表示
-    mainfont: sans-serif;
-    fontcolor: black;
-    linkcolor: hsla(237deg 74% 33% / 61%);
+    mainfont: sans-serif
+    linkcolor: hsla(237deg 74% 33% / 61%)
+
+  revealjs:
+    css: "styles.css"
