@@ -48,10 +48,11 @@ website:
             href: https://noumagse.github.io/article/settings/how2quarto.html
   page-footer: 
     left: "Copyright 2025"
+  google-analytics: "UA-HKLF6QFF51"
 
 format:
   html:
-    css: "styles.css"  # 共通のCSSファイル
+    css: "/styles.css"  # 共通のCSSファイル
     lightbox: true
     theme: 
       light: flatly
@@ -64,4 +65,4 @@ format:
     linkcolor: hsla(237deg 74% 33% / 61%)
 
   revealjs:
-    css: "styles.css"
+    css: "/styles.css"
