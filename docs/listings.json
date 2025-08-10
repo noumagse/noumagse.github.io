@@ -1,61 +1,95 @@
 [
   {
-    "listing": "/article/list_Trip.html",
+    "listing": "/article/list/list_BirdList.html",
     "items": [
-      "/article/Trip/Aug23_Senjogahara.html",
-      "/article/Trip/Dec22_Akita.html",
-      "/article/Trip/Dec22_bufflehead.html",
-      "/article/Trip/Dec23_Hokkaido.html",
-      "/article/Trip/Dec24_Sanbanze_Kasai.html",
-      "/article/Trip/Kyusyu.html",
-      "/article/Trip/Mar21_Hokkaido.html",
-      "/article/Trip/Mar23_Ishigaki.html",
-      "/article/Trip/Mar24_Hokuriku.html",
-      "/article/Trip/May24_Teuri.html",
-      "/article/Trip/Nov24_Akita.html",
-      "/article/Trip/Oct24_Tobishima.html",
-      "/article/Trip/Sep2024_Aomori.html"
+      "/article/list/bird_list/anseriformes.html"
     ]
   },
   {
-    "listing": "/article/list_BirdList.html",
+    "listing": "/article/blog_list/list_Trip.html",
     "items": [
-      "/article/bird_list/anseriformes.html"
+      "/article/blog_list/blog_article/Trip/Aug23_Senjogahara.html",
+      "/article/blog_list/blog_article/Trip/Dec22_Akita.html",
+      "/article/blog_list/blog_article/Trip/Dec22_bufflehead.html",
+      "/article/blog_list/blog_article/Trip/Dec23_Hokkaido.html",
+      "/article/blog_list/blog_article/Trip/Dec24_Sanbanze_Kasai.html",
+      "/article/blog_list/blog_article/Trip/Kyusyu.html",
+      "/article/blog_list/blog_article/Trip/Mar21_Hokkaido.html",
+      "/article/blog_list/blog_article/Trip/Mar23_Ishigaki.html",
+      "/article/blog_list/blog_article/Trip/Mar24_Hokuriku.html",
+      "/article/blog_list/blog_article/Trip/May24_Teuri.html",
+      "/article/blog_list/blog_article/Trip/Nov24_Akita.html",
+      "/article/blog_list/blog_article/Trip/Oct24_Tobishima.html",
+      "/article/blog_list/blog_article/Trip/Sep2024_Aomori.html"
     ]
   },
   {
-    "listing": "/article/list_BirdFerryList.html",
+    "listing": "/article/blog_list/list_Miyagi.html",
     "items": [
-      "/article/bird_ferrylist/albatross_list.html",
-      "/article/bird_ferrylist/alcidae_list.html",
-      "/article/bird_ferrylist/appendix_list.html"
+      "/article/blog_list/blog_article/Miyagi/numa1.html",
+      "/article/blog_list/blog_article/Miyagi/ajishima.html",
+      "/article/blog_list/blog_article/Miyagi/around_campus.html",
+      "/article/blog_list/blog_article/Miyagi/cycling.html",
+      "/article/blog_list/blog_article/Miyagi/hibarino.html",
+      "/article/blog_list/blog_article/Miyagi/kakou1.html",
+      "/article/blog_list/blog_article/Miyagi/kakou2.html",
+      "/article/blog_list/blog_article/Miyagi/kennan.html",
+      "/article/blog_list/blog_article/Miyagi/kenpoku_general.html",
+      "/article/blog_list/blog_article/Miyagi/kenpoku_goose.html",
+      "/article/blog_list/blog_article/Miyagi/park.html",
+      "/article/blog_list/blog_article/Miyagi/ricefield.html"
     ]
   },
   {
-    "listing": "/article/list_Miyagi.html",
+    "listing": "/article/blog_list/list_ferry.html",
     "items": [
-      "/article/Miyagi/numa1.html",
-      "/article/Miyagi/ajishima.html",
-      "/article/Miyagi/around_campus.html",
-      "/article/Miyagi/cycling.html",
-      "/article/Miyagi/hibarino.html",
-      "/article/Miyagi/kakou1.html",
-      "/article/Miyagi/kakou2.html",
-      "/article/Miyagi/kennan.html",
-      "/article/Miyagi/kenpoku_general.html",
-      "/article/Miyagi/kenpoku_goose.html",
-      "/article/Miyagi/park.html",
-      "/article/Miyagi/ricefield.html"
+      "/article/blog_list/blog_article/ferry/silverferry.html",
+      "/article/blog_list/blog_article/ferry/sunflower.html",
+      "/article/blog_list/blog_article/ferry/taiheiyoferry.html",
+      "/article/blog_list/blog_article/ferry/toukaikisen.html",
+      "/article/blog_list/blog_article/Miyagi/ajishima.html"
     ]
   },
   {
-    "listing": "/article/list_ferry.html",
+    "listing": "/article/list/list_BirdFerryList.html",
     "items": [
-      "/article/ferry/silverferry.html",
-      "/article/ferry/sunflower.html",
-      "/article/ferry/taiheiyoferry.html",
-      "/article/ferry/toukaikisen.html",
-      "/article/Miyagi/ajishima.html"
+      "/article/list/bird_ferrylist/albatross_list.html",
+      "/article/list/bird_ferrylist/alcidae_list.html",
+      "/article/list/bird_ferrylist/appendix_list.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/article/blog_list/blog_article/Miyagi/ajishima.html",
+      "/article/blog_list/blog_article/Miyagi/around_campus.html",
+      "/article/blog_list/blog_article/Miyagi/cycling.html",
+      "/article/blog_list/blog_article/Miyagi/hibarino.html",
+      "/article/blog_list/blog_article/Miyagi/kakou1.html",
+      "/article/blog_list/blog_article/Miyagi/kakou2.html",
+      "/article/blog_list/blog_article/Miyagi/kennan.html",
+      "/article/blog_list/blog_article/Miyagi/kenpoku_general.html",
+      "/article/blog_list/blog_article/Miyagi/kenpoku_goose.html",
+      "/article/blog_list/blog_article/Miyagi/park.html",
+      "/article/blog_list/blog_article/Miyagi/ricefield.html",
+      "/article/blog_list/blog_article/Trip/Aug23_Senjogahara.html",
+      "/article/blog_list/blog_article/Trip/Dec22_Akita.html",
+      "/article/blog_list/blog_article/Trip/Dec22_bufflehead.html",
+      "/article/blog_list/blog_article/Trip/Dec23_Hokkaido.html",
+      "/article/blog_list/blog_article/Trip/Dec24_Sanbanze_Kasai.html",
+      "/article/blog_list/blog_article/Trip/Kyusyu.html",
+      "/article/blog_list/blog_article/Trip/Mar21_Hokkaido.html",
+      "/article/blog_list/blog_article/Trip/Mar23_Ishigaki.html",
+      "/article/blog_list/blog_article/Trip/Mar24_Hokuriku.html",
+      "/article/blog_list/blog_article/Trip/May24_Teuri.html",
+      "/article/blog_list/blog_article/Trip/Nov24_Akita.html",
+      "/article/blog_list/blog_article/Trip/Oct24_Tobishima.html",
+      "/article/blog_list/blog_article/Trip/Sep2024_Aomori.html",
+      "/article/blog_list/blog_article/ferry/silverferry.html",
+      "/article/blog_list/blog_article/ferry/sunflower.html",
+      "/article/blog_list/blog_article/ferry/taiheiyoferry.html",
+      "/article/blog_list/blog_article/ferry/toukaikisen.html",
+      "/article/blog_list/blog_article/Miyagi/numa1.html"
     ]
   }
 ]

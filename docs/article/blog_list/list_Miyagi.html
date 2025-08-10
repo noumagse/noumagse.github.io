@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>How2ThisPage – noumaのページ</title>
+<title>宮城の鳥見リスト – noumaのページ</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
 <link href="../..//static/image/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -69,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 
 <script type="text/javascript">
 
@@ -84,6 +115,35 @@ ga('send', {
 });
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -114,7 +174,7 @@ ga('send', {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">How2ThisPage</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">宮城の鳥見リスト</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -251,34 +311,18 @@ ga('send', {
   </li>
     </ul>
     </div>
-    <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">目次</h2>
-   
-  <ul>
-  <li><a href="#このサイトの作り方" id="toc-このサイトの作り方" class="nav-link active" data-scroll-target="#このサイトの作り方">このサイトの作り方</a></li>
-  <li><a href="#具体的なやり方" id="toc-具体的なやり方" class="nav-link" data-scroll-target="#具体的なやり方">具体的なやり方</a>
-  <ul class="collapse">
-  <li><a href="#quarto使用時の注意点" id="toc-quarto使用時の注意点" class="nav-link" data-scroll-target="#quarto使用時の注意点">Quarto使用時の注意点</a></li>
-  <li><a href="#エラー" id="toc-エラー" class="nav-link" data-scroll-target="#エラー">エラー</a>
-  <ul class="collapse">
-  <li><a href="#rstudioでquarto" id="toc-rstudioでquarto" class="nav-link" data-scroll-target="#rstudioでquarto">RstudioでQuarto</a></li>
-  <li><a href="#git中" id="toc-git中" class="nav-link" data-scroll-target="#git中">Git中</a></li>
-  <li><a href="#ウェブデザイン編" id="toc-ウェブデザイン編" class="nav-link" data-scroll-target="#ウェブデザイン編">ウェブデザイン編</a></li>
-  </ul></li>
-  </ul></li>
-  </ul>
-</nav>
+    
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-    </div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(12)</span></div><div class="category" data-category="ZHVja3M=">ducks <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z2Vlc2U=">geese <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2hvcmViaXJkcw==">shorebirds <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">How2ThisPage</h1>
+<h1 class="title">宮城の鳥見リスト</h1>
 </div>
 
 
@@ -295,94 +339,291 @@ ga('send', {
 </header>
 
 
-<section id="このサイトの作り方" class="level1">
-<h1>このサイトの作り方</h1>
-<p>そもそもサイトの作成には「HTML」と「CSS」ファイルが必要。</p>
-<p>私は以下を用いてファイルを作成した。</p>
-<ol type="1">
-<li><p>Rstudio（Quarto）：記事執筆ができるIDE（統合開発環境）。最悪なくてもVScodeで代用可能</p></li>
-<li><p>VScode（Powershell/ terminal）：記事以外の、ウェブサイトのレイアウトをつかさどる.cssや.ymlを、記事とは別で編集したかったのでVScodeを使用した。あとはgitコマンドでGithubに記事をぶん投げるのに使う。</p></li>
-<li><p>Github：記事をぶん投げる先。</p></li>
-</ol>
-<ul>
-<li><p>.mdという拡張子で文章を執筆し、それをHTML形式にレンダリングしてくれるQuartoを、Rstudio上でいじる</p></li>
-<li><p>Github Pagesの機能を使って個人サイトを作成した。アカウントを作ったり、Githubの知識が必要だけど無料でサイト運営できる（容量に制限があるので、大量の画像をアップしたりは出来ない）</p></li>
-<li><p>VScodeで、Local環境のQuarto記事をgithubにpushする。</p></li>
-</ul>
-</section>
-<section id="具体的なやり方" class="level1">
-<h1>具体的なやり方</h1>
-<ol type="1">
-<li>Rstudio上で記事を執筆する。「Quarto Document」をクリックして書き始める。</li>
-<li>記事を.qmdから.htmlにrenderする。上書き保存してからRenderボタンをクリックしてもいいし、私は保存と同時にrenderを実行している。</li>
-<li>htmlを作成したら、githubのサーバーに自分のPC上にあるhtmlを送信する。add→commit→pushでOK</li>
-</ol>
-<p>以上</p>
-<section id="quarto使用時の注意点" class="level2">
-<h2 class="anchored" data-anchor-id="quarto使用時の注意点">Quarto使用時の注意点</h2>
-<p>・<code>_quarto.yml</code>を編集した後は、必ずqmdを一度renderする</p>
-</section>
-<section id="エラー" class="level2">
-<h2 class="anchored" data-anchor-id="エラー">エラー</h2>
-<p>website開発中に遭遇したエラーを記述しておく</p>
-<section id="rstudioでquarto" class="level3">
-<h3 class="anchored" data-anchor-id="rstudioでquarto">RstudioでQuarto</h3>
-<p>症例：</p>
-<p>_quarto.ymlを記述後、「Build-&gt;render website」をすると、ディレクトリ内のすべての.qmdが.htmlにrenderされる。しかし、前々から出力先に置いていたimage/ディレクトリが消えてしまう。（いちいちgit restore docs/で復元しなければならなかった…）</p>
-<p>→</p>
-<p>render時、デフォルトでは一度ディレクトリをresetするらしい。このときディレクトリのresetを回避するために、_quarto.ymlに以下を記述した。</p>
-<pre><code>project: 
-  type: website
-  output-dir: docs
-  render: 
-    - "*.qmd"
-  resources: 
-    - "image/"</code></pre>
-<p>もう一度renderしたら、無事残った！！</p>
-<p>docs |- article |- site_libs |- static |- image</p>
-</section>
-<section id="git中" class="level3">
-<h3 class="anchored" data-anchor-id="git中">Git中</h3>
-<p>症例：<code>git push origin main</code>でコミットした変更点をremoteに送るとき</p>
-<pre><code> ! [rejected]        main -&gt; main (non-fast-forward)
-error: failed to push some refs to 'github.com:hogehoge/hogehoge.github.io.git'
-hint: Updates were rejected because the tip of your current branch is behind
-hint: its remote counterpart. If you want to integrate the remote changes,
-hint: use 'git pull' before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.</code></pre>
-<p>remoteとlocalでbranchが異なるので、矛盾が生じる。</p>
-<p>ためしに<code>git status</code>で状況確認する。</p>
-<pre><code>$ git status
-Refresh index: 100% (469/469), done.
-On branch main
-Your branch and 'origin/main' have diverged,
-and have 1 and 1 different commits each, respectively.
-  (use "git pull" if you want to integrate the remote branch with yours)</code></pre>
-<p>たしかに、branchが分かれてしまっている。</p>
-</section>
-<section id="ウェブデザイン編" class="level3">
-<h3 class="anchored" data-anchor-id="ウェブデザイン編">ウェブデザイン編</h3>
-<section id="ダークモードにしてもテキストのカラーが黒のままで見づらい" class="level4">
-<h4 class="anchored" data-anchor-id="ダークモードにしてもテキストのカラーが黒のままで見づらい">ダークモードにしてもテキストのカラーが黒のままで見づらい</h4>
-<p>_quarto.ymlに</p>
-<p>format: html: css: “styles.css” lightbox: true theme: light: flatly dark: darkly toc: true toc-title: 目次 toc-location: left number-sections: false mainfont: sans-serif; fontcolor: black; linkcolor: hsla(237deg 74% 33% / 61%);</p>
-<p>と入れている。</p>
-<p><code>theme: dark</code>にしているので、ダークモード切替のトグルがページ右上に表示されるが、切り替えると背景黒のダークモードになる。</p>
-<p>しかし、テキストの色が黒のままなので見づらい。</p>
-<p>この場合、_quarto.yml内のfontcolorが強制で色を指定するので、この行を削除する</p>
-</section>
-<section id="faviconの設定" class="level4">
-<h4 class="anchored" data-anchor-id="faviconの設定">faviconの設定</h4>
-<p>_quarto.ymlのwebsite:以下にfavicon引数を指定することで、ブックマークやタブ左側の画像を表示できる。しかし、これを相対パスで指定するとindex.htmlのみが参照可能となり、「ホームページは表示できているが、それ以外の記事では表示されない」ことが起こる。</p>
-<p>絶対パスで指定するべき</p>
 
 
-</section>
-</section>
-</section>
-</section>
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+     </select>
+  </div>
+</div>
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="ZHVja3MlMkNzaG9yZWJpcmRz" data-listing-date-sort="1739199600000" data-listing-file-modified-sort="1742388911281" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
+<a href="../../article/blog_list/blog_article/Miyagi/numa1.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="static\image\Miyagi\numa1.JPG" alt="すやすやトモちゃん" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+沼１
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('ZHVja3M='); return false;">
+ducks
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('c2hvcmViaXJkcw=='); return false;">
+shorebirds
+</div>
+</div>
+<div class="card-text listing-description">
+よく行く沼の記録
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Feb 11, 2025
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1742389428652" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
+<a href="../../article/blog_list/blog_article/Miyagi/ajishima.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+宮城県航路
+</h5>
+<div class="card-text listing-description">
+網地島ライン＋網地島探鳥がメイン
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1753014809223" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
+<a href="../../article/blog_list/blog_article/Miyagi/around_campus.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Campus
+</h5>
+<div class="card-text listing-description">
+所属した東北大学野鳥の会で行われていた探鳥活動は、青葉山公園を利用する。キャンパス周辺と青葉山公園の探鳥記録。
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1752991282945" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<a href="../../article/blog_list/blog_article/Miyagi/cycling.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+チャリ探
+</h5>
+<div class="card-text listing-description">
+沿岸部サイクリングロードの探鳥記録。カメラとスコープ入れてのんびり自転車をこぎながらやる。仙台は風が強いので疲れる。
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1746619824104" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<a href="../../article/blog_list/blog_article/Miyagi/hibarino.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+雲雀野
+</h5>
+<div class="card-text listing-description">
+工事中に一時的にできた湿地環境に飛来するシギチ
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1752990716910" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
+<a href="../../article/blog_list/blog_article/Miyagi/kakou1.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+河口フィールド１
+</h5>
+<div class="card-text listing-description">
+河口のシギチ、ガンカモなどなど
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="6" data-listing-file-modified-sort="1752990095453" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
+<a href="../../article/blog_list/blog_article/Miyagi/kakou2.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+河口フィールド２
+</h5>
+<div class="card-text listing-description">
+河口の海ガモ、シギチなど。漁港もあるよ
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="7" data-listing-file-modified-sort="1741610241340" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<a href="../../article/blog_list/blog_article/Miyagi/kennan.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+県南
+</h5>
+<div class="card-text listing-description">
+県南の野鳥観察記録
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="8" data-listing-file-modified-sort="1752920063751" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
+<a href="../../article/blog_list/blog_article/Miyagi/kenpoku_general.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+県北その他
+</h5>
+<div class="card-text listing-description">
+ガン以外の野鳥の観察記録など。場所は蕪栗沼・伊豆沼や県北のその他の探鳥地。
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="9" data-categories="Z2Vlc2U=" data-listing-file-modified-sort="1742389430230" data-listing-reading-time-sort="1" data-listing-word-count-sort="29">
+<a href="../../article/blog_list/blog_article/Miyagi/kenpoku_goose.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="static\image\Miyagi\kenpoku_geese1.JPG" alt="マガン×シジュウカラガン？" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+県北ガン
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Z2Vlc2U='); return false;">
+geese
+</div>
+</div>
+<div class="card-text listing-description">
+県北でガン探し。分布の参考になればいいかな
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="10" data-listing-file-modified-sort="1742389439053" data-listing-reading-time-sort="1" data-listing-word-count-sort="4">
+<a href="../../article/blog_list/blog_article/Miyagi/park.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+公園いろいろ
+</h5>
+<div class="card-text listing-description">
+新型コロナウイルス感染症対策でオンデマンド授業、サークル活動自粛期間中だったので、探鳥する時間がかなりあった。
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="11" data-listing-file-modified-sort="1752988822353" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<a href="../../article/blog_list/blog_article/Miyagi/ricefield.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+近所田んぼ・川
+</h5>
+<div class="card-text listing-description">
+近所の田んぼは冬になるとハクチョウが150~200羽やってくる。たまにガンが数羽だけ入る。コチョゲンもいる。なんだかんだいいところ。
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

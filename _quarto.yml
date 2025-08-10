@@ -25,17 +25,17 @@ website:
       - section: "Bird"
         contents: 
           - text: "Miyagi"
-            href: https://noumagse.github.io/article/list_Miyagi.html
+            href: https://noumagse.github.io/article/blog_list/list_Miyagi.html
           - text: "Trip"
-            href: https://noumagse.github.io/article/list_Trip.html
+            href: https://noumagse.github.io/article/blog_list/list_Trip.html
           - text: "Ferry"
-            href: https://noumagse.github.io/article/list_ferry.html
+            href: https://noumagse.github.io/article/blog_list/list_ferry.html
       - section: "Bird List"
         contents: 
           - text: "Bird in Miyagi"
-            href: https://noumagse.github.io/article/list_BirdList.html
+            href: https://noumagse.github.io/article/list/list_BirdList.html
           - text: "Bird of Ferry"
-            href: https://noumagse.github.io/article/list_BirdFerryList.html
+            href: https://noumagse.github.io/article/list/list_BirdFerryList.html
       - section: "Others"
         contents: 
           - text: "Food"
