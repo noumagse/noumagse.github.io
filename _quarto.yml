@@ -46,6 +46,10 @@ website:
             href: https://noumagse.github.io/article/settings/how2thispage.html
           - text: "【工事中】Quartoで記事執筆"
             href: https://noumagse.github.io/article/settings/how2quarto.html
+      - section: "inclusion"
+        contents:
+          text: "練習"
+          href: https://noumagse.github.io/article/include_whole.html
   page-footer: 
     left: "Copyright 2025"
   google-analytics: "UA-HKLF6QFF51"
