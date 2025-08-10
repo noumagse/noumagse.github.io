@@ -20,10 +20,12 @@ body {
   position: relative;
 }
 
+
 /* アイコンを擬似要素で追加 */
+/*
 #TOC a.active::before {
   content: "";
-  background-image: url("static/image/brant_icon.jpg"); /* アイコン画像パス */
+  background-image: url("static/image/brant_icon.jpg"); 
   background-size: contain;
   background-repeat: no-repeat;
   width: 18px;
@@ -33,7 +35,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
-
+*/
 
 /*favicon*/
 .favicon {
