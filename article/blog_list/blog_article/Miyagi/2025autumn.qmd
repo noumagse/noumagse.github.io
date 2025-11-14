@@ -1,0 +1,8 @@
+---
+title: "2025autumn"
+format: html
+categories:
+  - ducks
+  - shorebirds
+description: "2025秋の記録"
+---

@@ -1,0 +1,9 @@
+---
+title: "2021summer"
+format: html
+categories:
+  - ducks
+  - shorebirds
+description: "2021春の記録"
+---
+

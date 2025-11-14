@@ -1,0 +1,8 @@
+---
+title: "2023winter"
+format: html
+categories:
+  - ducks
+  - shorebirds
+description: "2023冬の記録"
+---

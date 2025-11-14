@@ -1,0 +1,22 @@
+---
+title: "2020冬"
+format: html
+categories:
+  - ducks
+  - shorebirds
+description: "2020冬の記録"
+---
+
+## 宮城で鳥見
+
+近場とか
+
+{{< include 2020winter/20201202.qmd >}}
+
+{{< include numa1/_numa1_2.qmd >}}
+
+{{< include numa1/_numa1_3.qmd >}}
+
+{{< include numa1/_numa1_4.qmd >}}
+
+{{< include numa1/_numa1_5.qmd >}}

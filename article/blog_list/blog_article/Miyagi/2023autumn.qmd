@@ -1,0 +1,8 @@
+---
+title: "2023autumn"
+format: html
+categories:
+  - ducks
+  - shorebirds
+description: "2023秋の記録"
+---

@@ -1,0 +1,8 @@
+---
+title: "2022winter"
+format: html
+categories:
+  - ducks
+  - shorebirds
+description: "2022冬の記録"
+---

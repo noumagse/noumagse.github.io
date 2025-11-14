@@ -1,0 +1,8 @@
+---
+title: "2025spring"
+format: html
+categories:
+  - ducks
+  - shorebirds
+description: "2025春の記録"
+---

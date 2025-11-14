@@ -1,0 +1,8 @@
+---
+title: "2022autumn"
+format: html
+categories:
+  - ducks
+  - shorebirds
+description: "2022秋の記録"
+---

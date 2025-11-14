@@ -1,0 +1,8 @@
+---
+title: "2024summer"
+format: html
+categories:
+  - ducks
+  - shorebirds
+description: "2024夏の記録"
+---

@@ -1,0 +1,8 @@
+---
+title: "2022summer"
+format: html
+categories:
+  - ducks
+  - shorebirds
+description: "2022夏の記録"
+---

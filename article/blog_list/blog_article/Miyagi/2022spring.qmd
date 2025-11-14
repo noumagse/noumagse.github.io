@@ -1,0 +1,9 @@
+---
+title: "2022spring"
+format: html
+categories:
+  - ducks
+  - shorebirds
+description: "2022春の記録"
+---
+
