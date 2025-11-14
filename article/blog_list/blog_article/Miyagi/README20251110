@@ -1,0 +1,10 @@
+
+##　ブログでは、場所ごとに記事を分けている。だが、わかる人はこれでも場所を特定してしまうので、
+##　いっそ日記形式にして場所は伏せることにする。どうせ自分は場所を覚えているし。
+
+##というわけで、article\blog_list/blog_article/Miyagi内の記事を試しに以下のようにする。
+
+##　2020winter.qmd（include形式で、Miyagi/2020winter/内の記事を並べる）
+##　2021spring.qmd以降も同様にして作成。
+
+##　それができたら、各記事にcategoriesをつけ、Ducks, Geese, Shorebirdsなどをつけて見やすくする
