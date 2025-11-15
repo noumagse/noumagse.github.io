@@ -2,32 +2,8 @@
   {
     "listing": "/article/list/list_BirdList.html",
     "items": [
+      "/article/list/bird_list/Shorebirds.html",
       "/article/list/bird_list/anseriformes.html"
-    ]
-  },
-  {
-    "listing": "/article/blog_list/list_ferry.html",
-    "items": [
-      "/article/blog_list/blog_article/ferry/ajishima.html",
-      "/article/blog_list/blog_article/ferry/silverferry.html",
-      "/article/blog_list/blog_article/ferry/sunflower.html",
-      "/article/blog_list/blog_article/ferry/taiheiyoferry.html",
-      "/article/blog_list/blog_article/ferry/toukaikisen.html"
-    ]
-  },
-  {
-    "listing": "/article/blog_list/list_Miyagi.html",
-    "items": [
-      "/article/blog_list/blog_article/Miyagi/campus.html",
-      "/article/blog_list/blog_article/Miyagi/cycling.html",
-      "/article/blog_list/blog_article/Miyagi/industrial_port.html",
-      "/article/blog_list/blog_article/Miyagi/kakou1.html",
-      "/article/blog_list/blog_article/Miyagi/kakou2.html",
-      "/article/blog_list/blog_article/Miyagi/kenpoku_general.html",
-      "/article/blog_list/blog_article/Miyagi/kenpoku_goose.html",
-      "/article/blog_list/blog_article/Miyagi/numa1.html",
-      "/article/blog_list/blog_article/Miyagi/park.html",
-      "/article/blog_list/blog_article/Miyagi/ricefield.html"
     ]
   },
   {
@@ -49,6 +25,41 @@
     ]
   },
   {
+    "listing": "/article/blog_list/list_Miyagi.html",
+    "items": [
+      "/article/blog_list/blog_article/Miyagi/2020winter.html",
+      "/article/blog_list/blog_article/Miyagi/2021autumn.html",
+      "/article/blog_list/blog_article/Miyagi/2021spring.html",
+      "/article/blog_list/blog_article/Miyagi/2021summer.html",
+      "/article/blog_list/blog_article/Miyagi/2021winter.html",
+      "/article/blog_list/blog_article/Miyagi/2022autumn.html",
+      "/article/blog_list/blog_article/Miyagi/2022spring.html",
+      "/article/blog_list/blog_article/Miyagi/2022summer.html",
+      "/article/blog_list/blog_article/Miyagi/2022winter.html",
+      "/article/blog_list/blog_article/Miyagi/2023autumn.html",
+      "/article/blog_list/blog_article/Miyagi/2023spring.html",
+      "/article/blog_list/blog_article/Miyagi/2023summer.html",
+      "/article/blog_list/blog_article/Miyagi/2023winter.html",
+      "/article/blog_list/blog_article/Miyagi/2024autumn.html",
+      "/article/blog_list/blog_article/Miyagi/2024spring.html",
+      "/article/blog_list/blog_article/Miyagi/2024summer.html",
+      "/article/blog_list/blog_article/Miyagi/2024winter.html",
+      "/article/blog_list/blog_article/Miyagi/2025autumn.html",
+      "/article/blog_list/blog_article/Miyagi/2025spring.html",
+      "/article/blog_list/blog_article/Miyagi/2025summer.html"
+    ]
+  },
+  {
+    "listing": "/article/blog_list/list_ferry.html",
+    "items": [
+      "/article/blog_list/blog_article/ferry/ajishima.html",
+      "/article/blog_list/blog_article/ferry/silverferry.html",
+      "/article/blog_list/blog_article/ferry/sunflower.html",
+      "/article/blog_list/blog_article/ferry/taiheiyoferry.html",
+      "/article/blog_list/blog_article/ferry/toukaikisen.html"
+    ]
+  },
+  {
     "listing": "/article/list/list_BirdFerryList.html",
     "items": [
       "/article/list/bird_ferrylist/albatross_list.html",
@@ -59,16 +70,26 @@
   {
     "listing": "/index.html",
     "items": [
-      "/article/blog_list/blog_article/Miyagi/campus.html",
-      "/article/blog_list/blog_article/Miyagi/cycling.html",
-      "/article/blog_list/blog_article/Miyagi/industrial_port.html",
-      "/article/blog_list/blog_article/Miyagi/kakou1.html",
-      "/article/blog_list/blog_article/Miyagi/kakou2.html",
-      "/article/blog_list/blog_article/Miyagi/kenpoku_general.html",
-      "/article/blog_list/blog_article/Miyagi/kenpoku_goose.html",
-      "/article/blog_list/blog_article/Miyagi/numa1.html",
-      "/article/blog_list/blog_article/Miyagi/park.html",
-      "/article/blog_list/blog_article/Miyagi/ricefield.html",
+      "/article/blog_list/blog_article/Miyagi/2020winter.html",
+      "/article/blog_list/blog_article/Miyagi/2021autumn.html",
+      "/article/blog_list/blog_article/Miyagi/2021spring.html",
+      "/article/blog_list/blog_article/Miyagi/2021summer.html",
+      "/article/blog_list/blog_article/Miyagi/2021winter.html",
+      "/article/blog_list/blog_article/Miyagi/2022autumn.html",
+      "/article/blog_list/blog_article/Miyagi/2022spring.html",
+      "/article/blog_list/blog_article/Miyagi/2022summer.html",
+      "/article/blog_list/blog_article/Miyagi/2022winter.html",
+      "/article/blog_list/blog_article/Miyagi/2023autumn.html",
+      "/article/blog_list/blog_article/Miyagi/2023spring.html",
+      "/article/blog_list/blog_article/Miyagi/2023summer.html",
+      "/article/blog_list/blog_article/Miyagi/2023winter.html",
+      "/article/blog_list/blog_article/Miyagi/2024autumn.html",
+      "/article/blog_list/blog_article/Miyagi/2024spring.html",
+      "/article/blog_list/blog_article/Miyagi/2024summer.html",
+      "/article/blog_list/blog_article/Miyagi/2024winter.html",
+      "/article/blog_list/blog_article/Miyagi/2025autumn.html",
+      "/article/blog_list/blog_article/Miyagi/2025spring.html",
+      "/article/blog_list/blog_article/Miyagi/2025summer.html",
       "/article/blog_list/blog_article/Trip/Aug23_Senjogahara.html",
       "/article/blog_list/blog_article/Trip/Dec22_Akita.html",
       "/article/blog_list/blog_article/Trip/Dec22_bufflehead.html",
