@@ -7,3 +7,9 @@ categories:
 description: "2021冬の記録"
 ---
 
+## 2021年12月～2022年2月まで
+
+{{< include 2021winter/_20211229.qmd >}}
+
+{{< include 2021winter/_20220218.qmd >}}
+

@@ -6,16 +6,128 @@ format:
 
 # このサイトの作り方
 
-以下を用いている。
+そもそもサイトの作成には「HTML」と「CSS」ファイルが必要。
 
-1.  Rstudio（Quarto）
+私は以下を用いてファイルを作成した。
 
-2.  VScode（Powershell/ terminal）
+1.  Rstudio（Quarto）：記事執筆ができるIDE（統合開発環境）。最悪なくてもVScodeで代用可能
 
-3.  Github
+2.  VScode（Powershell/ terminal）：記事以外の、ウェブサイトのレイアウトをつかさどる.cssや.ymlを、記事とは別で編集したかったのでVScodeを使用した。あとはgitコマンドでGithubに記事をぶん投げるのに使う。
+
+3.  Github：記事をぶん投げる先。
 
 -   .mdという拡張子で文章を執筆し、それをHTML形式にレンダリングしてくれるQuartoを、Rstudio上でいじる
 
 -   Github Pagesの機能を使って個人サイトを作成した。アカウントを作ったり、Githubの知識が必要だけど無料でサイト運営できる（容量に制限があるので、大量の画像をアップしたりは出来ない）
 
 -   VScodeで、Local環境のQuarto記事をgithubにpushする。
+
+# 具体的なやり方
+
+1.  Rstudio上で記事を執筆する。「Quarto Document」をクリックして書き始める。
+2.  記事を.qmdから.htmlにrenderする。上書き保存してからRenderボタンをクリックしてもいいし、私は保存と同時にrenderを実行している。
+3.  htmlを作成したら、githubのサーバーに自分のPC上にあるhtmlを送信する。add→commit→pushでOK
+
+以上
+
+## Quarto使用時の注意点
+
+・`_quarto.yml`を編集した後は、必ずqmdを一度renderする
+
+## エラー
+
+website開発中に遭遇したエラーを記述しておく
+
+### RstudioでQuarto
+
+症例：
+
+_quarto.ymlを記述後、「Build->render website」をすると、ディレクトリ内のすべての.qmdが.htmlにrenderされる。しかし、前々から出力先に置いていたimage/ディレクトリが消えてしまう。（いちいちgit restore docs/で復元しなければならなかった...）
+
+→
+
+render時、デフォルトでは一度ディレクトリをresetするらしい。このときディレクトリのresetを回避するために、_quarto.ymlに以下を記述した。
+
+```
+project: 
+  type: website
+  output-dir: docs
+  render: 
+    - "*.qmd"
+  resources: 
+    - "image/"
+```
+
+もう一度renderしたら、無事残った！！
+
+docs
+|- article
+|- site_libs
+|- static
+   |- image
+   
+### Git中
+
+症例：`git push origin main`でコミットした変更点をremoteに送るとき
+
+```
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'github.com:hogehoge/hogehoge.github.io.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+
+remoteとlocalでbranchが異なるので、矛盾が生じる。
+
+ためしに`git status`で状況確認する。
+
+```
+$ git status
+Refresh index: 100% (469/469), done.
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+```
+
+たしかに、branchが分かれてしまっている。
+
+### ウェブデザイン編
+
+#### ダークモードにしてもテキストのカラーが黒のままで見づらい
+
+_quarto.ymlに
+
+
+format:
+  html:
+    css: "styles.css"
+    lightbox: true
+    theme: 
+      light: flatly
+      dark: darkly
+    toc: true
+    toc-title: 目次
+    toc-location: left
+    number-sections: false
+    mainfont: sans-serif;
+    fontcolor: black;
+    linkcolor: hsla(237deg 74% 33% / 61%);
+
+
+と入れている。
+
+`theme: dark`にしているので、ダークモード切替のトグルがページ右上に表示されるが、切り替えると背景黒のダークモードになる。
+
+しかし、テキストの色が黒のままなので見づらい。
+
+この場合、_quarto.yml内のfontcolorが強制で色を指定するので、この行を削除する
+
+
+#### faviconの設定
+
+_quarto.ymlのwebsite:以下にfavicon引数を指定することで、ブックマークやタブ左側の画像を表示できる。しかし、これを相対パスで指定するとindex.htmlのみが参照可能となり、「ホームページは表示できているが、それ以外の記事では表示されない」ことが起こる。
+
+絶対パスで指定するべき

@@ -1,0 +1,13 @@
+---
+title: "海鳥リスト"
+format: html
+listing: 
+  contents: bird_ferrylist
+  type: grid
+  sort: "date"
+  date-format: medium
+  categories: true
+  sort-ui: [title, date]
+---
+
+航路で見た鳥についての備忘録

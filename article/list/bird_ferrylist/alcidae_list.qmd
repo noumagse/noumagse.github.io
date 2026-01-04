@@ -1,0 +1,109 @@
+---
+title: "Murres, Murrelets and Guillemots"
+format: 
+  revealjs:
+    smaller: true
+    scrollable: true
+    theme: sky
+---
+
+# Alcidae
+
+・ウミスズメ科は絶滅種含め世界で25種が知られている。絶滅種のGreat Auk（オオウミガラス）は学名をPinguinus impennisと言うが、南半球のペンギンの語源である。
+
+・魚食性に伴う水の抵抗の少ない小さな翼と流線型の体が水棲への適応ならば、ウミスズメ科とペンギン科はそれぞれ北半球と南半球で生じた収斂進化であるといえる。
+
+# Murres {background-color="black" background-image="../../static/image/ferry/murre1.JPG"}
+
+Uria属の鳥は世界で２種知られている。どちらも日本で見られるが、
+
+## Thick-billed Murre {background-color="black" background-image="../../static/image/ferry/Thick-billed_Murre1.JPG"}
+
+ハシブトウミガラス。国内に繁殖地はないが、冬季に北日本の海域を運航するフェリーに乗るとみられる。
+
+## Common Murre
+
+ウミガラス。
+
+日本では北海道天売島で少数が繁殖。環境省による調査が2003年に始まった際の個体数は15羽だったが、2024年は122羽まで回復した。しかしながら繁殖に参加した個体数はいまだ少ないようだ。
+
+赤岩にはデコイや音声誘因が行われていて、2024年の5月に当地を訪れた際は赤岩展望台の下部から電子のウミガラスの声が絶えず響いていた。
+
+# Guillemots
+
+Cepphus属の鳥は世界で３種知られる。どの種も国内では北海道以北の海上で見られるが、稀に北日本の海域で見られることもあるみたい。
+
+## Spectacled Guillemot {background-color="black" background-image="../../static/image/ferry/Spectacled_Guillemot1.JPG"}
+
+ケイマフリ。
+
+アイヌ語で「足＋赤い」の意。海のカナリアと言われ、美しい声でさえずる。英名のSpectacledは目の周りの白い模様をさしたもの。この模様は夏羽でも冬羽でも消えることはない。
+
+# 
+
+北海道天売島で多くの数が繁殖する。断崖の小さな隙間に巣を作り産卵することで、ハシブトガラスやオオセグロカモメの侵入による捕食を防いでいる。
+
+# Murrelets
+
+Brachyrhamphus属が３種、Synthliboramphus属が５種の合計８種。Brachy（短い）、Synthlibo（圧縮する）＋rhamphus（くちばし）なので、とにかくくちばしがお手頃なサイズであることを言いたいらしい
+
+日本ではマダラウミスズメ、カンムリウミスズメ、ウミスズメの３種が見られる。
+
+## Long-billed_Murrelet {background-color="black" background-image="../../static/image/ferry/Long-billed_Murrelet1.JPG"}
+
+マダラウミスズメ。ごくまれにフェリー上で観察されることがある。
+
+## Ancient Murrelet {background-color="black" background-image="../../static/image/ferry/Ancient_Murrelet1.JPG"}
+
+::: {.panel-tabset}
+
+### ウミスズメ
+
+個人的に最も身近なウミスズメ類。冬季の北日本海域で十数羽の群れで海面すれすれを超高速の羽ばたきで飛ぶ姿がよく見られる。
+
+### 航路探鳥では
+
+フェリーが近づくと一気に飛び立ち、すぐに着水する。着水と同時に潜水しやがるので目を慣らさないと見つけるのに苦労する。
+
+宮城県では網地島フェリーに乗れば日帰りでウミスズメを観察するチャンスがある。
+
+![たくさんいると嬉しい](../../static/image/ferry/Ancient_Murrelet2.JPG)
+
+:::
+
+## Japanese Murrelet 
+
+カンムリウミスズメは日本で繁殖するウミスズメ科としては最も南まで分布し、九州地方の近海で見たことがある。
+
+英名からもわかるように日本近海にのみ分布する。伊豆諸島で繁殖するため、八丈航路でも見られるらしい（経験なし）
+
+# Auklet
+
+Aethia属４種に加え、Ptycorhamphus属、Cerorhinca属の合計６種が知られる。
+
+## Aethia属
+
+エトロフウミスズメ、コウミスズメは以前は2~3月の北日本の海域でよく見られていたらしく、三井商船のさんふらわあやシルバーフェリーでの観察例が多かった。しかしながら、2020年からはパッタリ観察例が見られなくなる。
+
+これは2017年から始まった黒潮の大蛇行により日本の海の平均海水温が極端に増加した結果だと考えられる。海水温の増加は偏西風の蛇行やそれに伴う太平洋高気圧の大きな張り出しも影響しているとみられる。
+
+著者が航路探鳥を始めたのは2021年の1月からなので、もちろん見たことがない。
+
+## Rhinoceros Auklet {background-color="black" background-image="../../static/image/ferry/Rhinoceros_Auklet1.JPG"}
+
+::: {.panel-tabset}
+
+### ウトウ
+
+ウトウ。サイの角のように見える生殖羽が英名の由来。顔の上下を流れるヒゲがユニーク
+
+冬季の北日本海域で見られる。太平洋フェリーなら体感ウミスズメの次に多い。船の上からでも特徴的な顔がよく見える。
+
+### 繁殖地では
+
+天売島で80万羽が繁殖している。５～６月の夕暮れにはオホーツク海で採餌から戻ってきたウトウが赤岩の上空を舞い、地面に落下する様子が観察される。むくっと起き上がると急いで自分の巣穴に駆け込んでしまう。急がないとオオセグロカモメなどに取ってきた小魚を奪われる。カモメも繁殖期で餌が必要なのだ。
+
+くちばしが湾曲しているため、一度に複数の小魚を加えることができる。しかしそれをすべてカモメに奪われることもあるらしい。
+
+![ウミネコでこのサイズ差なのだから、オオセグロは推して知るべし](../../static/image/ferry/Rhinoceros_Auklet2.JPG)
+:::

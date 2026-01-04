@@ -6,3 +6,17 @@ categories:
   - shorebirds
 description: "2022秋の記録"
 ---
+
+# 2022年の秋～2022年の冬まで
+
+シギチにがっつり専念した。
+
+{{< include 2022autumn/_20220921.qmd >}}
+
+{{< include 2022autumn/_20221006.qmd >}}
+
+{{< include 2022autumn/_20221008.qmd >}}
+
+{{< include 2022autumn/_20221010.qmd >}}
+
+{{< include 2022autumn/_20221010_2.qmd >}}

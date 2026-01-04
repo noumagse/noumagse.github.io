@@ -1,0 +1,11 @@
+---
+title: "include_whole"
+format: html
+---
+
+## まとめ
+
+{{< include inclusion_practice/_include1.qmd >}}
+
+
+{{< include inclusion_practice/_include2.qmd >}}

@@ -22,7 +22,7 @@ website:
     contents: 
       - text: "About me"
         href: https://noumagse.github.io/article/about.html
-      - section: "Bird"
+      - section: "Field Note"
         contents: 
           - text: "Miyagi"
             href: https://noumagse.github.io/article/blog_list/list_Miyagi.html

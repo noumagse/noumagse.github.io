@@ -2,8 +2,8 @@
 title: "2020冬"
 format: html
 categories:
-  - ducks
-  - shorebirds
+  - duck
+  - shorebird
 description: "2020冬の記録"
 ---
 
@@ -15,4 +15,4 @@ description: "2020冬の記録"
 
 {{< include 2020winter/_20210103.qmd >}}
 
-
+{{< include 2020winter/_20210110.qmd >}}

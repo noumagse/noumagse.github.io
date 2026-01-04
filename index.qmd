@@ -1,10 +1,37 @@
 ---
-title: "index"
+title: "宮城の野鳥観察記録"
 format: 
   html
+listing: 
+  contents: article/blog_list/blog_article
+  type: default
+  sort: "date desc"
 ---
 
-## サンプルページ
+## このサイトについて
 
-![Branta](../image/branta.JPG){width="100%"}
+宮城の野鳥観察の備忘録。
 
+・自分で復習したりするときとかに検索性の高い媒体で効率的に行いたい
+
+・HTMLとCSSの勉強をしてみたい
+
+→ホームページを作成。
+
+ガン・シギチ・航路多めでまとめていくつもり。
+
+## 図鑑リンク
+
+::: {layout-ncol="4"}
+
+[![Swans, Geese and Ducks](/static/image/Miyagi/kenpoku_geese9.JPG){width="100%"}](https://noumagse.github.io/article/list/bird_list/anseriformes.html#/title-slide)
+
+[![Shorebirds](/static/image/Miyagi/Red-necked_Stint1.JPG){width="100%"}](https://noumagse.github.io/article/list/bird_list/Shorebirds.html#/title-slide)
+
+[![Murres, Murrelets and Guillemots](/static/image/ferry/Thick-billed_Murre1.JPG){width="100%"}](https://noumagse.github.io/article/list/bird_ferrylist/alcidae_list.html#/title-slide)
+
+[![Albatross](/static/image/ferry/Laysan_Albatross1.JPG){width="100%"}](https://noumagse.github.io/article/list/bird_ferrylist/albatross_list.html#/title-slide)
+
+:::
+
+## 新着記事
